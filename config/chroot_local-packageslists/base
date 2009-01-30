@@ -1,0 +1,25 @@
+# base 
+# packages list for live-helper(7) with basic LAMP
+
+# You need the locales package if you want to set a 
+# different locale/keyboard map
+locales
+
+# editor
+vim
+
+#FileSystem
+ntfs-3g
+
+
+# ssh and scp for networking between host and guest
+openssh-client openssh-server
+
+#navigateur
+iceweasel iceweasel-l10n-fr
+
+#utilitaire
+usbview wajig gparted partimage htop
+
+#protocol
+vlan

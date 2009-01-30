@@ -1,0 +1,15 @@
+Source: satan-manual
+Section: doc
+Priority: optional
+Maintainer: Yohann Lepage  <yohannlepage@gmail.com>, Vincent palierne <www@gmail.com>
+Uploaders: Yohann Lepage  <yohannlepage@gmail.com>
+Build-Depends: debhelper (>= 7), dblatex, docbook-xml, docbook-xsl, make, po4a, w3m
+Standards-Version: 1.0.1
+Homepage: http://2xyo.info/
+Vcs-Browser: http://git.debian.org/?p=debian-live/live-manual.git
+Vcs-Git: git://git.debian.org/git/debian-live/live-manual.git
+
+Package: satan-manual
+Architecture: all
+Description: SATAN manual
+ This package contains the SATAN documentation.

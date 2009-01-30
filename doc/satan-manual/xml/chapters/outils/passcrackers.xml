@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
+]>
+<sect1 id="passcrackers">
+<title>Les outils pour cracker les mots de passe</title>
+
+<para>
+Ce chapitre liste les outils pour cracker les mots de passe qui sont dans SATAN
+</para>
+
+<sect2 id="passcrackers-johntheripper">
+<title>John the Ripper</title>
+<para>
+ John the Ripper il rox :
+</para>
+<orderedlist>
+<listitem><para>Il fait ça</para></listitem>
+<listitem><para>Et ça</para></listitem>
+</orderedlist>
+</sect2>
+
+<sect2 id="passcrackers-thchydra">
+<title>THC Hydra</title>
+<para>
+ Il se lance avec la commande <command>hydra</command> et le fichier de conf est <filename>config/chroot</filename> or by the <command>--apt</command> argument to <filename>lh_config</filename>:
+</para>
+
+<variablelist>
+
+<varlistentry><term><command>brute</command></term>
+<listitem>
+<para>
+mode brute force
+</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><command>gentil</command></term>
+<listitem>
+<para>
+le mode gentil
+</para>
+<para>
+il est vraiment gentil
+</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+<sect3 id="lh-packages">
+<title>The <command>LH_PACKAGES</command> variable</title>
+<screen>
+$ lh_config --packages "package1 package2 package3"
+</screen>
+
+<para>le comportement de &gensatan;  est blabla. voir <xref linkend="passcrackers-johntheripper"/> for more details.</para>
+
+<para>
+ If you need to specify a large number of packages to be installed or you need flexibility regarding which packages to install, you should probably be using package lists. See <xref linkend="package-lists"/> for more information.
+</para>
+</sect3>
+</sect1>
