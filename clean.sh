@@ -9,3 +9,4 @@ SH_BASE="${SH_BASE:-`pwd`}"
 lh_clean --all
 
 rm -f build.log
+rm -rf cache .stage

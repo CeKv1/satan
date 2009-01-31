@@ -4,6 +4,8 @@ binary.iso
 binary.list
 binary.packages
 
+build.log
+
 cache
 
 chroot/

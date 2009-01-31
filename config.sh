@@ -12,11 +12,11 @@ MIRROR="yes"
 
 if [ "${MIRROR}" = "yes" ]
 then
-	MIRROR_DEBIAN="http://localhost:9999/debian/"
-	MIRROR_SECURITY="http://localhost:9999/security/"
+	MIRROR_DEBIAN="http://localhost:9999/debian"
+	MIRROR_SECURITY="http://localhost:9999/security"
 else
-	MIRROR_DEBIAN="http://ftp.fr.debian.org/debian/"
-	MIRROR_SECURITY="http://ftp.ch.debian.org/debian-security/"
+	MIRROR_DEBIAN="http://ftp.fr.debian.org/debian"
+	MIRROR_SECURITY="http://ftp.ch.debian.org/debian-security"
 fi
 
 lh_config \

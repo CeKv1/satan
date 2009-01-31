@@ -6,7 +6,7 @@
 locales
 
 # editor
-vim-full
+vim
 
 #FileSystem
 ntfs-3g
@@ -23,7 +23,3 @@ usbview wajig gparted partimage htop
 
 #protocol
 vlan
-
-mysql-server-5.0
-
-apache2 libapache2-mod-php5
