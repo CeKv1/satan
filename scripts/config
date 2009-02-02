@@ -1,0 +1,53 @@
+#!/bin/sh -x
+
+# Répertoire de travail
+SH_BASE="${SH_BASE:-`pwd`}"
+
+#Scripts de live-helper
+. "${LH_BASE:-/usr/share/live-helper}"/functions.sh
+
+# $MIRROR: Utilisation d'un mirror local
+# (Default: no)
+MIRROR="yes"
+
+if [ "${MIRROR}" = "yes" ]
+then
+	MIRROR_DEBIAN="http://localhost:9999/debian"
+	MIRROR_SECURITY="http://localhost:9999/security"
+else
+	MIRROR_DEBIAN="http://ftp.fr.debian.org/debian"
+	MIRROR_SECURITY="http://ftp.ch.debian.org/debian-security"
+fi
+
+
+lh_config noautoconfig \
+	--apt-recommends disabled \
+	--architecture "i386" \
+	--binary-filesystem fat16 \
+	--bootappend-live "locale=fr  keyb=fr" \
+	--bootappend-install " -- locale=fr keyb=fr" \
+	--bootloader grub \
+	--categories "main contrib non-free" \
+	--distribution lenny \
+	--grub-splash splash.xpm.gz \
+	--hostname satan \
+	--initramfs live-initramfs \
+	--iso-application "SATAN" \
+	--iso-preparer "Yohann Lepage" \
+	--iso-publisher "Yohann Lepage, Vincent Palierne" \
+	--iso-volume "SATAN $(date +%Y%m%d-%H:%M)" \
+	--keyring-packages "debian-archive-keyring" \
+	--language fr \
+	--linux-flavours "486 686" \
+	--linux-packages "linux-image-2.6 aufs-modules-2.6 squashfs-modules-2.6 " \
+	--mirror-bootstrap ${MIRROR_DEBIAN} \
+	--mirror-binary http://ftp.fr.debian.org/debian/ \
+	--mirror-binary-security http://ftp.ch.debian.org/debian-security/ \
+	--mirror-chroot ${MIRROR_DEBIAN} \
+	--mirror-chroot-security ${MIRROR_SECURITY} \
+	--packages-lists "base graphic simulation standard tools" \
+	--union-filesystem aufs \
+	--username etu  \
+	--verbose \
+	${@}
+

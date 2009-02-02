@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -x 
 
 # Répertoire de travail
 SH_BASE="${SH_BASE:-`pwd`}"
@@ -10,7 +10,7 @@ SH_BASE="${SH_BASE:-`pwd`}"
 # (Default: binary.iso)
 LS_BINARY="${LS_BINARY:-binary.iso}"
 
-if [ -z $1]
+if [ -z $1 ]
 then
 	Echo "Usage : ./install.sh /dev/sdX"
 	exit 0
@@ -19,7 +19,7 @@ fi
 # $LS_DEVICE: clé usb
 # (Default: empty)
 LS_DEVICE=$1
-
+FS="true"
 
 Echo "Device : ${LS_DEVICE}"
 
@@ -37,7 +37,7 @@ Echo "Size of ISO : ${SIZEISOC} cylinders"
 SIZEDEVC=`sfdisk -l -uS ${LS_DEVICE}|grep "Disk /"|awk {'print $3'}` 2>&1
 Echo "Size of dev : ${SIZEDEVC} cylinders"
 
-SIZE1=$(($SIZEDEVC-$SIZEISOC-20))
+SIZE1=$(($SIZEDEVC-$SIZEISOC-30))
 Echo "Size partition 1 : ${SIZE1} cylinders"
 
 SIZE2=$(($SIZE1+1))
@@ -73,7 +73,8 @@ then
 
         umount ${LS_DEVICE}1 | exit 0
         umount ${LS_DEVICE}2 | exit 0
-        mkfs.vfat -F 32 ${LS_DEVICE}"1" && mkfs.ext2 ${LS_DEVICE}"2"
+        mkfs.vfat -F 16 ${LS_DEVICE}"1"
+	mkfs.ext2 ${LS_DEVICE}"2" -L "satan"
 fi
 
 echo "############################"
@@ -83,13 +84,24 @@ echo "############################"
 TEMPMOUNT="$(mktemp -d -t live-mount.XXXXXXXX)"
 TEMPISO="$(mktemp -d -t live-iso.XXXXXXXX)"
 
+if [ -z ${TEMPMOUNT} ]
+then
+	Echo "Error TEMPMOUNT"
+	exit 0
+fi
+if [ -z ${TEMPISO} ]
+then
+	Echo "Error TEMPISO"
+	exit 0
+fi
+
 Echo "Making tempdir"
 
 mkdir -p "${TEMPMOUNT}"
 mkdir -p "${TEMPISO}"
 
 Echo "Mounting device and binary"
-mount ${LS_DEVICE}"2" "${TEMPMOUNT}"
+mount -t ext2 ${LS_DEVICE}"2" "${TEMPMOUNT}"
 mount -o loop ${LS_BINARY} "${TEMPISO}"
 
 Echo "Copying binary"

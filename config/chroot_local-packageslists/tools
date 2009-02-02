@@ -3,3 +3,6 @@ wireshark tcpdump scapy
 
 #administration
 minicom
+
+#DNS
+bind9 dnsutils

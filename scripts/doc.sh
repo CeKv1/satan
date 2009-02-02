@@ -27,6 +27,7 @@ then
 	mv ${DOC_BASE}/satan*.deb ${SH_BASE}/config/chroot_local-packages
 	
 	rm -rf ${DOC_BASE}/satan-manual_*
+	cd ${SH_BASE}
 
 elif [ "${METHODE}" = "make" ]
 then

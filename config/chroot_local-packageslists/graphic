@@ -1,5 +1,5 @@
 # Xorg
-xserver-xorg
+xserver-xorg udev libgl1-mesa-dri 
 
 #xfce
-xfce4 xauth
+xfce4 desktop-base xfce4-terminal xfce4-mixer xfprint4 xauth evince xfonts-base

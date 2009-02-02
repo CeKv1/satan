@@ -8,8 +8,9 @@ SH_BASE="${SH_BASE:-`pwd`}"
 
 #Génération de la documentation
 . "${SH_BASE}"/scripts/doc.sh auto
+. "${SH_BASE}"/scripts/doc.sh clean
 
 cd ${SH_BASE}
-lh_build | tee build.log
+lh_build noautoconfig | tee build.log
 
 rm -f ${SH_BASE}/config/chroot_local-packages/satan-manual*
