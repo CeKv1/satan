@@ -29,4 +29,4 @@ kismet
 ruby libruby rdoc libyaml-ruby libzlib-ruby libopenssl-ruby libdl-ruby libreadline-ruby libiconv-ruby libgtk2-ruby libglade2-ruby
 
 # Dépendances hydra
-libssh2-1 libssh2-1-dev libssh2-1-dbg
+libssh-2-dev

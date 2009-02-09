@@ -35,7 +35,7 @@ apache2 libapache2-mod-php5
 sun-java6-jre
 
 # Librairies
-perl python
+perl python gcc make libssl-dev patch
 
 # Enregistrement vidéo
 recordmydesktop gtk-recordmydesktop
