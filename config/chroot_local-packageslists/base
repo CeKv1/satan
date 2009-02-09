@@ -1,29 +1,41 @@
 # base 
 # packages list for live-helper(7) with basic LAMP
 
-# You need the locales package if you want to set a 
-# different locale/keyboard map
+# l10n
 locales
 
-# editor
+# editeur 
 vim-full
 
-#FileSystem
+# Système de fichier
 ntfs-3g
 
+# Shell distant
+openssh-client openssh-server telnet
 
-# ssh and scp for networking between host and guest
-openssh-client openssh-server
-
-#navigateur
+# Navigateur
 iceweasel iceweasel-l10n-fr
 
-#utilitaire
-usbview wajig gparted partimage htop
+# Utilitaire hardware
+usbview wajig gparted partimage 
 
-#protocol
+# Monitoring des ressources
+htop
+
+# support du 802.1q
 vlan
 
+# Serveur de base de données
 mysql-server-5.0
 
+# Serveur web avec support php
 apache2 libapache2-mod-php5
+
+# Machine Java
+sun-java6-jre
+
+# Librairies
+perl python
+
+# Enregistrement vidéo
+recordmydesktop gtk-recordmydesktop

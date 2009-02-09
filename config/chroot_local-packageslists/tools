@@ -1,8 +1,32 @@
-#capture
-wireshark tcpdump scapy
+# Capture
+wireshark tcpdump ettercap dsniff netcat
 
-#administration
+# 
+scapy hping3
+
+# Administration par le port série
 minicom
 
-#DNS
-bind9 dnsutils
+# Serveur DNS
+bind9 dnsutils whois
+
+# SNMP
+snmp snmpd
+
+# Scanners de vulnérabilités
+nessus nessus-plugins nmap zenmap
+
+# Scanners de vulnérabilités web
+nikto
+
+# Brute force
+john
+
+# Wi-Fi
+kismet
+
+# Dépendances metasploit
+ruby libruby rdoc libyaml-ruby libzlib-ruby libopenssl-ruby libdl-ruby libreadline-ruby libiconv-ruby libgtk2-ruby libglade2-ruby
+
+# Dépendances hydra
+libssh2-1 libssh2-1-dev libssh2-1-dbg
