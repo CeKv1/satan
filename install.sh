@@ -122,3 +122,5 @@ umount ${LS_BINARY} |exit 0
 
 Echo "Removing build directory"
 rm -rf ${TEMPMOUNT}
+
+Echo "Installation terminé"

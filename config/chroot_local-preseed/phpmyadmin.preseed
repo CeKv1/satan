@@ -1,0 +1,5 @@
+################################################################################
+## phpmyadmin
+phpmyadmin	phpmyadmin/setup-password	password	
+phpmyadmin	phpmyadmin/setup-username	string	admin
+phpmyadmin	phpmyadmin/reconfigure-webserver	multiselect	apache2

@@ -28,6 +28,9 @@ vlan
 # Serveur de base de données
 mysql-server-5.0
 
+# Administration bd
+phpmyadmin
+
 # Serveur web avec support php
 apache2 libapache2-mod-php5
 
