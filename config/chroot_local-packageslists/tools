@@ -30,3 +30,6 @@ ruby rubygems rails libruby rdoc libyaml-ruby libzlib-ruby libopenssl-ruby libdl
 
 # Dépendances hydra
 libssh-2-dev
+
+# gestion des configurations
+puppet puppetmaster

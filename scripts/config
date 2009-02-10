@@ -23,12 +23,12 @@ fi
 lh_config noautoconfig \
 	--apt-recommends disabled \
 	--architecture "i386" \
-	--binary-filesystem fat16 \
+	--binary-filesystem fat32 \
 	--bootappend-live "locale=fr  keyb=fr" \
 	--bootappend-install " -- locale=fr keyb=fr" \
 	--bootloader grub \
 	--categories "main contrib non-free" \
-	--distribution lenny \
+	--distribution testing \
 	--grub-splash splash.xpm.gz \
 	--hostname satan \
 	--initramfs live-initramfs \
