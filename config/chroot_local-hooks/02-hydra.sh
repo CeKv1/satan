@@ -1,4 +1,8 @@
-#!/bin/sh
+#!/bin/sh -x
+echo "###################"
+echo "####### 02 ########"
+echo "###################"
+
 echo "I: Install hydra"
 
 mkdir /tmp/hydra

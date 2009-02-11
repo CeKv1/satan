@@ -28,7 +28,7 @@ lh_config noautoconfig \
 	--bootappend-install " -- locale=fr keyb=fr" \
 	--bootloader grub \
 	--categories "main contrib non-free" \
-	--distribution testing \
+	--distribution lenny \
 	--grub-splash splash.xpm.gz \
 	--hostname satan \
 	--initramfs live-initramfs \
@@ -42,7 +42,7 @@ lh_config noautoconfig \
 	--linux-packages "linux-image-2.6 aufs-modules-2.6 squashfs-modules-2.6 " \
 	--mirror-bootstrap ${MIRROR_DEBIAN} \
 	--mirror-binary http://ftp.fr.debian.org/debian/ \
-	--mirror-binary-security http://ftp.ch.debian.org/debian-security/ \
+	--mirror-binary-security http://security.debian.org/ \
 	--mirror-chroot ${MIRROR_DEBIAN} \
 	--mirror-chroot-security ${MIRROR_SECURITY} \
 	--packages-lists "base graphic simulation standard tools" \

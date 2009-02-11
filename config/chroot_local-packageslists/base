@@ -35,8 +35,10 @@ phpmyadmin
 apache2 libapache2-mod-php5
 
 # Machine Java
-sun-java6-jre
+sun-java6-jre sun-java6-plugin sun-java6-jdk
 
+# Dépendances paros
+libjline-java libxtst6 libcommons-codec-java libcommons-collections3-java libcommons-configuration-java libcommons-httpclient-java libcommons-lang-java libcommons-logging-java libhsqldb-java libjdic-bin libjdic-java liblog4j1.2-java libservlet2.3-java libservlet2.4-java
 # Librairies
 perl python gcc make libssl-dev patch
 

@@ -10,7 +10,7 @@ SH_BASE="${SH_BASE:-`pwd`}"
 lh_clean noautoconfig --all ${@}
 
 rm -f build.log
-
+rm -rf cache .stage
 # Remove generated files
 rm -f config/binary config/bootstrap config/chroot config/common config/source
 

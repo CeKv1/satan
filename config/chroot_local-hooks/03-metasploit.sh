@@ -1,4 +1,8 @@
-#/bin/sh -x
+#!/bin/sh -x
+
+echo "###################"
+echo "####### 03 ########"
+echo "###################"
 echo "I: install metasploit"
 
 mkdir /usr/local/msf
