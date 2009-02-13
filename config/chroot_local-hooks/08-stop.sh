@@ -27,3 +27,7 @@ update-rc.d  -f snmpd remove
 update-rc.d  snmpd stop  0 1 2 3 4 5 6 .
 update-rc.d  -f quagga remove
 update-rc.d  quagga stop  0 1 2 3 4 5 6 .
+update-rc.d  -f snort remove
+update-rc.d  snort stop  0 1 2 3 4 5 6 .
+update-rc.d  -f ipsec remove
+update-rc.d  ipsec stop  0 1 2 3 4 5 6 .

@@ -1,16 +1,66 @@
-#!/bin/sh
+#!/bin/sh -x
 
 # Répertoire de travail
 SH_BASE="${SH_BASE:-`pwd`}"
 
-#Scripts de live-helper
+# Scripts de live-helper
 . "${LH_BASE:-/usr/share/live-helper}"/functions.sh
 
-#Génération de la documentation
+# Génération de la documentation
 . "${SH_BASE}"/scripts/doc.sh auto
 . "${SH_BASE}"/scripts/doc.sh clean
 
 cd ${SH_BASE}
+
+# Netkit
+NETKIT_URL="http://www.netkit.org/download/netkit/netkit-2.6.tar.bz2"
+NETKIT_FS_URL="http://www.netkit.org/download/netkit-filesystem/netkit-filesystem-i386-F5.0.tar.bz2"
+NETKIT_KER_URL="http://www.netkit.org/download/netkit-kernel/netkit-kernel-i386-K2.6.tar.bz2"
+NETKIT="netkit-2.6.tar.bz2"
+NETKIT_FS="netkit-filesystem-i386-F5.0.tar.bz2"
+NETKIT_KER="netkit-kernel-i386-K2.6.tar.bz2"
+
+# Hydra
+LIBSSH_URL="http://0xbadc0de.be/libssh/libssh-0.2.tgz"
+LIBSSH="libssh-0.2.tgz"
+HYDRA_URL="http://freeworld.thc.org/releases/hydra-5.4-src.tar.gz"
+HYDRA="hydra-5.4-src.tar.gz"
+HYDRA_PATCH_URL="http://0xbadc0de.be/libssh/hydra-libssh0.2.patch"
+HYDRA_PATCH="hydra-libssh0.2.patch"
+
+# Metasploit
+MSF_URL="http://sugar.metasploit.com/releases/framework-3.1.tar.gz"
+MSF="framework-3.1.tar.gz"
+
+mkdir -p dl
+cd dl
+
+## Téléchargement
+# Netkit
+wget -N -c ${NETKIT_URL}
+wget -N -c ${NETKIT_KER_URL}
+wget -N -c ${NETKIT_FS_URL}
+# hydra
+wget -N -c ${LIBSSH_URL}
+wget -N -c ${HYDRA_URL}
+wget -N -c ${HYDRA_PATCH_URL}
+# Metasploit
+wget -N -c ${MSF_URL}
+
+## Décompression
+# Netkit
+tar -xjf ${NETKIT} -C ../config/chroot_local-includes/usr/share/
+tar -xjf ${NETKIT_FS} -C ../config/chroot_local-includes/usr/share/
+tar -xjf ${NETKIT_KER} -C ../config/chroot_local-includes/usr/share/
+# Hydra
+tar -xzf ${LIBSSH} -C ../config/chroot_local-includes/usr/share/
+tar -xzf ${HYDRA} -C ../config/chroot_local-includes/usr/share/
+cp  -a   ${HYDRA_PATCH}  ../config/chroot_local-includes/usr/share/
+# Metasploit
+tar -xzf ${MSF} -C ../config/chroot_local-includes/usr/share/
+
+cd ${SH_BASE}
+
 lh_build noautoconfig | tee build.log
 
 rm -f ${SH_BASE}/config/chroot_local-packages/satan-manual*
