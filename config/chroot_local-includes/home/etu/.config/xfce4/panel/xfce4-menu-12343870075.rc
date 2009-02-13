@@ -1,0 +1,7 @@
+use_default_menu=false
+menu_file=/home/etu/.config/xfce4/desktop/Simulation.xml
+icon_file=/usr/share/pixmaps/Menu/Simulation.png
+show_menu_icons=true
+button_title=Simulation & Modélisation de Réseaux
+show_button_title=false
+

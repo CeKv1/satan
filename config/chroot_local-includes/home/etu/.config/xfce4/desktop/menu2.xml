@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xfdesktop-menu>
+	<title name="Menu du Bureau"/>
+	<separator/>
+	<menu name="Paramètres" icon="gnome-settings">
+		<app name="Gestion des paramètres de Xfce" cmd="xfce-setting-show" icon="gnome-settings" snotify="true"/>
+	</menu>
+	<separator/>
+	<menu name="Debian">
+		<include type="file" src="menudefs.hook"/>
+	</menu>
+	<separator/>
+	<app name="Aide" cmd="xfhelp4" icon="gnome-help"/>
+	<app name="À propos de Xfce" cmd="xfce4-about" icon="gnome-info"/>
+	<builtin name="Quitter" cmd="quit" icon="gnome-logout"/>
+</xfdesktop-menu>

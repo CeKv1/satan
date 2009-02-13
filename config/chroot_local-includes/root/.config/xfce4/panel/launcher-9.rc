@@ -1,0 +1,8 @@
+[Entry 0]
+Name=Gestionnaire de fichiers
+Exec=thunar
+Terminal=false
+StartupNotify=true
+Comment=Gérer les fichiers et répertoires
+Icon=/usr/share/pixmaps/Menu/Gestionnaire fichiers.png
+

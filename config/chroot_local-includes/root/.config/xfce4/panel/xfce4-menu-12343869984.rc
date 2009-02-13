@@ -1,0 +1,7 @@
+use_default_menu=false
+menu_file=/root/.config/xfce4/desktop/Sniffers.xml
+icon_file=/usr/share/pixmaps/Menu/Sniffers.png
+show_menu_icons=true
+button_title=Sniffers
+show_button_title=false
+

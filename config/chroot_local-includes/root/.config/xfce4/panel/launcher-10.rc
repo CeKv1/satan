@@ -1,0 +1,8 @@
+[Entry 0]
+Name=Iceweasel
+Exec=exo-open --launch WebBrowser
+Terminal=false
+StartupNotify=false
+Comment=Naviguer sur internet
+Icon=/usr/share/pixmaps/iceweasel.png
+

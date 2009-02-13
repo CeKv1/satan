@@ -1,0 +1,8 @@
+[Entry 0]
+Name=Terminal Administrateur
+Exec=exo-open --launch TerminalEmulator
+Terminal=false
+StartupNotify=true
+Comment=Ligne de commande
+Icon=/usr/share/pixmaps/Menu/Terminal2.png
+
