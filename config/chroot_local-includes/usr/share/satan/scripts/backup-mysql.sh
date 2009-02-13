@@ -1,12 +1,4 @@
 #!/bin/sh
-if [[ -z $1 ]]
-then
-	echo "Usages :"
-	echo "Pour sauvegarder : ./backup-mysql.sh backup"
-	echo "Pour restaurer   : ./backup-mysql.sh backup /path/du/fichier.sql"
-	echo "Exemple          : ./backup-mysql.sh backup /home/etu/Desktop/backup/backup-20090211-03h51.sql"
-	exit 1
-fi
 if [[ $1 = "backup" ]]
 then
 	echo "I: Sauvegarde des bases de données mysql"
@@ -22,4 +14,10 @@ then
 	else
 		echo "Le fichier $2 n'existe pas ou n'est pas accesible en lecture" && exit 1
 	fi
+else
+	echo "Usages :"
+	echo "Pour sauvegarder : ./backup-mysql.sh backup"
+	echo "Pour restaurer   : ./backup-mysql.sh restore /path/du/fichier.sql"
+	echo "Exemple          : ./backup-mysql.sh restore /home/etu/Desktop/backup/backup-20090211-03h51.sql"
+	exit 1
 fi

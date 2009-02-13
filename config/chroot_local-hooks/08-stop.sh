@@ -13,3 +13,5 @@ update-rc.d  -f puppet remove
 update-rc.d  puppet stop  0 1 2 3 4 5 6 .
 update-rc.d  -f puppetmaster remove
 update-rc.d  puppetmaster stop  0 1 2 3 4 5 6 .
+update-rc.d  -f ssh remove
+update-rc.d  ssh stop  0 1 2 3 4 5 6 .
