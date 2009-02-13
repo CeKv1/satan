@@ -25,6 +25,9 @@ htop
 # support du 802.1q
 vlan
 
+# interface virtuel
+bridge-utils
+
 # Serveur de base de données
 mysql-server-5.0
 
@@ -40,7 +43,7 @@ sun-java6-jre sun-java6-plugin sun-java6-jdk
 # Dépendances paros
 libjline-java libxtst6 libcommons-codec-java libcommons-collections3-java libcommons-configuration-java libcommons-httpclient-java libcommons-lang-java libcommons-logging-java libhsqldb-java libjdic-bin libjdic-java liblog4j1.2-java libservlet2.3-java libservlet2.4-java
 # Librairies
-perl python gcc make libssl-dev patch
+perl python gcc make libssl-dev patch lsof
 
 # Enregistrement vidéo
 recordmydesktop gtk-recordmydesktop

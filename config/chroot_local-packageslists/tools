@@ -1,8 +1,8 @@
 # Capture
-wireshark tcpdump ettercap dsniff netcat
+wireshark tcpdump ssldump tcpreen ettercap  netcat
 
-# 
-scapy hping3
+# Forgeur de paquet
+scapy hping3 dsniff sendip
 
 # Administration par le port série
 minicom
@@ -33,3 +33,27 @@ libssh-2-dev
 
 # gestion des configurations
 puppet puppetmaster
+
+# FTP
+ftp ftpd
+
+# TFTP
+tftp tftpd
+
+# samba
+samba
+
+# Proxy
+squid
+
+# Support multicast
+pimd
+
+# IPsec
+openswan
+
+# Radius
+freeradius freeradius-krb5 freeradius-ldap freeradius-mysql freeradius-utils
+
+# IDS
+snort snort-doc
