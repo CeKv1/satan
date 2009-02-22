@@ -16,9 +16,11 @@ cd ${SH_BASE}
 NETKIT_URL="http://www.netkit.org/download/netkit/netkit-2.6.tar.bz2"
 NETKIT_FS_URL="http://www.netkit.org/download/netkit-filesystem/netkit-filesystem-i386-F5.0.tar.bz2"
 NETKIT_KER_URL="http://www.netkit.org/download/netkit-kernel/netkit-kernel-i386-K2.6.tar.bz2"
+VNETKIT_URL="http://visual-netkit.googlecode.com/files/visualnetkit-1.4.tar.bz"
 NETKIT="netkit-2.6.tar.bz2"
 NETKIT_FS="netkit-filesystem-i386-F5.0.tar.bz2"
 NETKIT_KER="netkit-kernel-i386-K2.6.tar.bz2"
+VNETKIT="visualnetkit-1.4.tar.bz"
 
 # Hydra
 LIBSSH_URL="http://0xbadc0de.be/libssh/libssh-0.2.tgz"
@@ -40,6 +42,7 @@ cd dl
 wget -N -c ${NETKIT_URL}
 wget -N -c ${NETKIT_KER_URL}
 wget -N -c ${NETKIT_FS_URL}
+wget -N -c ${VNETKIT_URL}
 # hydra
 wget -N -c ${LIBSSH_URL}
 wget -N -c ${HYDRA_URL}
@@ -52,6 +55,8 @@ wget -N -c ${MSF_URL}
 tar -xjf ${NETKIT} -C ../config/chroot_local-includes/usr/share/
 tar -xjf ${NETKIT_FS} -C ../config/chroot_local-includes/usr/share/
 tar -xjf ${NETKIT_KER} -C ../config/chroot_local-includes/usr/share/
+tar -xzf ${VNETKIT} -C ../config/chroot_local-includes/usr/share/
+
 # Hydra
 tar -xzf ${LIBSSH} -C ../config/chroot_local-includes/usr/share/
 tar -xzf ${HYDRA} -C ../config/chroot_local-includes/usr/share/

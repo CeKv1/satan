@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
+]>
+<sect1 id="scanvuln">
+<title>Les outils pour détécter les vulnérabilités d'un serveur</title>
+
+<para>
+Ce chapitre liste les outils pour trouver les vunérabilité
+</para>
+
+	<sect2 id="scanvuln-nessus">
+		<title>Nessus</title>
+			<para>
+			Nessus est basé sur des plugins tel que nmap, il permet de scanner les ports de la machine distante, et aussi d'indiquer les éventuelles vulnérabilités du serveur distant. Nessus nous présente un rapport avec les id de chaque faille et donne également des conseils pour améliorer la sécurité. 
+Sa fonctionnalité principale est de signaler les faiblesses potentielles ou avérées des machines testées. Ceci inclue donc la détection des services vulnérables à des attaques permettant la prise de contrôle de la machine, l'accès à des données sensibles, des dénis de services... Il signale aussi les patchs de sécurité non appliqués que les failles corrigées soient exploitables ou non.
+	Pour son fonctionnement, il faut activer le démon nessud et charger les plugin. Pour cela la commande nessusd -D est utile (à exécuter en root). Ce démon réalise les requêtes ainsi que la communication avec la cible. Le client nessus, quant à lui, ne fait que récupérer et afficher les réponses des requêtes du deamon. Pour cela, il n'est pas utile d'avoir les privilèges root. Les tests effectués par le demon nessus dépendent directement des plugins chargés et sélectionnés pour le test car ce sont eux qui jouent les tests. Nessus n'est donc pas en lui même un outil de scanne mais peut s'appuyer sur NMAP pour faire un scan réseau ou un outil similaire à NMAP.
+
+			</para>
+			<para>
+				Pour l'utilisation du client nessus vous devez charger le plugin grace au daemon nessud  
+			</para>
+			<command>nessusd -D</command>
+			<para> si aucun utilisateur n'est crée vous pouver en ajouter un</para>
+			<command>nessus-adduser</command>
+			<para>Pour plus d'info <command>man nessus</command></para>	
+	</sect2>
+	<sect2 id="scanvuln-paros">
+	<title>Paros</title>
+	<para>
+		Paros Proxy émule un navigateur Web et va permettre de tester des actions sur des services et des applications en ligne, et ainsi d'évaluer leur niveau de sécurité. Paros Proxy offre notamment la possibilité de capturer une requête, de la réécrire avant de la réacheminer. Toutes les données sur HTTP et HTTPS entre le serveur et le client, y compris les cookies, peuvent être interceptées et modifiées.
+	</para>
+	</sect2>
+</sect1>

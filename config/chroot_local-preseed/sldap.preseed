@@ -1,0 +1,2 @@
+slapd	slapd/password1	string	bonjour
+slapd	slapd/password2	string	bonjour

@@ -12,13 +12,27 @@
  <othername>The Debian Live Project</othername>
  <email>debian-live@lists.debian.org</email>
 </author>
+<author>
+ <othername>Yohann lepage</othername>
+ <email>yohannlepage@gmail.com</email>
+ <contrib>SATAN, documentatation</contrib>
+</author>
+<author>
+ <othername>Vincent Palierne</othername>
+ <email>vincentpalierne@gmail.com</email>
+</author>
+<author>
+ <othername>Alexandre Robinard</othername>
+ <email>robinux@gmail.com</email>
+</author>
+
 
 <releaseinfo>&version;</releaseinfo>
 <pubdate>&pubdate;</pubdate>
 
 <copyright>
- <year>2008</year>
- <holder>The Debian Live Project</holder>
+ <year>2008-2009</year>
+ <holder>The Debian Live Project, Yohann Lepage, Vincent Palierne, Alexandre Robinard</holder>
 </copyright>
 
 <legalnotice>
@@ -50,15 +64,18 @@ Document Format (PDF).
 </bookinfo>
 
 <!-- Chapters -->
+<xi:include href="chapters/outils.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="chapters/about.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="chapters/installation.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="chapters/basics.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="chapters/overview.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="chapters/customization.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-<xi:include href="chapters/outils.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="chapters/common-tasks.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="chapters/live-environment.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="chapters/faq.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="chapters/reporting-bugs.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="chapters/coding-style.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="chapters/procedures.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="chapters/resources.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 
 <!-- Appendecis -->

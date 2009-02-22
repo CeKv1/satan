@@ -2,10 +2,10 @@
 wireshark tcpdump ssldump tcpreen ettercap  netcat
 
 # Forgeur de paquet
-scapy hping3 dsniff sendip
+hping3 dsniff sendip python-scapy
 
 # Administration par le port série
-minicom
+minicom gtkterm
 
 # Serveur DNS
 bind9 dnsutils whois
@@ -14,7 +14,7 @@ bind9 dnsutils whois
 snmp snmpd
 
 # Scanners de vulnérabilités
-nessus nessus-plugins nmap zenmap
+nessus nessus-plugins nmap zenmap paros
 
 # Scanners de vulnérabilités web
 nikto
@@ -29,7 +29,7 @@ kismet
 ruby rubygems rails libruby rdoc libyaml-ruby libzlib-ruby libopenssl-ruby libdl-ruby libreadline-ruby libiconv-ruby libgtk2-ruby libglade2-ruby
 
 # Dépendances hydra
-libssh-2-dev
+libssh-2-dev libgtk-dev
 
 # gestion des configurations
 puppet puppetmaster
@@ -57,3 +57,12 @@ freeradius freeradius-krb5 freeradius-ldap freeradius-mysql freeradius-utils
 
 # IDS
 snort snort-doc
+
+# Voip
+asterisk asterisk-prompt-fr
+
+#monitoring
+munin munin-plugins-extra
+
+# Annuaire
+ldap-server phpldapadmin

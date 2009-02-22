@@ -12,7 +12,7 @@ MIRROR="yes"
 
 if [ "${MIRROR}" = "yes" ]
 then
-	MIRROR_DEBIAN="http://localhost:9999/debian"
+	MIRROR_DEBIAN="http://localhost/debian"
 	MIRROR_SECURITY="http://localhost:9999/security"
 else
 	MIRROR_DEBIAN="http://ftp.fr.debian.org/debian"
@@ -28,7 +28,7 @@ lh_config noautoconfig \
 	--bootappend-install " -- locale=fr keyb=fr" \
 	--bootloader grub \
 	--categories "main contrib non-free" \
-	--distribution lenny \
+	--distribution squeeze \
 	--grub-splash splash.xpm.gz \
 	--hostname satan \
 	--initramfs live-initramfs \
