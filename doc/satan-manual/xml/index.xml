@@ -65,6 +65,8 @@ Document Format (PDF).
 
 <!-- Chapters -->
 <xi:include href="chapters/outils.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="chapters/simul.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="chapters/services.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="chapters/about.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="chapters/installation.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="chapters/basics.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>

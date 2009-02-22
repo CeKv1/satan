@@ -14,7 +14,7 @@
 		Les briques présentés permettent par exemple de tester l'attaque contre DNS décrite par Dan Kaminsky dans différentes configurations et avec une architecture <abbrev>DNS</abbrev> complète (root(s) serveur(s), master(s) de zone, cache(s) et forwarder(s)) sur un simple pc sous Linux.
 	</para>
 	<para>
-		Elles peuvent également être mises à contribution pour reproduire l'attaque contre Youtube par Pakistan Telecom (quelle bande de farceurs !)[http://www.ripe.net/news/study-youtube-hijacking.html] ou encore tester l'attaque décrite par Anton Kapela et Alex Pilosov sur le détournement de trafic réseau exploitant les faiblesses de BGP et présentée à la DefCon 2008.
+		Elles peuvent également être mises à contribution pour reproduire l'attaque contre Youtube par Pakistan Telecom (quelle bande de farceurs !) [<ulink url="http://www.ripe.net/news/study-youtube-hijacking.html" />] ou encore tester l'attaque décrite par Anton Kapela et Alex Pilosov sur le détournement de trafic réseau exploitant les faiblesses de BGP et présentée à la DefCon 2008.
 	</para>
 <sect2 id="netkit-presentation">
 	<title>Présentation de Netkit</title>
@@ -227,46 +227,5 @@ HUB_COMMAND="$NETKIT_HOME/bin/uml_switch -tap  -unix $1 &lt;/dev/null 2&gt;&amp;
 	BASH
 		</screen>	
 	</sect3>
-</sect2>
-<sect2 id="passcrackers-thchydra">
-<title>THC Hydra</title>
-<para>
- Il se lance avec la commande <command>hydra</command> et le fichier de conf est <filename>config/chroot</filename> or by the <command>--apt</command> argument to <filename>lh_config</filename>:
-</para>
-
-<variablelist>
-
-<varlistentry><term><command>brute</command></term>
-<listitem>
-<para>
-mode brute force
-</para>
-</listitem>
-</varlistentry>
-
-<varlistentry><term><command>gentil</command></term>
-<listitem>
-<para>
-le mode gentil
-</para>
-<para>
-il est vraiment gentil
-</para>
-</listitem>
-</varlistentry>
-</variablelist>
-
-</sect2>
-<sect2 id="lh-packages">
-<title>The <command>LH_PACKAGES</command> variable</title>
-<screen>
-$ lh_config --packages "package1 package2 package3"
-</screen>
-
-<para>le comportement de   est blabla. voir <xref linkend="passcrackers-johntheripper"/> for more details.</para>
-
-<para>
- If you need to specify a large number of packages to be installed or you need flexibility regarding which packages to install, you should probably be using package lists. See <xref linkend="package-lists"/> for more information.
-</para>
 </sect2>
 </sect1>

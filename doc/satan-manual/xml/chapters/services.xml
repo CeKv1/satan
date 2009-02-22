@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
+]>
+<chapter id="services">
+<title>Les services</title>
+
+<xi:include href="services/bd.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="services/http.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="services/voip.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="services/dns.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="services/auth.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="services/supervision.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="services/network.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+</chapter>

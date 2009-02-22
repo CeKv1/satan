@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
+]>
+<sect1 id="dns">
+	<title>DNS</title>
+	<para>
+	DNS
+	</para>
+<sect2 id="dns-bind">
+	<title>Bind</title>
+	<para>
+	Bind
+	</para>
+</sect2>
+</sect1>
