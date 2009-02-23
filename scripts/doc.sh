@@ -26,7 +26,7 @@ then
 	debuild clean
 	mv ${DOC_BASE}/satan*.deb ${SH_BASE}/config/chroot_local-packages
 
-	cp -a ${DOC_BASE}/satan-manual/img/* ${DOC_BASE}/../config/chroot_local-includes/usr/share/doc/satan-manual/html/img/	
+	cp -R ${DOC_BASE}/satan-manual/img/ ${DOC_BASE}/../config/chroot_local-includes/usr/share/doc/satan-manual/html/	
 	rm -rf ${DOC_BASE}/satan-manual_*
 	cd ${SH_BASE}
 

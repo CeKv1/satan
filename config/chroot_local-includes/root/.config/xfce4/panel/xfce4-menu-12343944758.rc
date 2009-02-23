@@ -1,7 +1,0 @@
-use_default_menu=false
-menu_file=/root/.config/xfce4/desktop/menu2.xml
-icon_file=/usr/share/pixmaps/xfce4_xicon1.png
-show_menu_icons=true
-button_title=Menu Xfce
-show_button_title=false
-
