@@ -10,14 +10,16 @@
 	</para>
 <sect2 id="auth-ldap">
 	<title>ldap</title>
-	<para>
-	ldap
-	</para>
+	<itemizedlist>
+		<listitem><para><ulink url="http://www.openldap.org/">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/LDAP">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
 </sect2>
 <sect2 id="auth-freeradius">
 	<title>freeradius</title>
-	<para>
-	freeradius
-	</para>
+	<itemizedlist>
+		<listitem><para><ulink url="http://freeradius.org/">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/FreeRADIUS">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
 </sect2>
 </sect1>

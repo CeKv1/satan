@@ -73,7 +73,7 @@ then
 
         umount ${LS_DEVICE}1 | exit 0
         umount ${LS_DEVICE}2 | exit 0
-        mkfs.vfat -F 32 ${LS_DEVICE}"1"
+        mkfs.vfat -F 16 ${LS_DEVICE}"1"
 	mkfs.ext2 ${LS_DEVICE}"2" -L "satan"
 fi
 

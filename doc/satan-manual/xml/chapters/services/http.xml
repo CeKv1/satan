@@ -10,14 +10,16 @@
 	</para>
 <sect2 id="http-apache2">
 	<title>apache2</title>
-	<para>
-	apache2
-	</para>
+	<itemizedlist>
+		<listitem><para><ulink url="http://httpd.apache.org/">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/Apache_HTTP_Server">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
 </sect2>
 <sect2 id="http-squid">
 	<title>Squid</title>
-	<para>
-	Squid
-	</para>
+	<itemizedlist>
+		<listitem><para><ulink url="http://www.squid-cache.org/">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/Squid">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
 </sect2>
 </sect1>

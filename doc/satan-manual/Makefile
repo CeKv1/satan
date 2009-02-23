@@ -21,6 +21,7 @@ build: clean all
 	done
 
 	cp css/* $(AUTOBUILD)
+	cp img/* $(AUTOBUILD)
 
 po4a:
 	po4a -k 0 po4a/live-manual.cfg;

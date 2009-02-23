@@ -28,8 +28,8 @@ source.packages
 dl
 dl/*
 
-config/chroot_local-includes/usr/share/framework-3.1
-config/chroot_local-includes/usr/share/framework-3.1/*
+config/chroot_local-includes/usr/share/framework-3.2
+config/chroot_local-includes/usr/share/framework-3.2/*
 config/chroot_local-includes/usr/share/hydra-5.4-src
 config/chroot_local-includes/usr/share/hydra-5.4-src/*
 config/chroot_local-includes/usr/share/hydra-libssh0.2.patch

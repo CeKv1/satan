@@ -1,7 +1,7 @@
 use_default_menu=false
-menu_file=/home/etu/.config/xfce4/desktop/Scanners.xml
+menu_file=/root/.config/xfce4/desktop/Scanners.xml
 icon_file=/usr/share/pixmaps/Menu/Scanners2.png
 show_menu_icons=true
-button_title=Scanners
+button_title=Scanners & Sniffers
 show_button_title=false
 

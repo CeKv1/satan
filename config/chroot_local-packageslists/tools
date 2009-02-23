@@ -29,7 +29,7 @@ kismet
 ruby rubygems rails libruby rdoc libyaml-ruby libzlib-ruby libopenssl-ruby libdl-ruby libreadline-ruby libiconv-ruby libgtk2-ruby libglade2-ruby
 
 # Dépendances hydra
-libssh-2-dev libgtk-dev
+libssh-2-dev libgtk2.0-dev
 
 # gestion des configurations
 puppet puppetmaster

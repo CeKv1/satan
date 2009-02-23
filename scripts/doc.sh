@@ -25,7 +25,8 @@ then
 	dpkg-buildpackage -rfakeroot -us -uc
 	debuild clean
 	mv ${DOC_BASE}/satan*.deb ${SH_BASE}/config/chroot_local-packages
-	
+
+	cp -a ${DOC_BASE}/satan-manual/img/* ${DOC_BASE}/../config/chroot_local-includes/usr/share/doc/satan-manual/html/img/	
 	rm -rf ${DOC_BASE}/satan-manual_*
 	cd ${SH_BASE}
 
@@ -41,7 +42,9 @@ then
 	DOC_BASE="$(pwd)/../doc"
 	cd ${DOC_BASE}/satan-manual
 	make clean
+	rm -rf ${DOC_BASE}/../config/chroot_local-includes/usr/share/doc/satan-manual/html/img/*	
 	rm -rf ${DOC_BASE}/satan-manual_*
+
 else
 	Echo "Usage : ./doc make|clean"	
 fi

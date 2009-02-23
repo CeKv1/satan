@@ -1,5 +1,5 @@
 use_default_menu=false
-menu_file=/home/etu/.config/xfce4/desktop/Supervision.xml
+menu_file=/root/.config/xfce4/desktop/Supervision.xml
 icon_file=/usr/share/pixmaps/Menu/Supervision.PNG
 show_menu_icons=true
 button_title=Supervision

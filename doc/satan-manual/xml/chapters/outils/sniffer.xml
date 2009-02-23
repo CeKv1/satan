@@ -3,7 +3,7 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
 ]>
-<sect1 id="sniffer)">
+<sect1 id="sniffer">
 <title>Les outils pour récupéré les trames circulant sur le réseaux</title>
 
 <para>

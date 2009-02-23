@@ -31,8 +31,8 @@ HYDRA_PATCH_URL="http://0xbadc0de.be/libssh/hydra-libssh0.2.patch"
 HYDRA_PATCH="hydra-libssh0.2.patch"
 
 # Metasploit
-MSF_URL="http://sugar.metasploit.com/releases/framework-3.1.tar.gz"
-MSF="framework-3.1.tar.gz"
+MSF_URL="http://spool.metasploit.com/releases/framework-3.2.tar.gz"
+MSF="framework-3.2.tar.gz"
 
 mkdir -p dl
 cd dl

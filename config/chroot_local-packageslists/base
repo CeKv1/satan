@@ -1,6 +1,6 @@
 # base 
 # packages list for live-helper(7) with basic LAMP
-
+gksu
 # l10n
 locales
 

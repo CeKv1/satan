@@ -30,7 +30,7 @@
 			<property name="screen-position" value="8"/>
 			<property name="fullwidth" value="0"/>
 			<property name="xoffset" value="1229"/>
-			<property name="yoffset" value="146"/>
+			<property name="yoffset" value="171"/>
 			<property name="handlestyle" value="0"/>
 			<property name="autohide" value="0"/>
 			<property name="transparency" value="20"/>
@@ -48,7 +48,6 @@
 			<item name="xfce4-menu" id="12343869913"/>
 			<item name="xfce4-menu" id="12343870075"/>
 			<item name="xfce4-menu" id="12343869812"/>
-			<item name="xfce4-menu" id="12343869984"/>
 		</items>
 	</panel>
 </panels>

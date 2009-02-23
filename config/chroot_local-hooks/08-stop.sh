@@ -4,7 +4,7 @@ echo "###################"
 echo "####### 08 ########"
 echo "###################"
 
-ARRAY=( 'mysql' 'apache2' 'bind9' 'puppet' 'puppetmaster' 'ssh' 'pimd' 'samba' 'freeradius' 'squid' 'snmpd' 'quagga' 'ipsec' 'snort' 'asterisk' 'slapd')
+ARRAY=( 'mysql' 'apache2' 'bind9' 'puppet' 'puppetmaster' 'ssh' 'pimd' 'samba' 'freeradius' 'squid' 'snmpd' 'quagga' 'ipsec' 'snort' 'asterisk' 'slapd' 'munin-node')
 ELEMENTS=${#ARRAY[@]}
 for (( i=0;i<$ELEMENTS;i++))
 do
