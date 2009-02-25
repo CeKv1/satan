@@ -1,68 +1,181 @@
-# Capture
-wireshark tcpdump ssldump tcpreen ettercap  netcat
+###################################################################
+##	                   Utilitaires                           ##
+###################################################################
 
-# Forgeur de paquet
-hping3 dsniff sendip python-scapy
+## Génération de traffic
 
-# Administration par le port série
-minicom gtkterm
+# iperf
+iperf
+# netcat
+netcat
+# itrafgen
+# cryptcat
 
-# Serveur DNS
-bind9 dnsutils whois
+## Wi-Fi
+# Kismet
+kismet
+# Aircrack
+aircrack-ng
 
+## Manipulation de paquets
+# Hping
+hping3
+# Dsniff
+dsniff
+# Sendip
+sendip 
+# Scapy
+python-scapy
+# Nemesis
+nemesis
+
+## Réseaux
+# netwox
+netwox netwox-doc netwag netwag-doc
+
+## Calcul de masque
+# sipcalc
+sipcalc
+
+## performance des réseaux
+# netperf
+netperf
+# httperf
+httperf
+
+
+###################################################################
+##	                   Administration                        ##
+###################################################################
+
+## Monitoring
+# munin
+munin munin-node munin-plugins-extra
+
+## Gestion des configurations
+# puppet
+puppet puppetmaster
+
+## Capture
+# Wireshark
+wireshark 
+# tcpdump
+tcpdump ssldump 
+# tcpreen
+tcpreen 
+# ettercap  
+ettercap
+# sniffit
+sniffit
+# ngrep
+ngrep
+
+## Supervision
+# Client / Serveur virtuel
+xvnc4viewer  vnc4server
+# OpenSSH
+openssh-client openssh-server 
+# telnet
+telnet
+
+## Administration par le port série
+# gtkterm
+gtkterm
+
+## Administration des équipements
 # SNMP
 snmp snmpd
 
-# Scanners de vulnérabilités
-nessus nessus-plugins nmap zenmap paros
+# Services  DNS
+# bind
+bind9 dnsutils whois
 
-# Scanners de vulnérabilités web
-nikto
+## Serveur HTTP
+# Apache
+apache2 
+# PHP
+libapache2-mod-php5
 
-# Brute force
-john
+## Serveur de fichiers
+# FTP
+ftp ftpd
+# TFTP
+tftp tftpd
 
-# Wi-Fi
-kismet
+## Base de données
+# Mysql
+mysql-server-5.0
+
+## Partage windows
+# samba
+samba
+
+## Proxy applicatif
+# squid
+squid
+
+## IPsec
+# openswan
+openswan
+
+## Authentification
+# freeradius
+freeradius freeradius-krb5 freeradius-ldap freeradius-mysql freeradius-utils
+
+## Voip
+# asterisk
+asterisk asterisk-prompt-fr
+
+## Annuaire
+# openldap
+ldap-server phpldapadmin
+
+## Routage
+# quagga
+quagga quagga-doc
+# Support multicast
+pimd
+# support du 802.1q
+vlan
+# interfaces virtuelles
+bridge-utils
+
+
+###################################################################
+##                            Sécurité                           ##
+###################################################################
+
+## Détection d'intrusion
+# snort
+snort snort-doc
+
+## Scanners de vulnérabilités
+# nessus
+nessus nessus-plugins 
+# nmap
+nmap zenmap 
 
 # Dépendances metasploit
 ruby rubygems rails libruby rdoc libyaml-ruby libzlib-ruby libopenssl-ruby libdl-ruby libreadline-ruby libiconv-ruby libgtk2-ruby libglade2-ruby
 
+## Scanners de vulnérabilités web
+# nikto
+nikto
+# paros
+paros
+
+## Brute force
+# John the Ripper
+john
 # Dépendances hydra
 libssh-2-dev libgtk2.0-dev
 
-# gestion des configurations
-puppet puppetmaster
+###################################################################
+##                       Simulation réseaux                      ##
+###################################################################
 
-# FTP
-ftp ftpd
+# gns
+gns3
 
-# TFTP
-tftp tftpd
-
-# samba
-samba
-
-# Proxy
-squid
-
-# Support multicast
-pimd
-
-# IPsec
-openswan
-
-# Radius
-freeradius freeradius-krb5 freeradius-ldap freeradius-mysql freeradius-utils
-
-# IDS
-snort snort-doc
-
-# Voip
-asterisk asterisk-prompt-fr
-
-#monitoring
-munin munin-plugins-extra
-
-# Annuaire
-ldap-server phpldapadmin
+#Dépendances visualnetkit
+libqt4-dev g++ 

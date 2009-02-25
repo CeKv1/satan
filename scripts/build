@@ -42,7 +42,11 @@ cd dl
 wget -N -c ${NETKIT_URL}
 wget -N -c ${NETKIT_KER_URL}
 wget -N -c ${NETKIT_FS_URL}
-wget -N -c ${VNETKIT_URL}
+## Les serveurs de google ne support pas la reprise de téléchargement
+if [ ! -e ${VNETKIT} ]
+then
+	wget - ${VNETKIT_URL}
+fi
 # hydra
 wget -N -c ${LIBSSH_URL}
 wget -N -c ${HYDRA_URL}

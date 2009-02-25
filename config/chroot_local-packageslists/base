@@ -1,53 +1,35 @@
-# base 
-# packages list for live-helper(7) with basic LAMP
-gksu
-# l10n
+## Gestion des privilèges
+gksu sudo
+
+## Localisation
 locales
 
-# editeur 
-vim-full
-
-# Système de fichier
+## Système de fichier
+# NTFS
 ntfs-3g
 
-# Shell distant
-openssh-client openssh-server telnet
-
-# Navigateur
+## Navigateur
+# Firefox
 iceweasel iceweasel-l10n-fr
 
-# Utilitaire hardware
-gparted partimage 
-
+## Traitement de texte
+# vim
+vim-full
+# OpenOffice.Org
+openoffice.org-writer openoffice.org-l10n-fr openoffice.org-spellcheck-fr-fr 
 # Monitoring des ressources
 htop
 
-# support du 802.1q
-vlan
 
-# interface virtuel
-bridge-utils
-
-# Serveur de base de données
-mysql-server-5.0
-
-# Administration bd
-#phpmyadmin
-
-# Serveur web avec support php
-apache2 libapache2-mod-php5
-
-# Machine Java
+## Machine Java
+# Sun
 sun-java6-jre sun-java6-plugin sun-java6-jdk
 
 # Dépendances paros
-libjline-java libxtst6 libcommons-codec-java libcommons-collections3-java libcommons-configuration-java libcommons-httpclient-java libcommons-lang-java libcommons-logging-java libhsqldb-java libjdic-bin libjdic-java liblog4j1.2-java libservlet2.3-java libservlet2.4-java
-
-# Dépendances visualnetkit
-libqt4-dev g++
+#libjline-java libxtst6 libcommons-codec-java libcommons-collections3-java libcommons-configuration-java libcommons-httpclient-java libcommons-lang-java libcommons-logging-java libhsqldb-java libjdic-bin libjdic-java liblog4j1.2-java libservlet2.3-java libservlet2.4-java
 
 # Librairies
-perl python gcc colorgcc make libssl-dev patch lsof
+perl python g++ gcc colorgcc make libssl-dev patch lsof
 
 # Enregistrement vidéo
 recordmydesktop gtk-recordmydesktop

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
+]>
+<sect1 id="gen_traffic">
+	<title>Génération de traffic</title>
+	<para>
+	Génération de traffic
+	</para>
+<sect2 id="gen_traffic-iperf">
+	<title>iperf</title>
+	<itemizedlist>
+		<listitem><para><ulink url="http://www.openldap.org/">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/LDAP">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
+</sect2>
+<sect2 id="gen_traffic-netcat">
+	<title>netcat</title>
+	<itemizedlist>
+		<listitem><para><ulink url="http://freeradius.org/">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/FreeRADIUS">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
+</sect2>
+</sect1>

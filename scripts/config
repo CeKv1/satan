@@ -45,10 +45,9 @@ lh_config noautoconfig \
 	--mirror-binary-security http://security.debian.org/ \
 	--mirror-chroot ${MIRROR_DEBIAN} \
 	--mirror-chroot-security ${MIRROR_SECURITY} \
-	--packages-lists "base graphic simulation standard tools" \
-	--security enabled \
+	--packages-lists "base graphic tools" \
+	--security disabled \
 	--union-filesystem aufs \
 	--username etu  \
 	--verbose \
 	${@}
-

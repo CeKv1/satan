@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
+]>
+<sect1 id="capture">
+	<title>Capture</title>
+	<para>
+	Capture
+	</para>
+<sect2 id="capture-wireshark">
+	<title>Wireshark</title>
+	<itemizedlist>
+		<listitem><para><ulink url="http://www.wireshark.org/">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/Wireshark">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
+</sect2>
+<sect2 id="capture-tcpdump">
+	<title>tcpdump</title>
+	<itemizedlist>
+		<listitem><para><ulink url="http://www.tcpdump.org/">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/Tcpdump">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
+</sect2>
+<sect2 id="capture-ssldump">
+	<title>ssldump</title>
+	<itemizedlist>
+		<listitem><para><ulink url="http://www.rtfm.com/ssldump/">Documentation officielle</ulink></para></listitem>
+	</itemizedlist>
+</sect2>
+<sect2 id="capture-tcpreen">
+	<title>tcpreen</title>
+	<itemizedlist>
+		<listitem><para><ulink url="http://www.remlab.net/tcpreen/">Documentation officielle</ulink></para></listitem>
+	</itemizedlist>
+</sect2>
+<sect2 id="capture-ethercap">
+	<title>ethercap</title>
+	<itemizedlist>
+		<listitem><para><ulink url="http://www.sqlite.org/">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/SQLite">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
+</sect2>
+<sect2 id="capture-sniffit">
+	<title>sniffit</title>
+	<itemizedlist>
+		<listitem><para><ulink url="http://sniffit.sourceforge.net/">Documentation officielle</ulink></para></listitem>
+	</itemizedlist>
+</sect2>
+<sect2 id="capture-ngrep">
+	<title>ngrep</title>
+	<itemizedlist>
+		<listitem><para><ulink url="http://ngrep.sourceforge.net/">Documentation officielle</ulink></para></listitem>
+	</itemizedlist>
+</sect2>
+</sect1>

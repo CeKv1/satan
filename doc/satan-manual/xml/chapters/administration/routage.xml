@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
+]>
+<sect1 id="routage">
+	<title>Routage</title>
+	<para>
+	Routage
+	</para>
+<sect2 id="routage-quagga">
+	<title>quagga</title>
+	<itemizedlist>
+		<listitem><para><ulink url="https://www.isc.org/software/bind">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/BIND">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
+</sect2>
+<sect2 id="routage-pimd">
+	<title>Multicast</title>
+	<itemizedlist>
+		<listitem><para><ulink url="https://www.isc.org/software/bind">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/BIND">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
+</sect2>
+<sect2 id="routage-vlan">
+	<title>vlan 802.1q</title>
+	<itemizedlist>
+		<listitem><para><ulink url="https://www.isc.org/software/bind">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/BIND">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
+</sect2>
+<sect2 id="routage-bridge">
+	<title>bridge</title>
+	<itemizedlist>
+		<listitem><para><ulink url="https://www.isc.org/software/bind">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/BIND">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
+</sect2>
+</sect1>
