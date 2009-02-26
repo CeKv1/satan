@@ -35,7 +35,7 @@ then
 	DOC_BASE="$(pwd)/../doc"
 	cd ${DOC_BASE}/satan-manual
 	make 
-	Echo "La documentation est disponible dans satan-maual : index.html, satan-manual.pdf, satan-manual.txt"
+	Echo "La documentation est disponible dans satan-manual : index.html, satan-manual.pdf, satan-manual.txt"
 
 elif [ "${METHODE}" = "clean" ]
 then

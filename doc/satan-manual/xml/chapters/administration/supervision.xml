@@ -22,14 +22,89 @@
 	</para>
 <sect2 id="supervision-munin">
 	<title>Munin</title>
+	<itemizedlist>
+		<listitem><para><ulink url="http://munin.projects.linpro.no/">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/Munin_(Surveillance_syst%C3%A8me_et_r%C3%A9seau)">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
 	<para>
-		Netkit [<ulink url="http://www.netkit.org" />] est un logiciel libre sous licence GPL développé par le groupe "computer network research" de l'université de Rome3 et par le LUG (Linux user Group) "Roma 3"
-	</para>
-	<para>
-		Munin est un outil de surveillance système et réseau open source sous licence publique générale GNU[1], basé sur l'outil RRDtool.
-	</para>
-	<para>
-	Il présente ses résultats sous forme de graphiques disponibles via une interface web. Il possède une structure de plugins particulièrement simple qui permet d'enrichir rapidement l'outil. [<ulink url="http://muninexchange.projects.linpro.no/" />]
+	Munin est un logiciel de monitoring. Il permet de tracer des graphiques à partir des informations reçues par dautre machines. Munin fonctionne donc sur le principe client/serveur.	
 	</para>
 </sect2>
+<sect3 id="supervision-munin-serveur">
+	<title>Munin</title>
+	<para>
+	Le fichier de configuration de grapheur Munin est <filename>/etc/munin/munin.conf</filename>. Il suffit d'y indiquer quels hôtes il doit surveiller tel que :
+	</para>
+	<screen>
+	[localhost.localdomain]
+	    address 127.0.0.1
+	    use_node_name yes
+
+	[web.localdomain]
+	    address 192.168.10.2
+	    use_node_name yes
+	</screen>
+	<para>
+	La périodicité des relevés est éditable dans le fichier <filename>/etc/cron.d/munin</filename>
+	</para>
+</sect3>
+<sect3 id="supervision-munin-cient">
+	<title>Munin-node</title>
+	<para>
+	Le fichier de configuration de Munin-node est <filename>/etc/munin/munin-node.conf</filename>. Il faut y indiquer l'adresse du serveur munin pour l'autoriser à relever les mesures :
+	</para>
+	<screen>
+	allow ^1i92\.168\.10\.3$
+	</screen>
+	<para>
+	Munin-node fonctionne avec des plugins (139) qui sont dans <filename class="directory">/usr/share/munin/plugins/</filename>. Il suffit de faire des liens symboliques des plugins à activer vers <filename class="directory">/etc/munin/plugins/</filename> tel que :
+	</para>
+	<screen>
+$ cd /etc/munin/plugins/
+$ ln -s /usr/share/munin/plugins/Leplugin 
+$ /etc/init.d/munin-node restart
+	</screen>
+</sect3>
+<sect3 id="supervision-munin-apache">
+	<title>Exemples</title>
+	<para>
+	Monitoring de la température, charge système (load average), traffic d'une interface :
+	</para>
+	<screen>
+$ cd /etc/munin/plugins/
+$ ln -s /usr/share/munin/plugins/acpi
+$ ln -s /usr/share/munin/plugins/load
+$ ln -s /usr/share/munin/plugins/if_
+$ /etc/init.d/munin-node restart
+	</screen>
+	<para>
+	Le résultat est visible sur le serveur munin <ulink url="http://addreseIPmunin/munin/"/>. Les graphs suivant ont été générés lors de la création de ce Live USB. On constate un pic de température (85°C) lors de la compression du sytème de fichier squahfs qui concorde avec la monté de la charge. On y voie également le traffic causé par le téléchargement de tout les paquets (le traffic est négatif car les paquets sont téléchargés sur un mirroir local).
+	</para>
+	
+	<mediaobject>
+  			<imageobject>
+    				<imagedata fileref="img/localdomain-acpi-day.png" format="PNG"/>
+  			</imageobject>
+  			<textobject>
+    				<phrase>Température</phrase>
+  			</textobject>
+	</mediaobject>
+	<mediaobject>
+  			<imageobject>
+    				<imagedata fileref="img/localdomain-if_eth0-day.png" format="PNG"/>
+  			</imageobject>
+  			<textobject>
+    				<phrase>Traffic</phrase>
+  			</textobject>
+	</mediaobject>
+	<mediaobject>
+  			<imageobject>
+    				<imagedata fileref="img/localdomain-load-day.png" format="PNG"/>
+  			</imageobject>
+  			<textobject>
+    				<phrase>Charge</phrase>
+  			</textobject>
+	</mediaobject>
+
+</sect3>
 </sect1>

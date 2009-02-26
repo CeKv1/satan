@@ -4,9 +4,10 @@
   <!ENTITY % commondata SYSTEM "entities/common.ent" > %commondata;
   <!ENTITY % versiondata SYSTEM "entities/version.ent"> %versiondata;
 ]>
-<book lang="en">
+<book lang="fr">
 
-<title>Debian Live Manual</title>
+<title>SATAN</title>
+<subtitle>Simulations And Tools To Administrate Networks</subtitle>
 <bookinfo>
 <author>
  <othername>The Debian Live Project</othername>
