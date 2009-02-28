@@ -42,7 +42,7 @@ then
 	DOC_BASE="$(pwd)/../doc"
 	cd ${DOC_BASE}/satan-manual
 	make clean
-	rm -rf ${DOC_BASE}/../config/chroot_local-includes/usr/share/doc/satan-manual/html/img/*	
+	#rm -rf ${DOC_BASE}/../config/chroot_local-includes/usr/share/doc/satan-manual/html/img/*	
 	rm -rf ${DOC_BASE}/satan-manual_*
 
 else

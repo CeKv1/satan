@@ -30,7 +30,7 @@
 
 <copyright>
  <year>2008-2009</year>
- <holder>The Debian Live Project, Yohann Lepage, Vincent Palierne</holder>
+ <holder>Yohann Lepage, Vincent Palierne, The Debian Live Project</holder>
 </copyright>
 
 <legalnotice>
@@ -47,16 +47,12 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 </para>
 <para>
-A copy of the GNU General Public License is available as
-<filename>/usr/share/common-licenses/GPL</filename> in the Debian GNU/Linux
-distribution or on the World Wide Web at
-<ulink url="http://www.gnu.org/copyleft/gpl.html">the GNU web site</ulink>.
-You can also obtain it by writing to the Free Software Foundation, Inc., 59
+Une copie de la licence GNU General Public Licence est disponible dans
+<filename>/usr/share/common-licenses/GPL</filename> dans la distribution Debian GNU/linux
+ou sur le site internet
+<ulink url="http://www.gnu.org/copyleft/gpl.html">GNU</ulink>.
+Vous pouvez également l'obtenir en écrivant à Free Software Foundation, Inc., 59
 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
-</para>
-<para>
-If you want to print this reference, this document is also available in Portable
-Document Format (PDF).
 </para>
 </legalnotice>
 </bookinfo>

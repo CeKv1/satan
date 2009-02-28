@@ -39,4 +39,5 @@ config/chroot_local-includes/usr/share/netkit
 config/chroot_local-includes/usr/share/netkit/*
 config/chroot_local-includes/usr/share/visualnetkit-1.4
 config/chroot_local-includes/usr/share/visualnetkit-1.4/*
+config/chroot_local-includes/usr/share/ios/*
 

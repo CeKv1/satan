@@ -6,7 +6,7 @@ locales
 
 ## Système de fichier
 # NTFS
-ntfs-3g
+ntfs-3g console-tools
 
 ## Navigateur
 # Firefox

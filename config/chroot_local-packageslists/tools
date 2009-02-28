@@ -105,7 +105,8 @@ tftp tftpd
 ## Base de données
 # Mysql
 mysql-server-5.0
-
+# Phpmyadmin dépendances
+debconf perl  php5-mcrypt php5-mysql php5-gd
 ## Partage windows
 # samba
 samba
