@@ -90,8 +90,8 @@ cp  -a   ${HYDRA_PATCH}  ../config/chroot_local-includes/usr/share/
 # Metasploit
 tar -xzf ${MSF} -C ../config/chroot_local-includes/usr/share/
 # PHPmyadmin
-tar -xzf ${PHPM} -C ../config/chroot_local-includes/var/www/
 mkdir -p ../config/chroot_local-includes/var/www
+tar -xzf ${PHPM} -C ../config/chroot_local-includes/var/www/
 mv ../config/chroot_local-includes/var/www/phpMyAdmin-3.1.3-rc1-all-languages ../config/chroot_local-includes/var/www/phpmyadmin
 # IOS
 cp -u ${IOS1} ../config/chroot_local-includes/usr/share/ios/ 
