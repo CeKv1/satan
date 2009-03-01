@@ -6,5 +6,83 @@
 <chapter id="chapitre1-ProjetSATAN">
 <title>Le Projet</title>
 
-
+<sect1 id="origines">
+	<title>Les origines du projet</title>
+	<para>
+	</para>
+</sect1>
+<sect1 id="remise_en_cause">
+	<title>Remise en cause du projet R&amp;Tools</title>
+	<para>
+	</para>
+	<sect2 id="a_conserver">
+		<title>Les éléments à conserver</title>
+		<para>
+		</para>
+	</sect2>
+	<sect2 id="a_enlever">
+		<title>Les éléments à modifier</title>
+		<para>
+		</para>
+	</sect2>
+</sect1>
+<sect1 id="trousse_a_outils">
+	<title>Trousse à outils</title>
+	<para>
+	</para>
+	<sect2 id="kit">
+		<title>Quels sont les outils et pourquoi ceux là ?</title>
+		<para>
+		</para>
+	</sect2>
+	<sect2 id="methode">
+		<title>Comment les utilise-t-on ?</title>
+		<para>
+		</para>
+	</sect2>
+	<sect2 id="maj">
+		<title>Comment mettre à jour les outils ?</title>
+		<para>
+		</para>
+	</sect2>
+	<sect2 id="reproduire">
+		<title>Comment reproduire les clefs ?</title>
+		<para>
+		</para>
+	</sect2>
+</sect1>
+<sect1 id="demarche_projet">
+	<title>La démarche projet</title>
+	<sect2 id="etc">
+		<title>Contraintes, Ressources, Planning</title>
+		<sect3 id="contraintes">
+			<title>Contraintes</title>
+			<para>
+			</para>
+		</sect3>
+		<sect3 id="ressources">
+			<title>Ressources</title>
+			<para>
+			</para>
+		</sect3>
+		<sect3 id="planning">
+			<title>Planning</title>
+			<para>
+			</para>
+		</sect3>
+	</sect2>
+	<sect2 id="etc2">
+		<title>Reporting, Evolution</title>
+		<sect3 id="reporting">
+			<title>Reporting</title>
+			<para>
+			</para>
+		</sect3>
+		<sect3 id="evolutions">
+			<title>Evolutions</title>
+			<para>
+			</para>
+		</sect3>
+	</sect2>
+</sect1>
 </chapter>

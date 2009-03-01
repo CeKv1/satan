@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE appendix PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
+]>
+
+<appendix id="configuration-files">
+<title>Fichiers de configuration</title>
+
+<section id="scripts/clean">
+<title>Fichier <filename>scripts/clean</filename></title>
+   <programlistingco>
+          <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../scripts/clean" parse="text" encoding="utf-8"/></programlisting>
+        </programlistingco>
+</section>
+<section id="scripts/config">
+<title>Fichier <filename>scripts/config</filename></title>
+   <programlistingco>
+          <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../scripts/config" parse="text" encoding="utf-8"/></programlisting>
+        </programlistingco>
+</section>
+<section id="scripts/build">
+<title>Fichier <filename>scripts/build</filename></title>
+   <programlistingco>
+          <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../scripts/build" parse="text" encoding="utf-8"/></programlisting>
+        </programlistingco>
+</section>
+<section id="scripts/doc.sh">
+<title>Fichier <filename>scripts/doc.sh</filename></title>
+   <programlistingco>
+          <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../scripts/doc.sh" parse="text" encoding="utf-8"/></programlisting>
+        </programlistingco>
+</section>
+
+</appendix>

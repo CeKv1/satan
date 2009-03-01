@@ -6,5 +6,24 @@
 <chapter id="conclusion">
 	<title>Conclusion</title>
 
-
+<sect1 id="avenir">
+	<title>Avenir du projet</title>
+	<para>
+	</para>
+</sect1>
+<sect1 id="vivre">
+	<title>Comment faire vivre ce projet</title>
+	<para>
+	</para>
+	<sect2 id="partie_systeme">
+		<title>Partie système</title>
+		<para>
+		</para>
+	</sect2>
+	<sect2 id="partie_methode">
+		<title>Partie méthode</title>
+		<para>
+		</para>
+	</sect2>
+</sect1>
 </chapter>

@@ -44,6 +44,9 @@ then
 	make clean
 	#rm -rf ${DOC_BASE}/../config/chroot_local-includes/usr/share/doc/satan-manual/html/img/*	
 	rm -rf ${DOC_BASE}/satan-manual_*
+	# Nettoyage des annexes
+	rm -rf ${DOC_BASE}/satan-manual/config/
+	rm -rf ${DOC_BASE}/satan-manual/scripts/
 
 else
 	Echo "Usage : ./doc make|clean"	

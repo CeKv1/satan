@@ -5,7 +5,19 @@
 ]>
 <chapter id="chapitre2-Installation">
 <title>Création et configuration du support de projet</title>
-
-
-
+<sect1 id="chap2-installation">
+	<title>Installation</title>
+	<para>
+	</para>
+</sect1>
+<sect1 id="chap2-duplication">
+	<title>Duplication</title>
+	<para>
+	</para>
+</sect1>
+<sect1 id="chap2-maj">
+	<title>Mise à jour</title>
+	<para>
+	</para>
+</sect1>
 </chapter>

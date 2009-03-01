@@ -69,5 +69,7 @@ Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 <xi:include href="chapters/chapitre-Documentation.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="appendices/configuration-layout.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="appendices/configuration-files.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="appendices/satan-scripts.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="appendices/satan-hooks.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 
 </book>

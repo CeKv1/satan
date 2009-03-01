@@ -8,10 +8,9 @@
 
 /* --- Whole-Page --- */
 body {
-    margin: 0;
-    padding: 0;
+    margin: 2px;
+    padding: 2px;
     font-family: "DejaVu Sans", "Bitstream Vera Sans", sans-serif; /*Prefer Free Fonts*/
-    background: #fff url('image.png') no-repeat 10px 7px;
     color: #000;
     font-size: 100%;
 }
@@ -197,6 +196,9 @@ a.feedlink { /* Little orange RSS button */
 
 ul { list-style-type: none; padding: 0; }
 li { margin-top: 0.2em; }
+pre {
+    background-color: #f5f5f5;
+} 
 /*li { margin-top: 0.4em; }
 td > ul { padding-left: 1em; }
 a.none { color: #000 !important; text-decoration: none !important; }*/
