@@ -3,54 +3,54 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
 ]>
-<sect1 id="capture">
+<sect2 id="capture">
 	<title>Capture</title>
 	<para>
 	Capture
 	</para>
-<sect2 id="capture-wireshark">
+<sect3 id="capture-wireshark">
 	<title>Wireshark</title>
 	<itemizedlist>
 		<listitem><para><ulink url="http://www.wireshark.org/">Documentation officielle</ulink></para></listitem>
 		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/Wireshark">Wikipedia</ulink></para></listitem>
 	</itemizedlist>
-</sect2>
-<sect2 id="capture-tcpdump">
+</sect3>
+<sect3 id="capture-tcpdump">
 	<title>tcpdump</title>
 	<itemizedlist>
 		<listitem><para><ulink url="http://www.tcpdump.org/">Documentation officielle</ulink></para></listitem>
 		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/Tcpdump">Wikipedia</ulink></para></listitem>
 	</itemizedlist>
-</sect2>
-<sect2 id="capture-ssldump">
+</sect3>
+<sect3 id="capture-ssldump">
 	<title>ssldump</title>
 	<itemizedlist>
 		<listitem><para><ulink url="http://www.rtfm.com/ssldump/">Documentation officielle</ulink></para></listitem>
 	</itemizedlist>
-</sect2>
-<sect2 id="capture-tcpreen">
+</sect3>
+<sect3 id="capture-tcpreen">
 	<title>tcpreen</title>
 	<itemizedlist>
 		<listitem><para><ulink url="http://www.remlab.net/tcpreen/">Documentation officielle</ulink></para></listitem>
 	</itemizedlist>
-</sect2>
-<sect2 id="capture-ethercap">
+</sect3>
+<sect3 id="capture-ethercap">
 	<title>ethercap</title>
 	<itemizedlist>
 		<listitem><para><ulink url="http://www.sqlite.org/">Documentation officielle</ulink></para></listitem>
 		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/SQLite">Wikipedia</ulink></para></listitem>
 	</itemizedlist>
-</sect2>
-<sect2 id="capture-sniffit">
+</sect3>
+<sect3 id="capture-sniffit">
 	<title>sniffit</title>
 	<itemizedlist>
 		<listitem><para><ulink url="http://sniffit.sourceforge.net/">Documentation officielle</ulink></para></listitem>
 	</itemizedlist>
-</sect2>
-<sect2 id="capture-ngrep">
+</sect3>
+<sect3 id="capture-ngrep">
 	<title>ngrep</title>
 	<itemizedlist>
 		<listitem><para><ulink url="http://ngrep.sourceforge.net/">Documentation officielle</ulink></para></listitem>
 	</itemizedlist>
+</sect3>
 </sect2>
-</sect1>

@@ -3,7 +3,7 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
 ]>
-<chapter id="overview">
+<sect1 id="overview">
 <title>Overview of tools</title>
 
 <para>This chapter contains an overview of the two main tools used in building Debian Live systems.</para>
@@ -127,4 +127,4 @@ $ lh_config --apt aptitude --binary-images net --hostname live-machine --usernam
 <para>FIXME link to Kernel Handbook</para>
 </section>
 
-</chapter>
+</sect1>

@@ -1,7 +1,7 @@
 own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 use_xft yes
 on_bottom yes
-xftfont Comic sans MS:size=10
+xftfont Comic sans MS:size=8
 xftalpha 0.8
 update_interval 2.0
 total_run_times 0
@@ -30,20 +30,16 @@ use_spacer no
 
 
 TEXT
-${color white}-=SATAN UsB=-
-
+${color white}-=SATAN=-
 ${color white}Date : ${time %A %d %B %Y} - ${time %H:%M:%S}
 $nodename - $sysname $kernel on $machine
 $stippled_hr
-
 ${color #e49c16}Uptime:$color $uptime ${color #FFFFFF}- Load:$color $loadavg
 ${color #e49c16}% CPU utilisé :${color #FFFFFF} $cpu% ${color #ffc11f}${cpubar}
 ${color white}${cpugraph 0000ff 00ff00}
 ${color #e49c16}% RAM utilisée :${color #FFFFFF} $mem/$memmax - $memperc% ${color #ffc11f}${membar}
 ${color #e49c16}Processus : $color $processes ${color #e49c16}En cours : $color $running_processes
 $color$stippled_hr
-
 ${color #e49c16}Reseau : ${color #FFFFFF}IP Locale : ${addr eth0}
-               IP Publique : ${execi 1800 ~/.conkyscript.sh}
 ${color #e49c16}Download :${color white} ${downspeed eth0} k/s${color white} ${offset 80}${color #e49c16}Upload:${color white} ${upspeed eth0} k/s
 ${color #FFFFFF}${downspeedgraph eth0 32,150 8b4b0b ffc11f} ${color #FFFFFF}${upspeedgraph eth0 32,150 ffc11f 8b4b0b}

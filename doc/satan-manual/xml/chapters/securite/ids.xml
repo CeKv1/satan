@@ -3,16 +3,16 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
 ]>
-<sect1 id="ids">
+<sect2 id="ids">
 	<title>IDS</title>
 	<para>
 	IDS
 	</para>
-<sect2 id="ids-snort">
+<sect3 id="ids-snort">
 	<title>snort</title>
 	<itemizedlist>
 		<listitem><para><ulink url="http://httpd.apache.org/">Documentation officielle</ulink></para></listitem>
 		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/Apache_HTTP_Server">Wikipedia</ulink></para></listitem>
 	</itemizedlist>
+</sect3>
 </sect2>
-</sect1>

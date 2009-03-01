@@ -3,7 +3,7 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
 ]>
-<chapter id="administration">
+<sect1 id="administration">
 <title>Les administration</title>
 
 <xi:include href="administration/supervision.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
@@ -21,4 +21,4 @@
 <xi:include href="administration/annuaire.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="administration/routage.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 
-</chapter>
+</sect1>

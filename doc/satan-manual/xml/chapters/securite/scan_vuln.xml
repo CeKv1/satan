@@ -3,14 +3,14 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
 ]>
-<sect1 id="scan_vuln">
+<sect2 id="scan_vuln">
 <title>Les outils pour détécter les vulnérabilités d'un serveur</title>
 
 <para>
 Ce chapitre liste les outils pour trouver les vunérabilité
 </para>
 
-	<sect2 id="scan_vuln-nessus">
+	<sect3 id="scan_vuln-nessus">
 		<title>Nessus</title>
 			<para>
 			Nessus est basé sur des plugins tel que nmap, il permet de scanner les ports de la machine distante, et aussi d'indiquer les éventuelles vulnérabilités du serveur distant. Nessus nous présente un rapport avec les id de chaque faille et donne également des conseils pour améliorer la sécurité. 
@@ -25,5 +25,5 @@ Sa fonctionnalité principale est de signaler les faiblesses potentielles ou av�
 			<para> si aucun utilisateur n'est crée vous pouver en ajouter un</para>
 			<command>nessus-adduser</command>
 			<para>Pour plus d'info <command>man nessus</command></para>	
-	</sect2>
-</sect1>
+	</sect3>
+</sect2>

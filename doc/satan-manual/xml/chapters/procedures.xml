@@ -3,12 +3,12 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
 ]>
-<chapter id="procedures">
+<sect1 id="procedures">
 <title>Procedures</title>
 
 <para>This chapter documents the procedures within the Debian Live project for various tasks that need cooperation with other teams in Debian.</para>
 
-<sect1 id="major-releases">
+<sect2 id="major-releases">
 <title>Major Releases</title>
 
 <para>Releasing a new stable major version of Debian includes a lot of different teams working together to make it happen. At some point, the Live team comes in and builds live system images. The requirements to do this are:</para>
@@ -22,9 +22,9 @@
 	<listitem>Images are build and mirrored on cdimage.debian.org.</listitem>
 </itemizedlist>
 
-</sect1>
+</sect2>
 
-<sect1 id="Point Releases">
+<sect2 id="Point Releases">
 <title>Point Releases</title>
 
 <itemizedlist>
@@ -33,6 +33,6 @@
 	<listitem>Images are build and mirrored on cdimage.debian.org.</listitem>
 </itemizedlist>
 
-</sect1>
+</sect2>
 
-</chapter>
+</sect1>

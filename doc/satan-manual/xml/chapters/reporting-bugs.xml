@@ -3,7 +3,7 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
 ]>
-<chapter id="bugs">
+<sect1 id="bugs">
 <title>Reporting bugs</title>
 
 <para>Debian Live is far from being perfect, but we want to make it as close as possible to perfect - with your help. Do not hesitate to report a bug: it is better to fill a report twice than never. However, this chapter includes recommendations how to file good bug reports.</para>
@@ -138,4 +138,4 @@ encountered.</para>
 
 </section>
 
-</chapter>
+</sect1>

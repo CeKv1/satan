@@ -3,16 +3,16 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
 ]>
-<sect1 id="annuaire">
+<sect2 id="annuaire">
 	<title>Annuaire</title>
 	<para>
 	Annuaire
 	</para>
-<sect2 id="annuaire-ldap">
+<sect3 id="annuaire-ldap">
 	<title>ldap</title>
 	<itemizedlist>
 		<listitem><para><ulink url="http://www.openldap.org/">Documentation officielle</ulink></para></listitem>
 		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/LDAP">Wikipedia</ulink></para></listitem>
 	</itemizedlist>
+</sect3>
 </sect2>
-</sect1>

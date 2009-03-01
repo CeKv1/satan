@@ -59,25 +59,14 @@ Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 
 <!-- Chapters -->
 
-<xi:include href="chapters/utilitaires.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-<xi:include href="chapters/administration.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-<xi:include href="chapters/securite.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-<xi:include href="chapters/simul.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="chapters/introduction.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="chapters/chapitre1-ProjetSATAN.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="chapters/chapitre2-Installation.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="chapters/conclusion.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 
-<xi:include href="chapters/about.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-<xi:include href="chapters/installation.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-<xi:include href="chapters/basics.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-<xi:include href="chapters/overview.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-<xi:include href="chapters/customization.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-<xi:include href="chapters/common-tasks.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-<xi:include href="chapters/live-environment.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-<xi:include href="chapters/faq.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-<xi:include href="chapters/reporting-bugs.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-<xi:include href="chapters/coding-style.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-<xi:include href="chapters/procedures.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
-<xi:include href="chapters/resources.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 
 <!-- Appendecis -->
+<xi:include href="chapters/chapitre-Documentation.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="appendices/configuration-layout.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="appendices/configuration-files.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 

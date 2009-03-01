@@ -13,7 +13,8 @@ rm -f build.log
 rm -rf cache .stage
 # Remove generated files
 rm -f config/binary config/bootstrap config/chroot config/common config/source
-rm -rf ${SH_BASE}/config/chroot_local-includes/usr/share/doc/satan-manual/html/img/*	
+rm -f ${SH_BASE}/config/chroot_local-includes/usr/share/doc/satan-manual/html/img/*.png	
+rm -f ${SH_BASE}/config/chroot_local-includes/usr/share/doc/satan-manual/html/*.png	
 
 # Remove caching files
 rm -rf ${SH_BASE}/config/chroot_local-includes/usr/share/framework-3.1 ${SH_BASE}/config/chroot_local-includes/usr/share/hydra-5.4-src ${SH_BASE}/config/chroot_local-includes/usr/share/libssh-0.2 ${SH_BASE}/config/chroot_local-includes/usr/share/netkit

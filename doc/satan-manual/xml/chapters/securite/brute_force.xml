@@ -3,14 +3,14 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
 ]>
-<sect1 id="brute_force">
+<sect2 id="brute_force">
 <title>Les outils pour cracker les mots de passe</title>
 
 <para>
 Ce chapitre liste les outils pour cracker les mots de passe qui sont dans SATAN
 </para>
 
-<sect2 id="brute_force-johntheripper">
+<sect3 id="brute_force-johntheripper">
 <title>John the Ripper</title>
 <para>
  John the Ripper est un logiciel libre permetant des attaque par dictionnaire sur les mots de passe.
@@ -40,17 +40,17 @@ john -w:NOM_DU_DICTIONNAIRE FICHIER_AVEC_LES_MOT_DE_PASSE
 		</screen>
 	</listitem>
 </itemizedlist>
-</sect2>
+</sect3>
 
-<sect2 id="brute_force-thchydra">
+<sect3 id="brute_force-thchydra">
 <title>THC Hydra</title>
 <para>
  THC hydra est un logiciel libre qui permet de faire des attaques par dictionnaire mais a la diférence de john il permet de tester sur les protocole suivant:
 </para>
 <para> TELNET, FTP, HTTP, HTTPS, HTTP-PROXY, SMB, SMBNT, MS-SQL, MYSQL, REXEC, RSH,RLOGIN, CVS, SNMP, SMTP-AUTH, SOCKS5, VNC, POP3, IMAP, NNTP, PCNFS, ICQ, SAP/R3, LDAP2, LDAP3, Postgres, Teamspeak, Cisco auth, Cisco enable,LDAP2, Cisco AAA</para>
-</sect2>
+</sect3>
 
-<sect2 id="brute_force-aircrack">
+<sect3 id="brute_force-aircrack">
 <title>Aircrack</title>
 <para>
 Aircrack est une suite d'outils pour obtenir les clefs WEP/WPA.
@@ -97,6 +97,6 @@ Aircrack est une suite d'outils pour obtenir les clefs WEP/WPA.
 		<para>Il n'est pas nécésaire de stoper l'injection de paquets</para>
 	</listitem>
 </itemizedlist>
+</sect3>
 </sect2>
-</sect1>
 

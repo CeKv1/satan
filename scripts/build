@@ -71,11 +71,6 @@ wget -N -c ${HYDRA_PATCH_URL}
 wget -N -c ${MSF_URL}
 # PHPmyadmin
 wget -N -c ${PHPM_URL}
-# IOS
-wget -N -c ${IOS1}
-wget -N -c ${IOS2}
-wget -N -c ${IOS2}
-wget -N -c ${IOS3}
 
 ## Décompression
 # Netkit
@@ -93,11 +88,27 @@ tar -xzf ${MSF} -C ../config/chroot_local-includes/usr/share/
 mkdir -p ../config/chroot_local-includes/var/www
 tar -xzf ${PHPM} -C ../config/chroot_local-includes/var/www/
 mv ../config/chroot_local-includes/var/www/phpMyAdmin-3.1.3-rc1-all-languages ../config/chroot_local-includes/var/www/phpmyadmin
-# IOS
-cp -u ${IOS1} ../config/chroot_local-includes/usr/share/ios/ 
-cp -u ${IOS2} ../config/chroot_local-includes/usr/share/ios/ 
-cp -u ${IOS3} ../config/chroot_local-includes/usr/share/ios/ 
-cp -u ${IOS4} ../config/chroot_local-includes/usr/share/ios/ 
+
+if [ "${IOS}" = "yes" ]
+then
+	Echo_warning "Assurez-vous d'être à l'IUT pour télécharger les IOS sur restore !"
+	Echo_warning "Si vous n'êtes pas à l'IUT, il faut créer un repertoire dl et y inclure les IOS."
+
+	# IOS
+	wget -N -c ${IOS1}
+	wget -N -c ${IOS2}
+	wget -N -c ${IOS2}
+	wget -N -c ${IOS3}
+
+	# IOS
+	cp -u ${IOS1} ../config/chroot_local-includes/usr/share/ios/ 
+	cp -u ${IOS2} ../config/chroot_local-includes/usr/share/ios/ 
+	cp -u ${IOS3} ../config/chroot_local-includes/usr/share/ios/ 
+	cp -u ${IOS4} ../config/chroot_local-includes/usr/share/ios/ 
+else
+	Echo_warning "Il n'y aura pas d'IOS pour GNS3"
+fi
+
 
 
 cd ${SH_BASE}

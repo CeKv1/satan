@@ -3,7 +3,7 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
 ]>
-<chapter id="live-environment">
+<sect1 id="live-environment">
 <title>The Live environment</title>
 
 <section>
@@ -100,4 +100,4 @@ $ /sbin/mkfs.ext2 -F live-rw
 
 </section>
 
-</chapter>
+</sect1>

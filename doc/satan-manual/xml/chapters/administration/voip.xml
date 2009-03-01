@@ -3,15 +3,15 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
 ]>
-<sect1 id="voip">
+<sect2 id="voip">
 	<title>Voip</title>
 	<para>
 	Voip
 	</para>
-<sect2 id="voip-asterisk">
+<sect3 id="voip-asterisk">
 	<title>Asterisk</title>
 	<para>
 	Asterisk
 	</para>
+</sect3>
 </sect2>
-</sect1>

@@ -3,7 +3,7 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
 ]>
-<chapter id="installation">
+<sect1 id="installation">
 <title>Installation</title>
 
 <section>
@@ -176,4 +176,4 @@ cp config/chroot_sources/live-snapshots.chroot.gpg config/chroot_sources/live-sn
 </orderedlist>
 </section>
 </section>
-</chapter>
+</sect1>

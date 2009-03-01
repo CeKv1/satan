@@ -3,14 +3,14 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
 ]>
-<sect1 id="sniffer">
+<sect2 id="sniffer">
 <title>Les outils pour récupéré les trames circulant sur le réseaux</title>
 
 <para>
 Ce chapitre liste les outils pour récupéré les trames circulant sur le réseaux (le mode root est utiliser pour l'utilisation des logiciels)
 </para>
 
-	<sect2 id="sniffer-Wireshark">
+	<sect3 id="sniffer-Wireshark">
 		<title> Wireshark</title>
 			<para>
 			 Wireshark est un sniffer il capture les trames circulant à travers la carte réseau ciblé. Il supporte plus de 820 protocoles.
@@ -25,9 +25,9 @@ Ce chapitre liste les outils pour récupéré les trames circulant sur le résea
 				Pour améliorer votre utilisation de cette outil noublier pas qu'il existe des filtre pour laisser apparaitre seulment les trames qui vous intéresse. Il est égalment possible de modifier les couleur des trames du type voulu.
 			</para>
 			<para>Pour plus d'informations  <command>man wireshark</command></para>	
-	</sect2>
+	</sect3>
 
-	<sect2 id="sniffer-Kismet">
+	<sect3 id="sniffer-Kismet">
 			<title>Kismet</title>
 			<para>
 			 <filename>kismet</filename> est un sniffer et  détecteur de réseau pour le protocole 802.11 (wifi).
@@ -53,8 +53,8 @@ iwconfig interface mode monitor
 					suivant l'équipement wifi les commandes peuvent varier
 				</para>	
 			</note>
-	</sect2>
-		<sect2 id="sniffer-Tcpdump">
+	</sect3>
+		<sect3 id="sniffer-Tcpdump">
 		<title>Tcpdump</title>
 			<para>
 			 Sniffer en ligne de commande. Il permet d'obtenir le détail du trafic visible depuis une interface réseau.
@@ -77,8 +77,8 @@ iwconfig interface mode monitor
 			<para>Affichage des paquets ayant "www.machin.com" comme adresse source ou destination:</para>
 			<screen>tcpdump host www.machin.com</screen>	
 			<para>Pour plus d'info <command>man tcpdump</command></para>	
-		</sect2>
-	<sect2 id="sniffer-Ettercap">
+		</sect3>
+	<sect3 id="sniffer-Ettercap">
 		<title>Ettercap</title>
 			<para>
 			 Ce logiciel est capable d'intercepter le trafic sur un segment réseau, de capturer les mots de passe, et de réaliser des attaques Man In The Middle contre un certain nombre de protocoles de communication usuels tels que HTTP, FTP et certains protocoles chiffrés.
@@ -101,8 +101,8 @@ iwconfig interface mode monitor
 				<listitem><para>Le plugin dns_spoof va permettre de rediriger une url sur celle que l'on veut.</para></listitem>
 			</itemizedlist>
 			<para>Pour plus d'info <command>man ettercap</command></para>	
-		</sect2>
-	<sect2 id="sniffer-dsniff">
+		</sect3>
+	<sect3 id="sniffer-dsniff">
 		<title>dsniff</title>
 			<para>
 			 Dsniff est un outil d'analyse du trafic réseau (sniffer).Ainsi, Il détecte automatiquement les protocoles d’application, en capturant seulement les données interressantes (Des mots clefs : pass, user,...). Elles conçernent les sessions FTP, telnet, SMTP, HTTP, POP, NNTP, IMAP, SNMP, LDAP, rlogin, RIP, OSPF, PPTP, AIM, IRC et bien d'autres.
@@ -120,6 +120,6 @@ iwconfig interface mode monitor
 			<para>Axer le sniffing que sur une adresse du réseau grâce à une expression tcpdump (exemple 192.168.1.1) </para>
 			<command>dsniff src 192.168.1.1</command>
 			<para>Pour plus d'info <command>man dsniff</command></para>	
-		</sect2>
+		</sect3>
 
-</sect1>
+</sect2>

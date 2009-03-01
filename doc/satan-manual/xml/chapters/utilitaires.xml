@@ -3,12 +3,12 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
 ]>
-<chapter id="utilitaires">
-<title>Sécurité</title>
+<sect1 id="utilitaires">
+<title>Utilitaires</title>
 
 <xi:include href="utilitaires/gen_traffic.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="utilitaires/wifi.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="utilitaires/manip_paquets.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="utilitaires/reseaux.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 
-</chapter>
+</sect1>

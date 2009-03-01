@@ -4,7 +4,7 @@
   <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
 ]>
 <chapter>
-<title>About</title>
+<title>Documentation Debian Live</title>
 
 <xi:include href="about/manual.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
 <xi:include href="about/project.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>

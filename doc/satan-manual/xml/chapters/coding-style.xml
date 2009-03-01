@@ -3,12 +3,12 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
 ]>
-<chapter id="coding-style">
+<sect1 id="coding-style">
 <title>Coding Style</title>
 
 <para>This chapter documents the coding style used in live-helper.</para>
 
-<sect1 id="compatibilty">
+<sect2 id="compatibilty">
 <title>Compatibility</title>
 
 <itemizedlist>
@@ -16,18 +16,18 @@
 	<listitem>Only use posix subset, e.g. use $(foo) rather than `foo`.</listitem>
 	<listitem>Do check your scripts with 'sh -n' and 'checkbasishm'.</listitem>
 </itemizedlist>
-</sect1>
+</sect2>
 
-<sect1 id="indenting">
+<sect2 id="indenting">
 <title>Indenting</title>
 
 <itemizedlist>
 	<listitem>Always use tabs and not spaces.</listitem>
 </itemizedlist>
 
-</sect1>
+</sect2>
 
-<sect1 id="wrapping">
+<sect2 id="wrapping">
 <title>Wrapping</title>
 
 <itemizedlist>
@@ -75,9 +75,9 @@ foo ()
 	</para></listitem>
 </itemizedlist>
 
-</sect1>
+</sect2>
 
-<sect1 id="variables">
+<sect2 id="variables">
 <title>Variables</title>
 
 <itemizedlist>
@@ -125,9 +125,9 @@ fi
 	</para></listitem>
 </itemizedlist>
 
-</sect1>
+</sect2>
 
-<sect1 id="misc">
+<sect2 id="misc">
 <title>Miscellaneous</title>
 
 <itemizedlist>
@@ -136,6 +136,6 @@ fi
 
 </itemizedlist>
 
-</sect1>
+</sect2>
 
-</chapter>
+</sect1>

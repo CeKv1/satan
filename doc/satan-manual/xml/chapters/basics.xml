@@ -3,7 +3,7 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
 ]>
-<chapter id="basics">
+<sect1 id="basics">
 <title>The basics</title>
 
 <para>This chapter contains a brief overview of the build process as well as containing instructions on how to boot the various binary image types.</para>
@@ -201,4 +201,4 @@ and reload the super server with <command>/etc/init.d/openbsd-inetd reload</comm
 
 <para>Setting all these services is quite error prone, you'll need some patience to let all of them working together.</para>
 </section>
-</chapter>
+</sect1>

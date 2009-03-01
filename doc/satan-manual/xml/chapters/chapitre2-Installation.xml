@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
+]>
+<chapter id="chapitre2-Installation">
+<title>Création et configuration du support de projet</title>
+
+
+
+</chapter>

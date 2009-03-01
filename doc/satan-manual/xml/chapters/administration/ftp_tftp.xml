@@ -3,28 +3,28 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
 ]>
-<sect1 id="ftp">
+<sect2 id="ftp">
 	<title>FTP-TFTP</title>
 	<para>
 	ftp tftp
 	</para>
-<sect2 id="ftp-ftp">
+<sect3 id="ftp-ftp">
 	<title>ftp</title>
 	<itemizedlist>
 		<listitem><para><ulink url="http://httpd.apache.org/">Documentation officielle</ulink></para></listitem>
 		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/Apache_HTTP_Server">Wikipedia</ulink></para></listitem>
 	</itemizedlist>
-</sect2>
-<sect2 id="ftp-tftp">
+</sect3>
+<sect3 id="ftp-tftp">
 	<title>tftp</title>
 	<itemizedlist>
 		<listitem><para><ulink url="http://packages.debian.org/squeeze/tftp">Documentation officielle</ulink></para></listitem>
 	</itemizedlist>
-</sect2>
-<sect2 id="ftp-tftpd">
+</sect3>
+<sect3 id="ftp-tftpd">
 	<title>tftpd</title>
 	<itemizedlist>
 		<listitem><para><ulink url="http://packages.debian.org/squeeze/tftpd">Documentation officielle</ulink></para></listitem>
 	</itemizedlist>
+</sect3>
 </sect2>
-</sect1>

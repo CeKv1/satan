@@ -3,7 +3,7 @@
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
 ]>
-<sect1 id="supervision">
+<sect2 id="supervision">
 	<title>Supervision</title>
 	<para>
 		La supervision consiste à surveiller le bon fonctionnement d’un système ou d’une activité.
@@ -20,7 +20,7 @@
 	<para>
 		On ajoutera les actions réflexes à cette surveillance du système. Ce sont les réactions automatisées en fonctions d’alertes définies.
 	</para>
-<sect2 id="supervision-munin">
+<sect3 id="supervision-munin">
 	<title>Munin</title>
 	<itemizedlist>
 		<listitem><para><ulink url="http://munin.projects.linpro.no/">Documentation officielle</ulink></para></listitem>
@@ -29,8 +29,8 @@
 	<para>
 	Munin est un logiciel de monitoring. Il permet de tracer des graphiques à partir des informations reçues par dautre machines. Munin fonctionne donc sur le principe client/serveur.	
 	</para>
-</sect2>
-<sect3 id="supervision-munin-serveur">
+</sect3>
+<sect4 id="supervision-munin-serveur">
 	<title>Munin</title>
 	<para>
 	Le fichier de configuration de grapheur Munin est <filename>/etc/munin/munin.conf</filename>. Il suffit d'y indiquer quels hôtes il doit surveiller tel que :
@@ -47,8 +47,8 @@
 	<para>
 	La périodicité des relevés est éditable dans le fichier <filename>/etc/cron.d/munin</filename>
 	</para>
-</sect3>
-<sect3 id="supervision-munin-cient">
+</sect4>
+<sect4 id="supervision-munin-cient">
 	<title>Munin-node</title>
 	<para>
 	Le fichier de configuration de Munin-node est <filename>/etc/munin/munin-node.conf</filename>. Il faut y indiquer l'adresse du serveur munin pour l'autoriser à relever les mesures :
@@ -64,8 +64,8 @@ $ cd /etc/munin/plugins/
 $ ln -s /usr/share/munin/plugins/Leplugin 
 $ /etc/init.d/munin-node restart
 	</screen>
-</sect3>
-<sect3 id="supervision-munin-apache">
+</sect4>
+<sect4 id="supervision-munin-apache">
 	<title>Exemples</title>
 	<para>
 	Monitoring de la température, charge système (load average), traffic d'une interface :
@@ -106,5 +106,5 @@ $ /etc/init.d/munin-node restart
   			</textobject>
 	</mediaobject>
 
-</sect3>
-</sect1>
+</sect4>
+</sect2>
