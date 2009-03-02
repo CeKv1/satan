@@ -41,16 +41,16 @@ SIZE1=$(($SIZEDEVC-$SIZEISOC-30))
 Echo "Size partition 1 : ${SIZE1} cylinders"
 
 SIZE2=$(($SIZE1+1))
-while true
-do
-        if [ $((${SIZE1}%4)) != "0" ]
-        then
-                SIZE1=$((${SIZE1}-1))
-        else
-                break
-        fi
-done
-Echo "Size partition 1 adjust modulo 4 : ${SIZE1} cylinders"
+#while true
+#do
+#        if [ $((${SIZE1}%4)) != "0" ]
+#        then
+#                SIZE1=$((${SIZE1}-1))
+#        else
+#                break
+#        fi
+#done
+#Echo "Size partition 1 adjust modulo 4 : ${SIZE1} cylinders"
 
 #umount ${LS_DEVICE}"1" 2> /dev/null
 umount ${LS_DEVICE}"1" | exit 0
@@ -73,9 +73,11 @@ then
 
         umount ${LS_DEVICE}1 | exit 0
         umount ${LS_DEVICE}2 | exit 0
-        mkfs.vfat -F 16 ${LS_DEVICE}"1"
+        mkfs.vfat -F 32 ${LS_DEVICE}"1"
 	mkfs.ext2 ${LS_DEVICE}"2" -L "satan"
 fi
+
+partprobe -s
 
 echo "############################"
 Echo "Start copy of iso"
@@ -118,9 +120,16 @@ grub-install --root-directory=${TEMPMOUNT}  --no-floppy '(hd1)'
 
 Echo "Unmounting device"
 umount ${LS_DEVICE}2 | exit 0
+umount ${LS_DEVICE}1 | exit 0
 umount ${LS_BINARY} |exit 0
 
 Echo "Removing build directory"
 rm -rf ${TEMPMOUNT}
+
+if [[ $FS == true ]]
+then
+        Echo "Making filesystem"
+        mkfs.vfat -F 32 ${LS_DEVICE}"1"
+fi
 
 Echo "Installation terminé"

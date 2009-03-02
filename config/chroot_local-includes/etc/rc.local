@@ -4,6 +4,8 @@
 
 # Detect partitions (non-swap) and mount them
 # See /sbin/diskmounter.sh for supported filesystems
-/sbin/diskmounter.sh -w
+#/sbin/diskmounter.sh -w
+mkdir /home/etu/Desktop/documents
+mount /dev/sda1 /home/etu/Desktop/documents -o  rw,users,exec,dev,suid,uid=1000,gid=1000
 
 exit 0
