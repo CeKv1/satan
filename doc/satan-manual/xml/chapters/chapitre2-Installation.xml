@@ -8,16 +8,77 @@
 <sect1 id="chap2-installation">
 	<title>Installation</title>
 	<para>
+	L'installation nécessite deux étapes.
 	</para>
+	<sect2 id="chap2-installationi-dep">
+		<title>Installation des dépendances</title>
+		<para>
+			Il faut en premier lieu mettre à jour votre système puis installer les dépendances.
+		</para>
+		<screen>
+			<prompt>yoyo@YoYoSID:~$</prompt> <userinput>su</userinput>
+			<computeroutput>Mot de passe :</computeroutput> <userinput>Mot de passe root</userinput>
+			<prompt>YoYoSID:~#</prompt> <userinput>apt-get update</userinput>
+			<computeroutput>Réception de 1 :  http://ftp.fr.debian.org sid Release.gpg [197B] 
+			Réception de : 2 http://ftp.fr.debian.org sid/main Translation-fr [644kB] 
+			...
+			</computeroutput>
+			<prompt>YoYoSID:~#</prompt> <userinput>apt-get -y upgrade </userinput>
+			<prompt>YoYoSID:~#</prompt> <userinput>apt-get install dblatex docbook-xsl po4a w3m</userinput>
+				<prompt>YoYoSID:~#</prompt> <userinput>apt-get install dosfstools parted gettexti git partprobe</userinput>
+		</screen>
+		<para>
+			Il est préférable d'installer la dernière version des outils live-helper et non celle des dépôts.
+		</para>
+		<screen>
+			<prompt>YoYoSID:~#</prompt> <userinput>mkdir /tmp/helper</userinput>
+			<prompt>YoYoSID:~#</prompt> <userinput>cd /tmp/helper</userinput>
+			<prompt>YoYoSID:/tmp/helper#</prompt> <userinput>aptitude -y remove live-helper live-initscripts live-initramfs live-manual live-startscripts live-webhelper live-magic</userinput>
+			<prompt>YoYoSID:/tmp/helper#</prompt> <userinput>aptitude -y purge live-helper live-initscripts live-initramfs live-manual live-startscripts live-webhelper live-magic</userinput>
+			<prompt>YoYoSID:/tmp/helper#</prompt> <userinput>wget -r -nd -np -A.deb http://live.debian.net/debian/</userinput>
+			<prompt>YoYoSID:/tmp/helper#</prompt> <userinput>dpkg -i live-*.deb</userinput>
+		</screen>
+	</sect2>
+	<sect2 id="chap2-installationi-recup">
+		<title>Récupération du projet</title>
+		<para>
+			Le projet est hebergé sur le site <ulink url="http://github.com/2xyo/satan/tree/master" />. C'est un dépôt <ulink url="http://git-scm.com/">git</ulink>.
+		</para>
+		<screen>
+			<prompt>yoyo@YoYoSID:~$</prompt> <userinput>su</userinput>
+			<computeroutput>Mot de passe :</computeroutput> <userinput>Mot de passe root</userinput>
+			<prompt>YoYoSID:~#</prompt> <userinput>mkdir satan</userinput>
+			<prompt>YoYoSID:~#</prompt> <userinput>cd satan</userinput>
+			<prompt>YoYoSID:/root/satan#</prompt> <userinput>git clone git://github.com/2xyo/satan.git</userinput>
+			<computeroutput> 
+			Initialized empty Git repository in /root/satan/satan/.git/
+			remote: Counting objects: 790, done.
+			remote: Compressing objects: 100% (456/456), done.
+			remote: Total 790 (delta 370), reused 580 (delta 250)
+			Receiving objects: 100% (790/790), 2.85 MiB | 116 KiB/s, done.
+			Resolving deltas: 100% (370/370), done.
+			</computeroutput>
+			<prompt>YoYoSID:/root/satan#</prompt> <userinput>cd satan</userinput>
+		</screen>
+	</sect2>
+
 </sect1>
 <sect1 id="chap2-duplication">
 	<title>Duplication</title>
 	<para>
 	</para>
+	<screen>
+	<prompt></prompt> <userinput></userinput>
+	<computeroutput></computeroutput>
+	</screen>
 </sect1>
 <sect1 id="chap2-maj">
 	<title>Mise à jour</title>
 	<para>
 	</para>
+	<screen>
+	<prompt></prompt><userinput></userinput>
+	<computeroutput></computeroutput>
+	</screen>
 </sect1>
 </chapter>
