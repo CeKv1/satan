@@ -12,3 +12,5 @@ do
 	update-rc.d  -f ${ARRAY[${i}]} remove
 	update-rc.d  ${ARRAY[${i}]} stop  0 1 2 3 4 5 6 .
 done	
+# Démarrage
+update-rc.d -f satan defaults 99

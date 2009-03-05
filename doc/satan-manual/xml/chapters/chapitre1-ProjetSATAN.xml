@@ -9,21 +9,39 @@
 <sect1 id="origines">
 	<title>Les origines du projet</title>
 	<para>
+	Les orgines de ce projet remonte à l'année dernière. Trois étudiants ont réalisé un LiveCD baptisé R&amp;Tools dans le cadre des projets tuteurés.
 	</para>
 </sect1>
 <sect1 id="remise_en_cause">
 	<title>Remise en cause du projet R&amp;Tools</title>
 	<para>
+	Le projet R&amp;Tools 
 	</para>
 	<sect2 id="a_conserver">
 		<title>Les éléments à conserver</title>
-		<para>
-		</para>
+		<itemizedlist>
+                        <listitem>
+				<para>Nous allons garder le principe de Live CD<footnote><para><ulink url="http://fr.wikipedia.org/wiki/LiveCD" /></para></footnote>. C'est à dire de CD autonome qui contient un système d'exploitation exécutable sans installation.</para>
+                        </listitem>
+                        <listitem>
+				<para>Nous garderons également les outils de base de l'administration réseaux tel que traceroute.</para>
+                        </listitem>
+		</itemizedlist>
 	</sect2>
 	<sect2 id="a_enlever">
 		<title>Les éléments à modifier</title>
-		<para>
-		</para>
+		<itemizedlist>
+                        <listitem>
+				<para>R&amp;Tools est destiné à être gravé sur un cd-rom. Ce support est inscriptible seulement une seule fois (sauf les cd-rom RW) et il est très fragile. De plus sa capacité est limité à 800Mo pour les plus grandes capacités. Or R&amp;Tools pèse plus de 900Mo ! Il est par conséquent inutilisable. La parade consiste à graver l'image sur DVD mais l'IUT ne dispose pas de lecteurs DVD sur les ordinateurs.</para>
+				<para>SATAN utilise une clef USB qui peut être ré-utilisée plusieurs milliers de fois. De plus, celle-ci permet de stocker des informations dessus tel que des comptes rendus de travaux pratiques.</para> 
+				<para>R&amp;Tools n'est pas facilement modifiable. Il faut en effet monter l'image iso puis chrooter l'environnement pour y installer des logiciels. </para>
+				<para>SATAN permet d'ajouter un logiciel simplement en indiquant le nom du paquet correspondant dans config/chroot_local-packageslist/tools</para>
+                        </listitem>
+                        <listitem>
+				<para>R&amp;Tools n'est pas évolutif. Le système ne peut pas être mis à jour.</para>
+				<para>SATAN permet de générer une nouvelle image avec tout les logiciels à jours en seulement quatre commandes.</para>
+			</listitem>
+		</itemizedlist>
 	</sect2>
 </sect1>
 <sect1 id="trousse_a_outils">
@@ -33,7 +51,28 @@
 	<sect2 id="kit">
 		<title>Quels sont les outils et pourquoi ceux là ?</title>
 		<para>
+		Les outils sont réparties suivant quatre catégories :
 		</para>
+		<sect3 id="kit-utilitaires">
+			<title>Utilitaires</title>
+			<para>
+			</para>
+		</sect3>
+		<sect3 id="kit-administration">
+			<title>Administration</title>
+			<para>
+			</para>
+		</sect3>
+		<sect3 id="kit-securite">
+			<title>Sécurité</title>
+			<para>
+			</para>
+		</sect3>
+		<sect3 id="kit-simulation">
+			<title>Simulation / virtualisation de réseaux</title>
+			<para>
+			</para>
+		</sect3>
 	</sect2>
 	<sect2 id="methode">
 		<title>Comment les utilise-t-on ?</title>
@@ -58,6 +97,7 @@
 		<sect3 id="contraintes">
 			<title>Contraintes</title>
 			<para>
+				La première contrainte est que l'ensemble de logiciels que nous avons utilisé pour générer notre distribution n'est pas stable. En effet, live-helper est en développement actif et il existe encore de nombreux bugs.
 			</para>
 		</sect3>
 		<sect3 id="ressources">

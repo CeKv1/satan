@@ -23,7 +23,6 @@ FS="true"
 
 Echo "Device : ${LS_DEVICE}"
 
-#SIZEISOB=`ls -i -l ${LS_BINARY} |awk {'print $6'}`
 SIZEISOB=`stat -c %s ${LS_BINARY}`
 Echo "Size of  iso : ${SIZEISOB} bytes"
 
@@ -52,7 +51,6 @@ SIZE2=$(($SIZE1+1))
 #done
 #Echo "Size partition 1 adjust modulo 4 : ${SIZE1} cylinders"
 
-#umount ${LS_DEVICE}"1" 2> /dev/null
 umount ${LS_DEVICE}"1" | exit 0
 umount ${LS_DEVICE}"2" | exit 0
 

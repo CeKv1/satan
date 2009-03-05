@@ -1,7 +1,5 @@
 #!/bin/sh
 
-# Répertoire de travail
-
 #Scripts de live-helper
 . "${LH_BASE:-/usr/share/live-helper}"/functions.sh
 

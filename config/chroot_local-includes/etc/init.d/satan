@@ -1,0 +1,16 @@
+#!/bin/sh
+case "$1" in
+  start|"") 
+        # au démarrage
+        mkdir /home/etu/Desktop
+        mkdir /home/etu/Desktop/documents
+	mount /dev/sda1 /home/etu/Desktop/documents -o  rw,users,exec,dev,suid,uid=1000,gid=1000
+	;;
+  stop)   
+        # à l'arret
+        ;;
+  *)
+        echo "Usage: monscript [start|stop]" >&2
+        exit 3
+        ;;
+esac

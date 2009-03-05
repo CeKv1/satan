@@ -16,7 +16,8 @@ netcat
 kismet
 # Aircrack
 aircrack-ng
-
+# Drivers
+firmware-iwlwifi madwifi-source madwifi-tools
 ## Manipulation de paquets
 # Hping
 hping3
@@ -28,6 +29,8 @@ sendip
 python-scapy
 # Nemesis
 nemesis
+# Dépendance itrafgen
+libpcap0.8-dev
 
 ## Réseaux
 # netwox

@@ -14,6 +14,7 @@ cd ${SH_BASE}
 
 IOS="yes"
 
+## Liens vers les fichiers à télécharger
 # Netkit
 NETKIT_URL="http://www.netkit.org/download/netkit/netkit-2.6.tar.bz2"
 NETKIT_FS_URL="http://www.netkit.org/download/netkit-filesystem/netkit-filesystem-i386-F5.0.tar.bz2"
@@ -23,7 +24,6 @@ NETKIT="netkit-2.6.tar.bz2"
 NETKIT_FS="netkit-filesystem-i386-F5.0.tar.bz2"
 NETKIT_KER="netkit-kernel-i386-K2.6.tar.bz2"
 VNETKIT="visualnetkit-1.4.tar.bz"
-
 # Hydra
 LIBSSH_URL="http://0xbadc0de.be/libssh/libssh-0.2.tgz"
 LIBSSH="libssh-0.2.tgz"
@@ -31,24 +31,24 @@ HYDRA_URL="http://freeworld.thc.org/releases/hydra-5.4-src.tar.gz"
 HYDRA="hydra-5.4-src.tar.gz"
 HYDRA_PATCH_URL="http://0xbadc0de.be/libssh/hydra-libssh0.2.patch"
 HYDRA_PATCH="hydra-libssh0.2.patch"
-
 # Metasploit
 MSF_URL="http://spool.metasploit.com/releases/framework-3.2.tar.gz"
 MSF="framework-3.2.tar.gz"
-
 # Phpmyadmin
 PHPM_URL="http://ovh.dl.sourceforge.net/sourceforge/phpmyadmin/phpMyAdmin-3.1.3-rc1-all-languages.tar.gz"
 PHPM="phpMyAdmin-3.1.3-rc1-all-languages.tar.gz"
-
 # IOS
-IOS1_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-36xx/c3640-io3-mz.123-24a.bin"
-IOS1="c3640-io3-mz.123-24a.bin"
-IOS2_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-c7200/c7200-ik9o3s-mz.123-24a.bin"
+IOS1_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-36xx/c3640-jk9o3s-mz.122-37.bin"
+IOS1="c3640-jk9o3s-mz.122-37.bin"
+IOS2_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-c72xx/c7200-ik9o3s-mz.123-24a.bin"
 IOS2="c7200-ik9o3s-mz.123-24a.bin"
-IOS3_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-3745/c3745-ik9o3s-mz.123-24a.bin"
+IOS3_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-37xx/c3745-ik9o3s-mz.123-24a.bin"
 IOS3="c3745-ik9o3s-mz.123-24a.bin"
 IOS4_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-26xx/c2600-ik9o3s3-mz.123-22.bin"
 IOS4="c2600-ik9o3s3-mz.123-22.bin"
+# ITRAFGEN
+ITRAFGEN_URL="http://itrafgen.googlecode.com/files/itrafgenubuntu.deb"
+ITRAFGEN="itrafgenubuntu.deb"
 
 mkdir -p dl
 cd dl
@@ -62,6 +62,10 @@ wget -N -c ${NETKIT_FS_URL}
 if [ ! -e ${VNETKIT} ]
 then
 	wget  ${VNETKIT_URL}
+fi
+if [ ! -e ${ITRAFGEN} ]
+then
+	wget  ${ITRAFGEN_URL}
 fi
 # hydra
 wget -N -c ${LIBSSH_URL}
@@ -88,18 +92,18 @@ tar -xzf ${MSF} -C ../config/chroot_local-includes/usr/share/
 mkdir -p ../config/chroot_local-includes/var/www
 tar -xzf ${PHPM} -C ../config/chroot_local-includes/var/www/
 mv ../config/chroot_local-includes/var/www/phpMyAdmin-3.1.3-rc1-all-languages ../config/chroot_local-includes/var/www/phpmyadmin
-
+# Itrafgen
+cp ${ITRAFGEN} ../config/chroot_local-includes/usr/share/
 if [ "${IOS}" = "yes" ]
 then
 	Echo_warning "Assurez-vous d'être à l'IUT pour télécharger les IOS sur restore !"
 	Echo_warning "Si vous n'êtes pas à l'IUT, il faut créer un repertoire dl et y inclure les IOS."
 
 	# IOS
-	wget -N -c ${IOS1}
-	wget -N -c ${IOS2}
-	wget -N -c ${IOS2}
-	wget -N -c ${IOS3}
-
+	wget --timeout=5-N -c ${IOS1_URL}
+	wget --timeout=5 -N -c ${IOS2_URL}
+	wget --timeout=5 -N -c ${IOS2_URL}
+	wget --timeout=5 -N -c ${IOS3_URL}
 	# IOS
 	cp -u ${IOS1} ../config/chroot_local-includes/usr/share/ios/ 
 	cp -u ${IOS2} ../config/chroot_local-includes/usr/share/ios/ 
@@ -109,10 +113,6 @@ else
 	Echo_warning "Il n'y aura pas d'IOS pour GNS3"
 fi
 
-
-
 cd ${SH_BASE}
 
 lh_build noautoconfig | tee build.log
-
-rm -f ${SH_BASE}/config/chroot_local-packages/satan-manual*

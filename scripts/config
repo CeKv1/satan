@@ -13,10 +13,10 @@ MIRROR="yes"
 if [ "${MIRROR}" = "yes" ]
 then
 	MIRROR_DEBIAN="http://localhost/debian"
-	MIRROR_SECURITY="http://localhost:9999/security"
+	MIRROR_SECURITY="http://localhost/debian-security"
 else
 	MIRROR_DEBIAN="http://ftp.fr.debian.org/debian"
-	MIRROR_SECURITY="http://ftp.ch.debian.org/debian-security"
+	MIRROR_SECURITY="http://security.debian.org/"
 fi
 
 
@@ -46,7 +46,7 @@ lh_config noautoconfig \
 	--mirror-chroot ${MIRROR_DEBIAN} \
 	--mirror-chroot-security ${MIRROR_SECURITY} \
 	--packages-lists "base graphic tools" \
-	--security disabled \
+	--security enabled \
 	--union-filesystem aufs \
 	--username etu  \
 	--verbose \
