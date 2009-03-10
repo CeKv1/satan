@@ -1,0 +1,7 @@
+  Maximise = True
+  font = Monospace 8.5
+  background_darkness = 0.9
+  background_type = transparent 
+  foreground_color = "#FFFFFF"
+  scrollback_lines = '5000'
+

@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xfdesktop-menu>
 	<title name="Supervision"/>
+	<menu name="Cient/Serveur virtuel">
+		<menu name="VNC">
+			<app name="VNC viewer" cmd="terminator -e &quot;vncviewer -h ; vncviewer ;bash&quot;"/>
+			<app name="VNC server" cmd="terminator -e &quot;vncserver -h ; vncserver ;bash&quot;"/>
+		</menu>
+	</menu>
 	<separator/>
+	<menu name="Monitoring">
+		<menu name="Munin">
+			<app name="Munin" cmd="terminator -e &quot;echo &apos;Munin&apos; ; munin-cron -h ;bash&quot; "/>
+			<app name="Documentation Munin " cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#supervision"/>
+		</menu>
+	</menu>
 	<separator/>
+	<menu name="OpenSSH">
+		<app name="OpenSSH client" cmd="terminator -e &quot;echo &apos;OpenSSH client&apos; ; ssh -h ;bash&quot;"/>
+		<app name="OpenSSH server" cmd="terminator -e &quot;echo &apos;OpenSSH server&apos; ; ssh-agent -h ;bash&quot;"/>
+	</menu>
 	<separator/>
-	<separator/>
-	<separator/>
+	<menu name="Telnet">
+		<app name="telnet" cmd="terminator -e &quot;echo &apos;Telnet&apos; ; telnet -h ; telnet ;bash&quot;"/>
+	</menu>
 </xfdesktop-menu>

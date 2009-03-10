@@ -38,7 +38,7 @@ lh_config noautoconfig \
 	--iso-volume "SATAN $(date +%Y%m%d-%H:%M)" \
 	--keyring-packages "debian-archive-keyring" \
 	--language fr \
-	--linux-flavours "486 686" \
+	--linux-flavours "686" \
 	--linux-packages "linux-image-2.6 aufs-modules-2.6 squashfs-modules-2.6 " \
 	--mirror-bootstrap ${MIRROR_DEBIAN} \
 	--mirror-binary http://ftp.fr.debian.org/debian/ \

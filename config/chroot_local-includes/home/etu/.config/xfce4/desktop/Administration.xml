@@ -1,9 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xfdesktop-menu>
 	<title name="Administration &amp; Sécurité"/>
+	<menu name="Administration des équipements">
+		<menu name="Snmpd">
+			<app name="Snmpdelta" cmd="terminator -e &quot;echo &apos;Snmpd&apos; ; snmpdelta -h ;bash&quot;"/>
+		</menu>
+	</menu>
 	<separator/>
+	<menu name="Administration par port série">
+		<menu name="Gtkterm">
+			<app name="gtkterm" cmd="gtkterm"/>
+		</menu>
+	</menu>
 	<separator/>
+	<menu name="Annuaire">
+		<menu name="Serveur LDAP">
+			<app name="Serveur LDAP" cmd="sudo sh /usr/share/satan/scripts/ldap.sh"/>
+			<app name="Documentation LDAP" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#annuaire"/>
+		</menu>
+	</menu>
 	<separator/>
+	<menu name="Authentification">
+		<menu name="Freeradius">
+			<app name="Freeradius" cmd="terminator -e &quot;echo Freeradius ; sudo freeradius -h ;bash&quot;"/>
+			<app name="Documentation Freeradius" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#auth"/>
+		</menu>
+	</menu>
 	<separator/>
+	<menu name="Détection d&apos;intrusions">
+		<menu name="Snort">
+			<app name="Snort" cmd="terminator -e &quot;snort ;bash&quot;"/>
+			<app name="Documentation Snort" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/securite.html#ids"/>
+		</menu>
+	</menu>
 	<separator/>
+	<menu name="Gestion des configurations">
+		<menu name="Puppet">
+			<app name="Puppet" cmd="terminator -e &quot;echo &apos;Puppet&apos; ; puppet -h ;bash&quot;"/>
+			<app name="Documentation Puppet" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#configuration"/>
+		</menu>
+	</menu>
+	<separator/>
+	<menu name="Hack &amp; Passcrackers">
+		<menu name="John the Ripper">
+			<app name="John the Ripper" cmd="terminator -e &quot;sudo john ;bash&quot;"/>
+			<app name="Documentation John the Ripper" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/securite.html#brute_force"/>
+		</menu>
+		<menu name="Hydra">
+			<app name="hydra" cmd="terminator -e &quot;hydra ;bash&quot;"/>
+			<app name="Documentation Hydra" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/securite.html#brute_force"/>
+		</menu>
+	</menu>
+	<separator/>
+	<menu name="Partage Windows">
+		<menu name="Samba">
+			<app name="Documentation Samba" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#partage"/>
+		</menu>
+	</menu>
+	<separator/>
+	<menu name="Proxy Apllicatif">
+		<menu name="Squid">
+			<app name="squid" cmd="terminator -e &quot;echo &apos;Squid&apos; ; sudo squid -h ;bash&quot;"/>
+			<app name="Documentation Squid" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#proxy"/>
+		</menu>
+	</menu>
+	<separator/>
+	<menu name="Routage">
+		<menu name="Support Multicast">
+			<menu name="pimd">
+				<app name="pimd" cmd="terminator -e &quot;echo &apos;Pimd&apos; ; sudo pimd -h ;bash&quot;"/>
+				<app name="Documentation pimd" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#routage"/>
+			</menu>
+		</menu>
+		<menu name="Support 802.1q">
+			<menu name="vlan">
+				<app name="Documentation Vlan" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#routage"/>
+			</menu>
+		</menu>
+		<menu name="Quagga">
+			<app name="Documentation Quagga" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#routage"/>
+		</menu>
+		<menu name="Interfaces virtuelles">
+			<menu name="Bridge-utils">
+				<app name="Documentation Bridge-utils" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#routage"/>
+			</menu>
+		</menu>
+	</menu>
+	<separator/>
+	<menu name="Sauvegarder/Restaurer les configurations">
+		<app name="Base de données SQL" cmd="terminator -e &quot;echo &apos;base de données SQL&apos; ; sh /usr/share/satan/scripts/backup-mysql.sh ;bash&quot;"/>
+		<app name="Configurations" cmd="terminator -e &quot;echo &apos;Configurations&apos; ; sh /usr/share/satan/scripts/backup-conf.sh ;bash&quot; "/>
+	</menu>
+	<separator/>
+	<menu name="Services DNS">
+		<menu name="Bind">
+			<app name="bind" cmd="terminator -e &quot;echo &apos;bind&apos; ; bind -h ;bash&quot;"/>
+			<app name="Documentation Bind" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#dns"/>
+		</menu>
+	</menu>
+	<separator/>
+	<menu name="Serveur de fichiers">
+		<menu name="ftp">
+			<app name="ftp" cmd="terminator -e &quot;echo &apos;Ftp&apos; ; ftp -h ; ftp ;bash&quot;"/>
+			<app name="Documentation Ftp" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#ftp"/>
+		</menu>
+		<menu name="tftp">
+			<app name="tftp" cmd="terminator -e &quot;echo &apos;tftp&apos; ; tftp -h ; tftp ;bash&quot;"/>
+			<app name="Documentation Tftp" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#ftp"/>
+		</menu>
+	</menu>
+	<separator/>
+	<menu name="Serveur Apache et MySQL">
+		<app name="Démarrer serveur" cmd="sudo sh /usr/share/satan/scripts/lamp.sh"/>
+		<app name="Documentation" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html"/>
+	</menu>
+	<separator/>
+	<menu name="VoIP">
+		<menu name="Asterisk">
+			<app name="Asterisk" cmd="terminator -e &quot;echo &apos;Asterisk&apos; ; sudo asterisk -h ;bash&quot;"/>
+			<app name="Documentation Asterisk" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#voip"/>
+		</menu>
+	</menu>
 </xfdesktop-menu>

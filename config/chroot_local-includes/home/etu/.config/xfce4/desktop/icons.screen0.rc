@@ -1,16 +1,16 @@
-[satan]
-row=2
-col=0
-
-[Volume amovible 1G]
+[documents]
 row=3
 col=0
 
 [Système de fichiers]
-row=0
+row=2
 col=0
 
 [Home]
 row=1
+col=0
+
+[Corbeille]
+row=0
 col=0
 

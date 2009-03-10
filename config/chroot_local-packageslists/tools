@@ -14,6 +14,8 @@ netcat
 ## Wi-Fi
 # Kismet
 kismet
+# wifi-radar
+wifi-radar
 # Aircrack
 aircrack-ng
 # Drivers

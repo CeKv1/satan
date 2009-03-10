@@ -1,6 +1,6 @@
 #!/bin/sh -x
 
-DEST="/home/etu/Desktop/conf-$(date +%Y%m%d-%Hh%M)"
+DEST="/home/etu/Desktop/documents/conf-$(date +%Y%m%d-%Hh%M)"
 ARRAY=( '/etc/apache2' '/var/www' '/etc/bind' '/etc/dhcp3' '/etc/gns3' '/etc/john' '/etc/nikto' '/etc/mysql' '/etc/php5' '/etc/puppet' '/etc/snmp' '/etc/ssh' '/etc/wireshark')
 
 if [[ $1 = "backup" ]]

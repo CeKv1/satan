@@ -42,4 +42,4 @@ config/chroot_local-includes/usr/share/visualnetkit-1.4/*
 config/chroot_local-includes/usr/share/ios/*
 config/chroot_local-includes/usr/share/doc/*
 config/chroot_local-includes/var/www/*
-
+config/chroot_local-includes/usr/share/itrafgenubuntu.deb
