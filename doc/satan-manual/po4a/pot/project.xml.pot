@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-11-12 22:29+0100\n"
+"POT-Creation-Date: 2009-03-10 22:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -138,7 +138,7 @@ msgid "Only unchanged, official packages"
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><para>
-#: xml/chapters/about/project.xml:53
+#: xml/chapters/about/project.xml:52
 msgid ""
 "We will only use official packages from the Debian repository, section main "
 "or maybe contrib (the use of contrib is not decided yet). The non-free "
@@ -147,27 +147,28 @@ msgid ""
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><para>
-#: xml/chapters/about/project.xml:57
+#: xml/chapters/about/project.xml:54
 msgid ""
 "We will not change any packages. Whenever we need to change something, we "
 "will do that in coordination with its package maintainer in Debian."
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><para>
-#: xml/chapters/about/project.xml:61
+#: xml/chapters/about/project.xml:56
 msgid ""
-"Exception: temporarily, our own packages like live-helper or live-initramfs "
-"may be used from our own repository for development reasons (e.g. to create "
-"development snapshots). They will be synced into Debian on a regular basis."
+"Exception: temporarily, our own packages like &live-helper; or &live-"
+"initramfs; may be used from our own repository for development reasons (e.g. "
+"to create development snapshots). They will be synced into Debian on a "
+"regular basis."
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><title>
-#: xml/chapters/about/project.xml:66
-msgid "No configuration of the live system"
+#: xml/chapters/about/project.xml:60
+msgid "No package configuration of the live system"
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><para>
-#: xml/chapters/about/project.xml:68
+#: xml/chapters/about/project.xml:61
 msgid ""
 "In this phase we will not ship or install sample or alternative "
 "configurations. All packages are used in their default configuration as they "
@@ -175,23 +176,24 @@ msgid ""
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><para>
-#: xml/chapters/about/project.xml:72
+#: xml/chapters/about/project.xml:63
 msgid ""
 "Whenever we need a different default configuration, we will do that in "
 "coordination with its package maintainer in Debian."
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><para>
-#: xml/chapters/about/project.xml:76
+#: xml/chapters/about/project.xml:65
 msgid ""
 "A system for configuring packages is provided using debconf in lh_config "
 "(use --preseed FILE) allowing custom configured packages to be installed in "
 "your custom produced Debian Live images, but for official live images only "
-"default configuration will be used."
+"default configuration will be used. For more information, please see <xref "
+"linkend=\"customization\"/>."
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><para>
-#: xml/chapters/about/project.xml:80
+#: xml/chapters/about/project.xml:67
 msgid ""
 "Exception: There are a few essential changes needed to be make a live system "
 "alive (e.g. configuring pam to allow empty passwords). These essential "
@@ -200,19 +202,22 @@ msgid ""
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><title>
-#: xml/chapters/about/project.xml:85
-msgid "No live system to hard disk installer"
+#: xml/chapters/about/project.xml:71
+msgid "No live system to hard disk installer for etch"
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><para>
-#: xml/chapters/about/project.xml:87
-msgid ""
-"[ this is no longer valid after etch release, we will work on an installer "
-"for lenny ]"
+#: xml/chapters/about/project.xml:72
+msgid "Title says it all."
+msgstr ""
+
+# type: Content of: <sect1><sect2><sect3><title>
+#: xml/chapters/about/project.xml:75
+msgid "Live system to hard disk installer"
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><para>
-#: xml/chapters/about/project.xml:91
+#: xml/chapters/about/project.xml:76
 msgid ""
 "For the moment we will not ship an installer to copy the live system to a "
 "partition on the hard disk. Although we keep the changes in the live system "
@@ -222,7 +227,7 @@ msgid ""
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><para>
-#: xml/chapters/about/project.xml:95
+#: xml/chapters/about/project.xml:78
 msgid ""
 "Therefore, we will ship a copy of the regular DebianInstaller (resp. Debian "
 "Installer, Graphical Installer) instead, to allow users to perform a regular "
@@ -231,17 +236,17 @@ msgid ""
 msgstr ""
 
 # type: Content of: <sect1><sect2><title>
-#: xml/chapters/about/project.xml:102
+#: xml/chapters/about/project.xml:84
 msgid "Contact"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: xml/chapters/about/project.xml:105
+#: xml/chapters/about/project.xml:87
 msgid "Mailing list"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: xml/chapters/about/project.xml:106
+#: xml/chapters/about/project.xml:88
 msgid ""
 "The primary contact for the project is the <ulink url=\"http://lists.debian."
 "org/debian-live/\">mailing list</ulink>. You can email the list directly by "
@@ -251,12 +256,12 @@ msgid ""
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: xml/chapters/about/project.xml:109
+#: xml/chapters/about/project.xml:91
 msgid "IRC"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: xml/chapters/about/project.xml:111
+#: xml/chapters/about/project.xml:92
 msgid ""
 "A number of users and developers are present in the <ulink url=\"irc://irc."
 "debian.org/#debian-live\">#debian-live</ulink> channel on <ulink url="
@@ -266,12 +271,12 @@ msgid ""
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: xml/chapters/about/project.xml:115
+#: xml/chapters/about/project.xml:95
 msgid "BTS"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: xml/chapters/about/project.xml:117
+#: xml/chapters/about/project.xml:96
 msgid ""
 "The Debian Bug Tracking System (BTS) contains details of bugs reported by "
 "users and developers. Each bug is given a number, and is kept on file until "
@@ -280,13 +285,15 @@ msgid ""
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: xml/chapters/about/project.xml:121
+#: xml/chapters/about/project.xml:99
 msgid "Wiki"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: xml/chapters/about/project.xml:123
+#: xml/chapters/about/project.xml:100
 msgid ""
-"FIXME. <ulink url=\"http://wiki.debian.org/DebianLive\">our entry on the "
-"Debian wiki</ulink>."
+"The <ulink url=\"http://wiki.debian.org/DebianLive\">Debian Live wiki</"
+"ulink> is a place to gather information, discuss applied technologies, and "
+"document frameworks of Debian Live systems that go beyond the scope of this "
+"document."
 msgstr ""

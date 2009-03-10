@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-11-12 22:29+0100\n"
+"POT-Creation-Date: 2009-03-10 22:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgid "About this manual"
 msgstr ""
 
 # type: Content of: <sect1><para>
-#: xml/chapters/about/manual.xml:10
+#: xml/chapters/about/manual.xml:9
 msgid ""
 "The main goal of this manual is to serve as a single access point to all "
 "documentation related to the Debian Live project. It does not include end-"
@@ -29,119 +29,118 @@ msgid ""
 msgstr ""
 
 # type: Content of: <sect1><para>
-#: xml/chapters/about/manual.xml:12
+#: xml/chapters/about/manual.xml:11
 msgid ""
 "Some of the commands mentioned in the text must be executed with superuser "
 "privileges, either by becoming the root user or by using <filename>sudo</"
 "filename>. To distinguish between commands which may be executed by an "
 "unprivileged user and those requiring superuser privileges, commands are "
-"prepended by <computeroutput>$</computeroutput> or <computeroutput>#</"
-"computeroutput> respectively. This symbol is not a part of the command."
+"prepended by <command>$</command> or <command>#</command> respectively. This "
+"symbol is not a part of the command."
 msgstr ""
 
 # type: Content of: <sect1><sect2><title>
-#: xml/chapters/about/manual.xml:15
+#: xml/chapters/about/manual.xml:14
 msgid "Terms"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: xml/chapters/about/manual.xml:18
+#: xml/chapters/about/manual.xml:17
 msgid "Live system"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: xml/chapters/about/manual.xml:19
+#: xml/chapters/about/manual.xml:18
 msgid ""
 "An operating system that can boot without installation to a hard drive. Live "
-"systems does not alter operating systems or files already installed on the "
-"computer hard drive unless instructed to do so. Live systems are typically "
-"booted from CD or DVD media as well as USB sticks and via netboot."
+"systems do not alter the local operating system(s) or file(s) already "
+"installed on the computer hard drive, unless instructed to do so. Live "
+"systems are typically booted from media such as CD's or DVD's, some may also "
+"boot with USB sticks or over the network (via netboot images)."
 msgstr ""
 
-# type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: xml/chapters/about/manual.xml:22
+# type: Content of: <html><head><title>
+#: xml/chapters/about/manual.xml:21 build-index.html.in:8
 msgid "Debian Live"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: xml/chapters/about/manual.xml:23
+#: xml/chapters/about/manual.xml:22
 msgid ""
 "The Debian sub-project which maintains the &live-helper; and &live-"
 "initramfs; utilities."
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: xml/chapters/about/manual.xml:26
+#: xml/chapters/about/manual.xml:25
 msgid "Debian Live system"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: xml/chapters/about/manual.xml:27
+#: xml/chapters/about/manual.xml:26
 msgid ""
-"A Debian Live system is a live system that uses software from the Debian "
-"operating system."
+"A live system that uses software from the Debian operating system that may "
+"be booted from CD's, DVD's, USB sticks, over the network (via netboot "
+"images), and over the internet (via boot parameter fetch=URL)"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: xml/chapters/about/manual.xml:30
+#: xml/chapters/about/manual.xml:29
 msgid "Build system / host system"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: xml/chapters/about/manual.xml:31
+#: xml/chapters/about/manual.xml:30
 msgid "The environment used to create the live system."
 msgstr ""
 
-# type: Content of: <chapter><section><title>
-#: xml/chapters/about/manual.xml:34 xml/chapters/overview.xml:12
+# type: Content of: <sect1><section><title>
+#: xml/chapters/about/manual.xml:33 xml/chapters/overview.xml:12
 msgid "&live-helper;"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: xml/chapters/about/manual.xml:35
+#: xml/chapters/about/manual.xml:34
 msgid "A collection of scripts used to build customised Debian Live systems."
 msgstr ""
 
-# type: Content of: <chapter><section><title>
-#: xml/chapters/about/manual.xml:38 xml/chapters/installation.xml:170
+# type: Content of: <sect1><section><title>
+#: xml/chapters/about/manual.xml:37 xml/chapters/installation.xml:122
 msgid "&live-initramfs;"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: xml/chapters/about/manual.xml:39
+#: xml/chapters/about/manual.xml:38
 msgid ""
 "A collection of scripts used to boot live systems. &live-initramfs; is a "
 "fork of <filename>casper</filename> by Canonical, Ltd."
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: xml/chapters/about/manual.xml:42
+#: xml/chapters/about/manual.xml:41
 msgid "<filename>live-package</filename>"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
-#: xml/chapters/about/manual.xml:43
+#: xml/chapters/about/manual.xml:42
 msgid "The former name of &live-initramfs;."
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: xml/chapters/about/manual.xml:46
+#: xml/chapters/about/manual.xml:45
 msgid "Debian Installer / (d-i)"
 msgstr ""
 
-# type: Content of: <chapter><section><para>
-#: xml/chapters/about/manual.xml:47 xml/chapters/about/manual.xml:51
-#: xml/chapters/about/manual.xml:55 xml/chapters/about/manual.xml:59
-#: xml/chapters/about/manual.xml:63 xml/chapters/about/manual.xml:67
-#: xml/chapters/basics.xml:151 xml/chapters/basics.xml:182
-#: xml/chapters/customization/bootup.xml:11
+# type: Content of: <sect1><section><para>
+#: xml/chapters/about/manual.xml:46 xml/chapters/about/manual.xml:50
+#: xml/chapters/about/manual.xml:62 xml/chapters/customization/bootup.xml:11
 #: xml/chapters/customization/bootup.xml:20
 #: xml/chapters/customization/bootup.xml:26
 #: xml/chapters/customization/bootup.xml:38
-#: xml/chapters/customization/bootup.xml:46
-#: xml/chapters/customization/bootup.xml:53
-#: xml/chapters/customization/bootup.xml:60
-#: xml/chapters/customization/bootup.xml:67
+#: xml/chapters/customization/bootup.xml:85
+#: xml/chapters/customization/bootup.xml:92
+#: xml/chapters/customization/bootup.xml:99
+#: xml/chapters/customization/bootup.xml:106
 #: xml/chapters/customization/packages.xml:21
 #: xml/chapters/customization/packages.xml:138
 #: xml/chapters/customization/packages.xml:183
@@ -153,83 +152,114 @@ msgid "FIXME"
 msgstr ""
 
 # type: Content of: <sect1><sect2><title>
-#: xml/chapters/about/manual.xml:50 xml/chapters/customization/bootup.xml:65
+#: xml/chapters/about/manual.xml:49 xml/chapters/customization/bootup.xml:104
 msgid "Cheat codes"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: xml/chapters/about/manual.xml:54
+#: xml/chapters/about/manual.xml:53
 msgid "chroot"
 msgstr ""
 
-# type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: xml/chapters/about/manual.xml:58
-msgid "binary image"
+# type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: xml/chapters/about/manual.xml:54
+msgid ""
+"The chroot program, chroot(8), enables us to run different instances of the "
+"GNU/Linux environment on a single system simultaneously without rebooting."
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
-#: xml/chapters/about/manual.xml:62
+#: xml/chapters/about/manual.xml:57
+msgid "binary image"
+msgstr ""
+
+# type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
+#: xml/chapters/about/manual.xml:58
+msgid ""
+"On a live system, binary image refers to the binary filesystem and the "
+"respective extension, such as binary.iso or binary.img."
+msgstr ""
+
+# type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: xml/chapters/about/manual.xml:61
 msgid "Target distribution"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
+#: xml/chapters/about/manual.xml:65
+msgid "lenny/FIXME/sid stable/testing/unstable"
+msgstr ""
+
+# type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
 #: xml/chapters/about/manual.xml:66
-msgid "etch/lenny/sid stable/testing/unstable"
+msgid ""
+"The \"stable\" distribution contains the latest officially released "
+"distribution of Debian. The \"testing\" distribution contains packages that "
+"haven't been accepted into a \"stable\" release yet, but they are in the "
+"queue for that. The main advantage of using this distribution is that it has "
+"more recent versions of software. The \"unstable\" distribution is where "
+"active development of Debian occurs. Generally, this distribution is run by "
+"developers and those who like to live on the edge."
 msgstr ""
 
 # type: Content of: <sect1><sect2><title>
-#: xml/chapters/about/manual.xml:75
+#: xml/chapters/about/manual.xml:74
 msgid "Authors"
 msgstr ""
 
 # type: Content of: <sect1><sect2><para>
-#: xml/chapters/about/manual.xml:76
+#: xml/chapters/about/manual.xml:75
 msgid "A list of authors (in alphabetical order):"
 msgstr ""
 
 # type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: xml/chapters/about/manual.xml:79
+#: xml/chapters/about/manual.xml:78
 msgid "Ben Armstrong"
 msgstr ""
 
 # type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: xml/chapters/about/manual.xml:80
+#: xml/chapters/about/manual.xml:79
 msgid "Brendan Sleight"
 msgstr ""
 
 # type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: xml/chapters/about/manual.xml:81
+#: xml/chapters/about/manual.xml:80
 msgid "Chris Lamb"
 msgstr ""
 
 # type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: xml/chapters/about/manual.xml:82
+#: xml/chapters/about/manual.xml:81
 msgid "Daniel Baumann"
 msgstr ""
 
 # type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: xml/chapters/about/manual.xml:83
+#: xml/chapters/about/manual.xml:82
 msgid "Franklin Piat"
 msgstr ""
 
 # type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: xml/chapters/about/manual.xml:84
+#: xml/chapters/about/manual.xml:83
 msgid "Kai Hendry"
 msgstr ""
 
 # type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: xml/chapters/about/manual.xml:85
+#: xml/chapters/about/manual.xml:84
 msgid "Marco Amadori"
 msgstr ""
 
 # type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: xml/chapters/about/manual.xml:86
+#: xml/chapters/about/manual.xml:85
 msgid "Mathieu Geli"
 msgstr ""
 
 # type: Content of: <sect1><sect2><itemizedlist><listitem><para>
-#: xml/chapters/about/manual.xml:87
+#: xml/chapters/about/manual.xml:86
 msgid "Matthias Kirschner"
+msgstr ""
+
+# type: Content of: <sect1><sect2><itemizedlist><listitem><para>
+#: xml/chapters/about/manual.xml:87
+msgid "Richard Nelson"
 msgstr ""
 
 # type: Content of: <sect1><sect2><itemizedlist><listitem><para>
@@ -270,7 +300,32 @@ msgstr ""
 # type: Content of: <sect1><sect2><screen>
 #: xml/chapters/about/manual.xml:101
 #, no-wrap
+msgid "$ git clone git://git.debian.org/git/debian-live/live-manual.git"
+msgstr ""
+
+# type: Content of: <sect1><sect2><para>
+#: xml/chapters/about/manual.xml:103
 msgid ""
-"\n"
-"$ git clone git://git.debian.org/git/debian-live/live-manual.git\n"
+"Prior to submission of your contribution, please preview your work. To "
+"preview the live-manual, ensure the packages needed for building are "
+"installed by executing:"
+msgstr ""
+
+# type: Content of: <sect1><sect2><screen>
+#: xml/chapters/about/manual.xml:105
+#, no-wrap
+msgid "# apt-get install dblatex docbook-xml docbook-xsl make po4a w3m"
+msgstr ""
+
+# type: Content of: <sect1><sect2><para>
+#: xml/chapters/about/manual.xml:107
+msgid ""
+"You may build the live-manual from the top level directory of your git "
+"checkout by executing:"
+msgstr ""
+
+# type: Content of: <sect1><sect2><screen>
+#: xml/chapters/about/manual.xml:109
+#, no-wrap
+msgid "$ make build"
 msgstr ""

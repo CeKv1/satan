@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-11-12 22:29+0100\n"
+"POT-Creation-Date: 2009-03-10 22:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,8 +41,8 @@ msgstr ""
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: xml/chapters/customization/binary.xml:19
 msgid ""
-"<computeroutput>LH_ISO_APPLICATION</computeroutput> / <computeroutput>--iso-"
-"application <replaceable>NAME</replaceable></computeroutput>"
+"<command>LH_ISO_APPLICATION</command> / <command>--iso-application "
+"<replaceable>NAME</replaceable></command>"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
@@ -55,8 +55,8 @@ msgstr ""
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: xml/chapters/customization/binary.xml:27
 msgid ""
-"<computeroutput>LH_ISO_PREPARER</computeroutput> / <computeroutput>--iso-"
-"preparer <replaceable>NAME</replaceable></computeroutput>"
+"<command>LH_ISO_PREPARER</command> / <command>--iso-preparer "
+"<replaceable>NAME</replaceable></command>"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
@@ -71,8 +71,8 @@ msgstr ""
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: xml/chapters/customization/binary.xml:35
 msgid ""
-"<computeroutput>LH_ISO_PUBLISHER</computeroutput> / <computeroutput>--iso-"
-"publisher <replaceable>NAME</replaceable></computeroutput>"
+"<command>LH_ISO_PUBLISHER</command> / <command>--iso-publisher "
+"<replaceable>NAME</replaceable></command>"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
@@ -85,8 +85,8 @@ msgstr ""
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: xml/chapters/customization/binary.xml:43
 msgid ""
-"<computeroutput>LH_ISO_VOLUME</computeroutput> / <computeroutput>--iso-"
-"volume <replaceable>NAME</replaceable></computeroutput>"
+"<command>LH_ISO_VOLUME</command> / <command>--iso-volume <replaceable>NAME</"
+"replaceable></command>"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>

@@ -1,5 +1,5 @@
 AUTOBUILD	:= build
-#LANGUAGES       := de fr
+#LANGUAGES       := fr
 
 include Makefile.common
 

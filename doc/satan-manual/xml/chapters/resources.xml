@@ -1,38 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
 ]>
 <sect1 id="resources">
-<title>Resources and links</title>
+<title>Ressources et Liens</title>
 
 <section>
-<title>Links</title>
+<title>Liens</title>
 <para>FIXME</para>
 
 <orderedlist>
-<listitem><para><ulink url="http://www.debian.org/">Debian homepage</ulink></para></listitem>
+<listitem><para><ulink url="http://www.debian.org/">Page de démarrage Debian</ulink></para></listitem>
 </orderedlist>
 
 </section>
 
 <section>
-<title>Who is using Debian Live?</title>
+<title>Qui utilise Debian Live?</title>
 
-<para>A number of projects are using Debian Live:</para>
+<para>Un certain nombre de projets utilisent Debian Live:</para>
 
 <itemizedlist>
-<listitem><para><ulink url="http://pkg-kde.alioth.debian.org/kde4livecd.html">Debian KDE4 livecd</ulink></para></listitem>
-<listitem><para><ulink url="http://www.gnewsense.org/">gNewSense</ulink> "forked" a very early live-package</para></listitem>
-<listitem><para><ulink url="http://livecd.gnustep.org/">GNUSTEP Live CD</ulink> using live-package</para></listitem>
-<listitem><para><ulink url="http://www.keshi.org/moin/moin.cgi/PS3/Debian/Live">PlayStation 3 Live CD</ulink> using live-package</para></listitem>
-<listitem><para><ulink url="http://www.sidux.org/">Sidux Live CD</ulink> "forked" an early live-package</para></listitem>
+<listitem><para><ulink url="http://pkg-kde.alioth.debian.org/kde4livecd.html">Debian KDE4
+livecd</ulink></para></listitem>
+<listitem><para><ulink url="http://www.gnewsense.org/">gNewSense</ulink> "dérive" une des
+premières versions d live-package.</para></listitem>
+<listitem><para><ulink url="http://livecd.gnustep.org/">GNUSTEP Live CD</ulink> utilise
+live-package</para></listitem>
+<listitem><para><ulink url="http://www.keshi.org/moin/moin.cgi/PS3/Debian/Live">PlayStation
+3 Live CD</ulink> utilise live-package</para></listitem>
+<listitem><para><ulink url="http://www.sidux.org/">Sidux Live CD</ulink> "dérive" une des
+premières versions d live-package.</para></listitem>
 <listitem><para><ulink url="http://vamosproject.org">Vamos</ulink></para></listitem>
-<listitem><para><ulink url="http://clonezilla.sourceforge.net/">Clonezilla</ulink> (system image distributer)</para></listitem>
+<listitem><para><ulink url="http://clonezilla.sourceforge.net/">Clonezilla</ulink> (système
+de distribution d'images)</para></listitem>
 <listitem><para><ulink url="http://www.webconverger.com/">Webconverger</ulink></para></listitem>
-<listitem><para><ulink url="http://updates.xorcom.com/iso/">Xorcom Rapid live cd</ulink> - Asterisk-based live CD</para></listitem>
-<listitem><para><ulink url="http://pareto.uab.es/mcreel/PelicanHPC/">PelicanHPC</ulink> uses &live-helper;</para></listitem>
-<listitem><para>IES S'Arenal, Llucmajor (Secondary school located near to Palma de Mallorca), Spain.</para></listitem>
+<listitem><para><ulink url="http://updates.xorcom.com/iso/">Xorcom Rapid live cd</ulink> -
+Asterisk-based live CD</para></listitem>
+<listitem><para><ulink url="http://pareto.uab.es/mcreel/PelicanHPC/">PelicanHPC</ulink>
+utilise &live-helper;</para></listitem>
+<listitem><para>IES S'Arenal, Llucmajor (École secondaire située près de Palma de Majorque),
+Espagne.</para></listitem>
 </itemizedlist>
 
 </section>

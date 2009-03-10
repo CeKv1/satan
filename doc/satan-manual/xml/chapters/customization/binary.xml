@@ -1,49 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
 ]>
 <sect1 id="binary">
-<title>Customising the binary image</title>
+<title>Personnaliser l'image binaire</title>
 
-<para>This chapter discusses FIXME</para>
+<para>Ce chapitre aborde A FAIRE</para>
 
 <sect2 id="iso-metadata">
  <title>ISO metadata</title>
  <para>
-  When creating an ISO9660 binary image, you can use the following options to add various textual metadata for your image. This can help you easily identify the version or configuration of an image without booting it.
+  Lors de la création d'un image binaire ISO9660, on peut utiliser les options
+suivantes pour lui ajouter diverses méta-données textes. Ceci peut aider à
+identifier facilement la version ou la configuration d'une image sans qu'il
+soit nécessaire de la démarrer.
  </para>
 
 <variablelist>
  <varlistentry>
-  <term><command>LH_ISO_APPLICATION</command> / <command>--iso-application <replaceable>NAME</replaceable></command></term>
+  <term><command>LH_ISO_APPLICATION</command> / <command>--iso-application
+<replaceable>NOM</replaceable></command></term>
   <listitem>
    <para>
-    This should describe the application that will be on the image. The maximum length for this field is 128 characters.
+    Ceci devrait décrire l'application qui sera sur l'image. La longueur maximum
+est de 128 caractères.
    </para>
   </listitem>
  </varlistentry>
  <varlistentry>
-  <term><command>LH_ISO_PREPARER</command> / <command>--iso-preparer <replaceable>NAME</replaceable></command></term>
+  <term><command>LH_ISO_PREPARER</command> / <command>--iso-preparer
+<replaceable>NOM</replaceable></command></term>
   <listitem>
    <para>
-    This should describe the preparer of the image, usually with some contact details. The default for this option is the &live-helper; version you are using, which may help with debugging later. The maximum length for this field is 128 characters.
+    Ceci devrait décrire le préparateur de l'image, habituellement avec quelques
+détails de contact.La valeur par défaut pour cette option est la version de
+&live-helper; utilisée, qui peut aider plus tard pour le débogage. La
+longueur maximum est de 128 caractères.
    </para>
   </listitem>
  </varlistentry>
  <varlistentry>
-  <term><command>LH_ISO_PUBLISHER</command> / <command>--iso-publisher <replaceable>NAME</replaceable></command></term>
+  <term><command>LH_ISO_PUBLISHER</command> / <command>--iso-publisher
+<replaceable>NOM</replaceable></command></term>
   <listitem>
    <para>
-    This should describe the publisher of the image, usually with some contact details. The maximum length for this field is 128 characters.
+    Ceci devrait décrire le distibuteur de l'image, habituellement avec quelques
+details de contacts. La longueur maximum est de 128 caractères.
    </para>
   </listitem>
  </varlistentry>
  <varlistentry>
-  <term><command>LH_ISO_VOLUME</command> / <command>--iso-volume <replaceable>NAME</replaceable></command></term>
+  <term><command>LH_ISO_VOLUME</command> / <command>--iso-volume
+<replaceable>NOM</replaceable></command></term>
   <listitem>
    <para>
-    This should specify the volume ID of the image. This is used as a user-visible label on some platforms such as Windows and Apple Mac OS. The maximum length for this field is 32 characters.
+    Ceci devrait spécifier le volume-ID de l'image. Ceci est utilisé sur
+certaines plateformes comme Windows ou Apple Mac OS comme le nom visible par
+l'utilisateur. La longueur maximum est de 128 caractères.
    </para>
   </listitem>
  </varlistentry>

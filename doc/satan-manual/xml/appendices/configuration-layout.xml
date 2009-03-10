@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE appendix PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
 ]>
 
 <appendix id="configuration-layout">
-<title>Configuration layout</title>
+<title>Schéma de configuration</title>
 
 <variablelist>
-<title>Layout of the <filename class="directory">config/</filename> directory</title>
+<title>Schéma du répertoire <filename class="directory">config/</filename>.</title>
 
 <varlistentry>
  <term><filename class="directory">binary_debian-installer/</filename></term>

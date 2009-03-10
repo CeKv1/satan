@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-11-14 07:35+0100\n"
+"POT-Creation-Date: 2009-03-10 22:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,61 +16,90 @@ msgstr ""
 "Content-Transfer-Encoding: ENCODING"
 
 # type: Content of: <html><head><title>
-#: build-index.html.in:3
-msgid "Debian Live manual"
+#: xml/chapters/about/manual.xml:21 build-index.html.in:8
+msgid "Debian Live"
 msgstr ""
 
-# type: Content of: <html><body><p><a>
-#: build-index.html.in:7
-msgid "<a href=\"http://debian-live.alioth.debian.org/\">"
+# type: Content of: <html><body><h1>
+#: build-index.html.in:22
+msgid "<a href=\"/\">Debian Live</a>"
 msgstr ""
 
-# type: Content of: <html><body><p>
-#: build-index.html.in:7
-msgid "</a>"
+# type: Content of: <html><body><h2>
+#: build-index.html.in:23
+msgid "<a href=\"/\">Live Debian systems!</a>"
 msgstr ""
 
-# type: Content of: <book><title>
-#: build-index.html.in:9 xml/index.xml:9
-msgid "Debian Live Manual"
+# type: Content of: <html><body><div><h2>
+#: build-index.html.in:27
+msgid "Live Manual"
 msgstr ""
 
-# type: Content of: <html><body><p>
-#: build-index.html.in:11
+# type: Content of: <html><body><div><dl><dd>
+#: build-index.html.in:32
 msgid ""
 "<em>This manual is under heavy construction.</em> Please report errors, "
-"omissions, patches and suggestions to <a href=\"mailto:debian-live@lists."
-"debian.org\">debian-live@lists.debian.org</a>."
+"omissions, patches and suggestions to our mailinglist at <a href=\"mailto:"
+"debian-live@lists.debian.org\">debian-live@lists.debian.org</a>."
 msgstr ""
 
-# type: Content of: <html><body><p>
-#: build-index.html.in:13
-msgid "Formats:"
+# type: Content of: <html><body><div><dl><dt><h3>
+#: build-index.html.in:35
+msgid "Available Formats"
 msgstr ""
 
-# type: Content of: <html><body><p><ul><li>
-#: build-index.html.in:15
-msgid "<strong><a href=\"html/__LANG__/\">HTML</a></strong>"
+# type: Content of: <html><body><div><dl><dd><ul><li>
+#: build-index.html.in:39
+msgid "<strong><a href=\"html/@LANG@/\">HTML</a></strong>"
 msgstr ""
 
-# type: Content of: <html><body><p><ul><li>
-#: build-index.html.in:16
-msgid "<a href=\"txt/__LANG__/live-manual.txt\">Plain text</a>"
+# type: Content of: <html><body><div><dl><dd><ul><li>
+#: build-index.html.in:40
+msgid "<a href=\"pdf/@LANG@/live-manual.pdf\">PDF</a>"
 msgstr ""
 
-# type: Content of: <html><body><p><ul><li>
-#: build-index.html.in:17
-msgid "<a href=\"pdf/__LANG__/live-manual.pdf\">PDF</a>"
+# type: Content of: <html><body><div><dl><dd><ul><li>
+#: build-index.html.in:41
+msgid "<a href=\"txt/@LANG@/live-manual.txt\">Plain text</a>"
 msgstr ""
 
-# type: Content of: <html><body><p>
-#: build-index.html.in:21
+# type: Content of: <html><body><div><dl><dd><p>
+#: build-index.html.in:45
+msgid "Last updated: @DATE@"
+msgstr ""
+
+# type: Content of: <html><body><div><dl><dt><h3>
+#: build-index.html.in:49
+msgid "Source"
+msgstr ""
+
+# type: Content of: <html><body><div><dl><dd><p>
+#: build-index.html.in:53
 msgid ""
-"The source for this manual is available <a href=\"http://git.debian.org/?"
-"p=debian-live/live-manual.git\">here</a>."
+"The source for this manual is <a href=\"http://git.debian.org/?p=debian-live/"
+"live-manual.git\">available</a> at:"
 msgstr ""
 
-# type: Content of: <html><body><p>
-#: build-index.html.in:24
-msgid "Last updated: __UPDATED__."
+# type: Content of: <html><body><div><dl><dd><ul><li>
+#: build-index.html.in:57
+msgid ""
+"<a href=\"git://git.debian.org/git/debian-live/live-manual.git"
+"\"><small><tt>git://git.debian.org/git/debian-live/live-manual.git</tt></"
+"small></a>"
+msgstr ""
+
+# type: Content of: <html><body><div><dl><dd><ul><li>
+#: build-index.html.in:58
+msgid ""
+"<a href=\"http://git.debian.org/git/debian-live/live-manual.git"
+"\"><small><tt>http://git.debian.org/git/debian-live/live-manual.git</tt></"
+"small></a>"
+msgstr ""
+
+# type: Content of: <html><body><div><p>
+#: build-index.html.in:68
+msgid ""
+"<a href=\"http://debian-live.alioth.debian.org/\">Debian Live</a> &lt;<a "
+"href=\"mailto:debian-live@lists.debian.org\">debian-live@lists.debian.org</"
+"a>&gt; - <a href=\"http://live.debian.net/legal.html\">Legal Notice</a>"
 msgstr ""

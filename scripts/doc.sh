@@ -19,7 +19,7 @@ then
 	Echo "Construction de la documentation"
 	
 	cd ${DOC_BASE}/satan-manual
-	dch --force-bad-version --newversion 42+01 --distribution UNRELEASED Autobuild 1
+	dch --force-bad-version --newversion 42+01 --distribution Satan Mabual $(date -R)
 	dpkg-buildpackage -rfakeroot -us -uc
 	debuild clean
 	mkdir -p ${SH_BASE}/config/chroot_local-packages
@@ -34,7 +34,7 @@ then
 	DOC_BASE="$(pwd)/../doc"
 	cd ${DOC_BASE}/satan-manual
 	make 
-	Echo "La documentation est disponible dans satan-manual : index.html, satan-manual.pdf, satan-manual.txt"
+	Echo "La documentation est disponible dans /doc/satan-manual : index.html, satan-manual.pdf, satan-manual.txt"
 
 elif [ "${METHODE}" = "clean" ]
 then
