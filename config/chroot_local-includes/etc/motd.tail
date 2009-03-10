@@ -8,5 +8,16 @@
 
  SATAN : Simulations And Tools to Administrate Networks
  
- root:bonjour
- startx
+ Copyright © 2008-2009 Yohann Lepage, Vincent Palierne, The Debian Live Project
+ URL : http://www.2xyo.info/
+     : https://github.com/2xyo/satan/
+
+ ---------------------------------------------------- 
+ Pour démarrer l'interface graphique, tapez : 
+  startx
+ 
+ Si le clavier est en qwerty (bug #517153), tapez :
+  stwrtx
+
+ Le mot de passe root est     : bonjour
+ L'utilisateur par défaut est : etu
