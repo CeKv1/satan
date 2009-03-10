@@ -1,4 +1,4 @@
-#!/bin/sh -x 
+#!/bin/sh 
 
 # Répertoire de travail
 SH_BASE="${SH_BASE:-`pwd`}"
@@ -21,23 +21,23 @@ fi
 LS_DEVICE=$1
 FS="true"
 
-Echo "Device : ${LS_DEVICE}"
+Echo "Clef USB  : ${LS_DEVICE}"
 
 SIZEISOB=`stat -c %s ${LS_BINARY}`
-Echo "Size of  iso : ${SIZEISOB} bytes"
+Echo "Taille de l'image iso  : ${SIZEISOB} bytes"
 
 CYLINDERSBY=`sfdisk -l  ${LS_DEVICE}|grep "Units = "|awk {'print $5'}` 2>&1
-Echo "Number of Bytes/cylinders : ${CYLINDERSBY}"
+Echo "Nombre de  Bytes/cylinders : ${CYLINDERSBY}"
 
 
 SIZEISOC=$((($SIZEISOB/$CYLINDERSBY)+1))
-Echo "Size of ISO : ${SIZEISOC} cylinders"
+Echo "Taille de l'image iso : ${SIZEISOC} cylinders"
 
 SIZEDEVC=`sfdisk -l -uS ${LS_DEVICE}|grep "Disk /"|awk {'print $3'}` 2>&1
-Echo "Size of dev : ${SIZEDEVC} cylinders"
+Echo "Taille de la clef USB : ${SIZEDEVC} cylinders"
 
 SIZE1=$(($SIZEDEVC-$SIZEISOC-30))
-Echo "Size partition 1 : ${SIZE1} cylinders"
+Echo "Taille de la première partition : ${SIZE1} cylinders"
 
 SIZE2=$(($SIZE1+1))
 #while true
@@ -55,19 +55,19 @@ umount ${LS_DEVICE}"1" | exit 0
 umount ${LS_DEVICE}"2" | exit 0
 
 
-Echo "Write partition table"
+Echo "Ecriture de la table de partition"
 
 sfdisk ${LS_DEVICE} << EOF
 0,${SIZE1},b
 ${SIZE2},,83,*
 EOF
 
-Echo "Re-read partition table"
+Echo "Re-lecture de la table de partition"
 partprobe -s 
 
 if [[ $FS == true ]]
 then
-        Echo "Making filesystem"
+        Echo "Partitionnement"
 
         umount ${LS_DEVICE}1 | exit 0
         umount ${LS_DEVICE}2 | exit 0
@@ -77,9 +77,9 @@ fi
 
 partprobe -s
 
-echo "############################"
-Echo "Start copy of iso"
-echo "############################"
+echo "################################"
+Echo "## Début de la copie de l'iso ## "
+echo "################################"
 
 TEMPMOUNT="$(mktemp -d -t live-mount.XXXXXXXX)"
 TEMPISO="$(mktemp -d -t live-iso.XXXXXXXX)"
@@ -95,33 +95,34 @@ then
 	exit 0
 fi
 
-Echo "Making tempdir"
+Echo "Création des répertoires temporaires"
 
 mkdir -p "${TEMPMOUNT}"
 mkdir -p "${TEMPISO}"
 
-Echo "Mounting device and binary"
+Echo "Montage des partitions"
+Echo_warning "ATTENTION, si une erreur survient, il faut relancer tout le script install.sh"
 mount -t ext2 ${LS_DEVICE}"2" "${TEMPMOUNT}"
 mount -o loop ${LS_BINARY} "${TEMPISO}"
 
-Echo "Copying binary"
+Echo "Copie de l'iso sur la clé"
 cp -a "${TEMPISO}"/* "${TEMPMOUNT}"/
 
-Echo "Installing Grub"
+Echo "Installation de Grub"
 echo "(hd1) ${LS_DEVICE}" > ${TEMPMOUNT}/boot/grub/device.map
 
-Echo "Device map"
+Echo "Table de partition utilisée :"
 cat ${TEMPMOUNT}/boot/grub/device.map
 
 grub-install --root-directory=${TEMPMOUNT}  --no-floppy '(hd1)'
 
 
-Echo "Unmounting device"
+Echo "Démontage des périphériques"
 umount ${LS_DEVICE}2 | exit 0
 umount ${LS_DEVICE}1 | exit 0
 umount ${LS_BINARY} |exit 0
 
-Echo "Removing build directory"
+Echo "Suppréssion des répertoires temporaires"
 rm -rf ${TEMPMOUNT}
 
 if [[ $FS == true ]]

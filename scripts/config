@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 
 # Répertoire de travail
 SH_BASE="${SH_BASE:-`pwd`}"
