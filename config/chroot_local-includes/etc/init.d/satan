@@ -4,7 +4,8 @@ case "$1" in
         # au démarrage
         mkdir /home/etu/Desktop
         mkdir /home/etu/Desktop/documents
-	mount /dev/sda1 /home/etu/Desktop/documents -o  rw,users,exec,dev,suid,uid=1000,gid=1000
+#	mount /dev/sda1 /home/etu/Desktop/documents -o  rw,users,exec,dev,suid,uid=1000,gid=1000
+	mount /dev/sda1 /home/etu/Desktop/documents -o fmask=111,dmask=0
 	;;
   stop)   
         # à l'arret
