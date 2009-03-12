@@ -9,8 +9,142 @@
 
 <section id="install.sh">
 <title>Fichier <filename>install.sh</filename></title>
-   <programlistingco>
+	<programlistingco>
+		<areaspec>
+			<area id="install.sh-4"      coords="4"/>
+			<area id="install.sh-7"      coords="7"/>
+			<area id="install.sh-11"      coords="11"/>
+			<area id="install.sh-13"      coords="13"/>
+			<area id="install.sh-21"      coords="21"/>
+			<area id="install.sh-22"      coords="22"/>
+			<area id="install.sh-26"      coords="26"/>
+			<area id="install.sh-29"      coords="29"/>
+			<area id="install.sh-33"      coords="33"/>
+			<area id="install.sh-36"      coords="36"/>
+			<area id="install.sh-39"      coords="39"/>
+			<area id="install.sh-42"      coords="42"/>
+			<area id="install.sh-54"      coords="54"/>
+			<area id="install.sh-60"      coords="60"/>
+			<area id="install.sh-61"      coords="61"/>
+			<area id="install.sh-62"      coords="62"/>
+			<area id="install.sh-66"      coords="66"/>
+			<area id="install.sh-74"      coords="74"/>
+			<area id="install.sh-75"      coords="75"/>
+			<area id="install.sh-84"      coords="84"/>
+			<area id="install.sh-85"      coords="85"/>
+			<area id="install.sh-87"      coords="87"/>
+			<area id="install.sh-92"      coords="92"/>
+			<area id="install.sh-100"      coords="100"/>
+			<area id="install.sh-101"      coords="101"/>
+			<area id="install.sh-105"      coords="105"/>
+			<area id="install.sh-106"      coords="106"/>
+			<area id="install.sh-109"      coords="109"/>
+			<area id="install.sh-112"      coords="112"/>
+			<area id="install.sh-115"      coords="115"/>
+			<area id="install.sh-117"      coords="117"/>
+			<area id="install.sh-121"      coords="121"/>
+			<area id="install.sh-126"      coords="126"/>
+			<area id="install.sh-128"      coords="128"/>
+		</areaspec>
           <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../install.sh" parse="text" encoding="utf-8"/></programlisting>
-        </programlistingco>
+	   <calloutlist>
+	  <callout arearefs="install.sh-4">
+		    <para>Prise en compte des fonctions de live-helper.</para>
+          	</callout>
+           	<callout arearefs="install.sh-7">
+		    <para>Récupération du premier argument passé lors de l'appel du script.</para>
+          	</callout>
+           	<callout arearefs="install.sh-11">
+		    <para>Le système utilise par défaut le fichier binary.iso.</para>
+          	</callout>
+           	<callout arearefs="install.sh-13">
+		    <para>Vérification du branchement de  la clé usb</para>
+          	</callout>
+           	<callout arearefs="install.sh-21">
+		    <para>Récupération du répertoire de la clef monté qui est passé en argument.</para>
+          	</callout>
+           	<callout arearefs="install.sh-22">
+		    <para>Formatage de la clef par défaut.</para>
+          	</callout>
+           	<callout arearefs="install.sh-26">
+		    <para>Calcule de  la taille de l'image iso (en Mo).</para>
+          	</callout>
+           	<callout arearefs="install.sh-29">
+		    <para>Calcule du nombre d'octets par secteurs sur la clef.</para>
+          	</callout>
+           	<callout arearefs="install.sh-33">
+		    <para>Calcule de  la taille de l'image en cylindres.</para>
+          	</callout>
+           	<callout arearefs="install.sh-36">
+		    <para>Calcule de la taille de la clef.</para>
+          	</callout>
+           	<callout arearefs="install.sh-39">
+		    <para>Calcule de la taille de la première partition en prenant une marge d'érreurs.</para>
+          	</callout>
+           	<callout arearefs="install.sh-42">
+		    <para>Calcule du numéro du premier cylindre de la seconde partition.</para>
+          	</callout>
+           	<callout arearefs="install.sh-54">
+		    <para>Démontage des partitions (pour être sûr).</para>
+          	</callout>
+           	<callout arearefs="install.sh-60">
+		    <para>Appel de sfdisk pour le partitionnement.</para>
+          	</callout>
+           	<callout arearefs="install.sh-61">
+		    <para>Définition de la première partition avec un système de fichier fat (b).</para>
+          	</callout>
+           	<callout arearefs="install.sh-62">
+		    <para>Définition de la seconde partion linux (83) démarrable (*).</para>
+          	</callout>
+           	<callout arearefs="install.sh-66">
+		    <para>Relecture de la table de partition par le noyau.</para>
+          	</callout>
+           	<callout arearefs="install.sh-74">
+		    <para>Formatage en FAT32 de la première partition avec le label docs.</para>
+          	</callout>
+           	<callout arearefs="install.sh-75">
+		    <para>Formatage en ext2 de la seconde partition avec le label satan.</para>
+          	</callout>
+           	<callout arearefs="install.sh-84">
+		    <para>Définition du nom de répertoire temporaire pour le point de montage de la seconde partition de la clef.</para>
+          	</callout>
+           	<callout arearefs="install.sh-85">
+		    <para>Définition du nom de répertoire temporaire pour le point de montage de l'image iso.</para>
+          	</callout>
+           	<callout arearefs="install.sh-100">
+		    <para>Création du répertoire temporaire du montage de la clef.</para>
+          	</callout>
+           	<callout arearefs="install.sh-101">
+		    <para>Création du répertoire temporaire du montage de l'image iso.</para>
+          	</callout>
+           	<callout arearefs="install.sh-105">
+		    <para>Montage de la seconde partition de la clef.</para>
+          	</callout>
+           	<callout arearefs="install.sh-106">
+		    <para>Montage de l'image iso.</para>
+          	</callout>
+           	<callout arearefs="install.sh-109">
+		    <para>Copie du contenu de l'image iso dans la clef.</para>
+          	</callout>
+           	<callout arearefs="install.sh-112">
+		    <para>Copie de la cartographie de la clef dans la configuration de grub</para>
+          	</callout>
+           	<callout arearefs="install.sh-115">
+		    <para>Affichage de la cartographie pour surveiller.</para>
+          	</callout>
+           	<callout arearefs="install.sh-117">
+		    <para>Installation de grub.</para>
+          	</callout>
+           	<callout arearefs="install.sh-121">
+		    <para>Démontage de dossiers.</para>
+          	</callout>
+           	<callout arearefs="install.sh-126">
+		    <para>Suppression des répertoires temporaires.</para>
+          	</callout>
+           	<callout arearefs="install.sh-128">
+		    <para>Reformatage de la première partition.</para>
+          	</callout>
+	 </calloutlist>
+	</programlistingco>
 </section>
 </appendix>

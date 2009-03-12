@@ -36,7 +36,7 @@ Echo "Taille de l'image iso : ${SIZEISOC} cylinders"
 SIZEDEVC=`sfdisk -l -uS ${LS_DEVICE}|grep "Disk /"|awk {'print $3'}` 2>&1
 Echo "Taille de la clef USB : ${SIZEDEVC} cylinders"
 
-SIZE1=$(($SIZEDEVC-$SIZEISOC-30))
+SIZE1=$(($SIZEDEVC-$SIZEISOC-15))
 Echo "Taille de la première partition : ${SIZE1} cylinders"
 
 SIZE2=$(($SIZE1+1))
@@ -71,7 +71,7 @@ then
 
         umount ${LS_DEVICE}1 | exit 0
         umount ${LS_DEVICE}2 | exit 0
-        mkfs.vfat -F 32 ${LS_DEVICE}"1"
+	mkfs.vfat -F 32 ${LS_DEVICE}"1" -n "docs"
 	mkfs.ext2 ${LS_DEVICE}"2" -L "satan"
 fi
 

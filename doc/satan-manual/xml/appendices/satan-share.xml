@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE appendix PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
+]>
+
+<appendix id="satan-share">
+<title>Scripts inclus dans la clef finale.</title>
+
+<section id="config/chroot_local-includes/usr/share/satan/scripts/backup-conf.sh">
+<title>Fichier <filename>config/chroot_local-includes/usr/share/satan/scripts/backup-conf.sh</filename></title>
+   <programlistingco>
+	<areaspec>
+		<area id="share-conf-3"      coords="3"/>
+		<area id="share-conf-4"      coords="4"/>
+		<area id="share-conf-6"      coords="6"/>
+		<area id="share-conf-8"      coords="8"/>
+		<area id="share-conf-9"      coords="9"/>
+		<area id="share-conf-11"      coords="11"/>
+		<area id="share-conf-13"      coords="13"/>
+		<area id="share-conf-25"      coords="25"/>
+		<area id="share-conf-28"      coords="28"/>
+		<area id="share-conf-33"      coords="33"/>
+		<area id="share-conf-35"      coords="35"/>
+		<area id="share-conf-39"      coords="39"/>
+		<area id="share-conf-42"      coords="42"/>
+		<area id="share-conf-46"      coords="46"/>
+	</areaspec>
+	   <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../config/chroot_local-includes/usr/share/satan/scripts/backup-conf.sh" parse="text" encoding="utf-8"/></programlisting>
+ 	<calloutlist> 
+	   <callout arearefs="share-conf-3">
+  		<para>Définition du répertoire où sera sauvegardé les configuration.</para>
+         </callout>
+	  <callout arearefs="share-conf-4">
+  		<para>Définition des répertoires à sauvegarder.</para>
+         </callout>
+	  <callout arearefs="share-conf-6">
+  		<para>Détermination du mode de fonctionnement du script : sauvegarde des données.</para>
+         </callout>
+	  <callout arearefs="share-conf-8">
+  		<para>Test si le répertoire de sauvegarde existe.</para>
+         </callout>
+	  <callout arearefs="share-conf-9">
+  		<para>On continue si il existe.</para>
+         </callout>
+	  <callout arearefs="share-conf-11">
+  		<para>Si il n'existe pas on le créer.</para>
+         </callout>
+	  <callout arearefs="share-conf-13">
+  		<para>Vérification de la création du répertoire.</para>
+         </callout>
+	  <callout arearefs="share-conf-25">
+  		<para>Vérification de l'existence des répertoires à sauvegarder.</para>
+         </callout>
+	  <callout arearefs="share-conf-28">
+  		<para>Copie de l'arborescence complète.</para>
+         </callout>
+	  <callout arearefs="share-conf-33">
+  		<para>Déterminsation du mode de fonctionnement du script : restauration des données.</para>
+         </callout>
+	  <callout arearefs="share-conf-35">
+  		<para>Test de l'éxistence du répertoire qui contient la sauvegarde.</para>
+         </callout>
+	  <callout arearefs="share-conf-39">
+  		<para>Si celui-ci n'existe pas, abandon du script.</para>
+         </callout>
+	  <callout arearefs="share-conf-42">
+  		<para>Restauration des données.</para>
+         </callout>
+	  <callout arearefs="share-conf-46">
+  		<para>Rappel des usages du script.</para>
+         </callout>
+ </calloutlist>
+ </programlistingco>
+</section>
+
+<section id="config/chroot_local-includes/usr/share/satan/scripts/backup-mysql.sh">
+<title>Fichier <filename>config/chroot_local-includes/usr/share/satan/scripts/backup-mysql.sh</filename></title>
+   <programlistingco>
+	<areaspec>
+		<area id="share-mysql-2"      coords="2"/>
+		<area id="share-mysql-5"      coords="5"/>
+		<area id="share-mysql-6"      coords="6"/>
+		<area id="share-mysql-7"      coords="7"/>
+		<area id="share-mysql-12"      coords="12"/>
+		<area id="share-mysql-15"      coords="15"/>
+		<area id="share-mysql-17"      coords="17"/>
+	</areaspec>
+	   <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../config/chroot_local-includes/usr/share/satan/scripts/backup-mysql.sh" parse="text" encoding="utf-8"/></programlisting>
+ <calloutlist> 
+	   <callout arearefs="share-mysql-2">
+  		<para>Déterminsation du mode de fonctionnement du script : sauvegarde des données.</para>
+         </callout>
+	  <callout arearefs="share-mysql-5">
+  		<para>Utilisation du programme mysqldump pour sauvegarder toutes les bases de données du serveur. Arrêt du script si succès.</para>
+         </callout>
+	  <callout arearefs="share-mysql-6">
+  		<para>Arrêt du script avec avertissment si la sauvegarde échoue.</para>
+         </callout>
+	  <callout arearefs="share-mysql-7">
+  		<para>Déterminsation du mode de fonctionnement du script : restauration des données.</para>
+         </callout>
+	  <callout arearefs="share-mysql-12">
+  		<para>Restauration des données. Arrêt du script si succès.</para>
+         </callout>
+	  <callout arearefs="share-mysql-15">
+  		<para>Arrêt du script avec avertissement si la restauration échoue.</para>
+         </callout>
+	  <callout arearefs="share-mysql-17">
+  		<para>Rappel des usages du script.</para>
+         </callout>
+ </calloutlist>
+ </programlistingco>
+</section>
+<section id="config/chroot_local-includes/usr/share/satan/scripts/lamp.sh">
+<title>Fichier <filename>config/chroot_local-includes/usr/share/satan/scripts/lamp.sh</filename></title>
+   <programlistingco>
+	<areaspec>
+		<area id="share-lamp-3"      coords="3"/>
+		<area id="share-lamp-4"      coords="4"/>
+		<area id="share-lamp-5"      coords="5"/>
+	</areaspec>
+	   <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../config/chroot_local-includes/usr/share/satan/scripts/lamp.sh" parse="text" encoding="utf-8"/></programlisting>
+	  <calloutlist>
+	   <callout arearefs="share-lamp-3">
+  		<para>Lancement du serveur http.</para>
+         </callout>
+	  <callout arearefs="share-lamp-4">
+  		<para>Lancement du serveur de base de données SQL.</para>
+         </callout>
+	  <callout arearefs="share-lamp-5">
+  		<para>Lancement du navigateur sur la page de l'interface phpmyadmin.</para>
+         </callout>
+  </calloutlist>
+ </programlistingco>
+</section>
+<section id="config/chroot_local-includes/usr/share/satan/scripts/ldap.sh">
+<title>Fichier <filename>config/chroot_local-includes/usr/share/satan/scripts/ldap.sh</filename></title>
+   <programlistingco>
+	<areaspec>
+		<area id="share-ldap-3"      coords="3"/>
+		<area id="share-ldap-4"      coords="4"/>
+		<area id="share-ldap-5"      coords="5"/>
+	</areaspec>
+	   <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../config/chroot_local-includes/usr/share/satan/scripts/ldap.sh" parse="text" encoding="utf-8"/></programlisting>
+	  <calloutlist>
+	   <callout arearefs="share-ldap-3">
+  		<para>Lancement du serveur http.</para>
+         </callout>
+	  <callout arearefs="share-ldap-4">
+  		<para>Lancement de l'annuaire ldap.</para>
+         </callout>
+	  <callout arearefs="share-ldap-5">
+  		<para>Lancement du navigateur sur la page de l'interface phpldapadmin.</para>
+         </callout>
+  </calloutlist>
+ </programlistingco>
+</section>
+
+</appendix>

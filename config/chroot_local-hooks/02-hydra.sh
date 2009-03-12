@@ -1,39 +1,15 @@
-#!/bin/sh -x
+#!/bin/sh
 echo "###################"
 echo "####### 02 ########"
 echo "###################"
 
 echo "I: Install hydra"
 
-#mkdir /tmp/hydra
-#cd /tmp/hydra
-
-##############
-# libssh
-############## 
-# Téléchargement de l'archive
-#wget http://0xbadc0de.be/libssh/libssh-0.2.tgz
- 
-# Décompression
-#tar xzf libssh-0.2.tgz
 cd /usr/share/libssh-0.2
 ./configure
 make
 make install
 cd ..
- 
-############## 
-# hydra
-############## 
-
-# Téléchargement de l'archive
-#wget http://freeworld.thc.org/releases/hydra-5.4-src.tar.gz
- 
-# Décompression 
-#tar xzf hydra-5.4-src.tar.gz
- 
-# Téléchargement du patch
-#wget http://0xbadc0de.be/libssh/hydra-libssh0.2.patch
  
 cd hydra-5.4-src
 ./configure
@@ -47,9 +23,6 @@ sed -i 's/XLIBS= -lssl -lpq -lssh -lcrypto/XLIBS= -lssl -lssh -lcrypto/g' Makefi
 make
 make install
 
-# Nettoyage
-#cd /tmp/
-#rm -rf hydra
 cd /usr/share/
 rm -rf libssh-0.2
 rm -rf hydra-5.4-src

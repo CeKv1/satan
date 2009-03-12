@@ -19,7 +19,7 @@ then
 	Echo "Construction de la documentation"
 	
 	cd ${DOC_BASE}/satan-manual
-	dch --force-bad-version --newversion 42+01 --distribution Satan Mabual $(date -R)
+	dch --force-bad-version --newversion 1+00 --distribution Satan Mabual $(date -R)
 	dpkg-buildpackage -rfakeroot -us -uc
 	debuild clean
 	mkdir -p ${SH_BASE}/config/chroot_local-packages
