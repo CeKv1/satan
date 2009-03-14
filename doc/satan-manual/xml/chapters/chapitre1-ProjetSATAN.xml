@@ -171,22 +171,22 @@
 <sect1 id="remise_en_cause">
 	<title>Remise en cause du projet R&amp;Tools</title>
 	<para>
-	Le projet R&amp;Tools est un outil qui doit être en constante évolution et nécessite donc des mises à jours régulières. Il faut pour cela avoir un système de base modulable et évolutif, ce qui est l'exact contraire du liveCD R&amp;Tools. En effet, faire un liveCD sur un support fixe tel que le DVD ne permet pas de faire de mises à jour ou autres évolutions puisque ce support n'est inscriptible qu'une seule fois; ce support est aussi très fragile. Le liveCD actuel est en fait un DVD car l'image pèse près de 900 Mo; cela n'est pas très grave si les machines hôtes possèdent un lecteur DVD, ce qui n'est pas le cas des PCs de l'IUT de Saint Malo. Il faut donc trouver une solution qui puisse supporter des mises à jour et ajouts/suppréssion d'éléments sans avoir de problèmes avec l'utilisation des étudiants à l'IUT.</para>
+	Le projet R&amp;Tools est un outil qui doit être en constante évolution et nécessite donc des mises à jours régulières. Il faut pour cela avoir un système de base modulable et évolutif, ce qui est impossible avec le liveCD R&amp;Tools. En effet, faire un liveCD sur un support fixe tel qu'un CD ou un DVD ne permet pas de faire de mises à jour ou autres évolutions puisque ce support n'est inscriptible qu'une seule fois; ce support est aussi très fragile. Le liveCD actuel est en fait un DVD car l'image pèse près de 900 Mo; cela n'est pas très grave si les machines hôtes possèdent un lecteur DVD, ce qui n'est pas le cas des ordinateurs de l'IUT de Saint Malo. Il faut donc trouver une solution qui puisse supporter des mises à jour ainsi que des ajouts/suppression d'éléments très simplement.</para>
 	<para>
-	De plus, les logiciels présents sur R&amp;Tools ne sont pas tous utiles et certains sont en doublons; il faudra donc faire le tri et ne garder (ou ajouter) que les plus intéressants. Ensuite, on peut remarquer que le nom n'est pas très évoquateur, il faudrait trouver un nom plus facile à retenir et qui correspond plus au type de projet que nous nous sommes fixé : un système intégrant des outils de simulation et d'administration de réseaux. 
+	De plus, les logiciels présents sur R&amp;Tools ne sont pas tous utiles et certains sont en doublons; il faudra donc faire le tri et ne garder (ou ajouter) que les plus intéressants. Ensuite, le nom comporte le caractère &amp; qui est un caractère parfois mal supporté. Il faut par conséquent  trouver un nom plus normalisé, facile à retenir, et qui correspond au type de projet que nous nous sommes fixé : un système intégrant des outils de simulation et d'administration de réseaux. 
 	</para>
 	<sect2 id="a_conserver">
 		<title>Les éléments à conserver</title>
 		<para>Nous allons tout d'abord garder le principe de Live CD<footnote><para><ulink url="http://fr.wikipedia.org/wiki/LiveCD" /></para></footnote>. C'est à dire un support autonome qui contient un système d'exploitation exécutable sans installation.</para>
 		<para>Nous garderons également quelques outils que nous avons trouvé judicieux tels que GNS3 et Wireshark par exemple.</para>
-		<para>Quelques outils tel que conky pourra aussi servir comme supplément à l'interface du projet.</para>
+		<para>Quelques outils tel que conky pourront aussi servir comme supplément à l'interface du projet.</para>
 	</sect2>
 	<sect2 id="a_enlever">
 		<title>Les éléments à modifier</title>
-		<para>Nous avons décidé de baptiser notre projet "S.A.T.A.N" pour "Simulations And Tools to Administrate Networks"; c'est en effet très facile à retenir. N'y voyez pas de convictions personnelles, S.A.T.A.N est en fait un acronyme utilisé par un projet abandonné il y a quelques années.</para>
+		<para>Nous avons décidé de baptiser notre projet "S.A.T.A.N" pour "Simulations And Tools to Administrate Networks"; c'est en effet très facile à retenir. Il n'y a biensur aucunes connotations avec un culte démoniaque ; S.A.T.A.N est en fait un acronyme utilisé par un projet de boite à outils abandonné il y a quelques années.</para>
 		<para>Pour le support de S.A.T.A.N, nous utiliserons une clef USB qui peut être ré-utilisée plusieurs milliers de fois. En effet le support CD ne permettant pas d'évolution, la solution de la clef usb est plus appropriée. De plus, celle-ci permet de stocker des informations dessus tel que des comptes rendus de travaux pratiques.</para>
 		<para>Pour le système d'exploitation de la clef, nous utiliserons le projet Debian Live qui permet de créer des clés usb bootables comportant la distribution libre Debian. De plus, la distribution Ubuntu utilisée par R&amp;Tools est trop lourde et posséde beaucoup de fonctions inutiles; elle ne permet pas aussi de créer un système vraiment personnalisé. Debian est aussi une distribution stable en comparaison avec Ubuntu.</para>
-		<para>R&amp;Tools n'est pas facilement modifiable. Il faut en effet monter l'image iso puis chrooter l'environnement pour y installer des logiciels. S.A.T.A.N, quand a lui, permet d'ajouter un logiciel simplement en indiquant le nom du paquet correspondant dans un fichier de configuration.</para>
+		<para>R&amp;Tools n'est pas facilement modifiable. Il faut en effet monter l'image iso puis chrooter l'environnement pour y installer des logiciels. S.A.T.A.N permet d'ajouter un logiciel simplement en indiquant le nom du paquet correspondant dans un fichier de configuration.</para>
 		<para>R&amp;Tools n'est pas évolutif. Le système ne peut pas être mis à jour contrairement à S.A.T.A.N, qui permet de générer une nouvelle image avec tout les logiciels mis à jour en seulement quatre commandes.</para>
 	</sect2>
 </sect1>
@@ -202,25 +202,25 @@
 		<sect3 id="kit-utilitaires">
 			<title>Utilitaires</title>
 			<itemizedlist>
-				<listitem><para>Génération de traffic</para><para>La génération de trafic est utile pour par exemple tester la résistance du réseau.</para></listitem>
-				<listitem><para>Wi-Fi</para><para>Le Wi-Fi étant omniprésent dans les réseaux à ce jour, il était donc important d'intégrer des fonctionnalités sans-fil à notre projet. Grâce à ces utlitaires, on peut par exemple passer les protections de points d'accès Wi-Fi.</para></listitem>
+				<listitem><para>Génération de traffic</para><para>La génération de trafic est utile pour par exemple tester la résistance du réseau face à un trafic important ou de vérifier une politique de QOS par exemple.</para></listitem>
+				<listitem><para>Wi-Fi</para><para>Le Wi-Fi étant omniprésent dans les réseaux à ce jour, il était donc important d'intégrer des fonctionnalités sans-fil à notre projet. Grâce à ces utlitaires, on peut par exemple vérifier la sécurité des points d'accès Wi-Fi.</para></listitem>
 				<listitem><para>Manipulation de paquets</para><para>Les utilitaires de manipulation de paquets permettent de réaliser un envoi de trames en contrôlant la taille, le protocole utilisé et beaucoup d'autres paramètres.</para></listitem>
-				<listitem><para>Divers réseaux</para><para>Cette section contient des outils généraux tels qu'un calculateur d'adresses IP ou un testeur de performances réseau.</para></listitem>
+				<listitem><para>Divers réseaux</para><para>Cette section contient des outils généraux tels qu'un logiciel pour calculer les masques des réseaux.</para></listitem>
 			</itemizedlist> 
 		</sect3>
 		<sect3 id="kit-administration">
 			<title>Administration</title>
 			<itemizedlist>
-				<listitem><para>Supervision</para><para>Un réseau sécurisé est un réseau surveillé, il était donc nécessaire d'inclure un logiciel de supervision permettant d'afficher graphiquement et d'enregistrer par exemple la charge d'un routeur ou le nombre d'accès à un serveur.</para></listitem>
+				<listitem><para>Supervision</para><para>La sécurisation d'un réseau passe en partie par une surveillance de cellui-ci. Il était donc nécessaire d'inclure un logiciel de supervision permettant d'afficher graphiquement et d'enregistrer par exemple la charge d'un routeur ou le nombre d'accès à un serveur.</para></listitem>
 				<listitem><para>Gestion des configurations</para><para>Un administrateur réseau a pour tâche quotidienne la configuration d'équipements réseaux. Une fois configurés, l'administrateur doit pouvoir recharger ces configurations en cas de problème. C'est pourquoi nous avons inclut un logiciel gestionnaire de configurations.</para></listitem>
 				<listitem><para>Capture</para><para>Pour analyzer un réseau, il est nécessaire de mettre en place une solution de capture de traffic. Nous avons donc choisi plusieurs logiciels qui se complètent entre eux.</para></listitem>
 				<listitem><para>DNS</para><para>Dans un réseau, il peut être utile d'avoir un serveur DNS afin d'offrir le service de résolution d'adresses localement.</para></listitem>
 				<listitem><para>HTTP</para><para>Afin d'héberger le site de son entreprise par exemple, l'administrateur peut avoir besoin de monter son serveur localement et non de nécessiter le service d'un hébergeur professionnel.</para></listitem>
 				<listitem><para>FTP/TFTP</para><para>Les services de transfert de fichiers sont très utiles dans une entreprise pour par exemple récupérer des documents stockés sur un serveur.</para></listitem>
 				<listitem><para>Base de données</para><para>Ce service est aussi très utilisé en entreprise ne serait-ce que pour gérer une liste d'utilisateurs par exemple.</para></listitem>
-				<listitem><para>Partage Samba</para><para>Le partage de fichier est utile à l'utilisation du réseau par une communauté d'utilisateurs.</para></listitem>
+				<listitem><para>Partage Samba</para><para>Le partage de fichiers entre des postes windows et unix est impossible par défaut. C'est pourquoi nous avons intégré Samba qui permet de faire du partage de fichier dans un environnement windows.</para></listitem>
 				<listitem><para>Authentification</para><para>La sécurité étant un facteur très important, mettre en place des systèmes d'authentification sur le réseau est primordial.</para></listitem>
-				<listitem><para>VoIP</para><para>La VoIP est en passe de devenir commun dans un réseau d'entreprise, nous avons donc intégré cette fonction à notre projet.</para></listitem>
+				<listitem><para>VoIP</para><para>La VoIP est en passe de devenir commun dans un réseau d'entreprise, nous avons donc intégré un serveur SIP à notre projet.</para></listitem>
 				<listitem><para>Routage</para><para>Dans cette section, on trouve des logiciels utiles permettant de mettre en place l'architecture du réseau.</para></listitem>
 			</itemizedlist>
 		</sect3>
@@ -244,7 +244,7 @@
 	</sect2>
 	<sect2 id="maj">
 		<title>Comment mettre à jour les outils ?</title>
-		<para>Une fois avoir démarré un PC avec la clef usb, on utilise la commande "apt-get update" mais le problème est que cette mise à jour sera perdue au prochain redémarrage de l'ordinateur. En effet, S.A.T.A.N étant un système liveCD, toute modification éffectuée est effacée lors de l'extinction du PC. Afin de mettre à jour la totalité du système, il suffit de regénérer la clef usb grâce au logiciel live-helper comme expliqué dans le chapitre 2. Pour les logiciels dont les paquets d'installation ne sont pas dans les dépôts Debian, ils sont intégrés statiquement dans le dossier de génération de clef usb grâce à plusieurs scripts détaillés en annexe. Pour certains, il faudra télécharger la dernière version directement sur les sites hébergeurs de ces logiciels et les placer dans le dossier des "local includes" afin qu'ils s'installent automatiquement sur la clef.
+		<para>Une fois avoir démarré un PC avec la clef usb, on utilise la commande "apt-get update" mais le problème est que cette mise à jour sera perdue au prochain redémarrage de l'ordinateur. En effet, S.A.T.A.N étant un système liveCD, toute modification éffectuée est effacée lors de l'extinction du PC. Afin de mettre à jour la totalité du système, il suffit de regénérer la clef usb grâce au logiciel live-helper comme expliqué dans le chapitre 2. Pour les logiciels dont les paquets d'installation ne sont pas dans les dépôts Debian, ils sont intégrés statiquement dans le dossier de génération de clef usb grâce à plusieurs scripts détaillés en annexe. Pour certains, il faudra télécharger la dernière version directement sur les sites hébergeurs de ces logiciels et les placer dans le dossier chroot_locale-include afin qu'ils s'installent automatiquement sur la clef.
 		</para>
 	</sect2>
 	<sect2 id="reproduire">
