@@ -15,9 +15,6 @@
  ---------------------------------------------------- 
  Pour démarrer l'interface graphique, tapez : 
   startx
- 
- Si le clavier est en qwerty (bug #517153), tapez :
-  stqrtx
 
  Le mot de passe root est     : bonjour
  L'utilisateur par défaut est : etu
