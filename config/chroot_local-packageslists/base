@@ -2,7 +2,7 @@
 gksu sudo
 
 ## Localisation
-locales
+locales console-data
 
 ## Système de fichier
 # NTFS
