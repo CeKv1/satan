@@ -35,13 +35,16 @@ HYDRA_PATCH="hydra-libssh0.2.patch"
 MSF_URL="http://spool.metasploit.com/releases/framework-3.2.tar.gz"
 MSF="framework-3.2.tar.gz"
 # Phpmyadmin
-PHPM_URL="http://ovh.dl.sourceforge.net/sourceforge/phpmyadmin/phpMyAdmin-3.1.3-rc1-all-languages.tar.gz"
-PHPM="phpMyAdmin-3.1.3-rc1-all-languages.tar.gz"
+#PHPM_URL="http://ovh.dl.sourceforge.net/sourceforge/phpmyadmin/phpMyAdmin-3.1.3-rc1-all-languages.tar.gz"
+PHPM_URL="http://ovh.dl.sourceforge.net/sourceforge/phpmyadmin/phpMyAdmin-3.1.3-all-languages.tar.gz"
+PHPM="phpMyAdmin-3.1.3-all-languages.tar.gz"
 # IOS
 IOS1_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-36xx/c3640-jk9o3s-mz.122-37.bin"
 IOS1="c3640-jk9o3s-mz.122-37.bin"
-IOS2_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-c72xx/c7200-ik9o3s-mz.123-24a.bin"
+#IOS2_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-c72xx/c7200-ik9o3s-mz.123-24a.bin"
 IOS2="c7200-ik9o3s-mz.123-24a.bin"
+IOS2_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-72xx/c7200-ik9o3s-mz.123-24a.bin"
+
 IOS3_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-37xx/c3745-ik9o3s-mz.123-24a.bin"
 IOS3="c3745-ik9o3s-mz.123-24a.bin"
 IOS4_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-26xx/c2600-ik9o3s3-mz.123-22.bin"
@@ -100,10 +103,10 @@ then
 	Echo_warning "Si vous n'êtes pas à l'IUT, il faut créer un repertoire dl et y inclure les IOS."
 
 	# IOS
-	wget --tries=2 --timeout=5-N -c ${IOS1_URL}
-	wget --tries=2 --timeout=5 -N -c ${IOS2_URL}
-	wget --tries=2 --timeout=5 -N -c ${IOS2_URL}
-	wget --tries=2 --timeout=5 -N -c ${IOS3_URL}
+	wget --tries=2 --timeout=2 -N -c ${IOS1_URL}
+	wget --tries=2 --timeout=2 -N -c ${IOS2_URL}
+	wget --tries=2 --timeout=2 -N -c ${IOS2_URL}
+	wget --tries=2 --timeout=2 -N -c ${IOS3_URL}
 	# IOS
 	cp -u ${IOS1} ../config/chroot_local-includes/usr/share/ios/ 
 	cp -u ${IOS2} ../config/chroot_local-includes/usr/share/ios/ 

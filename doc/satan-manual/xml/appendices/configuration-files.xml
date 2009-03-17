@@ -1,573 +1,513 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE appendix PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
-    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+<!DOCTYPE appendix PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
 ]>
-
 <appendix id="configuration-files">
-<title>Fichiers de configuration</title>
+<title>Configuration files</title>
 
 <section id="config-binary">
-<title>Le fichier <filename>config/binary</filename>.</title>
+<title>The <filename>config/binary</filename> file</title>
 
 <variablelist>
 <varlistentry>
  <term>LH_BINARY_FILESYSTEM</term>
- <listitem><para>Défini l'image du système de fichier (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set image filesystem. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_BINARY_IMAGES</term>
- <listitem><para>Défini le type d'image. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set image type. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_BINARY_INDICES</term>
- <listitem><para>Défini les indices génériques pour apt/aptitude (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set apt/aptitude generic indices. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_BOOTAPPEND_LIVE</term>
- <listitem><para>Défini les paramètres de démarrage. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set boot parameters. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_BOOTAPPEND_INSTALL</term>
- <listitem><para>Défini les paramètres de démarrage. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set boot parameters. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_BOOTLOADER</term>
- <listitem><para>Défini le chargeur de démarrage. (Voir <xref linkend="bootloaders"/>)</para></listitem>
+ <listitem><para>Set bootloader. (See <xref linkend="bootloaders"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_CHECKSUMS</term>
- <listitem><para>Défini les sommes de contrôle (ndt: checksums). (Voir <xref
-linkend="cheat-codes"/>)</para></listitem>
+ <listitem><para>Set checksums. (See <xref linkend="cheat-codes"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_CHROOT_BUILD</term>
- <listitem><para>Controle si on construit des images binaires "chrootée". (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Control if we build binary images chrooted. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_DEBIAN_INSTALLER</term>
- <listitem><para>Défini l'installeur Debian (debian-installer). (See <xref
-linkend="debian-installer"/>)</para></listitem>
+ <listitem><para>Set debian-installer. (See <xref linkend="debian-installer"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_DEBIAN_INSTALLER_DAILY</term>
- <listitem><para>Défini les images journalières. (Voir <xref linkend="debian-installer"/>)</para></listitem>
+ <listitem><para>Set daily images. (See <xref linkend="debian-installer"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_ENCRYPTION</term>
- <listitem><para>Défini le cryptage. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set encrytion. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_GRUB_SPLASH</term>
- <listitem><para>Défini un écran de démarrage personnalisé pour grub. (Voir <xref
-linkend="splash"/>)</para></listitem>
+ <listitem><para>Set custom grub splash. (See <xref linkend="splash"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_HOSTNAME</term>
- <listitem><para>Défini le nom d'hôte. (Voir <xref linkend="hostname"/>)</para></listitem>
+ <listitem><para>Set hostname. (See <xref linkend="hostname"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_ISO_APPLICATION</term>
- <listitem><para>défin l'auteur de l'iso. (Voir <xref linkend="iso-metadata"/>)</para></listitem>
+ <listitem><para>Set iso author. (See <xref linkend="iso-metadata"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_ISO_PREPARER</term>
- <listitem><para>Défini le préparateur de l'iso. (Voir <xref linkend="iso-metadata"/>)</para></listitem>
+ <listitem><para>Set iso preparer. (See <xref linkend="iso-metadata"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_ISO_PUBLISHER</term>
- <listitem><para>Défini le distributeur. (Voir <xref linkend="iso-metadata"/>)</para></listitem>
+ <listitem><para>Set iso publisher. (See <xref linkend="iso-metadata"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_ISO_VOLUME</term>
- <listitem><para>Défini le nom "iso volume" (max 32 caractères). (Voir <xref
-linkend="iso-metadata"/>)</para></listitem>
+ <listitem><para>Set iso volume (max 32 chars). (See <xref linkend="iso-metadata"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_JFFS2_ERASEBLOCK</term>
- <listitem><para>Défini jffs2 eraseblock size. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set jffs2 eraseblock size. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_MEMTEST</term>
- <listitem><para>Défini memtest. (Voir <xref linkend="memtest"/>)</para></listitem>
+ <listitem><para>Set memtest. (See <xref linkend="memtest"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_NET_ROOT_FILESYSTEM</term>
- <listitem><para>Défini le système de fichier pour le démarrage réseau. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set netboot filesystem. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_NET_ROOT_MOUNTOPTIONS</term>
- <listitem><para>Défini les options NFS. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set nfsopts. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_NET_ROOT_PATH</term>
- <listitem><para>Défini le répertoire sur le serveur de démarrage réseau. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set netboot server directory. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_NET_ROOT_SERVER</term>
- <listitem><para>Défini l'adresse du serveur de démarrage réseau. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set netboot server address. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_NET_COW_FILESYSTEM</term>
- <listitem><para>Défini le système de fichier réseau COW pour le client. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set net client cow filesystem. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_NET_COW_MOUNTOPTIONS</term>
- <listitem><para>Défini les options de montage pour le COW. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set cow mount options. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_NET_COW_PATH</term>
- <listitem><para>Défini le répertoire du COW. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set cow directory. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_NET_COW_SERVER</term>
- <listitem><para>Défini le serveur pour le COW. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set cow server. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_NET_TARBALL</term>
- <listitem><para>Défini l'archive réseau. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set net tarball. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_SYSLINUX_SPLASH</term>
- <listitem><para>Défini un écran d'accueil personnalisé.pour syslinux. (Voir <xref
-linkend="splash"/>)</para></listitem>
+ <listitem><para>Set custom syslinux splash. (See <xref linkend="splash"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_SYSLINUX_TIMEOUT</term>
- <listitem><para>Défini le temps d'attente de syslinux en secondes. (Voir <xref
-linkend="syslinux"/>)</para></listitem>
+ <listitem><para>Set custom syslinux timeout in seconds. (See <xref linkend="syslinux"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_SYSLINUX_CFG</term>
- <listitem><para>Défini des fichiers de configurations personnalisés pour syslinux. (Voir
-<xref linkend="syslinux"/>)</para></listitem>
+ <listitem><para>Set custom syslinux configuration file. (See <xref linkend="syslinux"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_SYSLINUX_MENU</term>
- <listitem><para>Défini le menu de syslinux. (Voir <xref linkend="syslinux"/>)</para></listitem>
+ <listitem><para>Set syslinux menu. (See <xref linkend="syslinux"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_SYSLINUX_MENU_LIVE_ENTRY</term>
- <listitem><para>Défini le texte devant être utilisé dans le menu pour les entrées live (Voir
-<xref linkend="syslinux"/>)</para></listitem>
+ <listitem><para>Set text to be used on the menu for live entries. (See <xref linkend="syslinux"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_SYSLINUX_MENU_LIVE_FAILSAFE_ENTRY</term>
- <listitem><para>Set text to be used on the menu for live entries (failsafe ones). (See <xref
-linkend="syslinux"/>)</para></listitem>
+ <listitem><para>Set text to be used on the menu for live entries (failsafe ones). (See <xref linkend="syslinux"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_SYSLINUX_MENU_MEMTEST_ENTRY</term>
- <listitem><para>Set text to be used on the menu for memtest entry. (See <xref
-linkend="syslinux"/> and <xref linkend="memtest"/>)</para></listitem>
+ <listitem><para>Set text to be used on the menu for memtest entry. (See <xref linkend="syslinux"/> and <xref linkend="memtest"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_USERNAME</term>
- <listitem><para>Défini l'utilisateur. (Voir <xref linkend="live-user"/>)</para></listitem>
+ <listitem><para>Set username. (See <xref linkend="live-user"/>)</para></listitem>
 </varlistentry>
 
 </variablelist>
 </section>
 
 <section id="config-bootstrap">
-<title>Le fichier <filename>config/bootstrap</filename>.</title>
+<title>The <filename>config/bootstrap</filename> file</title>
 
 <variablelist>
 <varlistentry>
  <term>LH_ARCHITECTURE</term>
- <listitem><para>Défini l'architecture du chroot. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Select chroot architecture. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_BOOTSTRAP_CONFIG</term>
- <listitem><para>Défini le répertoire de configuration de la distribution. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set distribution config directory. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_BOOTSTRAP_INCLUDE</term>
- <listitem><para>Inclure des paquets sur la base. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Include packages on base. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_BOOTSTRAP_EXCLUDE</term>
- <listitem><para>Exclure des paquets de la base. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Exclude packages on base. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_BOOTSTRAP_FLAVOUR</term>
- <listitem><para>Défini la "saveur"(ndt:flavour) à utiliser. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Select flavour to use. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_BOOTSTRAP_KEYRING</term>
- <listitem><para>Défini le keyring.de la distribution. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set distribution keyring. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_DISTRIBUTION</term>
- <listitem><para>Selectionner la distribution à utiliser. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Select distribution to use. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_MIRROR_BOOTSTRAP</term>
- <listitem><para>Défini le mirroir pour l'étape de bootstrap. (Voir <xref
-linkend="package-sources"/>)</para></listitem>
+ <listitem><para>Set mirror to bootstrap from. (See <xref linkend="package-sources"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_MIRROR_CHROOT</term>
- <listitem><para>Défini le mirroir pour rapatrier les paquets. (Voir <xref
-linkend="package-sources"/>)</para></listitem>
+ <listitem><para>Set mirror to fetch packages from. (See <xref linkend="package-sources"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_MIRROR_CHROOT_SECURITY</term>
- <listitem><para>Défini le mirroir de sécurité pour rapatrier les paquets. (Voir <xref
-linkend="package-sources"/>)</para></listitem>
+ <listitem><para>Set security mirror to fetch packages from. (See <xref linkend="package-sources"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_MIRROR_BINARY</term>
- <listitem><para>Défini le mirroir utilisé dans l'image. (Voir <xref
-linkend="package-sources"/>)</para></listitem>
+ <listitem><para>Set mirror which ends up in the image. (See <xref linkend="package-sources"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_MIRROR_BINARY_SECURITY</term>
- <listitem><para>Défini le mirroir de sécurité utilisé dans l'image. (Voir <xref
-linkend="package-sources"/>)</para></listitem>
+ <listitem><para>Set security mirror which ends up in the image. (See <xref linkend="package-sources"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_SECTIONS</term>
- <listitem><para>Défini la(es) section(s) à utiliser. (Voir <xref
-linkend="package-sources"/>)</para></listitem>
+ <listitem><para>select section(s) to use. (See <xref linkend="package-sources"/>)</para></listitem>
 </varlistentry>
 </variablelist>
 </section>
 
 <section id="config-chroot">
-<title>Le fichier <filename>config/chroot</filename>.</title>
+<title>The <filename>config/chroot</filename> file</title>
 
 <variablelist>
 <varlistentry>
  <term>LH_CHROOT_FILESYSTEM</term>
- <listitem><para>Défini le système de fichiers du chroot. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set chroot filesystem. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_UNION_FILESYSTEM</term>
- <listitem><para>Défini le système de fichier pour l'union. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set union filesystem. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_EXPOSED_ROOT</term>
- <listitem><para>Proposer le système de fichier racine en lecture seule. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>expose root as read only. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_HOOKS</term>
- <listitem><para>Définir les hooks. (Voir <xref linkend="hooks"/>)</para></listitem>
+ <listitem><para>Set hook commands. (See <xref linkend="hooks"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_INTERACTIVE</term>
- <listitem><para>Défini une construction interactive. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set interactive build. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_KEYRING_PACKAGES</term>
- <listitem><para>Défini les paquets de keyring (ndt: authentification). (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set keyring packages. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_LANGUAGE</term>
- <listitem><para>Défini la langue à utiliser. (Voir <xref linkend="language"/>)</para></listitem>
+ <listitem><para>Set language to use. (See <xref linkend="language"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_LINUX_FLAVOURS</term>
- <listitem><para>Défini la "saveur" (ndt:flavour) du noyau à utiliser. (Voir <xref
-linkend="kernel"/>)</para></listitem>
+ <listitem><para>Set kernel flavour to use. (See <xref linkend="kernel"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_LINUX_PACKAGES</term>
- <listitem><para>Défini les paquets noyau à utiliser. (Voir <xref linkend="kernel"/>)</para></listitem>
+ <listitem><para>Set kernel packages to use. (See <xref linkend="kernel"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_PACKAGES</term>
- <listitem><para>Défini les paquets à installer. (Voir <xref linkend="lh-packages"/>)</para></listitem>
+ <listitem><para>Set packages to install. (See <xref linkend="lh-packages"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_PACKAGES_LISTS</term>
- <listitem><para>Défini une liste de paquets à installer. (Voir <xref
-linkend="package-lists"/>)</para></listitem>
+ <listitem><para>Set package list to install. (See <xref linkend="package-lists"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_TASKS</term>
- <listitem><para>Défini les tâches à installer. (Voir <xref linkend="tasks"/>)</para></listitem>
+ <listitem><para>Set tasks to install. (See <xref linkend="tasks"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_SECURITY</term>
- <listitem><para>Autoriser les mises à jour de sécurité. (Voir <xref
-linkend="package-sources"/>)</para></listitem>
+ <listitem><para>enable security updates. (See <xref linkend="package-sources"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_SYMLINKS</term>
- <listitem><para>Activer la conversion des liens symboliques. (Voir <xref
-linkend="symlinks"/>)</para></listitem>
+ <listitem><para>enable symlink convertion. (See <xref linkend="symlinks"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_SYSVINIT</term>
- <listitem><para>Activer sysvinit. (Voir <xref linkend="startup-scripts"/>)</para></listitem>
+ <listitem><para>enable sysvinit. (See <xref linkend="startup-scripts"/>)</para></listitem>
 </varlistentry>
 
 </variablelist>
 </section>
 
 <section id="config-common">
-<title>Le fichier <filename>config/common</filename>.</title>
+<title>The <filename>config/common</filename> file</title>
 
 <variablelist>
 <varlistentry>
  <term>LH_APT</term>
- <listitem><para>Défini le gestionnaire de paquets. (Voir <xref
-linkend="package-installation"/>)</para></listitem>
+ <listitem><para>Set package manager. (See <xref linkend="package-installation"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_APT_FTP_PROXY</term>
- <listitem><para>Défini le proxy ftp pour apt/aptitude. (Voir <xref
-linkend="package-installation"/>)</para></listitem>
+ <listitem><para>Set apt/aptitude ftp proxy. (See <xref linkend="package-installation"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_APT_HTTP_PROXY</term>
- <listitem><para>Défini le proxy http pour apt/aptitude. (Voir <xref
-linkend="package-installation"/>)</para></listitem>
+ <listitem><para>Set apt/aptitude http proxy. (See <xref linkend="package-installation"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_APT_PDIFFS</term>
- <listitem><para>Défini les indices pdiff pour apt/aptitude. (Voir <xref
-linkend="package-installation"/>)</para></listitem>
+ <listitem><para>Set apt/aptitude pdiff indices. (See <xref linkend="package-installation"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_APT_PIPELINE</term>
- <listitem><para>Défini la profondeur du pipeline pour apt/aptitude. (Voir <xref
-linkend="package-installation"/>)</para></listitem>
+ <listitem><para>Set apt/aptitude pipeline depth. (See <xref linkend="package-installation"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_APT_RECOMMENDS</term>
- <listitem><para>Défini l'option "recommends" pour apt/aptitude. (Voir <xref
-linkend="package-installation"/>)</para></listitem>
+ <listitem><para>Set apt/aptitude recommends. (See <xref linkend="package-installation"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_APT_SECURE</term>
- <listitem><para>Défini la sécurité pour apt/aptitude. (Voir <xref
-linkend="package-installation"/>)</para></listitem>
+ <listitem><para>Set apt/aptitude security. (See <xref linkend="package-installation"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_BOOTSTRAP</term>
- <listitem><para>Défini le programme de bootstrap. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set bootstrap program. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_CACHE</term>
- <listitem><para>Contrôle du cache. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>control cache. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_CACHE_INDICES</term>
- <listitem><para>Défini si les indices des paquets téléchargés devraient être mis en
-cache. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>control if downloaded package indices should be cached. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_CACHE_PACKAGES</term>
- <listitem><para>Défini si les paquets téléchargés devraient être mis en cache. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>control if downloaded packages files should be cached. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_CACHE_STAGES</term>
- <listitem><para>Défini si les étapes réussies doivent être mises an cache. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>control if completed stages should be cached. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_DEBCONF_FRONTEND</term>
- <listitem><para>Défini l'interface à utilisée pour debconf(1). (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set debconf(1) frontend to use. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_DEBCONF_NOWARNINGS</term>
- <listitem><para>Défini les messages d'erreurs de debconf(1). (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set debconf(1) warnings. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_DEBCONF_PRIORITY</term>
- <listitem><para>Défini la priorité à utilisée pour debconf(1). (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set debconf(1) priority to use. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_INITRAMFS</term>
- <listitem><para>Défini le hook pour initramfs. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set initramfs hook. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_FDISK</term>
- <listitem><para>Défini le programme fdisk. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set fdisk program. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_LOSETUP</term>
- <listitem><para>Défini le programme losetup. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set losetup program. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_MODE</term>
- <listitem><para>Défini le mode de distribution. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set distribution mode. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_ROOT_COMMAND</term>
- <listitem><para>Utiliser sudo ou un équivalent. (Voir <xref
-linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>use sudo or equivalent. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_USE_FAKEROOT</term>
- <listitem><para>Utiliser fakeroot/fakechroot. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>use fakeroot/fakechroot. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_TASKSEL</term>
- <listitem><para>Défini le programme pour tasksel. (Voir <xref linkend="tasks"/>)</para></listitem>
+ <listitem><para>Set tasksel program. (See <xref linkend="tasks"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_INCLUDES</term>
- <listitem><para>Défini les includes. (See <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set includes. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_TEMPLATES</term>
- <listitem><para>Défini templates. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set templates. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_BREAKPOINTS</term>
- <listitem><para>Activer les points d'arrêts. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>enable breakpoints. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_DEBUG</term>
- <listitem><para>Activer le debogage. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>enable debug. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_FORCE</term>
- <listitem><para>Activer l'option force. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>enable force. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_QUIET</term>
- <listitem><para>Activer l'option quiet. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>enable quiet. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_VERBOSE</term>
- <listitem><para>Activer l'option verbose. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>enable verbose. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 </variablelist>
 </section>
 
 <section id="config-source">
-<title>Le fichier <filename>config/source</filename>;</title>
+<title>The <filename>config/source</filename> file</title>
 
 <variablelist>
 <varlistentry>
  <term>LH_SOURCE</term>
- <listitem><para>Défini l'option source. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set source option. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 <varlistentry>
  <term>LH_SOURCE_IMAGES</term>
- <listitem><para>Défini le type d'image. (Voir <xref linkend="configuration-layout"/>)</para></listitem>
+ <listitem><para>Set image type. (See <xref linkend="configuration-layout"/>)</para></listitem>
 </varlistentry>
 
 </variablelist>

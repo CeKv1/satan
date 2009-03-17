@@ -34,6 +34,6 @@ sun-java6-jre sun-java6-plugin sun-java6-jdk
 perl python g++ gcc colorgcc make libssl-dev patch lsof
 
 # Terminal
-terminator xterm
+terminator xterm bash-completion
 # Enregistrement vidéo
 recordmydesktop gtk-recordmydesktop

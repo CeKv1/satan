@@ -14,9 +14,11 @@
 		<area id="hooks-01-1"      coords="6"/>
 	</areaspec>
 	   <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../config/chroot_local-hooks/01-update_password.sh" parse="text" encoding="utf-8"/></programlisting>
+	   <calloutlist>
 	  <callout arearefs="hooks-01-1">
   		<para>Changement du mot de passe root à bonjour.</para>
          </callout>
+ </calloutlist>
     </programlistingco>
 </section>
 <section id="config/chroot_local-hooks/02-hydra.sh">

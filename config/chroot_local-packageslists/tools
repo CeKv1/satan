@@ -19,7 +19,7 @@ wifi-radar
 # Aircrack
 aircrack-ng
 # Drivers
-firmware-iwlwifi madwifi-source madwifi-tools
+firmware-iwlwifi 
 ## Manipulation de paquets
 # Hping
 hping3
