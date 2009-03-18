@@ -27,6 +27,7 @@ then
 
 	cp -R ${DOC_BASE}/satan-manual/img/ ${DOC_BASE}/../config/chroot_local-includes/usr/share/doc/satan-manual/html/	
 	cp -R ${DOC_BASE}/satan-manual/scripts/ ${DOC_BASE}/../config/chroot_local-includes/usr/share/doc/satan-manual/html/scripts/	
+	cp -R ${DOC_BASE}/satan-manual/config/ ${DOC_BASE}/../config/chroot_local-includes/usr/share/doc/satan-manual/html/config/	
 	rm -rf ${DOC_BASE}/satan-manual_*
 	cd ${SH_BASE}
 

@@ -5,6 +5,7 @@
 ]>
 <sect2 id="netkit">
 	<title>Emulation d'architecture réseau avec Netkit</title>
+	<para>Copyright : 2008, Cedric Foll, MISC n°40 Novembre/Décembre 2008, Diamond Editions</para>
 	<para>
 	 La virtualisation de serveurs et de postes de travail est aujourd'hui une pratique extrêmement répandue. Elle est devenue indispensable à tous les administrateurs système pour effectuer des tests de pré-production ou optimiser les ressources matérielles des data-centers. Nous exposons dans cette documentation ce que les mécanismes  de virtualisation peuvent apport aux administrateurs et architectes réseau dans une optique de prototypage. ces outils servent également dans le cadre d'enseignements ou comme outil d'étude pour le pen-tester souhaitant répliquer l'architecture d'une partie du réseau audité pour effectuer des tests avant de lancer l'attaque en réel.
 	</para>
@@ -14,22 +15,22 @@
 		Les briques présentés permettent par exemple de tester l'attaque contre DNS décrite par Dan Kaminsky dans différentes configurations et avec une architecture <abbrev>DNS</abbrev> complète (root(s) serveur(s), master(s) de zone, cache(s) et forwarder(s)) sur un simple pc sous Linux.
 	</para>
 	<para>
-		Elles peuvent également être mises à contribution pour reproduire l'attaque contre Youtube par Pakistan Telecom (quelle bande de farceurs !) [<ulink url="http://www.ripe.net/news/study-youtube-hijacking.html" />] ou encore tester l'attaque décrite par Anton Kapela et Alex Pilosov sur le détournement de trafic réseau exploitant les faiblesses de BGP et présentée à la DefCon 2008.
+		Elles peuvent également être mises à contribution pour reproduire l'attaque contre Youtube par Pakistan Telecom (quelle bande de farceurs !) <footnote><ulink url="http://www.ripe.net/news/study-youtube-hijacking.html" /></footnote> ou encore tester l'attaque décrite par Anton Kapela et Alex Pilosov sur le détournement de trafic réseau exploitant les faiblesses de BGP et présentée à la DefCon 2008.
 	</para>
 <sect3 id="netkit-presentation">
 	<title>Présentation de Netkit</title>
 	<para>
-		Netkit [<ulink url="http://www.netkit.org" />] est un logiciel libre sous licence GPL développé par le groupe "computer network research" de l'université de Rome3 et par le LUG (Linux user Group) "Roma 3"
+		Netkit <footnote><ulink url="http://www.netkit.org" /></footnote> est un logiciel libre sous licence GPL développé par le groupe "computer network research" de l'université de Rome3 et par le LUG (Linux user Group) "Roma 3"
 	</para>
 	<para>
 		Il est composé de différents scripts permettant le lancement et l'arrêt des machines virtuelles, d'un noyau Linux UML et de l'image d'une distribution issue de Debian disposant d'outils liés au réseau dont voici une liste non exhaustive :
 	</para>
 	<itemizedlist>
-		<listitem><para>support du 802.1q (vlan), 802.1q (spanning tree) ;</para></listitem>
-		<listitem><para>démons de routage dynamique (quagga) avec support de MPLS et distribution de labels par LDP ;</para></listitem>
-		<listitem><para>support des tunnels IPsec, GRE et MPLS (IP over MPLS et Ethernet over MPLS) ;</para></listitem>
-		<listitem><para>support d'ipv6 ;</para></listitem>
-		<listitem><para>outils de filtrage (iptables, ebtables) ;</para></listitem>
+		<listitem><para>Support du 802.1q (vlan), 802.1q (spanning tree) ;</para></listitem>
+		<listitem><para>Démons de routage dynamique (quagga) avec support de MPLS et distribution de labels par LDP ;</para></listitem>
+		<listitem><para>Support des tunnels IPsec, GRE et MPLS (IP over MPLS et Ethernet over MPLS) ;</para></listitem>
+		<listitem><para>Support d'ipv6 ;</para></listitem>
+		<listitem><para>Outils de filtrage (iptables, ebtables) ;</para></listitem>
 		<listitem><para>DNS coté serveur (BIND) et client (host dig) ;</para></listitem>
 		<listitem><para>SMTP avec Exim ;</para></listitem>
 		<listitem><para>FTP avec Proftpd et TFTP avec tftpd ainsi que des clients respectifs ;</para></listitem>
@@ -366,7 +367,7 @@ addr.arpa (44)
 			Nous avons dans ce laboratoire un routeur virtuel (R) disposant d'une seule interface, d'un switch (S) disposant de 3 interfaces et de deux PC. Lancer tout ceci en ligne de commande sans se tromper peut paraître un peu complète, mais Netkit offre un système de fichiers de configuration permettant d'automatiser le lancement de laboratoires préconfigurés.
 		</para>
 		<para>
-			Afin de construire cette architecture, nous nous appuyons sur une interface graphique Netkit, VisualNetkit [<ulink url="http://code.google.com/p/visual-netkit/" />], aidant à la génération de ces fichiers de configuration.
+			Afin de construire cette architecture, nous nous appuyons sur une interface graphique Netkit, VisualNetkit<footnote><ulink url="http://code.google.com/p/visual-netkit/" /></footnote>, aidant à la génération de ces fichiers de configuration.
 		</para>
 		<para>
 			Le paquet se compile sans difficulté sur une Ubuntu Hardy et le réseau ci-dessus se configure en quelques minutes à la souris.

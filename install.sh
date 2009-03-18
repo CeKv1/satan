@@ -36,10 +36,10 @@ Echo "Taille de l'image iso : ${SIZEISOC} cylinders"
 SIZEDEVC=`sfdisk -l -uS ${LS_DEVICE}|grep "Disk /"|awk {'print $3'}` 2>&1
 Echo "Taille de la clef USB : ${SIZEDEVC} cylinders"
 
-SIZE1=$(($SIZEDEVC-$SIZEISOC-15))
+SIZE1=$(($SIZEDEVC-$SIZEISOC-30))
 Echo "Taille de la première partition : ${SIZE1} cylinders"
 
-SIZE2=$(($SIZE1+1))
+SIZE2=$(($SIZE1+2))
 #while true
 #do
 #        if [ $((${SIZE1}%4)) != "0" ]
