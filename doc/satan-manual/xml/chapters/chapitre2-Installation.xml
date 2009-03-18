@@ -52,7 +52,7 @@
 	<sect2 id="chap2-installation-recup">
 		<title>Récupération du projet</title>
 		<para>
-			Le projet est hebergé sur le site <ulink url="http://github.com/2xyo/satan/tree/master" />. C'est un dépôt <ulink url="http://git-scm.com/">git</ulink>.
+			Le projet est hebergé sur le site <ulink url="http://github.com/2xyo/satan/" />. C'est un dépôt git<footnote><ulink url="http://git-scm.com/"/></footnote>.
 		</para>
 		<screen>
 	<prompt>yoyo@YoYoSID:~$</prompt> <userinput>su</userinput>

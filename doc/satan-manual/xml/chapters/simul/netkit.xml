@@ -5,7 +5,7 @@
 ]>
 <sect2 id="netkit">
 	<title>Emulation d'architecture réseau avec Netkit</title>
-	<para>Copyright : 2008, Cedric Foll, MISC n°40 Novembre/Décembre 2008, Diamond Editions</para>
+	<para>Copyright : 2008, Cedric Foll, MISC n°40 Novembre/Décembre 2008, Diamond Editions <cmdsynopsis><sbr /></cmdsynopsis> </para>
 	<para>
 	 La virtualisation de serveurs et de postes de travail est aujourd'hui une pratique extrêmement répandue. Elle est devenue indispensable à tous les administrateurs système pour effectuer des tests de pré-production ou optimiser les ressources matérielles des data-centers. Nous exposons dans cette documentation ce que les mécanismes  de virtualisation peuvent apport aux administrateurs et architectes réseau dans une optique de prototypage. ces outils servent également dans le cadre d'enseignements ou comme outil d'étude pour le pen-tester souhaitant répliquer l'architecture d'une partie du réseau audité pour effectuer des tests avant de lancer l'attaque en réel.
 	</para>
