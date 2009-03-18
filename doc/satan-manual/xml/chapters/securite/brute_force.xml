@@ -16,18 +16,20 @@ Ce chapitre propose des outils pour vérifier la solidité des mots de passe.
  John the Ripper est un logiciel permetant de réaliser des  attaques par dictionnaire sur des mots de passe contenus dans un fichier. SATAN intègre par conséquent un dictionnaire de 138257 termes français dans <filename>/usr/share/satan/dict/</filename>.  
 </para>
 <screen>
-$john -w:NOM_DU_DICTIONNAIRE FICHIER_AVEC_LES_MOT_DE_PASSE
+	<prompt>satan:/</prompt> <userinput>john -w:NOM_DU_DICTIONNAIRE FICHIER_AVEC_LES_MOT_DE_PASSE</userinput>
 </screen>
 <para>Pour voir les mots de passes trouvés, lancez la commande</para>
-<screen>john --show FICHIER_AVEC_LES_MOT_DE_PASSE</screen>
+<screen>
+	<prompt>satan:/</prompt> <userinput>john --show FICHIER_AVEC_LES_MOT_DE_PASSE</userinput>
+</screen>
 <para>Exemple:</para>
 <screen>
-<prompt>satan:/</prompt> <userinput>john -w:/usr/share/satan/dict/ /etc/shadow</userinput>
-<computeroutput>Loaded 2 password hashes with 2 different salts (FreeBSD MD5 [32/32])
-bonjour          (root)
-guesses: 0  time: 0:00:00:35 100%  c/s: 4262  trying: zyeuter</computeroutput>
-<prompt>satan:/</prompt> <userinput>john --show /etc/shadow</userinput>
-j<computeroutput>ohn:bonjour0:14285:0:99999:7:::
+	<prompt>satan:/</prompt> <userinput>john -w:/usr/share/satan/dict/ /etc/shadow</userinput>
+	<computeroutput>Loaded 2 password hashes with 2 different salts (FreeBSD MD5 [32/32])
+	bonjour          (root)
+	guesses: 0  time: 0:00:00:35 100%  c/s: 4262  trying: zyeuter</computeroutput>
+	<prompt>satan:/</prompt> <userinput>john --show /etc/shadow</userinput>
+	<computeroutput>ijohn:bonjour0:14285:0:99999:7:::
 	1 password hash cracked, 2 left</computeroutput>
 </screen>
 </sect3>
@@ -35,58 +37,35 @@ j<computeroutput>ohn:bonjour0:14285:0:99999:7:::
 <sect3 id="brute_force-thchydra">
 <title>THC Hydra</title>
 <para>
- THC hydra est un logiciel libre qui permet de faire des attaques par dictionnaire mais a la diférence de john il permet de tester sur les protocole suivant:
+ THC hydra est également un logiciel qui se base sur un dictionnaire. Cependant, celui-ci peut vérifier les mots de passe avec ces protocoles :
 </para>
 <para> TELNET, FTP, HTTP, HTTPS, HTTP-PROXY, SMB, SMBNT, MS-SQL, MYSQL, REXEC, RSH,RLOGIN, CVS, SNMP, SMTP-AUTH, SOCKS5, VNC, POP3, IMAP, NNTP, PCNFS, ICQ, SAP/R3, LDAP2, LDAP3, Postgres, Teamspeak, Cisco auth, Cisco enable,LDAP2, Cisco AAA</para>
+<para>
+THC hydra peut s'utiliser en ligne de commande (<filename>hydra</filename>)ou avec une interface graphique (<filename>xhydra</filename>).
+</para>
 </sect3>
 
 <sect3 id="brute_force-aircrack">
 <title>Aircrack</title>
 <para>
-Aircrack est une suite d'outils pour obtenir les clefs WEP/WPA.
+Aircrack est une suite d'outils pour vérifier la sécurité de ses points d'accès. Il permet par exemple de casser une clef WEP en moins de quinze minutes :
 </para>
-<term>utilisation:</term>
-<itemizedlist>
-	<listitem>
-		<screen>
-			ifconfig interface-wifi up
-		</screen>
-		<para>active linterface-wifi</para>
-	</listitem>
-	<listitem>
-		<screen>
-			airmon-ng start linterface-wifi
-		</screen>
-		<para>active le mode monitor</para>
-	</listitem>
-	<listitem>
-		<screen>
-			airodump-ng --write "NomFichierSortie" --channel "NumeroChannel" "Interface"
-		</screen>
-		<para>permet de crée un fichier avec les capture de trame capter par l'interface choisie avec ne numéro du cannaus désigner</para>
-		<para>ne pas fermer se terminal</para>
-	</listitem>
-	<listitem>
-		<screen>
-			aireplay-ng -1 0 -e ESSID -a @_mac_AP -h @_mac_station interface
-		</screen>
-		<para>permet de sassocier avec l'AP wifi distant</para>
-	</listitem>
-	<listitem>
-		<screen>
-			aireplay-ng -3 -e ESSID -b @_mac_AP -h @_mac_station interface
-		</screen>
-		<para>Permet de faire des injections de paquet</para>
-		<para>ne pas fermer se terminal</para>
-	</listitem>
-	<listitem>
-		<screen>
-			aircrack-ng -x fichier_capture
-		</screen>
-		<para>permet de brute forcer les clef</para>
-		<para>Il n'est pas nécésaire de stoper l'injection de paquets</para>
-	</listitem>
-</itemizedlist>
-</sect3>
+<screen>
+	<prompt>satan:/</prompt> <userinput>ifconfig wlan0 up</userinput>
+		<lineannotation>Activation de l'interface wi-fi</lineannotation>
+	<prompt>satan:/</prompt> <userinput>airmon-ng start wlan0</userinput>
+		<lineannotation>Activation du mode monitor de la carte</lineannotation>
+	<prompt>satan:/</prompt> <userinput>airodump-ng --write "NomFichierSortie" --channel "NumeroChannel" wlan0</userinput>
+		<lineannotation>Réalise une capture de tout le trafic de l'interface wlan0 dans un fichier.</lineannotation>
+		<lineannotation>Ouvrir un second terminal pour la commande suivante :</lineannotation>
+	<prompt>satan:/</prompt> <userinput>aireplay-ng -1 0 -e ESSID -a @_mac_AP -h @_mac_station wlan0</userinput>
+		<lineannotation>Association de l'interface wlan0 au réseau wifi</lineannotation>
+	<prompt>satan:/</prompt> <userinput>aireplay-ng -3 -e ESSID -b @_mac_AP -h @_mac_station interface</userinput>
+		<lineannotation>L'attaque fonctionne uniquement avec un grand nombre de paquets. Cette commande permet d'injecter du trafic pour accélérer la manipulation. </lineannotation>
+		<lineannotation>Ouvrir un troisième terminal pour la commande suivante :</lineannotation>
+	<prompt>satan:/</prompt> <userinput>aircrack-ng -x fichier_capture</userinput>
+		<lineannotation>Cette commande permet enfin d'analyser le fichier de capture (sans être obligé d'arrêter l'injection) afin de récupérer la clef WEP.</lineannotation>
+</screen>
+	</sect3>
 </sect2>
 
