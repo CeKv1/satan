@@ -3,7 +3,7 @@ Section: doc
 Priority: optional
 Maintainer: Yohann Lepage  <yohannlepage@gmail.com>, Vincent palierne <www@gmail.com>
 Uploaders: Yohann Lepage  <yohannlepage@gmail.com>
-Build-Depends: debhelper (>= 7)
+Build-Depends: debhelper (>= 7),dblatex, docbook-xml, docbook-xsl, make, po4a, w3m
 Standards-Version: 1.0.1
 Homepage: http://2xyo.info/
 Vcs-Browser: http://git.debian.org/?p=debian-live/live-manual.git

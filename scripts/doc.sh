@@ -19,13 +19,14 @@ then
 	Echo "Construction de la documentation"
 	
 	cd ${DOC_BASE}/satan-manual
-	dch --force-bad-version --newversion 1+00 --distribution Satan Mabual $(date -R)
+	dch --force-bad-version --newversion 1+00 --distribution Satan Manual $(date -R)
 	dpkg-buildpackage -rfakeroot -us -uc
 	debuild clean
 	mkdir -p ${SH_BASE}/config/chroot_local-packages
 	mv ${DOC_BASE}/satan*.deb ${SH_BASE}/config/chroot_local-packages
 
 	cp -R ${DOC_BASE}/satan-manual/img/ ${DOC_BASE}/../config/chroot_local-includes/usr/share/doc/satan-manual/html/	
+	cp -R ${DOC_BASE}/satan-manual/scripts/ ${DOC_BASE}/../config/chroot_local-includes/usr/share/doc/satan-manual/html/scripts/	
 	rm -rf ${DOC_BASE}/satan-manual_*
 	cd ${SH_BASE}
 
@@ -43,7 +44,7 @@ then
 	make clean
 	#rm -rf ${DOC_BASE}/../config/chroot_local-includes/usr/share/doc/satan-manual/html/img/*	
 	rm -rf ${DOC_BASE}/satan-manual_*
-	rm -rf ${DOC_BASE}/../config/chroot_local-packages/satan-*
+#	rm -rf ${DOC_BASE}/../config/chroot_local-packages/satan-*
 	# Nettoyage des annexes
 	rm -rf ${DOC_BASE}/satan-manual/config/
 	rm -rf ${DOC_BASE}/satan-manual/scripts/

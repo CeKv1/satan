@@ -8,7 +8,7 @@ SH_BASE="${SH_BASE:-`pwd`}"
 
 # Génération de la documentation
 . "${SH_BASE}"/scripts/doc.sh auto
-. "${SH_BASE}"/scripts/doc.sh clean
+#. "${SH_BASE}"/scripts/doc.sh clean
 
 cd ${SH_BASE}
 
