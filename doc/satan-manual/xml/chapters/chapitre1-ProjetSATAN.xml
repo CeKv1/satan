@@ -9,7 +9,7 @@
 <sect1 id="origines">
 	<title>Les origines du projet</title>
 	<para>
-	Deux étudiants de deuxième année ont réalisé, en 2008, un LiveCD baptisé R&amp;Tools dans le cadre des projets tuteurés. Le but était de concentrer en un seul support mobile les différents outils utiles à un administrateur réseau. Pour cela, ils ont choisi un système consistant en un liveCD comportant un OS libre, Ubuntu. Ce choix est vital car il définit ensuite les outils utilisés. De plus, choisir un OS libre permet de laisser le projet évolutif. Les deux étudiants ont donc choisi et implémentés les logiciels utiles à leur liveCD et les ont documentés.
+	Deux étudiants de deuxième année ont réalisé, en 2008, un LiveCD baptisé R&amp;Tools dans le cadre des projets tuteurés. Le but était de concentrer en un seul support mobile les différents outils utiles à un administrateur réseau. Pour cela, ils ont choisi un système consistant en un liveCD comportant un OS libre, Ubuntu. Ce choix est vital car il définit ensuite les outils utilisés. De plus, choisir un OS libre permet de laisser le projet évolutif. Les deux étudiants ont donc choisi et implémentés les logiciels utiles à leur liveCD et les ont documentés.<cmdsynopsis><sbr /></cmdsynopsis>
 	</para>
 	<mediaobject>
   		<imageobject>
@@ -183,11 +183,21 @@
 	</sect2>
 	<sect2 id="a_enlever">
 		<title>Les éléments à modifier</title>
-		<para>Nous avons décidé de baptiser notre projet "S.A.T.A.N" pour "Simulations And Tools to Administrate Networks"; c'est en effet très facile à retenir. Il n'y a biensur aucunes connotations avec un culte démoniaque ; S.A.T.A.N est en fait un acronyme utilisé par un projet de boite à outils abandonné il y a quelques années.</para>
+		<para>Nous avons décidé de baptiser notre projet "S.A.T.A.N" pour "Simulations And Tools to Administrate Networks"; c'est en effet très facile à retenir. Il n'y a bien sûr aucune connotation avec un culte démoniaque ; S.A.T.A.N est en fait un acronyme utilisé par un projet de boite à outils abandonné il y a quelques années.</para>
 		<para>Pour le support de S.A.T.A.N, nous utiliserons une clef USB qui peut être ré-utilisée plusieurs milliers de fois. En effet le support CD ne permettant pas d'évolution, la solution de la clef usb est plus appropriée. De plus, celle-ci permet de stocker des informations dessus tel que des comptes rendus de travaux pratiques.</para>
 		<para>Pour le système d'exploitation de la clef, nous utiliserons le projet Debian Live qui permet de créer des clés usb bootables comportant la distribution libre Debian. De plus, la distribution Ubuntu utilisée par R&amp;Tools est trop lourde et posséde beaucoup de fonctions inutiles; elle ne permet pas aussi de créer un système vraiment personnalisé. Debian est aussi une distribution stable en comparaison avec Ubuntu.</para>
 		<para>R&amp;Tools n'est pas facilement modifiable. Il faut en effet monter l'image iso puis chrooter l'environnement pour y installer des logiciels. S.A.T.A.N permet d'ajouter un logiciel simplement en indiquant le nom du paquet correspondant dans un fichier de configuration.</para>
-		<para>R&amp;Tools n'est pas évolutif. Le système ne peut pas être mis à jour contrairement à S.A.T.A.N, qui permet de générer une nouvelle image avec tout les logiciels mis à jour en seulement quatre commandes.</para>
+		<para>R&amp;Tools n'est pas évolutif. Le système ne peut pas être mis à jour contrairement à S.A.T.A.N, qui permet de générer une nouvelle image avec tout les logiciels mis à jour en seulement quatre commandes.<cmdsynopsis><sbr /></cmdsynopsis></para>
+		<para>Voici un aperçu de l'interface graphique adoptée par notre projet :<cmdsynopsis><sbr /></cmdsynopsis></para>
+	        <mediaobject>
+        	        <imageobject>
+                	        <imagedata fileref="img/satan1.png" format="PNG"/>
+	                </imageobject>
+	                <textobject>
+	                        <phrase>R&amp;Tools</phrase>
+	                </textobject>
+	        </mediaobject>
+		<para>Nous voulions une interface qui soit à la fois sobre et agréable à utiliser. De plus, nous avons choisi le gestionnaire graphique xfce afin de permettre une navigation fluide et un faible encombrement d'espace disque. Nous avons aussi ajouté l'outil conky pour faciliter l'accès à des données importantes de sa machine telles que l'adresse Ip ou la charge de la carte réseau et du processeur.</para>
 	</sect2>
 </sect1>
 <sect1 id="trousse_a_outils">
@@ -320,13 +330,10 @@
 				<listitem><para>Création de recettes sur l'utilisation des logiciels pour valider des architectures ;</para></listitem>
 				<listitem><para>Participation à la traduction du projet live-helper ;</para></listitem>
 				<listitem><para>Ajout de logiciels ;</para></listitem>
-				<listitem><para>Réécriture standardisé de tout les scripts et de la documentation ;</para></listitem>
-				<listitem><para>Ecriture de feuilles de styles pour la documentation html et pdf ;</para></listitem>
-				<listitem><para>Création d'un site internet dedié au projet ;</para></listitem>
+				<listitem><para>Réécriture standardisé de tout les scripts ;</para></listitem>
 				<listitem><para>Création d'une interface graphique pour générer S.A.T.A.N ;</para></listitem>
-				<listitem><para>Automatiser l'importation de la documentation officielle dans la documentation de S.A.T.A.N. ;</para></listitem>
-				<listitem><para>Suivis et correction des bugs ;</para></listitem>
-				<listitem><para>Intégrer la documentation du projet tuteuré "Sécurité des réseaux sans fil" de 2008/2009.</para></listitem>
+				<listitem><para>Automatiser l'importation de la documentation officielle dans la documentation de S.A.T.A.N.</para></listitem>
+				<listitem><para>Suivis et correction des bugs.</para></listitem>
 			</itemizedlist>
 		</sect3>
 	</sect2>

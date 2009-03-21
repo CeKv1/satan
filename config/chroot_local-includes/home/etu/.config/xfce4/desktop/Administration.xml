@@ -47,7 +47,7 @@
 			<app name="Documentation John the Ripper" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/securite.html#brute_force"/>
 		</menu>
 		<menu name="Hydra">
-			<app name="hydra" cmd="terminator -e &quot;hydra ;bash&quot;"/>
+			<app name="hydra" cmd="xhydra" snotify="true"/>
 			<app name="Documentation Hydra" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/securite.html#brute_force"/>
 		</menu>
 	</menu>
@@ -88,8 +88,8 @@
 	</menu>
 	<separator/>
 	<menu name="Sauvegarder/Restaurer les configurations">
-		<app name="Base de données SQL" cmd="terminator -e &quot;echo &apos;base de données SQL&apos; ; sh /usr/share/satan/scripts/backup-mysql.sh ;bash&quot;"/>
-		<app name="Configurations" cmd="terminator -e &quot;echo &apos;Configurations&apos; ; sh /usr/share/satan/scripts/backup-conf.sh ;bash&quot; "/>
+		<app name="Base de données SQL" cmd="terminator -e &quot;echo &apos;base de données SQL&apos; ; sh /usr/share/satan/scripts/backup-mysql.sh ; cd /usr/share/satan/scripts/ ;bash&quot;"/>
+		<app name="Configurations" cmd="terminator -e &quot;echo &apos;Configurations&apos; ; sh /usr/share/satan/scripts/backup-conf.sh ; cd /usr/share/satan/scripts ;bash&quot; "/>
 	</menu>
 	<separator/>
 	<menu name="Services DNS">

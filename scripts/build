@@ -38,6 +38,7 @@ MSF="framework-3.2.tar.gz"
 #PHPM_URL="http://ovh.dl.sourceforge.net/sourceforge/phpmyadmin/phpMyAdmin-3.1.3-rc1-all-languages.tar.gz"
 PHPM_URL="http://ovh.dl.sourceforge.net/sourceforge/phpmyadmin/phpMyAdmin-3.1.3-all-languages.tar.gz"
 PHPM="phpMyAdmin-3.1.3-all-languages.tar.gz"
+PHPM1="phpMyAdmin-3.1.3-all-languages"
 # IOS
 IOS1_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-36xx/c3640-jk9o3s-mz.122-37.bin"
 IOS1="c3640-jk9o3s-mz.122-37.bin"
@@ -94,7 +95,7 @@ tar -xzf ${MSF} -C ../config/chroot_local-includes/usr/share/
 # PHPmyadmin
 mkdir -p ../config/chroot_local-includes/var/www
 tar -xzf ${PHPM} -C ../config/chroot_local-includes/var/www/
-mv ../config/chroot_local-includes/var/www/phpMyAdmin-3.1.3-rc1-all-languages ../config/chroot_local-includes/var/www/phpmyadmin
+mv ../config/chroot_local-includes/var/www/${PHPM1} ../config/chroot_local-includes/var/www/phpmyadmin
 # Itrafgen
 cp ${ITRAFGEN} ../config/chroot_local-includes/usr/share/
 if [ "${IOS}" = "yes" ]
