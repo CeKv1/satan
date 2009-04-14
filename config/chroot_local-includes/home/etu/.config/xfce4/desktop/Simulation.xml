@@ -8,6 +8,10 @@
 	<separator/>
 	<menu name="Netkit">
 		<app name="Netkit" cmd="terminator -e &quot;echo &apos;Netkit&apos; ; cd /usr/share/netkit/ ; export NETKIT_HOME=/usr/share/netkit ; export MANPATH=:/usr/share/netkit/man ; export PATH=/usr/share/netkit/bin:$PATH ; sh check_configuration.sh ;bash&quot;"/>
+<<<<<<< HEAD:config/chroot_local-includes/home/etu/.config/xfce4/desktop/Simulation.xml
+=======
+		<app name="VisualNetkit" cmd="terminator -e &quot;echo &apos;VisualNetkit&apos; ; cd /usr/share/visualnetkit-1.4/bin/ ; sh visualnetkit.sh ;bash&quot;"/>
+>>>>>>> 7275a50fd7122d6354fa9930f9e1f79c358cedf2:config/chroot_local-includes/home/etu/.config/xfce4/desktop/Simulation.xml
 		<app name="Documentation Netkit" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/simul.html#netkit"/>
 	</menu>
 </xfdesktop-menu>

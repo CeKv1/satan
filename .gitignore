@@ -28,6 +28,12 @@ source.packages
 dl
 dl/*
 
+
+config/chroot_local-packages/
+doc/satan-manual/config/
+doc/satan-manual/scripts/
+
+
 config/chroot_local-includes/usr/share/framework-3.2
 config/chroot_local-includes/usr/share/framework-3.2/*
 config/chroot_local-includes/usr/share/hydra-5.4-src
@@ -42,4 +48,4 @@ config/chroot_local-includes/usr/share/visualnetkit-1.4/*
 config/chroot_local-includes/usr/share/ios/*
 config/chroot_local-includes/usr/share/doc/*
 config/chroot_local-includes/var/www/*
-
+config/chroot_local-includes/usr/share/itrafgenubuntu.deb

@@ -88,8 +88,13 @@
 	</menu>
 	<separator/>
 	<menu name="Sauvegarder/Restaurer les configurations">
+<<<<<<< HEAD:config/chroot_local-includes/home/etu/.config/xfce4/desktop/Administration.xml
 		<app name="Base de données SQL" cmd="terminator -e &quot;echo &apos;base de données SQL&apos; ; sh /usr/share/satan/scripts/backup-mysql.sh ;bash&quot;"/>
 		<app name="Configurations" cmd="terminator -e &quot;echo &apos;Configurations&apos; ; sh /usr/share/satan/scripts/backup-conf.sh ;bash&quot; "/>
+=======
+		<app name="Base de données SQL" cmd="terminator -e &quot;echo &apos;base de données SQL&apos; ; sh /usr/share/satan/scripts/backup-mysql.sh ; cd /usr/share/satan/scripts/ ;bash&quot;"/>
+		<app name="Configurations" cmd="terminator -e &quot;echo &apos;Configurations&apos; ; sh /usr/share/satan/scripts/backup-conf.sh ; cd /usr/share/satan/scripts ;bash&quot; "/>
+>>>>>>> 7275a50fd7122d6354fa9930f9e1f79c358cedf2:config/chroot_local-includes/home/etu/.config/xfce4/desktop/Administration.xml
 	</menu>
 	<separator/>
 	<menu name="Services DNS">

@@ -53,6 +53,7 @@
 	<sect2 id="chap2-installation-recup">
 		<title>Récupération du projet</title>
 		<para>
+<<<<<<< HEAD:doc/satan-manual/xml/chapters/chapitre2-Installation.xml
 			Le projet est hebergé sur le site <ulink url="http://github.com/2xyo/satan/" />. C'est un dépôt git<footnote><ulink url="http://git-scm.com/"/></footnote>. 
 		</para>
 		<para>
@@ -71,6 +72,9 @@
 		</screen>
 		<para>
 			Une fois ceci fait, on copie la clé ssh en ouvrant le fichier .pub créé et on le colle dans l'option "clé SSH :" dans les options du profil github.
+=======
+			Le projet est hebergé sur le site <ulink url="http://github.com/2xyo/satan/" />. C'est un dépôt git<footnote><ulink url="http://git-scm.com/"/></footnote>.
+>>>>>>> 7275a50fd7122d6354fa9930f9e1f79c358cedf2:doc/satan-manual/xml/chapters/chapitre2-Installation.xml
 		</para>
 		<screen>
 	<prompt>yoyo@YoYoSID:~$</prompt> <userinput>su</userinput>

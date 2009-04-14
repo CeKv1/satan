@@ -2,9 +2,13 @@
 case "$1" in
   start|"") 
         # au démarrage
+	echo "etu:bonjour" | chpasswd
         mkdir /home/etu/Desktop
         mkdir /home/etu/Desktop/documents
-	mount /dev/sda1 /home/etu/Desktop/documents -o  rw,users,exec,dev,suid,uid=1000,gid=1000
+	chown --recursive etu:etu /home/etu/Desktop
+	chown --recursive etu:etu /home/etu/Desktop/documents
+#	mount /dev/sda1 /home/etu/Desktop/documents -o  rw,users,exec,dev,suid,uid=1000,gid=1000
+	mount /dev/sda1 /home/etu/Desktop/documents -o fmask=111,dmask=0
 	;;
   stop)   
         # à l'arret

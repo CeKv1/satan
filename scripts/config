@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 
 # Répertoire de travail
 SH_BASE="${SH_BASE:-`pwd`}"
@@ -46,7 +46,7 @@ lh_config noautoconfig \
 	--mirror-chroot ${MIRROR_DEBIAN} \
 	--mirror-chroot-security ${MIRROR_SECURITY} \
 	--packages-lists "base graphic tools" \
-	--security enabled \
+	--security disabled \
 	--union-filesystem aufs \
 	--username etu  \
 	--verbose \
