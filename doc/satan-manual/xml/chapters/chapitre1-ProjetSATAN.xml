@@ -184,11 +184,7 @@
 	<sect2 id="a_enlever">
 		<title>Les éléments à modifier</title>
 		<para>Nous avons décidé de baptiser notre projet "S.A.T.A.N" pour "Simulations And Tools to Administrate Networks"; c'est en effet très facile à retenir. Il n'y a bien sûr aucune connotation avec un culte démoniaque ; S.A.T.A.N est en fait un acronyme utilisé par un projet de boite à outils abandonné il y a quelques années.</para>
-<<<<<<< HEAD:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 		<para>Pour le support de S.A.T.A.N, nous utiliserons une clef USB qui peut être ré-utilisée plusieurs milliers de fois. En effet le support CD ne permettant pas d'évolution, la solution de la clef usb est plus appropriée. De plus, celle-ci permet de stocker des informations dessus tel que des comptes rendus de travaux pratiques ou, si l'on se place dans le cadre de l'utilisation professionnelle, des captures réseau, des rapports d'audit, etc...</para>
-=======
-		<para>Pour le support de S.A.T.A.N, nous utiliserons une clef USB qui peut être ré-utilisée plusieurs milliers de fois. En effet le support CD ne permettant pas d'évolution, la solution de la clef usb est plus appropriée. De plus, celle-ci permet de stocker des informations dessus tel que des comptes rendus de travaux pratiques.</para>
->>>>>>> 7275a50fd7122d6354fa9930f9e1f79c358cedf2:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 		<para>Pour le système d'exploitation de la clef, nous utiliserons le projet Debian Live qui permet de créer des clés usb bootables comportant la distribution libre Debian. De plus, la distribution Ubuntu utilisée par R&amp;Tools est trop lourde et posséde beaucoup de fonctions inutiles; elle ne permet pas aussi de créer un système vraiment personnalisé. Debian est aussi une distribution stable en comparaison avec Ubuntu.</para>
 		<para>R&amp;Tools n'est pas facilement modifiable. Il faut en effet monter l'image iso puis chrooter l'environnement pour y installer des logiciels. S.A.T.A.N permet d'ajouter un logiciel simplement en indiquant le nom du paquet correspondant dans un fichier de configuration.</para>
 		<para>R&amp;Tools n'est pas évolutif. Le système ne peut pas être mis à jour contrairement à S.A.T.A.N, qui permet de générer une nouvelle image avec tout les logiciels mis à jour en seulement quatre commandes.<cmdsynopsis><sbr /></cmdsynopsis></para>
@@ -226,24 +222,15 @@
 			<title>Administration</title>
 			<itemizedlist>
 				<listitem><para>Supervision</para><para>La sécurisation d'un réseau passe en partie par une surveillance de cellui-ci. Il était donc nécessaire d'inclure un logiciel de supervision permettant d'afficher graphiquement et d'enregistrer par exemple la charge d'un routeur ou le nombre d'accès à un serveur.</para></listitem>
-<<<<<<< HEAD:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 				<listitem><para>Gestion des configurations</para><para>Un administrateur réseau a pour tâche quotidienne la configuration d'équipements réseaux. Une fois configurés, l'administrateur doit pouvoir recharger ces configurations en cas de problème. C'est pourquoi nous avons inclus un logiciel gestionnaire de configurations.</para></listitem>
 				<listitem><para>Capture</para><para>Pour analyser un réseau, il est nécessaire de mettre en place une solution de capture de traffic. Nous avons donc choisi plusieurs logiciels qui se complètent entre eux.</para></listitem>
-=======
-				<listitem><para>Gestion des configurations</para><para>Un administrateur réseau a pour tâche quotidienne la configuration d'équipements réseaux. Une fois configurés, l'administrateur doit pouvoir recharger ces configurations en cas de problème. C'est pourquoi nous avons inclut un logiciel gestionnaire de configurations.</para></listitem>
-				<listitem><para>Capture</para><para>Pour analyzer un réseau, il est nécessaire de mettre en place une solution de capture de traffic. Nous avons donc choisi plusieurs logiciels qui se complètent entre eux.</para></listitem>
->>>>>>> 7275a50fd7122d6354fa9930f9e1f79c358cedf2:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 				<listitem><para>DNS</para><para>Dans un réseau, il peut être utile d'avoir un serveur DNS afin d'offrir le service de résolution d'adresses localement.</para></listitem>
 				<listitem><para>HTTP</para><para>Afin d'héberger le site de son entreprise par exemple, l'administrateur peut avoir besoin de monter son serveur localement et non de nécessiter le service d'un hébergeur professionnel.</para></listitem>
 				<listitem><para>FTP/TFTP</para><para>Les services de transfert de fichiers sont très utiles dans une entreprise pour par exemple récupérer des documents stockés sur un serveur.</para></listitem>
 				<listitem><para>Base de données</para><para>Ce service est aussi très utilisé en entreprise ne serait-ce que pour gérer une liste d'utilisateurs par exemple.</para></listitem>
 				<listitem><para>Partage Samba</para><para>Le partage de fichiers entre des postes windows et unix est impossible par défaut. C'est pourquoi nous avons intégré Samba qui permet de faire du partage de fichier dans un environnement windows.</para></listitem>
 				<listitem><para>Authentification</para><para>La sécurité étant un facteur très important, mettre en place des systèmes d'authentification sur le réseau est primordial.</para></listitem>
-<<<<<<< HEAD:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 				<listitem><para>VoIP</para><para>La VoIP est en passe de devenir commune dans un réseau d'entreprise, nous avons donc intégré un serveur SIP à notre projet.</para></listitem>
-=======
-				<listitem><para>VoIP</para><para>La VoIP est en passe de devenir commun dans un réseau d'entreprise, nous avons donc intégré un serveur SIP à notre projet.</para></listitem>
->>>>>>> 7275a50fd7122d6354fa9930f9e1f79c358cedf2:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 				<listitem><para>Routage</para><para>Dans cette section, on trouve des logiciels utiles permettant de mettre en place l'architecture du réseau.</para></listitem>
 			</itemizedlist>
 		</sect3>
@@ -251,11 +238,7 @@
 			<title>Sécurité</title>
 			<itemizedlist>
 				<listitem><para>IDS</para><para>Détecter les intrusions est une tâche importante pour l'administrateur réseau puisque c'est ce qui permet de se prévenir contre des attaques externes au réseau local.</para></listitem>
-<<<<<<< HEAD:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 				<listitem><para>Détection de vulnérabilités serveur</para><para>Un serveur sécurisé est un serveur surveillé, ces outils permettent donc, par exemple, de scanner les ports de la machine et détecter les éventuelles vulnérabilités et failles de sécurité.</para></listitem>
-=======
-				<listitem><para>Détection de vulnérabilités serveur</para><para>Un serveur sécurisé est un serveur surveillé, ces outils permettent donc, par exemple, scanner les ports de la machine et détecter les éventuelles vulnérabilités et failles de sécurité.</para></listitem>
->>>>>>> 7275a50fd7122d6354fa9930f9e1f79c358cedf2:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 				<listitem><para>Cracker des mots de passe</para><para>Attaquer son système de sécurité permet de redéfinir certains points sensibles de son intégrité. Par exemple, on peut tester la force de ses mots de passe en utilisant les outils disponibles dans cette section.</para></listitem>
 			</itemizedlist>
 		</sect3>
@@ -271,11 +254,7 @@
 	</sect2>
 	<sect2 id="maj">
 		<title>Comment mettre à jour les outils ?</title>
-<<<<<<< HEAD:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 		<para>Une fois avoir démarré un PC avec la clef usb, on utilise la commande "apt-get update" mais le problème est que cette mise à jour sera perdue au prochain redémarrage de l'ordinateur. En effet, S.A.T.A.N étant un système liveCD, toute modification éffectuée est effacée lors de l'extinction du PC. Afin de mettre à jour la totalité du système, il suffit de regénérer la clef usb grâce au logiciel live-helper comme expliqué dans le chapitre 3. Pour les logiciels dont les paquets d'installation ne sont pas dans les dépôts Debian, ils sont intégrés statiquement dans le dossier de génération de clef usb grâce à plusieurs scripts détaillés en annexe. Pour certains, il faudra télécharger la dernière version directement sur les sites hébergeurs de ces logiciels et les placer dans le dossier chroot_locale-include afin qu'ils s'installent automatiquement sur la clef.
-=======
-		<para>Une fois avoir démarré un PC avec la clef usb, on utilise la commande "apt-get update" mais le problème est que cette mise à jour sera perdue au prochain redémarrage de l'ordinateur. En effet, S.A.T.A.N étant un système liveCD, toute modification éffectuée est effacée lors de l'extinction du PC. Afin de mettre à jour la totalité du système, il suffit de regénérer la clef usb grâce au logiciel live-helper comme expliqué dans le chapitre 2. Pour les logiciels dont les paquets d'installation ne sont pas dans les dépôts Debian, ils sont intégrés statiquement dans le dossier de génération de clef usb grâce à plusieurs scripts détaillés en annexe. Pour certains, il faudra télécharger la dernière version directement sur les sites hébergeurs de ces logiciels et les placer dans le dossier chroot_locale-include afin qu'ils s'installent automatiquement sur la clef.
->>>>>>> 7275a50fd7122d6354fa9930f9e1f79c358cedf2:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 		</para>
 	</sect2>
 	<sect2 id="reproduire">
@@ -303,11 +282,7 @@
 			<para>
 				De plus, les logiciels ne sont pas tous accessibles et téléchargeables dans les dépôts Debian. Il faut donc réfléchir à comment inclure les logiciels manuellement tout en ne créant pas de problèmes de dépendances. 
 			</para>
-<<<<<<< HEAD:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 			Enfin, même si certaines logiciels sont paquetagés, il est parfois impossible de les installer automatiquement. Nous avons rencontré ce problème avec le paquet phpmyadmin <footnote><ulink url="http://packages.debian.org/squeeze/phpmyadmin"/></footnote> qui utilise également debconf pour son installation. Cependant, un bug dans debconf <footnote><ulink url="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=511737"/></footnote> nous a empeché de répondre automatiquement aux questions. C'est pourquoi nous avons déposé un rapport de bug<footnote><ulink url="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=511737"/></footnote> et installé phpmyadmin manuellement en le téléchargeant sur le site de phpmyadmin. 
-=======
-			Enfin, même si certaines logiciels sont paquetagés, il est parfois impossible de les installer automatiquement. Nous avons rencontré ce problème avec le paquet phpmyadmin <footnote><ulink url="http://packages.debian.org/squeeze/phpmyadmin"/></footnote> qui utilise également debconf pour son installation. Cependant, un bug dans debconf <footnote><ulink url="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=511737"/></footnote> nous a empeché de répondre automatiquement aux questions. C'est pourquoi nous avons déposé un rapport de bug<footnote><ulink url="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=511737"/></footnote> et installé phpmyadmin manuellement en le téléchargé sur le site de phpmyadmin. 
->>>>>>> 7275a50fd7122d6354fa9930f9e1f79c358cedf2:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 			<para>
 
 			</para>
@@ -315,11 +290,7 @@
 		<sect3 id="ressources">
 			<title>Ressources</title>
 			<para>
-<<<<<<< HEAD:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 			Notre projet nous a demandé très peu de ressources matérielles. En effet, une clef USB et un ordinateur sont suffisants pour réaliser nos tests. De plus, nous avons beaucoup utilisé la virtualisation. Cette méthode nous a permis de gagner du temps puisque cela évite de monter le système sur la clef et de redémarrer pour tester si l'image disque SATAN comporte les modifications effectuées. 
-=======
-			Notre projet nous a demandé très peu de ressources matériels. En effet, un clef USB et un ordinateur sont suffisant pour réaliser nos tests. De plus, nous avons très largement utilisé la virtualisation en démarrant une machine vuruelle  avec le fichier binary.iso. Cette méthode nous a permis de gagné beaucoup de temps car nous il est inutile d'installer le système sur la clef pour tester le système d'exploitation. 
->>>>>>> 7275a50fd7122d6354fa9930f9e1f79c358cedf2:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 			</para>
 		</sect3>
 		<sect3 id="planning">
@@ -335,10 +306,7 @@
 				<listitem><para>Février 2009 : Ajout des logiciels de simulation, réécriture complète des scripts (Yohann). Finalisation de l'interface graphique, début de la rédaction de la documentation (Vincent) ;</para></listitem>
 				<listitem><para>Mars 2009 : Correction de bugs, écriture de la documentation, préparation de la soutenance (Yohann, Vincent).</para></listitem>
 			</itemizedlist>
-<<<<<<< HEAD:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 			<para>Nous aurons passé en cumulant les heres près de 300 heures pour réaliser ce projet.</para>
-=======
->>>>>>> 7275a50fd7122d6354fa9930f9e1f79c358cedf2:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 		</sect3>
 	</sect2>
 	<sect2 id="etc2">
@@ -351,12 +319,8 @@
 				<listitem><para>23 septembre 2008 : Prise de contact avec Mr Rioual pour l'informer que notre binôme souhaite reprendre le projet R&amp;Tools.</para><para>Suite aux conseils de Mr Rioual, nous cherchons un troisième élève pour nous accompagner dans le projet mais nous n'avons pas trouvé de candidats ;</para></listitem>
 				<listitem><para>4 octobre 2008 : Première rencontre afin de définir les objectifs du projet ;</para></listitem>
 				<listitem><para>23 février 2009 : Compte rendu de l'avancement du projet et démonstration ;</para></listitem>
-<<<<<<< HEAD:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 				<listitem><para>4 mars 2009 : Compte rendu de l'avancement afin de déterminer les dernièrs points à finir.</para></listitem>
 				<listitem><para>26 mars 2009 : Soutenance du projet.</para></listitem>
-=======
-				<listitem><para>4 mars 2009 : Compte rendu de l'avancement afin de déterminer les dernières points à finir.</para></listitem>
->>>>>>> 7275a50fd7122d6354fa9930f9e1f79c358cedf2:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 			</itemizedlist>
 		</sect3>
 		<sect3 id="evolutions">
@@ -365,15 +329,9 @@
 				Voici les évolutions qui peuvent être apportées au projet S.A.T.A.N :
 			</para>
 			<itemizedlist>
-<<<<<<< HEAD:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 				<listitem><para>Création de recettes sur l'utilisation des logiciels pour valider des architectures (créer des labs de tests);</para></listitem>
 				<listitem><para>Participation à la traduction du projet live-helper ;</para></listitem>
 				<listitem><para>Recherche et ajout de logiciels ;</para></listitem>
-=======
-				<listitem><para>Création de recettes sur l'utilisation des logiciels pour valider des architectures ;</para></listitem>
-				<listitem><para>Participation à la traduction du projet live-helper ;</para></listitem>
-				<listitem><para>Ajout de logiciels ;</para></listitem>
->>>>>>> 7275a50fd7122d6354fa9930f9e1f79c358cedf2:doc/satan-manual/xml/chapters/chapitre1-ProjetSATAN.xml
 				<listitem><para>Réécriture standardisé de tout les scripts ;</para></listitem>
 				<listitem><para>Création d'une interface graphique pour générer S.A.T.A.N ;</para></listitem>
 				<listitem><para>Automatiser l'importation de la documentation officielle dans la documentation de S.A.T.A.N.</para></listitem>

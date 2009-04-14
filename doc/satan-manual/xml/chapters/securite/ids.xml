@@ -6,7 +6,7 @@
 <sect2 id="ids">
 	<title>IDS</title>
 	<para>
-	Un système de détection d'intrusion (ou IDS : Intrusion Detection System) est un mécanisme destiné à repérer des activités anormales ou suspectes sur la cible analysée (un réseau ou un hôte). Il permet ainsi d'avoir une connaissance sur les tentatives réussies comme échouées des intrusions.
+	IDS
 	</para>
 <sect3 id="ids-snort">
 	<title>snort</title>

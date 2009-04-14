@@ -7,7 +7,7 @@
 <title>Les outils pour récupéré les trames circulant sur le réseaux</title>
 
 <para>
-Ce chapitre liste les outils pour récupéré les trames circulant sur le réseaux (le mode root est utilisé pour l'utilisation des logiciels)
+Ce chapitre liste les outils pour récupéré les trames circulant sur le réseaux (le mode root est utiliser pour l'utilisation des logiciels)
 </para>
 
 	<sect3 id="sniffer-Wireshark">
