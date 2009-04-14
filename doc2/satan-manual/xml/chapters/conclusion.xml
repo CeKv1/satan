@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
+]>
+<chapter id="conclusion">
+	<title>Conclusion</title>
+
+<sect1 id="avenir">
+	<title>Avenir du projet</title>
+	<para>
+	</para>
+</sect1>
+<sect1 id="vivre">
+	<title>Comment faire vivre ce projet</title>
+	<para>
+	</para>
+	<sect2 id="partie_systeme">
+		<title>Partie système</title>
+		<para>
+		</para>
+	</sect2>
+	<sect2 id="partie_methode">
+		<title>Partie méthode</title>
+		<para>
+		</para>
+	</sect2>
+</sect1>
+</chapter>

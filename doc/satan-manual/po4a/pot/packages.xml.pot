@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-11-12 22:29+0100\n"
+"POT-Creation-Date: 2009-03-10 22:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,19 +15,16 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: ENCODING"
 
-# type: Content of: <chapter><section><para>
-#: xml/chapters/about/manual.xml:47 xml/chapters/about/manual.xml:51
-#: xml/chapters/about/manual.xml:55 xml/chapters/about/manual.xml:59
-#: xml/chapters/about/manual.xml:63 xml/chapters/about/manual.xml:67
-#: xml/chapters/basics.xml:151 xml/chapters/basics.xml:182
-#: xml/chapters/customization/bootup.xml:11
+# type: Content of: <sect1><section><para>
+#: xml/chapters/about/manual.xml:46 xml/chapters/about/manual.xml:50
+#: xml/chapters/about/manual.xml:62 xml/chapters/customization/bootup.xml:11
 #: xml/chapters/customization/bootup.xml:20
 #: xml/chapters/customization/bootup.xml:26
 #: xml/chapters/customization/bootup.xml:38
-#: xml/chapters/customization/bootup.xml:46
-#: xml/chapters/customization/bootup.xml:53
-#: xml/chapters/customization/bootup.xml:60
-#: xml/chapters/customization/bootup.xml:67
+#: xml/chapters/customization/bootup.xml:85
+#: xml/chapters/customization/bootup.xml:92
+#: xml/chapters/customization/bootup.xml:99
+#: xml/chapters/customization/bootup.xml:106
 #: xml/chapters/customization/packages.xml:21
 #: xml/chapters/customization/packages.xml:138
 #: xml/chapters/customization/packages.xml:183
@@ -83,16 +80,15 @@ msgstr ""
 # type: Content of: <sect1><sect2><para>
 #: xml/chapters/customization/packages.xml:28
 msgid ""
-"You can elect to use either <computeroutput>apt</computeroutput> or "
-"<computeroutput>aptitude</computeroutput> when installing packages. Which "
-"utility is used is governed by the <computeroutput>LH_APT</computeroutput> "
-"variable in <filename>config/chroot</filename> or by the <computeroutput>--"
-"apt</computeroutput> argument to <filename>lh_config</filename>:"
+"You can elect to use either <command>apt</command> or <command>aptitude</"
+"command> when installing packages. Which utility is used is governed by the "
+"<command>LH_APT</command> variable in <filename>config/chroot</filename> or "
+"by the <command>--apt</command> argument to <filename>lh_config</filename>:"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: xml/chapters/customization/packages.xml:33
-msgid "<computeroutput>apt</computeroutput>"
+msgid "<command>apt</command>"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
@@ -109,7 +105,7 @@ msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><term>
 #: xml/chapters/customization/packages.xml:44
-msgid "<computeroutput>aptitude</computeroutput>"
+msgid "<command>aptitude</command>"
 msgstr ""
 
 # type: Content of: <sect1><sect2><variablelist><varlistentry><listitem><para>
@@ -139,7 +135,7 @@ msgstr ""
 # type: Content of: <sect1><sect2><sect3><title>
 #: xml/chapters/customization/packages.xml:66
 #: xml/chapters/customization/packages.xml:73
-msgid "The <computeroutput>LH_PACKAGES</computeroutput> variable"
+msgid "The <command>LH_PACKAGES</command> variable"
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><title>
@@ -162,9 +158,8 @@ msgstr ""
 # type: Content of: <sect1><sect2><sect3><para>
 #: xml/chapters/customization/packages.xml:75
 msgid ""
-"To install additional packages, simply add them to the "
-"<computeroutput>LH_PACKAGES</computeroutput> variable in <filename>config/"
-"chroot</filename>. For example:"
+"To install additional packages, simply add them to the <command>LH_PACKAGES</"
+"command> variable in <filename>config/chroot</filename>. For example:"
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><screen>
@@ -218,8 +213,8 @@ msgstr ""
 #: xml/chapters/customization/packages.xml:103
 msgid ""
 "To specify a package list, add the name of the list to the "
-"<computeroutput>LH_PACKAGES_LISTS</computeroutput> variable in "
-"<filename>config/chroot</filename>. For example:"
+"<command>LH_PACKAGES_LISTS</command> variable in <filename>config/chroot</"
+"filename>. For example:"
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><screen>
@@ -234,7 +229,7 @@ msgstr ""
 #: xml/chapters/customization/packages.xml:109
 msgid ""
 "Packages lists that a distributed with &live-helper; reside in view in the "
-"<computeroutput>/usr/share/live-helper/lists</computeroutput> directory."
+"<command>/usr/share/live-helper/lists</command> directory."
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><sect4><title>
@@ -246,7 +241,7 @@ msgstr ""
 #: xml/chapters/customization/packages.xml:114
 msgid ""
 "You may supplement the supplied lists using local package lists stored in "
-"<computeroutput>config/chroot_local-packageslists</computeroutput>."
+"<command>config/chroot_local-packageslists</command>."
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><sect4><para>
@@ -274,8 +269,8 @@ msgstr ""
 #: xml/chapters/customization/packages.xml:132
 msgid ""
 "The package lists that are included with &live-helper; make extensive use of "
-"includes. They are available to view in the <computeroutput>/usr/share/live-"
-"helper/lists</computeroutput> directory."
+"includes. They are available to view in the <command>/usr/share/live-helper/"
+"lists</command> directory."
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><sect4><title>
@@ -296,9 +291,8 @@ msgstr ""
 # type: Content of: <sect1><sect2><sect3><sect4><para>
 #: xml/chapters/customization/packages.xml:146
 msgid ""
-"or if <computeroutput>LH_ARCHITECTURE</computeroutput> is set to "
-"<computeroutput>i386</computeroutput> or <computeroutput>amd64</"
-"computeroutput>:"
+"or if <command>LH_ARCHITECTURE</command> is set to <command>i386</command> "
+"or <command>amd64</command>:"
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><sect4><screen>
@@ -314,9 +308,8 @@ msgstr ""
 # type: Content of: <sect1><sect2><sect3><sect4><para>
 #: xml/chapters/customization/packages.xml:154
 msgid ""
-"or if <computeroutput>LH_SECTIONS</computeroutput> contains either "
-"<computeroutput>contrib</computeroutput> or <computeroutput>non-free</"
-"computeroutput>:"
+"or if <command>LH_SECTIONS</command> contains either <command>contrib</"
+"command> or <command>non-free</command>:"
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><sect4><screen>
@@ -331,9 +324,7 @@ msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><sect4><para>
 #: xml/chapters/customization/packages.xml:162
-msgid ""
-"A conditional may surround an <computeroutput>#include</computeroutput> "
-"directive:"
+msgid "A conditional may surround an <command>#include</command> directive:"
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><sect4><screen>
@@ -349,8 +340,8 @@ msgstr ""
 # type: Content of: <sect1><sect2><sect3><sect4><para>
 #: xml/chapters/customization/packages.xml:171
 msgid ""
-"Any &live-helper; configuration variable that begins with "
-"<computeroutput>LH_</computeroutput> can be tested in this way."
+"Any &live-helper; configuration variable that begins with <command>LH_</"
+"command> can be tested in this way."
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><sect4><para>
@@ -417,17 +408,17 @@ msgstr ""
 # type: Content of: <sect1><sect2><sect3><para>
 #: xml/chapters/customization/packages.xml:205
 msgid ""
-"To install a custom package, simply copy it to the <computeroutput>config/"
-"chroot_local-packages</computeroutput> directory. Packages that are inside "
-"this directory will be automatically installed into the live system during "
-"build - you do not need to specify them elsewhere."
+"To install a custom package, simply copy it to the <command>config/"
+"chroot_local-packages</command> directory. Packages that are inside this "
+"directory will be automatically installed into the live system during build "
+"- you do not need to specify them elsewhere."
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><para>
 #: xml/chapters/customization/packages.xml:207
 msgid ""
 "Packages <emphasis>must</emphasis> be named in the prescribed way. One "
-"simple way to is to use <computeroutput>dpkg-name</computeroutput>. FIXME"
+"simple way to is to use <command>dpkg-name</command>. FIXME"
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><para>
@@ -445,8 +436,8 @@ msgstr ""
 # type: Content of: <sect1><sect2><sect3><orderedlist><listitem><para>
 #: xml/chapters/customization/packages.xml:212
 msgid ""
-"You must install all appropriate packages in the <computeroutput>config/"
-"chroot_local-packages</computeroutput> directory"
+"You must install all appropriate packages in the <command>config/"
+"chroot_local-packages</command> directory"
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><orderedlist><listitem><para>
@@ -495,11 +486,10 @@ msgstr ""
 #: xml/chapters/customization/packages.xml:237
 msgid ""
 "Because of this. you may wish to increment the version number in your custom "
-"packages' <computeroutput>debian/changelog</computeroutput> files to ensure "
-"that your modified version is installed over one in the official Debian "
-"repositories. This may also be achieved by altering the live system's APT "
-"pinning preferences - see <xref linkend=\"apt-preferences\"/> for more "
-"information."
+"packages' <command>debian/changelog</command> files to ensure that your "
+"modified version is installed over one in the official Debian repositories. "
+"This may also be achieved by altering the live system's APT pinning "
+"preferences - see <xref linkend=\"apt-preferences\"/> for more information."
 msgstr ""
 
 # type: Content of: <sect1><sect2><sect3><title>

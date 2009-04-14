@@ -5,25 +5,13 @@
 ]>
 <chapter id="conclusion">
 	<title>Conclusion</title>
-
-<sect1 id="avenir">
-	<title>Avenir du projet</title>
 	<para>
+	Notre projet nous a permis de répondre à notre problèmatique, à savoir réaliser un environement portable d'administration sur clé usb en s'appuyant sur le projet de l'année précédente R&amp;Tools. Ce projet nous a aussi permis d'avoir une meilleure maîtrise de la distribution Debian ainsi que des outils liés à la virtualisation et la sécurité. De plus, cela nous a apporté d'un point de vue personnel l'opportunité d'entrer en contact avec la communauté opensource avec l'équipe Debian Live mais auusi l'association Gulliver qui compte dans les utilisateurs et contributeurs du projet Debian Live.
 	</para>
-</sect1>
-<sect1 id="vivre">
-	<title>Comment faire vivre ce projet</title>
 	<para>
+	Pour l'avenir, d'un point de vue technique, l'ajout de logiciels ainsi que la correction de certains bugs serait bénéfique à la survie du projet. De même, la documentation des logiciels et outils de S.A.T.A.N étant loin d'être complète, il faudra bien évidemment la peaufiner. Ces différents points (parmis d'autres) engagent donc à perpétuer le projet pour les étudiants R&amp;T des prochaines années.  
 	</para>
-	<sect2 id="partie_systeme">
-		<title>Partie système</title>
-		<para>
-		</para>
-	</sect2>
-	<sect2 id="partie_methode">
-		<title>Partie méthode</title>
-		<para>
-		</para>
-	</sect2>
-</sect1>
+	<para>
+	Nous espérons aussi que ce projet permettra un jour de fournir aux étudiants de l'iut un outil complet et viable pour son utilisation en TP Réseaux. Parallèlement, la qualité des logiciels intégrés profite à cet environement portable qu'est S.A.T.A.N et peut donc tout à fait correspondre à une utilisation dans un cadre professionnel.
+	</para>
 </chapter>

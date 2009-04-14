@@ -8,7 +8,8 @@
 <sect1 id="chap2-installation">
 	<title>Installation</title>
 	<para>
-	L'installation nécessite deux étapes.
+	Pour générer une clef usb bootable SATAN, on doit tout d'abord disposer d'une distribution Debian et d'une connection à internet.
+	L'installation nécessite deux étapes :
 	</para>
 	<sect2 id="chap2-installationi-dep">
 		<title>Installation des dépendances</title>
@@ -52,7 +53,24 @@
 	<sect2 id="chap2-installation-recup">
 		<title>Récupération du projet</title>
 		<para>
-			Le projet est hebergé sur le site <ulink url="http://github.com/2xyo/satan/tree/master" />. C'est un dépôt <ulink url="http://git-scm.com/">git</ulink>.
+			Le projet est hebergé sur le site <ulink url="http://github.com/2xyo/satan/" />. C'est un dépôt git<footnote><ulink url="http://git-scm.com/"/></footnote>. 
+		</para>
+		<para>
+			On installe premièrement git :
+		</para>
+		<screen>
+	<prompt>yoyo@YoYoSID:~$</prompt> <userinput>aptitude install git-core</userinput>
+		</screen>
+		<para>
+			On doit ensuite ouvrir un compte sur le site github. Une fois ceci fait, le créateur du dépôt doit vous accepter comme collaborateur.</para>
+		<para>
+			On peut maintenant avoir accès au projet mais on ne peut pas modifier la source sur github. Pour cela, il faut générer une clé SSH afin de s'identifier et valider l'utilisateur qui a effectué les modifications. Pour générer la clé, on fait la commande suivante:
+		</para>
+		<screen>
+	<prompt>yoyo@YoYoSID:~$</prompt> <userinput>ssh-keygen</userinput>
+		</screen>
+		<para>
+			Une fois ceci fait, on copie la clé ssh en ouvrant le fichier .pub créé et on le colle dans l'option "clé SSH :" dans les options du profil github.
 		</para>
 		<screen>
 	<prompt>yoyo@YoYoSID:~$</prompt> <userinput>su</userinput>
@@ -74,9 +92,9 @@
 		</screen>
 	</sect2>
 	<sect2 id="chap2-installation-creation">
-		<title>Création de SATAN</title>
+		<title>Création et modification de SATAN</title>
 		<para>
-			Maintenant que tout les paquets nécessaires sont installés, il suffit de deux ligne pour générer le système d'exploitation complet et d'une ligne pour l'installer sur une clef. 
+			Maintenant que tout les paquets nécessaires sont installés, il suffit de deux ligne pour générer le système d'exploitation complet et d'une ligne pour l'installer sur une clef. Les scripts utilisés par ces commandes sont modifiables dans le dossier satan/scripts. Une fois le projet recupéré, il est possible de le modifier localement et de le recharger sur github. Pour cela, on utilise la commande "git push" (voir la doc http://www.kernel.org/pub/software/scm/git/docs/git-push.html ).
 		</para>
 		<screen>
 	<lineannotation>Création de l'environnement pour créer SATAN. lh_config appel le fichier scripts/config</lineannotation>
@@ -87,6 +105,44 @@
 	<prompt>YoYoSID:/root/satan/satan#</prompt> <userinput>./install.sh /dev/sdX</userinput> 
 		</screen>
 	<caution>Le gestionnaire de boot GRUB n'arrive parfois pas à s'installer directement sur la clef ! Il est par conséquent nécessaire de relancer la commande ./install.sh /dev/sdX.</caution>
+		<para>
+			Pour gagner du temps lors des créations de clés, on peut installer un mirroir debian local qui permet de ne pas retélécharger à chaque fois les paquets nécessaires à la génération de l'image disque.
+		</para>
+		<para>
+			Nous avons utilisé pour notre part "debmirror" présent dans les dépôts.
+		</para>
+		<screen>
+	<prompt>YoYoSID:/root/satan#</prompt> <userinput>aptitude install debmirror</userinput>
+		</screen>
+		<para>
+			Voici la commande pour créer le mirroir :
+		</para>
+		<screen>
+	<prompt>YoYoSID:/root/satan#</prompt> <userinput># debmirror -v -a i386 -h ftp.fr.debian.org -d etch /chemin/vers/votre/mirroir --nosource --progress
+</userinput>
+		</screen>
+		<para>
+			L'accès au mirroir se fera via http. Pour cela nous allons utiliser et configurer apache.  Pour cela, on édite/etc/apache2/apache2.conf et on ajoute les lignes suivantes :
+		</para>
+		<screen>
+	<computeroutput>
+	Alias /debian/ &quot;/CheminEmplacementDeVotreMirroir/debian/&quot;
+   	 &lt; Directory &quot;/CheminEmplacementDeVotreMirroir/debian&quot;&gt;
+	  Options +Indexes +SymlinksIfOwnerMatch
+	  IndexOptions NameWidth=* +SuppressDescription
+	 &lt;/Directory&gt;
+	Alias /debian-security/ &quot;CheminEmplacementDeVotreMirroir/debian-security/&quot;
+	 &lt;Directory &quot;/CheminEmplacementDeVotreMirroir/debian-security&quot;&gt;
+	  Options +Indexes +SymlinksIfOwnerMatch
+	  IndexOptions NameWidth=* +SuppressDescription
+	 &lt;/Directory&gt;
+	</computeroutput>
+		</screen>
+		<para>
+			On actualise ensuite la configuration apache avec la commande "/etc/init.d/apache2 reload". Enfin, il suffira de changer les sources d'installation en éditant satan/scripts/config avec "http://votre_serveur_mirroir/debian/" et "http://votre_serveur_mirroir/debian-security/".
+		</para>
+
+
 	</sect2>
 
 </sect1>
@@ -102,10 +158,10 @@
 <sect1 id="chap2-maj">
 	<title>Mise à jour</title>
 	<para>
-	La distribution SATAN ne peut pas être mis à jour en partie. EN effet il est impossible de monter le fichier binary.iso pour ensuite monter le système de fichier squashfs et d'y réaliser des modifications. Il est cependant possible de mettre à jour temporairement la distribution SATAN lors de son utilisation via la commande apt-get update mais les mises à jours seront perdus lors du prochaine redémarrage.
+	La distribution SATAN ne peut pas être mis à jour en partie. En effet il est impossible de monter le fichier binary.iso pour ensuite monter le système de fichier squashfs et d'y réaliser des modifications. Il est cependant possible de mettre à jour temporairement la distribution SATAN lors de son utilisation via la commande apt-get update mais les mises à jours seront perdus lors du prochaine redémarrage.
 	</para>
 	<para>
-	La mise à jour complète et définitive de la distribution SATAN nécessite de générer de nouveau un fichier binary.iso et d'installer celui-ci dans la clé en écrasant tout ce qu'il y a sur la clef
+	La mise à jour complète et définitive de la distribution SATAN nécessite de générer de nouveau un fichier binary.iso et d'installer celui-ci dans la clé en écrasant tout ce qu'il y a sur la clef.
 	</para>
 	<screen>
 	<lineannotation>Nettoyage du dossier (suppression du cache de live-helper). lh_clean appel le fichier scripts/clean</lineannotation>
@@ -117,5 +173,8 @@
 	<lineannotation>Il faut seulement indiquer l'emplacement du périphérique physique et non logique ! (Exemple : /dev/sdb et non /dev/sdb1)</lineannotation>
 	<prompt>YoYoSID:/root/satan/satan#</prompt> <userinput>./install.sh /dev/sdX</userinput> 
 	</screen>
+	<para>
+	Pour générer seulement la doc dans "satan/doc/satan-manual/", on va dans le repertoire "satan/scripts" et on tape "./doc.sh make".
+	</para>
 </sect1>
 </chapter>

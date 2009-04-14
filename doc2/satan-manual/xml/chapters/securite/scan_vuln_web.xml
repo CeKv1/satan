@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
+]>
+<sect2 id="scan_vuln_web">
+<title>Les outils pour détécter les vulnérabilités d'un serveur</title>
+
+<para>
+Ce chapitre liste les outils pour trouver les vunérabilité
+</para>
+	<sect3 id="scan_vuln_web-paros">
+	<title>Paros</title>
+	<para>
+		Paros Proxy émule un navigateur Web et va permettre de tester des actions sur des services et des applications en ligne, et ainsi d'évaluer leur niveau de sécurité. Paros Proxy offre notamment la possibilité de capturer une requête, de la réécrire avant de la réacheminer. Toutes les données sur HTTP et HTTPS entre le serveur et le client, y compris les cookies, peuvent être interceptées et modifiées.
+	</para>
+	</sect3>
+</sect2>

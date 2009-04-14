@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % commondata SYSTEM "entities/common.ent" > %commondata;
+  <!ENTITY % versiondata SYSTEM "entities/version.ent"> %versiondata;
+]>
+<book lang="fr">
+
+<title>SATAN</title>
+<subtitle>Simulations And Tools To Administrate Networks</subtitle>
+<bookinfo>
+<author>
+ <othername>The Debian Live Project</othername>
+ <email>debian-live@lists.debian.org</email>
+</author>
+<author>
+ <othername>Yohann lepage</othername>
+ <email>yohannlepage@2xyo.info</email>
+ <contrib>Intégration, développement,documentatation</contrib>
+</author>
+<author>
+ <othername>Vincent Palierne</othername>
+ <email>vincentpalierne@gmail.com</email>
+ <contrib>Interface graphique, documentation</contrib>
+</author>
+
+
+<releaseinfo>&version;</releaseinfo>
+<pubdate>&pubdate;</pubdate>
+
+<copyright>
+ <year>2008-2009</year>
+ <holder>Yohann Lepage, Vincent Palierne, The Debian Live Project</holder>
+</copyright>
+
+<legalnotice>
+<para>
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+</para>
+<para>
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+</para>
+<para>
+Une copie de la licence GNU General Public Licence est disponible dans
+<filename>/usr/share/common-licenses/GPL</filename> dans la distribution Debian GNU/linux
+ou sur le site internet
+<ulink url="http://www.gnu.org/copyleft/gpl.html">GNU</ulink>.
+Vous pouvez également l'obtenir en écrivant à Free Software Foundation, Inc., 59
+Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+</para>
+</legalnotice>
+</bookinfo>
+
+<!-- Chapters -->
+
+<xi:include href="chapters/introduction.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="chapters/chapitre1-ProjetSATAN.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="chapters/chapitre2-Installation.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="chapters/conclusion.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+
+<!-- Appendecis -->
+<xi:include href="chapters/chapitre-Documentation.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="appendices/configuration-layout.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="appendices/configuration-files.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="appendices/satan-scripts.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="appendices/satan-hooks.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+<xi:include href="appendices/satan-install.xml" xmlns:xi="http://www.w3.org/2003/XInclude"/>
+
+</book>

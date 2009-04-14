@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>C.2. Fichier scripts/config</title>
+    <link rel="stylesheet" href="../css/stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.73.2" />
+    <link rel="start" href="../index.html" title="SATAN" />
+    <link rel="up" href="../configuration-files.html" title="Annexe C. Fichiers de configuration" />
+    <link rel="prev" href="clean.html" title="C.1. Fichier scripts/clean" />
+    <link rel="next" href="build.html" title="C.3. Fichier scripts/build" />
+  </head>
+  <body>
+    <div class="navheader">
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <th colspan="3" align="center">C.2. Fichier <code class="filename">scripts/config</code></th>
+        </tr>
+        <tr>
+          <td width="20%" align="left"><a accesskey="p" href="clean.html">Précédent</a> </td>
+          <th width="60%" align="center">Annexe C. Fichiers de configuration</th>
+          <td width="20%" align="right"> <a accesskey="n" href="build.html">Suivant</a></td>
+        </tr>
+      </table>
+      <hr />
+    </div>
+    <div class="section" lang="fr" xml:lang="fr">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="scripts/config"></a>C.2. Fichier <code class="filename">scripts/config</code></h2>
+          </div>
+        </div>
+      </div>
+      <div class="programlistingco">
+        <pre class="programlisting">#!/bin/sh -x
+
+# Répertoire de travail
+SH_BASE="${SH_BASE:-`pwd`}"
+
+#Scripts de live-helper
+. "${LH_BASE:-/usr/share/live-helper}"/functions.sh
+
+# $MIRROR: Utilisation d'un mirror local
+# (Default: no)
+MIRROR="yes"
+
+if [ "${MIRROR}" = "yes" ]
+then
+	MIRROR_DEBIAN="http://localhost/debian"
+	MIRROR_SECURITY="http://localhost/debian-security"
+else
+	MIRROR_DEBIAN="http://ftp.fr.debian.org/debian"
+	MIRROR_SECURITY="http://security.debian.org/"
+fi
+
+
+lh_config noautoconfig \
+	--apt-recommends disabled \
+	--architecture "i386" \
+	--binary-filesystem fat32 \
+	--bootappend-live "locale=fr  keyb=fr" \
+	--bootappend-install " -- locale=fr keyb=fr" \
+	--bootloader grub \
+	--categories "main contrib non-free" \
+	--distribution squeeze \
+	--grub-splash splash.xpm.gz \
+	--hostname satan \
+	--initramfs live-initramfs \
+	--iso-application "SATAN" \
+	--iso-preparer "Yohann Lepage" \
+	--iso-publisher "Yohann Lepage, Vincent Palierne" \
+	--iso-volume "SATAN $(date +%Y%m%d-%H:%M)" \
+	--keyring-packages "debian-archive-keyring" \
+	--language fr \
+	--linux-flavours "486 686" \
+	--linux-packages "linux-image-2.6 aufs-modules-2.6 squashfs-modules-2.6 " \
+	--mirror-bootstrap ${MIRROR_DEBIAN} \
+	--mirror-binary http://ftp.fr.debian.org/debian/ \
+	--mirror-binary-security http://security.debian.org/ \
+	--mirror-chroot ${MIRROR_DEBIAN} \
+	--mirror-chroot-security ${MIRROR_SECURITY} \
+	--packages-lists "base graphic tools" \
+	--security enabled \
+	--union-filesystem aufs \
+	--username etu  \
+	--verbose \
+	${@}
+</pre>
+        <div class="calloutlist">
+          <table border="0" summary="Callout list">
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>
+                  <img src="images/callouts/1.png" alt="1" border="0" />
+                </p>
+              </td>
+              <td valign="top" align="left">
+                <p>Définition du répertoire de travail.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>
+                  <img src="images/callouts/2.png" alt="2" border="0" />
+                </p>
+              </td>
+              <td valign="top" align="left">
+                <p>Prise en compte des fonctions de live-helper.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>???</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Utilisation ou non d'un miror.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>
+                  <img src="images/callouts/3.png" alt="3" border="0" />
+                </p>
+              </td>
+              <td valign="top" align="left">
+                <p>Si un miroir est utilisé, on le déclare.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>
+                  <img src="images/callouts/4.png" alt="4" border="0" />
+                </p>
+              </td>
+              <td valign="top" align="left">
+                <p>Dans le cas contraire, on utilise les miroirs officiels.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>
+                  <img src="images/callouts/5.png" alt="5" border="0" />
+                </p>
+              </td>
+              <td valign="top" align="left">
+                <p>On indique à lh_config qu'il doit prendre en compte scripts/config.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>
+                  <img src="images/callouts/6.png" alt="6" border="0" />
+                </p>
+              </td>
+              <td valign="top" align="left">
+                <p>Apt-get doit seulement installer les paquets nécessaires et pas ceus juste recommandés.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>
+                  <img src="images/callouts/7.png" alt="7" border="0" />
+                </p>
+              </td>
+              <td valign="top" align="left">
+                <p>Sélection de l'architecture i386.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>
+                  <img src="images/callouts/8.png" alt="8" border="0" />
+                </p>
+              </td>
+              <td valign="top" align="left">
+                <p>Système de fichier fat32.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>
+                  <img src="images/callouts/9.png" alt="9" border="0" />
+                </p>
+              </td>
+              <td valign="top" align="left">
+                <p>Passage de paramètres locaux au démarrage.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>
+                  <img src="images/callouts/10.png" alt="10" border="0" />
+                </p>
+              </td>
+              <td valign="top" align="left">
+                <p>Passage de paramètres locaux au démarrage.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>
+                  <img src="images/callouts/11.png" alt="11" border="0" />
+                </p>
+              </td>
+              <td valign="top" align="left">
+                <p>Sélection du gestionnaire de boot grub.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>
+                  <img src="images/callouts/12.png" alt="12" border="0" />
+                </p>
+              </td>
+              <td valign="top" align="left">
+                <p>Sélection des paquets dans les catégories main non-free et contrib.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>
+                  <img src="images/callouts/13.png" alt="13" border="0" />
+                </p>
+              </td>
+              <td valign="top" align="left">
+                <p>Sélection de la distribution squeeze (testing).</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>
+                  <img src="images/callouts/14.png" alt="14" border="0" />
+                </p>
+              </td>
+              <td valign="top" align="left">
+                <p>Sélection du fichier d'arrière plan au démarrage.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>
+                  <img src="images/callouts/15.png" alt="15" border="0" />
+                </p>
+              </td>
+              <td valign="top" align="left">
+                <p>Sélection du nom de machine.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(16)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Sélection du système de fichier live.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(17)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Nom de l'image iso.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(18)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Nom du préparateur de l'image iso.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(19)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Nom de l'éditeur de l'image iso.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(20)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Nom du volume de l'image iso avec la date.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(21)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Nom de l'archive qui contient les clefs publiques des dépôts.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(22)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Sélection du langage.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(23)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Sélection des noyaux installés.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(24)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Sélection des paquetages relatives au noyau et au système de fichier.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(25)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Sélection des miroirs pour création de la distribution.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(26)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Sélection des mirrors finaux dans /etc/apt/sources.list</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(27)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Sélection des mirrors finaux dans /etc/apt/sources.list</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(28)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Sélection des miroirs une fois dans le chroot.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(29)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Sélection des miroirs une fois dans le chroot.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(30)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Liste des paquets à installer</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(31)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Désactivation du téléchargement des mises à jour de sécurité.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(32)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Sélection du système de fichier volatile.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(33)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Sélection du nom d'utilisteur.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(34)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Afficher beaucoup d'informations.</p>
+              </td>
+            </tr>
+            <tr>
+              <td width="5%" valign="top" align="left">
+                <p>(35)</p>
+              </td>
+              <td valign="top" align="left">
+                <p>Prendre en compte les arguments passés en ligne de commande.</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="navfooter">
+      <hr />
+      <table width="100%" summary="Navigation footer">
+        <tr>
+          <td width="40%" align="left"><a accesskey="p" href="clean.html">Précédent</a> </td>
+          <td width="20%" align="center">
+            <a accesskey="u" href="../configuration-files.html">Niveau supérieur</a>
+          </td>
+          <td width="40%" align="right"> <a accesskey="n" href="build.html">Suivant</a></td>
+        </tr>
+        <tr>
+          <td width="40%" align="left" valign="top">C.1. Fichier <code class="filename">scripts/clean</code> </td>
+          <td width="20%" align="center">
+            <a accesskey="h" href="../index.html">Sommaire</a>
+          </td>
+          <td width="40%" align="right" valign="top"> C.3. Fichier <code class="filename">scripts/build</code></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

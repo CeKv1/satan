@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
+]>
+<sect2 id="sniffer">
+<title>Les outils pour récupéré les trames circulant sur le réseaux</title>
+
+<para>
+Ce chapitre liste les outils pour récupéré les trames circulant sur le réseaux (le mode root est utiliser pour l'utilisation des logiciels)
+</para>
+
+	<sect3 id="sniffer-Wireshark">
+		<title> Wireshark</title>
+			<para>
+			 Wireshark est un sniffer il capture les trames circulant à travers la carte réseau ciblé. Il supporte plus de 820 protocoles.
+			</para>
+			<para>
+				pour bien démarer vérifier que vous êtes bien connecter au réseaux voulut avec la commande <command>ifconfig</command> et que votre interface réseaux est bien up (commande: <command>ifconfig interface up</command> )ou reconnu (pour le wifi <command>iwconfig</command>).
+			</para>
+			<para>
+				Pour démarrer choisisez l'icone wireshark (root) avec ce logiciel cliquer sur la première icone de la fenêtre (liste des interface disponible pour la capture) cliquer sur le start en face de l'interface voulu. 
+			</para>
+			<para>
+				Pour améliorer votre utilisation de cette outil noublier pas qu'il existe des filtre pour laisser apparaitre seulment les trames qui vous intéresse. Il est égalment possible de modifier les couleur des trames du type voulu.
+			</para>
+			<para>Pour plus d'informations  <command>man wireshark</command></para>	
+	</sect3>
+
+	<sect3 id="sniffer-Kismet">
+			<title>Kismet</title>
+			<para>
+			 <filename>kismet</filename> est un sniffer et  détecteur de réseau pour le protocole 802.11 (wifi).
+			</para>
+			<para>
+				Pour bien démarer vérifier que vous êtes bien connecté au réseaux voulu avec la commande <command>ifconfig</command> et que votre interface réseaux est bien up (commande: <command>ifconfig interface up</command> )ou reconnu (pour le wifi 	<command>iwconfig</command>)
+			</para>
+			<para>
+				Editer le fichier de configuration <filename>/etc/kismet/kismet.conf</filename> pour identifier le type d'interface réseau sans fil utilisée au niveau du paramètre source suivant la syntaxe source=type,interface,name[,channel].
+			</para>
+			<para>
+Une fois la configuration en place, il ne reste plus qu'à lancer<command> kismet</command>et attendre quelques minutes pour que le recensement des équipements actifs soit complet.</para>
+			<para>
+Pour que le logiciel kismet puisse scruter les communications sur l'ensemble des 14 canaux utilisables par les réseaux IEEE 802.11b/g, il faut placer l'interface en mode monitor.
+			</para>
+			<screen>
+iwconfig interface essid any
+iwconfig interface mode monitor
+			</screen>
+			<note>
+				<title>Note :</title>
+				<para>
+					suivant l'équipement wifi les commandes peuvent varier
+				</para>	
+			</note>
+	</sect3>
+		<sect3 id="sniffer-Tcpdump">
+		<title>Tcpdump</title>
+			<para>
+			 Sniffer en ligne de commande. Il permet d'obtenir le détail du trafic visible depuis une interface réseau.
+			</para>
+			<para>
+				Pour bien démarer vérifier que vous êtes bien connecter au réseaux voulut avec la commande <command>ifconfig</command> et que votre interface réseaux est bien up (commande: <command>ifconfig interface up</command> )ou reconnu (pour le wifi <command>iwconfig</command>).
+			</para>
+			<para>
+			Capture du traffic d'une interface particulière:
+			</para>
+			<screen>tcpdump -i eth0</screen>
+			<para>Capture du trafic UDP:</para>
+			<screen>tcpdump udp</screen>
+			<para>Capture du trafic du port TCP 80:</para>
+			<screen>tcpdump port http</screen>
+			<para>Arrêter la capture après 20 paquets:</para>
+			<screen>tcpdump -c 20</screen>
+			<para>Envoi du résultat dans un fichier à la place de directement à l'écran:</para>
+			<screen>tcpdump -w capture.log</screen>
+			<para>Affichage des paquets ayant "www.machin.com" comme adresse source ou destination:</para>
+			<screen>tcpdump host www.machin.com</screen>	
+			<para>Pour plus d'info <command>man tcpdump</command></para>	
+		</sect3>
+	<sect3 id="sniffer-Ettercap">
+		<title>Ettercap</title>
+			<para>
+			 Ce logiciel est capable d'intercepter le trafic sur un segment réseau, de capturer les mots de passe, et de réaliser des attaques Man In The Middle contre un certain nombre de protocoles de communication usuels tels que HTTP, FTP et certains protocoles chiffrés.
+			</para>
+			<para>
+				pour bien démarer vérifier que vous êtes bien connecter au réseaux voulut avec la commande <command>ifconfig</command> et que votre interface réseaux est bien up (commande: <command>ifconfig interface up</command> )ou reconnu (pour le wifi <command>iwconfig</command>)
+			</para>
+			<para>
+			Lour utiliser cette outil lancer la commande:
+			</para>
+			<screen>ettercap -G</screen>
+			<para>L'interface graphique devrait alors démarrer ensuite dans le menu sniff vous pouver réaliser un bridged sniffing qui répéte les trames reçus sur une interface vers une autre afin de faire de l'arp poisonning.</para>
+			<title>Arp Poisoning </title>
+			<para>il faut tout d'abord scanner la plage IP correspondant au réseau local du poste, afin de déterminer les hôtes en ligne. Le bouton Scan for Host dans le menu Host réalisera cette action.</para>
+			<para>Les hôtes en ligne seront alors ajoutés dans la Host List du menu host. Target1 et Target2 représentent la liste des ordinateurs entres lesquelles nous allons nous immiscer. Ajoutez au moins une IP dans chacune de ces deux listes. </para>
+			<para>Pour commencer l'attaque , on sélectionne ARP Poisoning dans le menu Mitm.</para>
+			<para>Pensez aussi à l'utiliserles plugins.</para>
+			<itemizedlist>
+				<listitem><para>Le plugin chk_poison vous indiquera si l'arp poisoning fonctionne bien ce qui est fort appréciable.</para></listitem>
+				<listitem><para>Le plugin dns_spoof va permettre de rediriger une url sur celle que l'on veut.</para></listitem>
+			</itemizedlist>
+			<para>Pour plus d'info <command>man ettercap</command></para>	
+		</sect3>
+	<sect3 id="sniffer-dsniff">
+		<title>dsniff</title>
+			<para>
+			 Dsniff est un outil d'analyse du trafic réseau (sniffer).Ainsi, Il détecte automatiquement les protocoles d’application, en capturant seulement les données interressantes (Des mots clefs : pass, user,...). Elles conçernent les sessions FTP, telnet, SMTP, HTTP, POP, NNTP, IMAP, SNMP, LDAP, rlogin, RIP, OSPF, PPTP, AIM, IRC et bien d'autres.
+			</para>
+			<para>
+				Pour bien démarer vérifier que vous êtes bien connecter au réseaux voulut avec la commande <command>ifconfig</command> et que votre interface réseaux est bien up (commande: <command>ifconfig interface up</command> )ou reconnu (pour le wifi <command>iwconfig</command>)
+			</para>
+			<para>
+			Dsniff est beaucoup plus efficace à utiliser durant un MITM (man in the middle), c'est pourquoi on le retrouve souvent utilisé en complément de  Ettercap. 
+			pour utiliser cette outil en mode détection automatique de protocole lancer la commande:
+			</para>
+			<command>dsniff -m</command>
+			<para>Pour capturer tous les logins/pass du protocole ftp circulant à travers sa carte réseau (notre interfaçe réseau est eth0) se ses identifian sont enregistrer dans un fichier pass.txt:</para>
+			<command>dsniff -i eth0 -w pass.txt -f pop</command>
+			<para>Axer le sniffing que sur une adresse du réseau grâce à une expression tcpdump (exemple 192.168.1.1) </para>
+			<command>dsniff src 192.168.1.1</command>
+			<para>Pour plus d'info <command>man dsniff</command></para>	
+		</sect3>
+
+</sect2>

@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2008-11-12 22:29+0100\n"
+"POT-Creation-Date: 2009-03-10 22:07+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,40 +15,68 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: ENCODING"
 
-# type: Content of: <book><title>
-#: autobuild-index.html.in:9 xml/index.xml:9
-msgid "Debian Live Manual"
-msgstr ""
-
 # type: Attribute 'lang' of: <book>
 #: xml/index.xml:7
-msgid "en"
+msgid "fr"
+msgstr ""
+
+# type: Content of: <book><title>
+#: xml/index.xml:9
+msgid "SATAN"
+msgstr ""
+
+# type: Content of: <book><subtitle>
+#: xml/index.xml:10
+msgid "Simulations And Tools To Administrate Networks"
+msgstr ""
+
+# type: Content of: <book><bookinfo><author>
+#: xml/index.xml:12
+msgid ""
+"<author> <othername>The Debian Live Project</othername> <email>debian-"
+"live@lists.debian.org</email> </author> <author> <othername>Yohann lepage</"
+"othername> <email>yohannlepage@2xyo.info</email>"
+msgstr ""
+
+# type: Content of: <book><bookinfo><author><contrib>
+#: xml/index.xml:19
+msgid "Intégration, développement,documentatation"
+msgstr ""
+
+# type: Content of: <book><bookinfo><author>
+#: xml/index.xml:20
+msgid ""
+"</author> <author> <othername>Vincent Palierne</othername> "
+"<email>vincentpalierne@gmail.com</email>"
+msgstr ""
+
+# type: Content of: <book><bookinfo><author><contrib>
+#: xml/index.xml:24
+msgid "Interface graphique, documentation"
 msgstr ""
 
 # type: Content of: <book><bookinfo>
-#: xml/index.xml:11
-msgid ""
-"<author> <othername>The Debian Live Project</othername> <email>debian-"
-"live@lists.debian.org</email> </author>"
+#: xml/index.xml:25
+msgid "</author>"
 msgstr ""
 
 # type: Content of: <book><bookinfo><releaseinfo>
-#: xml/index.xml:16
+#: xml/index.xml:28
 msgid "&version;"
 msgstr ""
 
 # type: Content of: <book><bookinfo><pubdate>
-#: xml/index.xml:17
+#: xml/index.xml:29
 msgid "&pubdate;"
 msgstr ""
 
 # type: Content of: <book><bookinfo><copyright><holder>
-#: xml/index.xml:21
-msgid "The Debian Live Project"
+#: xml/index.xml:33
+msgid "Yohann Lepage, Vincent Palierne, The Debian Live Project"
 msgstr ""
 
 # type: Content of: <book><bookinfo><legalnotice><para>
-#: xml/index.xml:26
+#: xml/index.xml:38
 msgid ""
 "This program is free software: you can redistribute it and/or modify it "
 "under the terms of the GNU General Public License as published by the Free "
@@ -57,7 +85,7 @@ msgid ""
 msgstr ""
 
 # type: Content of: <book><bookinfo><legalnotice><para>
-#: xml/index.xml:32
+#: xml/index.xml:44
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -66,19 +94,12 @@ msgid ""
 msgstr ""
 
 # type: Content of: <book><bookinfo><legalnotice><para>
-#: xml/index.xml:38
+#: xml/index.xml:50
 msgid ""
-"A copy of the GNU General Public License is available as <filename>/usr/"
-"share/common-licenses/GPL</filename> in the Debian GNU/Linux distribution or "
-"on the World Wide Web at <ulink url=\"http://www.gnu.org/copyleft/gpl.html"
-"\">the GNU web site</ulink>.  You can also obtain it by writing to the Free "
-"Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-"
-"1307, USA."
-msgstr ""
-
-# type: Content of: <book><bookinfo><legalnotice><para>
-#: xml/index.xml:46
-msgid ""
-"If you want to print this reference, this document is also available in "
-"Portable Document Format (PDF)."
+"Une copie de la licence GNU General Public Licence est disponible dans "
+"<filename>/usr/share/common-licenses/GPL</filename> dans la distribution "
+"Debian GNU/linux ou sur le site internet <ulink url=\"http://www.gnu.org/"
+"copyleft/gpl.html\">GNU</ulink>.  Vous pouvez également l'obtenir en "
+"écrivant à Free Software Foundation, Inc., 59 Temple Place - Suite 330, "
+"Boston, MA 02111-1307, USA."
 msgstr ""

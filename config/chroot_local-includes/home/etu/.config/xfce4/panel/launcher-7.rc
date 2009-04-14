@@ -1,6 +1,6 @@
 [Entry 0]
 Name=Terminal Administrateur
-Exec=exo-open --launch TerminalEmulator
+Exec=xfce4-terminal
 Terminal=false
 StartupNotify=true
 Comment=Ligne de commande

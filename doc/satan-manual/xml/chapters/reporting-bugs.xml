@@ -1,116 +1,160 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
 ]>
 <sect1 id="bugs">
-<title>Reporting bugs</title>
+<title>Rapporter les bugs</title>
 
-<para>Debian Live is far from being perfect, but we want to make it as close as possible to perfect - with your help. Do not hesitate to report a bug: it is better to fill a report twice than never. However, this chapter includes recommendations how to file good bug reports.</para>
+<para>Debian Live est loin d'être parfait, mais nous désirons en faire un système
+aussi proche que possible de la perfection, avec votre aide. N'hésitez pas à
+rapporter un bug : deux rapports pour un même bug valent mieux
+qu'aucun. Cependant, ce chapitre apporte des recommendations pour bien
+remplir ses rapports de bugs.</para>
 
-<para>For the impatient:</para>
+<para>Pour les impatients :</para>
 
 <itemizedlist>
 <listitem>
  <para>
-  Always try to reproduce the bug with the <emphasis>most recent version of &live-helper; and &live-initramfs;</emphasis> before submitting a bug report.
+  Efforcez-vous toujours de reproduire le problème <emphasis> avec les plus
+récentes versions de &live-helper; et &live-initramfs;</emphasis> avant de
+soumettre un rapport de bug.
  </para>
 </listitem>
 <listitem>
  <para>
-  Try to give <emphasis>as specific information as possible</emphasis> about the bug. This includes (at least) the version of &live-helper; and &live-initramfs; used and the distribution of the live system you are building.
+  Donnez des informations <emphasis>aussi détaillées que possibles</emphasis>
+sur le bug. Ceci comprend (au minimum) les versions de
+&live-helper;·et·&live-initramfs; utilisées et la distribution du système
+live que vous construisez.
  </para>
 </listitem>
 </itemizedlist>
 
 <section id="rebuild-from-scratch">
-<title>Rebuild from scratch</title>
-<para>To ensure that a particular bug is not caused by an unclean built system, please always rebuild the whole live system from scratch to see if the bug is reproducible.</para>
+<title>Reconstruction depuis le départ</title>
+<para>Afin de s'assurer qu'une mauvaise construction du système n'est pas à
+l'origine du bug, merci de reconstruire le système depuis le départ et de
+vérifier que le bug est reproductible.</para>
 </section>
 
 <section id="up-to-date">
-<title>Use up-to-date packages</title>
-<para>This means</para>
+<title>N'utilisez que des paquets à jour</title>
+<para>Ce qui signifie que</para>
 
-<para>Using outdated packages can cause significant problems when trying to reproduce (and ultimately fix) your problem. If a relevant package is not available in Debian anymore, please recognize that the resources of the Debian kernel team are limited and will be unlikely to be able to fix the problem.</para>
+<para>L'utilisation de paquets obsolètes peut être problématique au moment
+d'essayer de reproduire (et, en finalité, résoudre) le bug. Si le paquet
+concerné n'est plus disponible chez Debian, merci d'admettre que les
+ressources de l'équipe de développement du noyau sont limitées et qu'il y a
+peu de chances qu'elle puisse solutionner votre problème.</para>
 </section>
 
 
 <section id="collect-information">
-<title>Collect information</title>
+<title>Collecter des informations</title>
 
-<para>Please provide enough information with your report. At a minimum, it should contain the exact version of live-helper version where the bug is encountered, and steps to reproduce it. Please use common sense and include other relevant information if you think that it might help in solving the problem.</para>
+<para>Please provide enough information with your report. At a minimum, it should
+contain the exact version of live-helper version where the bug is
+encountered, and steps to reproduce it. Please use common sense and include
+other relevant information if you think that it might help in solving the
+problem.</para>
 
-<para>To make the most out of your bug report, we require at least the following
-information:</para>
+<para>Afin de tirer le meilleur parti de votre rapport de bug, les informations
+suivantes sont requises :</para>
 
 <itemizedlist>
- <listitem><para>Architecture of the host system</para></listitem>
- <listitem><para>Version of &live-helper; on the host system</para></listitem>
- <listitem><para>Version of &live-initramfs; on the live system</para></listitem>
- <listitem><para>Version of <filename>debootstrap</filename> and/or <filename>cdebootstrap</filename> on the host system</para></listitem>
- <listitem><para>Architecture of the live system</para></listitem>
- <listitem><para>Distribution of the live system</para></listitem>
- <listitem><para>Version of the kernel on the live system</para></listitem>
+ <listitem><para>Architecture du système hôte</para></listitem>
+ <listitem><para>Version de &live-helper; installée sur l'hôte</para></listitem>
+ <listitem><para>Version de &live-initramfs; installée sur l'hôte</para></listitem>
+ <listitem><para>Versions de <filename>debootstrap</filename> et/ou
+<filename>cdebootstrap</filename> installées sur l'hôte</para></listitem>
+ <listitem><para>Architecture du système live</para></listitem>
+ <listitem><para>Distribution du système live</para></listitem>
+ <listitem><para>Version du noyau du système live</para></listitem>
 </itemizedlist>
 
 <para>
- You can generate a log of the build process by using the <filename>tee</filename> command:
+ Il est possible d'enregistrer un fichier de log du processus de construction
+grâce à la commande <filename>tee</filename> :
 </para>
 
 <screen>
  # lh_build 2>&amp;1 | tee buildlog.txt
 </screen>
 
-<para>Additionally, to rule out other errors, it is always a good idea to tar up
-your config directory and upload it somewhere (do *not* send it as an attachment
-to the mailinglist), so that we can try to reproduce the errors you
-encountered.</para>
+<para>De plus, pour éliminer d'autres erreurs possibles, il peut être de bon ton
+d'envoyer quelquepart (ne *pas* envoyer de pièce jointe à la liste de
+diffusion) une copie archivée (tar) de votre répertoire de configuration,
+afin que nous puissions essayer de reproduire les erreurs rencontrées.</para>
 
 
 </section>
 
 <section id="correct-package">
-<title>Use the correct package to report the bug against</title>
+<title>Spécifiez le bon paquet concerné par le bug</title>
 
-<para>Where does the bug appear?</para>
+<para>Où apparaît le bug?</para>
 
 <para>
 <variablelist>
 
-<varlistentry><term>At build time whilst bootstrapping</term>
+<varlistentry><term>Au moment de la construction pendant le botstrap</term>
 
 <listitem><para>
-<para>&live-helper; first bootstraps a basic Debian system with <command>debootstrap</command> or <command>cdebootstrap</command>. Depending on the bootstrapping tool used and the Debian distribution it is bootstrapping, it may fail. If a bug appears here, check if the error is related to a specific Debian package (most likely), or if it is related to cdebootstrap itself.</para>
+<para>&live-helper; commence par bootstrapper un système Debian basique avec
+<command>debootstrap</command> ou <command>cdebootstrap</command>. Selon
+l'outil utilisé et la distribution que l'on bootstrappe, la construction
+peut échouer. En cas de problème, vérifiez si l'erreur provient d'un paquet
+Debian spécifique (le plus probable), ou de cdebotstrap lui-même.</para>
 
-<para>In both cases, this is not a bug in Debian Live, but rather in Debian itself which we can not fix this directly. Please report such a bug against <command>debootstrap</command>, <command>cdebootstrap</command> or the failing package.</para>
+<para>Dans les deux cas, le bug ne provient pas de Debian Live mais de Debian tout
+court, et nous ne pouvons pas le résoudre directement. Merci d'associer ce
+bug à <command>debootstrap</command>, <command>cdebootstrap</command> ou au
+paquet incriminé.</para>
 </para></listitem>
 </varlistentry>
 
-<varlistentry><term>At build time whilst installing packages</term>
+<varlistentry><term>Au moment de la construction pendant l'installation des paquets</term>
 
-<listitem><para>&live-helper; installs additional packages from the Debian archive and depending on the Debian distribution used and the daily archive state, it can fail. If a bug appears here, check if the error is also reproducible on a normal system.</para>
+<listitem><para>&live-helper; installe des paquets supplémentaires des archives
+Debian. Selon la distribution utilisée et l'état courant des archives, la
+construction peut échouer. En cas de problème, vérifiez si l'erreur peut
+être reproduite sur un système normal.</para>
 
-<para>If this is the case, this is not a bug in Debian Live, but rather in Debian - please report it against the failing package. Running <filename>debootstrap</filename> seperately from the Live system build or running <filename>lh_bootstrap</filename> with <command>--debug</command> will give you more information.</para>
+<para>Si c'est le cas, le bug provient de Debian et non de Debian Live. Merci de
+l'associer au paquet incriminé. Vous pouvez obtenir plus d'informations en
+exécutant <filename>debootstrap</filename> séparément depuis le système live
+construit, ou en lançant <filename>lh_bootstrap</filename> avec l'option
+<command>--debug</command> </para>
 
-<para>Also, if you are using a local mirror and/or any of sort of proxy and you are experiencing a problem, please always reproduce it first by bootstrapping from an official mirror.</para>
+<para>De plus, si vous utilisez un miroir local ou un proxy et qu'un problème
+survient, merci d'essayer de reproduire le problème en bootstrappant depuis
+un miroir officiel</para>
 
 </listitem>
 
 </varlistentry>
 
 <varlistentry>
- <term>At boot-time</term>
+ <term>Au moment du démarrage</term>
  <listitem>
   <para>
-   If your image does not boot, please report it to the mailing list together with the information requested in <xref linkend="collect-information"/>. Do not forget to mention, how/when the image failed, in Qemu, VMWare or real hardware. If you are using a virtualization technology of any kind, please always run it on real hardware before reporting a bug. Providing a screenshot of the failure is also very helpful.
+   Si vous ne parvenez pas à démarrer l'image, merci de le rapporter et de
+fournir toutes les informations requises (voir <xref
+linkend="collect-information"/>) à la liste de diffusion. N'oubliez pas de
+préciser quand/comment l'erreur a eu lieu, dans Qemu, VMWare ou directement
+sur une machine. Si vous utilisez un système de virtualisation quel qu'il
+soit, merci de faire un test sur une vraie machine avant de rapporter un
+bug. Une copie écran de l'erreur peut également s'avérer utile.
   </para>
  </listitem>
 </varlistentry> 
 
-<varlistentry><term>At run-time</term>
+<varlistentry><term>Pendant l'exécution</term>
 
-<listitem><para>If a package was successfully installed, but fails while actually running the Live system, this is probably a bug in Debian Live. However, </para></listitem>
+<listitem><para>Si un paquet a été correctement installé mais ne s'exécute pas sur le
+système Live, le bug provient probablement de Debian Live. Cependant </para></listitem>
 </varlistentry>
 
 </variablelist>
@@ -119,22 +163,49 @@ encountered.</para>
 </section>
 
 <section id="research">
-<title>Do the research</title>
-<para>Before filing the bug, please search the web for the particular error message or symptom you are getting. As it is highly unlikely that you are the only person experiencing a particular problem, there is always a chance that it has been discussed elsewhere, and a possible solution, patch, or workaround has been proposed.</para>
+<title>Effectuez les recherches suivantes</title>
+<para>Avant de rapporter un bug, merci de rechercher sur le web le message
+d'erreur obtenu ou une description du problème rencontré. Il est fort peu
+probable que votre problème ne concerne que vous, et il est toujours
+possible qu'il soit décrit quelquepart, et qu'une solution, un patch ou un
+contournement y soient proposés.</para>
 
-<para>You should pay particular attention to the Debian Live mailing list, as well as the homepage, as these are likely to contain the most up-to-date information. If such information exists, always include the references to it in your bug report.</para>
+<para>Il est conseillé de consulter régulièrement la liste de diffusion, ainsi que
+l'accueil du site, qui contiennent les informations les plus à jour. Si de
+telles informations existent, merci d'en inclure les références dans votre
+rapport de bug.</para>
 
-<para>In addition, you should check the <ulink url="http://bugs.debian.org/cgi-bin/pkgreport.cgi?src=live-helper">current bug list for live-helper</ulink> and the <ulink url="http://bugs.debian.org/cgi-bin/pkgreport.cgi?src=live-initramfs">current bug list for live-initramfs</ulink> to see whether something similar has been reported already.</para>
+<para>In addition, you should check the <ulink
+url="http://bugs.debian.org/cgi-bin/pkgreport.cgi?src=live-helper">current
+bug list for live-helper</ulink> and the <ulink
+url="http://bugs.debian.org/cgi-bin/pkgreport.cgi?src=live-initramfs">current
+bug list for live-initramfs</ulink> to see whether something similar has
+been reported already.</para>
 </section>
 
 <section id="where">
-<title>Where to report bugs</title>
+<title>Où signaler les bugs</title>
 
-<para>The Debian Live project keeps track of all bugs in the Debian Bug Tracking System (BTS). For information on how to use the system, please see <ulink url="http://bugs.debian.org">http://bugs.debian.org</ulink>. You can also submit the bugs by using the <command>reportbug</command> command from the package with the same name.</para>
+<para>Le projet Debian Live garde trace des bugs grâce au Système de Suivi de Bugs
+Debian (Debian·Bug·Tracking·System·- BTS). Pour plus d'informations sur
+l'utilisation de ce système, voir <ulink
+url="http://bugs.debian.org">http://bugs.debian.org</ulink>. Vous pouvez
+également soumettre les bugs à l'aide de la commande
+<command>reportbug</command> du paquet du même nom.</para>
 
-<para>In general, you should report build time errors against the <ulink url="http://bugs.debian.org/cgi-bin/pkgreport.cgi?src=live-helper">live-helper</ulink> package and run time errors against <ulink url="http://bugs.debian.org/cgi-bin/pkgreport.cgi?src=live-initramfs">live-initramfs</ulink>. If you are unsure of which package is appropriate or need more help before submitting a bug report, please send a message to the mailing list and we will help you to figure it out.</para>
+<para>En règle générale, soumettez les bugs rencontrés lors de la construction à
+<ulink
+url="http://bugs.debian.org/cgi-bin/pkgreport.cgi?src=live-helper">live-helper</ulink>,
+et ceux rencontrés à l'exécution à <ulink
+url="http://bugs.debian.org/cgi-bin/pkgreport.cgi?src=live-initramfs">live-initramfs</ulink>.
+En cas de doute sur le paquet concerné, et si vous voulez de l'aide avant de
+soumettre un rapport de bug, merci de contacter la liste de diffusion et
+nous vous aiderons.</para>
 
-<para>Please note that bugs found in distributions derived from Debian (such as Ubuntu, Knoppix, Xandros, etc.) should <emphasis>not</emphasis> be reported to the Debian BTS unless they can be also reproduced on a Debian system using official Debian packages.</para>
+<para>Merci de noter que les bugs rencontrés sur des distributions basées sur
+Debian, telles qu'Ubuntu, Knoppix, Xandros... ne <emphasis>doivent
+pas</emphasis> être rapportés au BTS, sauf si ces bugs sont reproductibles
+sur un système Debian utilisant des paquets officiels.</para>
 
 </section>
 

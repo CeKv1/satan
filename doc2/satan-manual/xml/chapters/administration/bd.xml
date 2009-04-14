@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
+]>
+<sect2 id="bd">
+	<title>Base de données</title>
+	<para>
+	Base de données
+	</para>
+<sect3 id="bd-mysql">
+	<title>MySQL</title>
+	<itemizedlist>
+		<listitem><para><ulink url="http://dev.mysql.com/doc/refman/5.0/fr/index.html">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/MySQL">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
+</sect3>
+<sect3 id="bd-sqlite">
+	<title>SQLite</title>
+	<itemizedlist>
+		<listitem><para><ulink url="http://www.sqlite.org/">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/SQLite">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
+</sect3>
+</sect2>

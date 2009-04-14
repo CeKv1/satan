@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>C.1. Fichier scripts/clean</title>
+    <link rel="stylesheet" href="../css/stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.73.2" />
+    <link rel="start" href="../index.html" title="SATAN" />
+    <link rel="up" href="../configuration-files.html" title="Annexe C. Fichiers de configuration" />
+    <link rel="prev" href="../configuration-files.html" title="Annexe C. Fichiers de configuration" />
+    <link rel="next" href="config.html" title="C.2. Fichier scripts/config" />
+  </head>
+  <body>
+    <div class="navheader">
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <th colspan="3" align="center">C.1. Fichier <code class="filename">scripts/clean</code></th>
+        </tr>
+        <tr>
+          <td width="20%" align="left"><a accesskey="p" href="../configuration-files.html">Précédent</a> </td>
+          <th width="60%" align="center">Annexe C. Fichiers de configuration</th>
+          <td width="20%" align="right"> <a accesskey="n" href="config.html">Suivant</a></td>
+        </tr>
+      </table>
+      <hr />
+    </div>
+    <div class="section" lang="fr" xml:lang="fr">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="scripts/clean"></a>C.1. Fichier <code class="filename">scripts/clean</code></h2>
+          </div>
+        </div>
+      </div>
+      <div class="programlistingco">
+        <pre class="programlisting">#!/bin/sh -x
+
+# Répertoire de travail
+SH_BASE="${SH_BASE:-`pwd`}"
+
+#Scripts de live-helper
+. "${LH_BASE:-/usr/share/live-helper}"/functions.sh
+
+lh_clean noautoconfig --all ${@}
+
+rm -f build.log
+rm -rf cache .stage
+rm -f config/binary config/bootstrap config/chroot config/common config/source
+rm -f ${SH_BASE}/config/chroot_local-includes/usr/share/doc/satan-manual/html/img/*.png	
+rm -f ${SH_BASE}/config/chroot_local-includes/usr/share/doc/satan-manual/html/*.png	
+rm -rf ${SH_BASE}/config/chroot_local-includes/usr/share/framework-3.1 ${SH_BASE}/config/chroot_local-includes/usr/share/hydra-5.4-src ${SH_BASE}/config/chroot_local-includes/usr/share/libssh-0.2 ${SH_BASE}/config/chroot_local-includes/usr/share/netkit
+rm -f ${SH_BASE}/config/chroot_local-includes/usr/share/hydra-libssh0.2.patch
+rm -rf ${SH_BASE}/config/chroot_local-includes/var/www
+rm -f ${SH_BASE}/config/chroot_local-includes/usr/share/ios/*
+rm -f ${SH_BASE}/config/chroot_local-includes/usr/share/itrafgenubuntu.deb
+rm -rf ${SH_BASE}/config/chroot_local-packages/
+rm -rf ${SH_BASE}/doc/satan-manual/config/
+rm -rf ${SH_BASE}/doc/satan-manual/scripts/
+
+# Remove empty directories in config tree
+if ls config/*/ &gt; /dev/null 2&gt;&amp;1
+then
+	rmdir --ignore-fail-on-non-empty config/*/
+fi
+
+if [ -d config ]
+then
+	rmdir --ignore-fail-on-non-empty config
+fi
+</pre>
+      </div>
+      <div class="calloutlist">
+        <table border="0" summary="Callout list">
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/1.png" alt="1" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Définition du répertoire de travail.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/2.png" alt="2" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Prise en compte des fonctions de live-helper.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/3.png" alt="3" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Nettoyage des répertoires dont le chroot.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/4.png" alt="4" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Suppression de l'historique de lh_build.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/5.png" alt="5" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Suppression du cache et du fichier .stage qui est utilisé comme historique lors de lh_build.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/6.png" alt="6" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Suppression des fichiers générés par lh_config.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/7.png" alt="7" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Suppression des images de la documentation dans le pré-chroot.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/8.png" alt="8" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Suppression des images de la documentation dans le pré-chroot.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/9.png" alt="9" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Suppression des répertoires copiés lors du lh_build dans le pré-chroot.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/10.png" alt="10" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Suppression du patch de libssh0.2 dans le pré-chroot.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/11.png" alt="11" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Suppression de phpmyadmin dans le pré-chroot.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/12.png" alt="12" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Suppression des IOS dans le pré-chroot.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/13.png" alt="13" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Suppression de la documentation packagé et de itrafgen.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/14.png" alt="14" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Suppression de tout les sous répertoires vide.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/15.png" alt="15" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Suppression du répertoire config si il est vide.</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="navfooter">
+      <hr />
+      <table width="100%" summary="Navigation footer">
+        <tr>
+          <td width="40%" align="left"><a accesskey="p" href="../configuration-files.html">Précédent</a> </td>
+          <td width="20%" align="center">
+            <a accesskey="u" href="../configuration-files.html">Niveau supérieur</a>
+          </td>
+          <td width="40%" align="right"> <a accesskey="n" href="config.html">Suivant</a></td>
+        </tr>
+        <tr>
+          <td width="40%" align="left" valign="top">Annexe C. Fichiers de configuration </td>
+          <td width="20%" align="center">
+            <a accesskey="h" href="../index.html">Sommaire</a>
+          </td>
+          <td width="40%" align="right" valign="top"> C.2. Fichier <code class="filename">scripts/config</code></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

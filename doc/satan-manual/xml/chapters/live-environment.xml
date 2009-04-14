@@ -1,58 +1,79 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
 ]>
 <sect1 id="live-environment">
-<title>The Live environment</title>
+<title>L'environnement Live</title>
 
 <section>
-<title>Swap space</title>
+<title>L'espace d'échange</title>
 <para>FIXME</para>
 </section>
 
 <section id="hostname">
-<title>Hostname</title>
+<title>Le nom d'hôte</title>
 <para>FIXME</para>
 </section>
 
 <section id="live-user">
-<title>The Live user</title>
-<para>Username FIXME.</para>
-<para>One important consideration is that the live user is created by &live-initramfs; during bootup, it is not created by &live-helper; when building the image.</para>
+<title>L'utilisateur Live</title>
+<para>Utilisateur A FAIRE</para>
+<para>Il faut prendre en considération que l'utilisateur live est créé par
+&live-initramfs; pendant le démarrage, il n'est pas créé par &live-helper;
+pendant la construction de l'image.</para>
 
- <para>You can specify additional groups that the live user will belong to by preseeding the <command>passwd/user-default-groups</command> debconf value. For example, to add the live user to the <command>fuse</command> group, add the following to a file in the <filename class="directory">config/chroot_local-preseed</filename> directory:</para>
+ <para>Vous pouvez spécifier des groupes supplémentaires auxquels l'utilisateur
+live appartiendra en configurant la valeur
+<command>passwd/user-default-groups</command> de debconf. Par exemple, pour
+ajouter l'utilisateur live au groupe <command>fuse</command> ajouter ce qui
+suit dans un fichier dans le répertoire <filename
+class="directory">config/chroot_local-preseed</filename>:</para>
 
 <screen>
  debconf passwd/user-default-groups string audio cdrom dialout floppy video plugdev netdev powerdev fuse
 </screen>
 
- <para>For more information about debconf preseeding, please see <xref linkend="debconf-preseed"/>.</para>
+ <para>Pour plus d'informations sur la façon de configurer debconf, voir, svp,
+<xref linkend="debconf-preseed"/>.</para>
 
 </section>
 
 <section id="language">
-<title>Language</title>
-<para>When the live system boots there are three process which concerns language: the locale generation, setting the keyboard layout for the console and setting the keyboard layout for X. To define the locale that should be generated, use the <command>locale</command> parameter to the <command>--bootappend-live</command> option of <filename>lh_config</filename>, e.g.:
+<title>Langue</title>
+<para>Lorsque le système live démarre, il y a trois processus qui concernent la
+langue: la génération des locales, la mise en place de la langue du clavier
+pour la console et la mise en place de la langue du clavier pour
+l'environnement X. Pour définir la locale qui devrait être configurée,
+utiliser le paramètre <command>locale</command> de l'option
+<command>--bootappend-live</command> de la commande
+<filename>lh_config</filename> de l'assistant, par exemple:
 
 <screen>lh_config --bootappend-live "locale=sv_SE.utf8"</screen>
 
-Both the console and X keyboard configuration depends on the <command>keyb</command> parameter of the <command>--bootappend-live</command>option. Valid options for X keyboard layouts can be found in <filename>/etc/X11/xkb/base.xml</filename>. To find the value (the two characters) corresponding to a language try searching for the english name of the nation where the language is spoken, e.g:
+La configuration du clavier pour la console et pour X dépend du paramètre
+<command>keyb</command>de l'option <command>--bootappend-live</command>. Les
+options valides pour la langue du clavier pour X peuvent être consultées
+dans le fichier <filename>/etc/X11/xkb/base.xml</filename>. Pour trouver une
+valeur (les deux caractères) qui correspondent à une langue, essayer de
+chercher le nom anglais du pays où la langue est parlée, par exmple:
 
 <screen>$ grep -i sweden -C3 /etc/X11/xkb/base.xml | grep name
 	&lt;name&gt;se&lt;name&gt;
 </screen>
 
-To get the locale files for swedish generated and a swedish keyboard layout in X use:
+Pour que les fichiers de locales soient générés en suédois et que le clavier
+suédois soit utilisé pour X, utiliser:
 
 <screen>lh_config --bootappend-live "locale=sv_SE.utf8 keyb=se"</screen>
 
 </para>
 <para>
-A list of the valid values of the keyboards for the console can be figured with the following command:
+Une liste des valeurs valides pour le type de clavier pour la console peut
+être obtenue avec la commande suivante:
 <screen>for i in `find /usr/share/keymaps/ -iname "*kmap.gz"`; do basename $i | head -c -9; echo; done | sort | less </screen>
 
-To make the console keyboard use a swedish layout use
+Pour avoir un clavier de type suédois dans la console, utiliser:
 
 <screen>lh_config --bootappend-live "locale=sv_SE.utf8 keyb=se-latin1"</screen>
 
@@ -60,42 +81,104 @@ To make the console keyboard use a swedish layout use
 </section>
 
 <section id="persistence">
-<title>Persistence</title>
-<para>A live cd paradigm is a preinstalled system which runs from a read-only media, like a cdrom, were writes and modifications does not survive reboots of the host hardware which runs it.</para>
-<para>A Debian Live system is a generalization of this paradigm and thus supports more media, and not only cds; but stills, in its default behaviour, it should be considered read only and all the runtime evolutions of the system are lost with a shutdown.</para>
+<title>Persistance</title>
+<para>Le paradigme du live cd, c'est un système préinstallé qui s'éxécute à partir
+d'une source en lecture seule, comme un cdrom, les écritures et les
+modfications ne survivent pas à un redémarrage du système hôte exécutant le
+système live.</para>
+<para>Un système Debian Live est une généralisation de ce paradigme et supporte
+plus de medias source, et pas seulement les cdroms; malgré tout, dans son
+comportement par défaut, il devrait être considéré comme étant en lecture
+seule et toutes les modifications faites pendant l'exécution sont perdues
+avec un arrêt.</para>
 
-<para>Persistence is a common name for different kinds of solutions for saving across reboots some or all of this runtime evolution of the system; to undestand how it could work it could be handy to know that even if the system is booted and runt from a read only media, modification to the files and directories are wrote on a writable media , tipically a ram disk (tmpfs) and ram disk's data do not survive reboots.</para>
-<para>The data stored on this ramdisk should be saved in a writable persistent media like on an Hard Disk, a USB key, a network "share" or even a session of a multisession (re)writable CD/DVD. All this cited media are supported in Debian Live in different ways, all but latest one requires a special boot parameter to be specified at boot: <command>persistent</command>.</para>
+<para>Persistence est un terme commun pour désigner diférents types de solutions
+pour sauvagarder, entre les redémarrages, tout ou une partie des
+modifications faites au système pendant son exécution; pour comprendre
+comment cela peut fonctionner, il faut savoir que même si le système
+s'exécute à partir d'un support en lecture seule, les modifications des
+fichiers et des répertoires durant l'exécution sont écrites sur un support
+accessible en lecture ecriture, habituellement une ram-disk (tmpfs) et les
+données d'une ram-disk ne survivent pas à un redémarrage.</para>
+<para>Les données stockées sur cette ramdisk devraient être sauvegardées sur un
+support accessible en lecture et persistant comme un disque dur, une clef
+USB, un partage réseau ou même dans une session sur CD/DVD (re)inscriptible
+multi-session. Tous les supports précités sont disponibles pour Debian Live
+de différentes façons, toutes, sauf la dernière, requierent un paramètre de
+démarrage spécifique: <command>persistent</command>.</para>
 
-<section><title>Full persistence</title>
-<para>With "full persistence" it is meant that instead of using a tmpfs for storing modifications to the read-only media (with the copy-on-write, COW, system) a writable partition is used. In order to use this feature a partition with a clean writable supported filesystem on it labeled "live-rw" must be attached on the system at bootime and the system must be started with "persistent" boot parameter; this partition could be an ext2 partition on the hard disk or on a usb key created with, e.g.:</para>
+<section><title>Persistence complète</title>
+<para>La "persistence complète" induit qu' au lieu d'utiliser un tmpfs pour
+stocker les modifications pour le support en lecture seule (avec le
+copy-on-write, COW system), una partitin est utilisée. Afin de pouvoir
+utiliser cette fonction, une partition nommée "live-rw" contenant système de
+fichiers propre et accessible en écriture doit être disponible sur le
+système au moment du démarrage et le système doit être démarrer avec
+l'option de démarrage "persistent"; cette partition peut être une partition
+ext2 sur le disque dur ou sur une clef USB créé comme suit:</para>
 
 <screen>
 # mkfs.ext2 -L live-rw /dev/sdb1
 </screen>
 
-<para>But since live system users, not always can use an hard drive partition, maybe because they aren't allowed or they wan't to repartition a drive, and considering that most USB keys have laughables write speeds, "full" persistence could be also used with just image files, so you could create a file representing a partition and put this image file even on a NTFS partition of a foreign OS, with something like:</para>
+<para>Mais, comme les utilisateurs du système live ne peuvent pas toujours
+utiliser une partition sur le disque dur, peut être parce qu'ils n'en ont
+pas le droit ou parce qu'ils ne veulent pas repartitionner le disque et en
+considérant que la plupart des clefs USB ont des vitesses d'écriture
+risibles, la persistence complète peut aussi être utilisé avec seulement des
+fichiers images, donc vous pouvez créer un fichier représentant un partition
+et mettre ce fichier image même sur une partition NTFS d'un système
+d'exploitation étranger avec quelque chose comme:</para>
 
 <screen>
 $ dd if=/dev/null of=live-rw bs=1G seek=1	# for a 1GB sized image file
 $ /sbin/mkfs.ext2 -F live-rw
 </screen>
 
-<para>Then copy the <command>live-rw</command> file in a writable partition and reboot with "persistent" boot parameter.</para>
+<para>Après, copier le fichier <command>live-rw</command> sur une partition
+accessible en écriture et redémarrer avec l'option de démarrage "persistent"</para>
 </section>
 
-<section><title>Home automounting</title>
-<para>If during the boot a partition (filesystem) image file or a partition labeled  <command>home-rw</command> will be discovered, this filesystem will be directly mounted as <command>/home</command>, thus permitting persistence of files that belong to the e.g. default user. It can be combined with full persistence.</para>
+<section><title>Montage automatique de Home</title>
+<para>Si pendant le démarrage un fichier image de partition (système de fichiers)
+ou une partition nommée <command>home-rw</command> est découverte ce système
+de fichiers sera directement monté comme <command>/home</command>, et
+permettant ainsi la persistence de fichiers qui appartiennent par exemple à
+l'utilisateur par défaut. Ceci peut être combiné avec la persistence
+complète.</para>
 </section>
 
 <section><title>Snapshots</title>
-<para>Snapshots are collection of files and directories which are not mounted while running but which are copied from a persistent device to the system (tmpfs) at boot and which are resynced at reboot/shutdown of the system. The content of a snapshot could reside on a partition or an image file (like the above mentioned types) labeled <command>live-sn</command>, but it defaults to a simple cpio archive named <command>live-sn.cpio.gz</command>. As above at boot time, the block devices connected to the system are traversed to see if a partition or a file named like that could be found. A power interruption during runtime could lead to data lost hence a tool invoked  <command>live-snapshot --refresh</command> could be called to sync important changes. This type of persistence since it does not write continuosly to the persistent media is the most flash-based device friendly and the fastest of all the persistence systems.</para>
-<para> A /home version of snapshot exists too and its label is <command>home-sn.*</command>; it works the same as the main snapshot but it is only applied to /home.</para>
-<para> All kind of snapshots cannot currently handle file deleting while full persistence and obviously home automounting could.</para>
+<para>Les Snpashots sont une collection de fichiers et de répertoires qui ne sont
+pas montés pendant l'exécution du système mais qui sont copiés depuis un
+support persistant vers le système (tmpfs) pendant le démarrage et qui sont
+resynchronisés au redémarrage/arrêt du système. Le contenu d'un snapshot
+peut se situer sur une partition ou dans un fichier image (comme les types
+mentionnés plus haut) nommés <command>live-sn</command>, mais il fait par
+défaut une simple archive cpio nommée
+<command>live-sn.cpio.gz</command>. Comme précédemment, au démarrage, les
+périphériques de stockages connectés au système sont explorés à la recherche
+d'une partition ou d'un fichier de ce nom là.Une coupure d'alimentation
+pendant l'exécution peut conduire à une perte de données à moins que la
+commande <command>live-snapshot --refresh</command>puisse être appelée pour
+synchroniser les changements importants.Ce type de persistance, comme il
+n'écrit pas continuellement sur le media persistant est très interessant à
+utiliser pour les supports basés sur de la mémoire flash, c'est aussi le
+mode de persistance le plus rapide.</para>
+<para> Un version /home des snapshots existe aussi et elle est nommée
+<command>home-sn.*</command>; elle fonctionne de la même façon que le
+snapshot principal mais elle s'applique seulement à /home</para>
+<para> Toutes les formes de snapshots ne peuvent pas pour l'instant prendre en
+compte la suppression de fichiers alors que la persistence complète et
+évidemment le montage automatique du /home le peuvent.</para>
 </section>
 
-<section><title>Partial remasterings</title>
-<para>The runtime modification of the tmpfs could be collected usign live-snapshot in a squashfs and added to the cd by remastering the iso in case of cd-r or adding a session to multisession cd/dvd(rw); live-initramfs mounts all /live filesystem in order or with the module bootparameter.</para>
+<section><title>Remastérisation partielle</title>
+<para>Les modifications faites pendant l'exécution peuvent être collectées en
+utilisant live-snapshot dans un squashfs et ajoutées au cd en remastérisant
+l'iso dans le cas de cd-r ou en ajoutant une session à un CD/DVD(rw)
+multi-session; live-initramfs monte tout les système de fichiers /live dans
+l'ordre ou avec le paramètre de démarrage module.</para>
 </section>
 
 </section>

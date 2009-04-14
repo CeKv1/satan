@@ -2,7 +2,7 @@
 if [[ $1 = "backup" ]]
 then
 	echo "I: Sauvegarde des bases de données mysql"
-	mysqldump -uroot -pbonjour --all-databases --add-drop-database=true > /home/etu/Desktop/backup-$(date +%Y%m%d-%Hh%M).sql && echo "I: Toutes vos bases de données mysql ont été savegardé dans /home/yoyo/" && exit 0
+	mysqldump -uroot -pbonjour --all-databases --add-drop-database=true > /home/etu/Desktop/documents/backup-$(date +%Y%m%d-%Hh%M).sql && echo "I: Toutes vos bases de données mysql ont été savegardé dans /home/yoyo/" && exit 0
 	echo "La sauvegarde a échoué !" && exit 1
 elif [[ $1 = "restore" ]]
 then

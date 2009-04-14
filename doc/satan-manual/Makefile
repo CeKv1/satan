@@ -1,5 +1,5 @@
 AUTOBUILD	:= build
-#LANGUAGES       := de fr
+#LANGUAGES       := fr
 
 include Makefile.common
 
@@ -22,6 +22,7 @@ build: clean all
 
 	cp css/* $(AUTOBUILD)
 	cp img/* $(AUTOBUILD)
+	cp scripts/* $(AUTOBUILD)
 
 po4a:
 	po4a -k 0 po4a/live-manual.cfg;

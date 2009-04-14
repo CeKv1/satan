@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
+]>
+<sect2 id="gns3">
+	<title>Emulation d'architecture réseau avec GNS3</title>
+	<para>
+		
+	</para>
+<sect3 id="gns3-presentation">
+	<title>Présentation de GNS3</title>
+	<para>
+	GNS3 [<ulink url="http://www.gns3.net/" />] est un logiciel libre graphique de simulation de réseaux. Il permet l'émulation de routeurs Cisco à partir de leurs IOS. GNS3 ne permet pas d'émuler des commutateurs.
+	</para>
+        <itemizedlist>
+                <listitem><para><ulink url="http://www.gns3.net/documentation">Documentation officielle</ulink></para></listitem>
+                <listitem><para><ulink url="http://doc.ubuntu-fr.org/gns3">Wiki Ubuntu</ulink></para></listitem>
+        </itemizedlist>
+</sect3>
+<sect3 id="gns3-lab1">
+	<title>Découverte au travers d'un premmier Lab</title>
+	<para>
+		Nous allons découvrir quelques fonctionnalités de GNS3 à travers ce lab. Nous mettrons en oeuvre une topologie simple composé de 2 routeurs et  
+	</para>
+	<itemizedlist>
+		<listitem><para>Lancer GNS3 via le menu dans l'icône Simulation ;</para></listitem>
+		<listitem><para>Indiquer un nom à votre projet, cocher la case "Exporter les fichiers de configuration des routeurs" et valider ;</para></listitem>
+		<listitem><para>Glisser-déposer deux routeurs 2600 et un routeur 3600 ;</para></listitem>
+		<listitem><para>Faire un clique droit sur le routeur 3600, cliquer sur configurer, séléctionner le routeur dans la colonne de gauche ;</para></listitem>
+		<listitem><para>Cliquer sur l'onglet Slots, faire défiler le menu déroulant du slot0 et séléctionner NM-16ESW. Valider en cliquant sur OK ;</para></listitem>
+		<listitem><para>Cliquer sur le bouton "Ajouter un lien" et rlier les deux routeurs 2600 au routeur 3600 ;</para></listitem>
+		<listitem><para>Démarrer la simulation en cliquant sur l'icone "Démarrer tout les IOS" ;</para></listitem>
+		<listitem><para>Il suffit enfin de cliquer sur le bouton "Démarrer une console" pour ouvrir une console sur chaque matériel.</para></listitem>
+	</itemizedlist>	
+</sect3>
+</sect2>

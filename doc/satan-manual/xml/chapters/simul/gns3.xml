@@ -11,7 +11,7 @@
 <sect3 id="gns3-presentation">
 	<title>Présentation de GNS3</title>
 	<para>
-	GNS3 [<ulink url="http://www.gns3.net/" />] est un logiciel libre graphique de simulation de réseaux. Il permet l'émulation de routeurs Cisco à partir de leurs IOS. GNS3 ne permet pas d'émuler des commutateurs.
+		GNS3<footnote><ulink url="http://www.gns3.net/" /></footnote> est un logiciel libre graphique de simulation de réseaux. Il permet l'émulation de routeurs Cisco à partir de leurs IOS. GNS3 ne permet pas d'émuler des commutateurs.
 	</para>
         <itemizedlist>
                 <listitem><para><ulink url="http://www.gns3.net/documentation">Documentation officielle</ulink></para></listitem>

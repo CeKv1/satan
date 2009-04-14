@@ -6,9 +6,9 @@
 <chapter id="introduction">
 <title>Introduction</title>
 <para>
-L'omniprésence des réseaux tel qu'Internet à engendré la créations d'une multitude d'outils pour administrer ces réseaux. Ces outils évoluent très rapidement pour faire face aux failles de sécurités découvertes quotidennement mais aussi à cause de la demande croissante de nouveaux services. 
-Ces outils permettent également depuis quelques année de simuler des infrastructures réseaux grace à la virtualisation. Ces simulations évitent de devoir mettre en place des maquettes avec du matériel à des coûts élevés. Enfin, ces simulations autorisent les administrateurs à simuler des topologies en un temps beaucoup plus court.
-Le problème de tout ces outils est qu'ils sont nombreux et qu'il faut régulièrement les mettre à jours. C'est pourquoi, notre projet nommé SATAN pour "Simulation And Tools to Administrate Networks" a pour but de rassembler les outils éssentiels pour la réalisation des tâches quotidiennes d'un administrateur réseaux.
+L'omniprésence des réseaux tel qu'Internet à engendré la création d'une multitude d'outils pour administrer ces réseaux. Ces outils évoluent très rapidement pour faire face aux failles de sécurités découvertes quotidennement mais aussi au besoin de la demande croissante de nouveaux services. 
+Ces outils permettent également depuis quelques années de simuler des infrastructures réseaux grâce à la virtualisation. Ces simulations évitent de devoir mettre en place des maquettes avec du matériel qui induisent des coûts élevés. Enfin, ces simulations autorisent les administrateurs à simuler des topologies en un temps beaucoup plus court.
+Le problème de tout ces outils est qu'ils sont nombreux et qu'il faut régulièrement les mettre à jour. C'est pourquoi, notre projet nommé S.A.T.A.N pour "Simulation And Tools to Administrate Networks" a pour but de rassembler les outils éssentiels pour la réalisation des tâches quotidiennes d'un administrateur réseaux.
 Nous étudierons d'abord les enjeux et la vie du projet pour ensuite se concentrer sur les aspects techniques de la création du projet.
 </para>
 </chapter>

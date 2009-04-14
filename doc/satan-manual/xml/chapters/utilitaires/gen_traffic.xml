@@ -14,12 +14,201 @@
 		<listitem><para><ulink url="http://www.openldap.org/">Documentation officielle</ulink></para></listitem>
 		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/LDAP">Wikipedia</ulink></para></listitem>
 	</itemizedlist>
+	<para>
+	Iperf est un outil client/serveur pour mesurer la bande passante et la qualité d'un lien réseau.Iperf utilise les différentes propriétés de TCP et d'UDP pour fournir des statistiques sur des liens réseaux. La qualité d'un lien est déterminée principalement par les facteurs suivants:
+	</para>
+	<itemizedlist>
+		<listitem><para>Latence (temps de réponse ou RTT): peut être mesurée à l'aide d'un ping.</para></listitem>
+		<listitem><para>Gigue ou jitter en anglais (variation de la latence): peut être mesurée par un test Iperf UDP.</para></listitem>
+		<listitem><para>Perte de paquets: peut être mesurée avec un test Iperf UDP.</para></listitem>
+		<listitem><para>La bande passante: peut être mesurée par des tests TCP.</para></listitem>
+	</itemizedlist>
+	<sect4 id="gen_traffic-iperf-arguments">
+		<title>Arguments utiles</title>
+		<itemizedlist>
+			<listitem><para>défaut  :    Paramètres par défaut ;</para></listitem>
+			<listitem><para>-f      :    Formatage des données ;</para></listitem>
+			<listitem><para>-r      :    Bande passante bidirectionnelle ;</para></listitem>
+			<listitem><para>-d      :    Bande passante bidirectionnelle simultanée ;</para></listitem>
+			<listitem><para>-w      :    Taille de la fenêtre TCP ;</para></listitem>
+			<listitem><para>-h      :    Aide ;</para></listitem>
+			<listitem><para>-p, -t, -i : Port, temps et intervalle ;</para></listitem>
+			<listitem><para>-u, -b  :    Tests UDP, configuration bande passante ;</para></listitem>
+			<listitem><para>-m      :    Affichage de la taille de segment maximale ;</para></listitem>
+			<listitem><para>-M      :    Configuraation de la taille de segment maximale ;</para></listitem>
+			<listitem><para>-P      :    Tests parrallèles ;</para></listitem>
+		</itemizedlist>
+	</sect4>
+	<sect4 id="gen_traffic-iperf-exemples">
+		<title>Exemples</title>
+		<para>
+	Voici quelques exemples de son utilisation:
+		</para>
+		<sect5 id="gen_traffic-iperf-exemples-defaut">
+			<title>Test avec les parmètres par défaut</title>
+			<para>
+	Par défaut, le client Iperf se connecte au serveur Iperf sur le port TCP 5001 et la bande passante affichée par Iperf est celle du client au serveur : 
+			</para>
+			<para>
+	Côté serveur : 
+			</para>
+			<mediaobject>
+  				<imageobject>
+    					<imagedata fileref="img/iperf-figure1.png" format="PNG"/>
+  				</imageobject>
+  				<textobject>
+    					<phrase>figure 1</phrase>
+  				</textobject>
+			</mediaobject>		
+			<para>
+	Côté client : 
+			</para>
+			<mediaobject>
+  				<imageobject>
+    					<imagedata fileref="img/iperf-figure2.png" format="PNG"/>
+  				</imageobject>
+  				<textobject>
+    					<phrase>figure 2</phrase>
+  				</textobject>
+			</mediaobject>
+		</sect5>		
+		<sect5 id="gen_traffic-iperf-exemples-tailletcp">
+			<title>Test en spécifiant la taille de la fenêtre TCP</title>
+			<para>
+	 La taille de la fenêtre TCP correspond aux données qui peuvent être mises en tampon pendant une connexion sans la validation du destinataire. Elle est comprise entre 2 et 65535 bytes. Sur les systèmes Linux, quand on spécifie une taille de fenêtre TCP avec l'argument -w, le noyau alloue le double de la valeur indiquée.
+
+			</para>
+			<para>
+	Côté serveur :
+			</para>
+			<mediaobject>
+  				<imageobject>
+    					<imagedata fileref="img/iperf-figure3.png" format="PNG"/>
+  				</imageobject>
+  				<textobject>
+    					<phrase>figure 3</phrase>
+  				</textobject>
+			</mediaobject>		
+			<para>
+	Côté client : 
+			</para>
+			<mediaobject>
+  				<imageobject>
+    					<imagedata fileref="img/iperf-figure4.png" format="PNG"/>
+  				</imageobject>
+  				<textobject>
+    					<phrase>figure 4</phrase>
+  				</textobject>
+			</mediaobject>		
+		</sect5>
+		<sect5 id="gen_traffic-iperf-exemples-testudp">
+			<title>Test UDP, paramètrage de la bande passante</title>
+			<para>
+	Les tests UDP avec l'argument -u vont donner de précieuses informations sur la gigue ou les pertes de paquets. Si vous ne spécifiez pas l'argument -u, Iperf utilise TCP. Pour garder une bonne qualité de lien, la perte de paquet ne devrait pas dépasser 1%. Un haut taux de perte de paquet générera un grand nombre de retransmissions de segments TCP ce qui affectera la bande passante.
+	La Gigue (jitter) est basiquement la variation de la latence et ne dépend pas de cette dernière. Il est tout à fait possible d'avoir des temps de réponse élevés et une gigue très basse. La valeur de la gigue est particulièrement importante pour des liens réseaux supportant la voix sur IP (VoIP, Voice over
+IP) parce qu'une gigue élevée peut interrompre un appel téléphonique.
+	L'argument -b permet d'allouer la bande passante désirée.
+			</para>
+			<para>
+	Côté serveur :
+			</para>
+			<mediaobject>
+  				<imageobject>
+    					<imagedata fileref="img/iperf-figure5.png" format="PNG"/>
+  				</imageobject>
+  				<textobject>
+    					<phrase>figure 5</phrase>
+  				</textobject>
+			</mediaobject>		
+			<para>
+	Côté client : 
+			</para>
+			<mediaobject>
+  				<imageobject>
+    					<imagedata fileref="img/iperf-figure6.png" format="PNG"/>
+  				</imageobject>
+  				<textobject>
+    					<phrase>figure 6</phrase>
+  				</textobject>
+			</mediaobject>		
+		</sect5>
+	</sect4>
 </sect3>
 <sect3 id="gen_traffic-netcat">
-	<title>netcat</title>
+	<title>Netcat</title>
 	<itemizedlist>
 		<listitem><para><ulink url="http://freeradius.org/">Documentation officielle</ulink></para></listitem>
 		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/FreeRADIUS">Wikipedia</ulink></para></listitem>
 	</itemizedlist>
+	<para>
+	Netcat est un utilitaire que l'on pourrait qualifier de couteau suisse du protocole TCP/IP. En effet, c'est un simple outil en ligne de commande qui permet de lire et d'écrire au travers de connexions réseaux en utilisant TCP ou UDP. Son implémentation vous permet de l'utiliser seul ou par l'intermédiaire d'autres scripts (perl, shell...); mais, en même temps, il est tellement puissant qu'il peut être utilisé comme un débuggeur réseau ou comme un outil d'exploration. En effet, il supporte n'importe quel type de connexion dont vous pourriez avoir besoin. Cet outil contient encore beaucoup d'autres fonctions qui pourront vous être utiles.
+	</para>
+	<para>
+	Netcat est un outil à tout faire. Il permet simplement de gérer un socket : d'envoyer... de recevoir... pas plus... Cela veut dire qu'il ne connait aucun protocole comme FTP entre autres. Mais cela veut dire aussi qu'il nous affiche exactemment ce qui se passe dans la connexion, qu'il n'effectue aucun traitement, et qu'il envoie aussi exactemment ce que l'on veut qu'il envoie.
+	</para>
+	<sect4 id="gen_traffic-netcat-client">
+		<title>Netcat coté client :</title>
+		<para>
+	Ouverture d'un socket : netcat ftp.univ-savoie.fr 21. tout ce que vous taperez ensuite sera envoyé à l'adresse que vous avez indiquée.
+		</para>
+		<para>
+	Netcat peut émuler un client telnet :
+		</para>
+		<screen>
+	netcat -t IP_seveur_telnet 23
+		</screen>
+	</sect4>
+	<sect4 id="gen_traffic-netcat-serveur">
+		<title>Netcat côté serveur :</title>
+		<para>
+	Ouverture du port 23 pour la réception :
+		</para>
+		<screen>
+	netcat -l -p 23
+		</screen>
+		<itemizedlist>
+			<listitem><para>-l pour dire qu'on est en mode "listen" (on attend une connexion sur un port).</para></listitem>
+			<listitem><para>-p 23 pour dire que le port sur lequel on attend la connexion est le port 23.</para></listitem>
+		</itemizedlist>
+		<para>
+	-> tout ce qui est écrit sur le client qui ce connecte a ce port sera écrit à l'ecran du serveur et inversement.
+		</para>
+	</sect4>
+	<sect4 id="gen_traffic-netcat-redirections">
+		<title>Les redirections Entrées/Sorties :</title>
+		<screen>
+	netcat -l -p 23 toto
+		</screen>
+		<para>
+	-> à chaque connection d'un client sur ce serveur, le contenu du fichier toto sera affiché sur son écran.
+		</para>
+		<para>
+	Nous pouvons aussi bien sûr faire
+		</para>
+		<screen>	
+	netcat -L -p 23 > toto.log
+		</screen>
+		<para>
+	pour renvoyer toutes les informations de connexion dans le fichier toto.log.
+		</para>
+		<para>
+	netcat -l -p 23 -e /bin/bash 
+		</para>
+		<para>
+	Toutes les commandes du client seront redirigées vers "bin/bash": ceci est donc un serveur telnet.
+		</para>
+	</sect4>
+	<sect4 id="gen_traffic-netcat-scan">
+		<title>Scan de ports :</title>
+		<screen>
+	netcat -vv -r -z 10.100.25.2 -i­100
+		</screen>
+		<itemizedlist>
+			<listitem><para>L'option -vv : sert à avoir des informations sur les connexions</para></listitem>
+			<listitem><para>L'option -z : pour effectuer un scan rapide, qui ne s'arrête pas si le port est ouvert.</para></listitem>
+			<listitem><para>L'option -r : fait un "random" sur les ports de 1 jusqu'à 100 ici. Il fera tous les ports, mais pas dans un ordre précis.</para></listitem>
+			<listitem><para>L'option -i : tps_en_sec: Permet d'attendre un certain temps entre essai sur chaque port.</para></listitem>
+		</itemizedlist>
+	</sect4>
 </sect3>
 </sect2>

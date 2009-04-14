@@ -7,13 +7,13 @@
 <title>Les outils pour cracker les mots de passe</title>
 
 <para>
-Ce chapitre liste les outils pour cracker les mots de passe qui sont dans SATAN
+Ce chapitre liste les outils pour cracker les mots de passe qui sont dans SATAN.
 </para>
 
 <sect3 id="brute_force-johntheripper">
 <title>John the Ripper</title>
 <para>
- John the Ripper est un logiciel libre permetant des attaque par dictionnaire sur les mots de passe.
+ John the Ripper est un logiciel libre permetant des attaques par dictionnaire sur les mots de passe.
 </para>
 <para>
 Pour bien démarer crée ou télécharger (ftp://ftp.ox.ac.uk/pub/wordlists/french/dico.Z ou http://www.outpost9.com/files/WordLists.html) un dictionaire une fois cela fais vous devez déterminer le fichier qui contien les mots de passe qui vous interesse exemple pour les utilisateur debian les mot de passe hacher sont sauver dans /etc/shadow il ne vous reste plus que lancez la commande: 

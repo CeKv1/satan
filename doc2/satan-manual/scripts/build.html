@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>C.3. Fichier scripts/build</title>
+    <link rel="stylesheet" href="../css/stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.73.2" />
+    <link rel="start" href="../index.html" title="SATAN" />
+    <link rel="up" href="../configuration-files.html" title="Annexe C. Fichiers de configuration" />
+    <link rel="prev" href="config.html" title="C.2. Fichier scripts/config" />
+    <link rel="next" href="doc.sh.html" title="C.4. Fichier scripts/doc.sh" />
+  </head>
+  <body>
+    <div class="navheader">
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <th colspan="3" align="center">C.3. Fichier <code class="filename">scripts/build</code></th>
+        </tr>
+        <tr>
+          <td width="20%" align="left"><a accesskey="p" href="config.html">Précédent</a> </td>
+          <th width="60%" align="center">Annexe C. Fichiers de configuration</th>
+          <td width="20%" align="right"> <a accesskey="n" href="doc.sh.html">Suivant</a></td>
+        </tr>
+      </table>
+      <hr />
+    </div>
+    <div class="section" lang="fr" xml:lang="fr">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="scripts/build"></a>C.3. Fichier <code class="filename">scripts/build</code></h2>
+          </div>
+        </div>
+      </div>
+      <div class="programlistingco">
+        <pre class="programlisting">#!/bin/sh -x
+
+# Répertoire de travail
+SH_BASE="${SH_BASE:-`pwd`}"
+
+# Scripts de live-helper
+. "${LH_BASE:-/usr/share/live-helper}"/functions.sh
+
+# Génération de la documentation
+. "${SH_BASE}"/scripts/doc.sh auto
+. "${SH_BASE}"/scripts/doc.sh clean
+
+cd ${SH_BASE}
+
+IOS="yes"
+
+## Liens vers les fichiers à télécharger
+# Netkit
+NETKIT_URL="http://www.netkit.org/download/netkit/netkit-2.6.tar.bz2"
+NETKIT_FS_URL="http://www.netkit.org/download/netkit-filesystem/netkit-filesystem-i386-F5.0.tar.bz2"
+NETKIT_KER_URL="http://www.netkit.org/download/netkit-kernel/netkit-kernel-i386-K2.6.tar.bz2"
+VNETKIT_URL="http://visual-netkit.googlecode.com/files/visualnetkit-1.4.tar.bz"
+NETKIT="netkit-2.6.tar.bz2"
+NETKIT_FS="netkit-filesystem-i386-F5.0.tar.bz2"
+NETKIT_KER="netkit-kernel-i386-K2.6.tar.bz2"
+VNETKIT="visualnetkit-1.4.tar.bz"
+# Hydra
+LIBSSH_URL="http://0xbadc0de.be/libssh/libssh-0.2.tgz"
+LIBSSH="libssh-0.2.tgz"
+HYDRA_URL="http://freeworld.thc.org/releases/hydra-5.4-src.tar.gz"
+HYDRA="hydra-5.4-src.tar.gz"
+HYDRA_PATCH_URL="http://0xbadc0de.be/libssh/hydra-libssh0.2.patch"
+HYDRA_PATCH="hydra-libssh0.2.patch"
+# Metasploit
+MSF_URL="http://spool.metasploit.com/releases/framework-3.2.tar.gz"
+MSF="framework-3.2.tar.gz"
+# Phpmyadmin
+PHPM_URL="http://ovh.dl.sourceforge.net/sourceforge/phpmyadmin/phpMyAdmin-3.1.3-rc1-all-languages.tar.gz"
+PHPM="phpMyAdmin-3.1.3-rc1-all-languages.tar.gz"
+# IOS
+IOS1_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-36xx/c3640-jk9o3s-mz.122-37.bin"
+IOS1="c3640-jk9o3s-mz.122-37.bin"
+IOS2_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-c72xx/c7200-ik9o3s-mz.123-24a.bin"
+IOS2="c7200-ik9o3s-mz.123-24a.bin"
+IOS3_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-37xx/c3745-ik9o3s-mz.123-24a.bin"
+IOS3="c3745-ik9o3s-mz.123-24a.bin"
+IOS4_URL="http://restore.iutsm.etu.univ-rennes1.fr/ios/tftp/Cisco-26xx/c2600-ik9o3s3-mz.123-22.bin"
+IOS4="c2600-ik9o3s3-mz.123-22.bin"
+# ITRAFGEN
+ITRAFGEN_URL="http://itrafgen.googlecode.com/files/itrafgenubuntu.deb"
+ITRAFGEN="itrafgenubuntu.deb"
+
+mkdir -p dl
+cd dl
+
+## Téléchargement
+# Netkit
+wget -N -c ${NETKIT_URL}
+wget -N -c ${NETKIT_KER_URL}
+wget -N -c ${NETKIT_FS_URL}
+## Les serveurs de google ne support pas la reprise de téléchargement
+if [ ! -e ${VNETKIT} ]
+then
+	wget  ${VNETKIT_URL}
+fi
+if [ ! -e ${ITRAFGEN} ]
+then
+	wget  ${ITRAFGEN_URL}
+fi
+# hydra
+wget -N -c ${LIBSSH_URL}
+wget -N -c ${HYDRA_URL}
+wget -N -c ${HYDRA_PATCH_URL}
+# Metasploit
+wget -N -c ${MSF_URL}
+# PHPmyadmin
+wget -N -c ${PHPM_URL}
+
+## Décompression
+# Netkit
+tar -xjf ${NETKIT} -C ../config/chroot_local-includes/usr/share/
+tar -xjf ${NETKIT_FS} -C ../config/chroot_local-includes/usr/share/
+tar -xjf ${NETKIT_KER} -C ../config/chroot_local-includes/usr/share/
+tar -xzf ${VNETKIT} -C ../config/chroot_local-includes/usr/share/
+# Hydra
+tar -xzf ${LIBSSH} -C ../config/chroot_local-includes/usr/share/
+tar -xzf ${HYDRA} -C ../config/chroot_local-includes/usr/share/
+cp  -a   ${HYDRA_PATCH}  ../config/chroot_local-includes/usr/share/
+# Metasploit
+tar -xzf ${MSF} -C ../config/chroot_local-includes/usr/share/
+# PHPmyadmin
+mkdir -p ../config/chroot_local-includes/var/www
+tar -xzf ${PHPM} -C ../config/chroot_local-includes/var/www/
+mv ../config/chroot_local-includes/var/www/phpMyAdmin-3.1.3-rc1-all-languages ../config/chroot_local-includes/var/www/phpmyadmin
+# Itrafgen
+cp ${ITRAFGEN} ../config/chroot_local-includes/usr/share/
+if [ "${IOS}" = "yes" ]
+then
+	Echo_warning "Assurez-vous d'être à l'IUT pour télécharger les IOS sur restore !"
+	Echo_warning "Si vous n'êtes pas à l'IUT, il faut créer un repertoire dl et y inclure les IOS."
+
+	# IOS
+	wget --tries=2 --timeout=5-N -c ${IOS1_URL}
+	wget --tries=2 --timeout=5 -N -c ${IOS2_URL}
+	wget --tries=2 --timeout=5 -N -c ${IOS2_URL}
+	wget --tries=2 --timeout=5 -N -c ${IOS3_URL}
+	# IOS
+	cp -u ${IOS1} ../config/chroot_local-includes/usr/share/ios/ 
+	cp -u ${IOS2} ../config/chroot_local-includes/usr/share/ios/ 
+	cp -u ${IOS3} ../config/chroot_local-includes/usr/share/ios/ 
+	cp -u ${IOS4} ../config/chroot_local-includes/usr/share/ios/ 
+else
+	Echo_warning "Il n'y aura pas d'IOS pour GNS3"
+fi
+
+cd ${SH_BASE}
+
+lh_build noautoconfig | tee build.log
+</pre>
+      </div>
+      <div class="calloutlist">
+        <table border="0" summary="Callout list">
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/1.png" alt="1" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Définition du répertoire de travail.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/2.png" alt="2" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Prise en compte des fonctions de live-helper.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/3.png" alt="3" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Création de la documentation et copie dans le pré-chroot.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/4.png" alt="4" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Nettoyage des fichiers générés par la documentation.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/5.png" alt="5" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Téléchargement ou non des IOS.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/6.png" alt="6" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Définition des urls de Netkit et Visual Netkit.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/7.png" alt="7" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Définition des urls d'Hydra.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/8.png" alt="8" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Définition de l'url de Metasploit.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/9.png" alt="9" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Définition de l'url de Phpmyadmin.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/10.png" alt="10" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Définition des urls des IOS.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/11.png" alt="11" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Définition de l'url de Itrafgen</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/12.png" alt="12" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Création d'un répertoire de cache.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/13.png" alt="13" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Téléchargement de netkit.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/14.png" alt="14" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Les serveurs de google ne supportent pas la reprise de télécharement. Par consquent, on vérifie si le fichier existe avant de la télécharger.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>
+                <img src="images/callouts/15.png" alt="15" border="0" />
+              </p>
+            </td>
+            <td valign="top" align="left">
+              <p>Téléchargement d'Hydra.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>(16)</p>
+            </td>
+            <td valign="top" align="left">
+              <p>Téléchargement de Metasploit.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>(17)</p>
+            </td>
+            <td valign="top" align="left">
+              <p>Téléchargement de PHPmyadmin.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>(18)</p>
+            </td>
+            <td valign="top" align="left">
+              <p>Décompression des archives de Netkit.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>(19)</p>
+            </td>
+            <td valign="top" align="left">
+              <p>Décompression des archives d'Hydra et copie du patch.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>(20)</p>
+            </td>
+            <td valign="top" align="left">
+              <p>Décompression de Metasploit.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>(21)</p>
+            </td>
+            <td valign="top" align="left">
+              <p>Décompression de PHPmyadmin et copie des fichier dans le futur /var/www/</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>(22)</p>
+            </td>
+            <td valign="top" align="left">
+              <p>Copie du paquet d'Itrafgen.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>???</p>
+            </td>
+            <td valign="top" align="left">
+              <p>Vérification pour le téléchargement des IOS.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>???</p>
+            </td>
+            <td valign="top" align="left">
+              <p>Avertissement qui indique qu'il faut être connecté au réseaux de l'IUT de St-Malo pour télécharger les IOS sur le serveur de partage restore.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>(23)</p>
+            </td>
+            <td valign="top" align="left">
+              <p>Téléchargement des IOS.</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>(24)</p>
+            </td>
+            <td valign="top" align="left">
+              <p>Copie des IOS dans le pré-chroot</p>
+            </td>
+          </tr>
+          <tr>
+            <td width="5%" valign="top" align="left">
+              <p>(25)</p>
+            </td>
+            <td valign="top" align="left">
+              <p>Lancement de la création de la distribution avec redirection de la sortie vers le fichier build.log</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="navfooter">
+      <hr />
+      <table width="100%" summary="Navigation footer">
+        <tr>
+          <td width="40%" align="left"><a accesskey="p" href="config.html">Précédent</a> </td>
+          <td width="20%" align="center">
+            <a accesskey="u" href="../configuration-files.html">Niveau supérieur</a>
+          </td>
+          <td width="40%" align="right"> <a accesskey="n" href="doc.sh.html">Suivant</a></td>
+        </tr>
+        <tr>
+          <td width="40%" align="left" valign="top">C.2. Fichier <code class="filename">scripts/config</code> </td>
+          <td width="20%" align="center">
+            <a accesskey="h" href="../index.html">Sommaire</a>
+          </td>
+          <td width="40%" align="right" valign="top"> C.4. Fichier <code class="filename">scripts/doc.sh</code></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

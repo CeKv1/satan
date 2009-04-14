@@ -1,9 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xfdesktop-menu>
 	<title name="Scanners &amp; Sniffers"/>
+	<menu name="Capture">
+		<menu name="Wireshark">
+			<app name="Wireshark" cmd="wireshark"/>
+			<app name="Documentation Wireshark" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#capture"/>
+		</menu>
+		<menu name="TCP/SSLdump">
+			<app name="tcpdump" cmd="terminator -e &quot;echo &apos;TCPdump&apos; ; sudo tcpdump -h ;bash&quot;"/>
+			<app name="ssldump" cmd="terminator -e &quot;echo &apos;SSLdump&apos; ; sudo ssldump -h ;bash&quot;"/>
+			<app name="Documentation" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#capture"/>
+		</menu>
+		<menu name="Tcpreen">
+			<app name="tcpreen" cmd="terminator -e &quot;echo &apos;TCPreen&apos; ; tcpreen -h ;bash&quot;"/>
+			<app name="Documentation TCPreen" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#capture"/>
+		</menu>
+		<menu name="Sniffit">
+			<app name="sniffit" cmd="terminator -e &quot;echo &apos;Sniffit&apos; ; sudo sniffit ;bash&quot;"/>
+			<app name="Documentation Sniffit " cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#capture"/>
+		</menu>
+		<menu name="Ngrep">
+			<app name="ngrep" cmd="terminator -e &quot;echo &apos;Ngrep&apos; ; ngrep -h ;bash&quot;"/>
+			<app name="Documentation Ngrep" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#capture"/>
+		</menu>
+		<menu name="Ettercap">
+			<app name="ettercap" cmd="terminator -e &quot;echo &apos;Ettercap&apos; ; sudo ettercap -h ;bash&quot;"/>
+			<app name="Documentation Ettercap" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/administration.html#capture"/>
+		</menu>
+	</menu>
 	<separator/>
+	<menu name="Scanners de vulnérabilités">
+		<menu name="Nessus">
+			<app name="Nessus" cmd="nessus"/>
+			<app name="Documentation Nessus" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/securite.html#scan_vuln"/>
+		</menu>
+		<menu name="Nmap">
+			<app name="nmap" cmd="terminator -e &quot;nmap ;bash&quot;"/>
+		</menu>
+		<menu name="Zenmap">
+			<app name="Zenmap" cmd="sudo zenmap"/>
+		</menu>
+	</menu>
 	<separator/>
-	<separator/>
-	<separator/>
-	<separator/>
+	<menu name="Scanners de vulnaribilités web">
+		<menu name="Paros">
+			<app name="paros" cmd="paros"/>
+			<app name="Documentation Paros" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/securite.html#scan_vuln"/>
+		</menu>
+		<menu name="Nikto">
+			<app name="Nikto" cmd="terminator -e &quot;nikto ;bash&quot;"/>
+		</menu>
+	</menu>
 </xfdesktop-menu>

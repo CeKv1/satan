@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>D.3. Fichier config/chroot_local-hooks/03-metasploit.sh</title>
+    <link rel="stylesheet" href="../css/stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="../../css/stylesheet.css" type="text/css" />
+    <link rel="stylesheet" href="../../../css/stylesheet.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.73.2" />
+    <link rel="start" href="../../index.html" title="SATAN" />
+    <link rel="up" href="../../satan-hooks.html" title="Annexe D. Fichiers de personnalisation" />
+    <link rel="prev" href="02-hydra.sh.html" title="D.2. Fichier config/chroot_local-hooks/02-hydra.sh" />
+    <link rel="next" href="07-netkit.sh.html" title="D.4. Fichier config/chroot_local-hooks/07-netkit.sh" />
+  </head>
+  <body>
+    <div class="navheader">
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <th colspan="3" align="center">D.3. Fichier <code class="filename">config/chroot_local-hooks/03-metasploit.sh</code></th>
+        </tr>
+        <tr>
+          <td width="20%" align="left"><a accesskey="p" href="02-hydra.sh.html">Précédent</a> </td>
+          <th width="60%" align="center">Annexe D. Fichiers de personnalisation</th>
+          <td width="20%" align="right"> <a accesskey="n" href="07-netkit.sh.html">Suivant</a></td>
+        </tr>
+      </table>
+      <hr />
+    </div>
+    <div class="section" lang="fr" xml:lang="fr">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title" style="clear: both"><a id="config/chroot_local-hooks/03-metasploit.sh"></a>D.3. Fichier <code class="filename">config/chroot_local-hooks/03-metasploit.sh</code></h2>
+          </div>
+        </div>
+      </div>
+      <div class="programlistingco">
+        <pre class="programlisting">#!/bin/sh -x
+
+echo "###################"
+echo "####### 03 ########"
+echo "###################"
+echo "I: install metasploit"
+
+#mkdir /usr/share/framework-3.1
+cd /usr/share/framework-3.2
+
+# Téléchargement du paquet
+#wget  http://sugar.metasploit.com/releases/framework-3.1.tar.gz
+#tar xzf framework-3.1.tar.gz
+#rm framework-3.1.tar.gz
+#cd framework-3.1
+
+# Création des liens symboliques
+chmod +x msf*
+cd /usr/local/bin
+ln -s /usr/share/framework-3.2/msfcli
+ln -s /usr/share/framework-3.2/msfconsole
+ln -s /usr/share/framework-3.2/msfd
+ln -s /usr/share/framework-3.2/msfencode
+ln -s /usr/share/framework-3.2/msfgui
+ln -s /usr/share/framework-3.2/msfopcode
+ln -s /usr/share/framework-3.2/msfpayload
+ln -s /usr/share/framework-3.2/msfpescan
+ln -s /usr/share/framework-3.2/msfweb
+</pre>
+      </div>
+    </div>
+    <div class="navfooter">
+      <hr />
+      <table width="100%" summary="Navigation footer">
+        <tr>
+          <td width="40%" align="left"><a accesskey="p" href="02-hydra.sh.html">Précédent</a> </td>
+          <td width="20%" align="center">
+            <a accesskey="u" href="../../satan-hooks.html">Niveau supérieur</a>
+          </td>
+          <td width="40%" align="right"> <a accesskey="n" href="07-netkit.sh.html">Suivant</a></td>
+        </tr>
+        <tr>
+          <td width="40%" align="left" valign="top">D.2. Fichier <code class="filename">config/chroot_local-hooks/02-hydra.sh</code> </td>
+          <td width="20%" align="center">
+            <a accesskey="h" href="../../index.html">Sommaire</a>
+          </td>
+          <td width="40%" align="right" valign="top"> D.4. Fichier <code class="filename">config/chroot_local-hooks/07-netkit.sh</code></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

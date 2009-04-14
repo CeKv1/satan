@@ -1,5 +1,5 @@
 use_default_menu=false
-menu_file=/root/.config/xfce4/desktop/Administration.xml
+menu_file=/home/etu/.config/xfce4/desktop/Administration.xml
 icon_file=/usr/share/pixmaps/Menu/Administration.png
 show_menu_icons=true
 button_title=Administration & Sécurité

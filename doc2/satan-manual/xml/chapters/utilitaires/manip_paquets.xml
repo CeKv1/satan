@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+    "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+  <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
+]>
+<sect2 id="manipp">
+	<title>Manipulation de paquets</title>
+	<para>
+	Manipulation de paquets
+	</para>
+<sect3 id="manipp-hping">
+	<title>hping</title>
+	<itemizedlist>
+		<listitem><para><ulink url="http://www.openldap.org/">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/LDAP">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
+</sect3>
+<sect3 id="manipp-dsniff">
+	<title>dsniff</title>
+	<itemizedlist>
+		<listitem><para><ulink url="http://freeradius.org/">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/FreeRADIUS">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
+</sect3>
+<sect3 id="manipp-sendip">
+	<title>sendip</title>
+	<itemizedlist>
+		<listitem><para><ulink url="http://freeradius.org/">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/FreeRADIUS">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
+</sect3>
+<sect3 id="manipp-scapy">
+	<title>scapy</title>
+	<itemizedlist>
+		<listitem><para><ulink url="http://freeradius.org/">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/FreeRADIUS">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
+</sect3>
+<sect3 id="manipp-nemesis">
+	<title>nemesis</title>
+	<itemizedlist>
+		<listitem><para><ulink url="http://freeradius.org/">Documentation officielle</ulink></para></listitem>
+		<listitem><para><ulink url="http://fr.wikipedia.org/wiki/FreeRADIUS">Wikipedia</ulink></para></listitem>
+	</itemizedlist>
+</sect3>
+</sect2>

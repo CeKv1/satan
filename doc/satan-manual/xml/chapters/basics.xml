@@ -1,61 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
 ]>
 <sect1 id="basics">
-<title>The basics</title>
+<title>Les principes</title>
 
-<para>This chapter contains a brief overview of the build process as well as containing instructions on how to boot the various binary image types.</para>
+<para>Ce chapitre contient un bref aprçu du processus de création ainsi que des
+instructions sur la méthode de démarrage des différents types d'images</para>
 
 <section>
-<title>What is a live system?</title>
+<title>Qu'est-ce qu'un système live</title>
 
-<para>A live system usually means an OS booted on a computer from a removable support (as CD-ROM, USB stick, or network), ready to use without any installation on the usual drive(s), with an auto-configuration done at runtime (see <xref linkend="terms"/>).</para>
+<para>Un système live désigne le plus souvent un Système d'Exploitation démarré
+sur une machine depuis un support amovible (comme un CD-ROM, une clef USB,
+ou depuis le réseau), prêt à l'emploi sans installation sur le(s) disque(s)
+traditionnel, avec une configuration automatique faite  pendant le démarrage
+(voir <xref linkend="terms"/>).</para>
 
-<para>With Debian Live, it's a Debian GNU/Linux OS, built for one of the supported architectures (currently amd64, i386, powerpc and sparc). It is made from following parts:</para>
+<para>Avec Debian Live, c'est un système d'exploitation Debian GNU/Linux,
+construit pour l'une des achitectures supportées (actuellement amd64, i386,
+powerpc, et sparc). Il est construit à partir des composants suivants:</para>
 
 <variablelist>
 <varlistentry>
-<term>Linux kernel</term>
-<listitem><para>The Linux image, usually named <filename>vmlinuz*</filename>.</para></listitem>
+<term>Noyau Linux</term>
+<listitem><para>L'image du noyau Linux, habituellement nommée <filename>vmlinuz*</filename>.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term>Initial RAM disk image (initrd)</term>
-<listitem><para>RAM disk setup for the Linux boot, containing modules possibly need to mount the filesystem's image and some scripts to do it.</para></listitem>
+<listitem><para>Configuration de la RAM disque pour le démarrage de Linux, contenant les
+modules qui pourraient être nécessaire pour monter l'image du système de
+fichiers et plusieurs scripts pour le faire</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term>System image</term>
-<listitem><para>The O.S. image. Debian Live uses a SquashFS image, a compressed filesystem, to minimize its size. Note that it's read-only, so during boot, the Debian Live system will uses RAM disk and 'union' mechanism to be able to write files on the system, but all modifications will be lost when shutdown, until using optional persistence partition(s) (see <xref linkend="persistence"/>).</para></listitem>
+<term>L'image du système</term>
+<listitem><para>L'image du système d'exploitation Debian Live utilise une image Squashfs, un
+système de fichiers compressé, pour diminuer sa taille. Noter qu'il est en
+lecture seule, donc pendant la phase de démarrage, le système Debian Live
+utilisera la RAM comme un disque et un mechanisme d'union pour pouvoir
+écrire des fichiers sur le système, mais toutes les modifitions seront
+perdues à l'arrêt de la machine à moins d'utiliser une(des) partition(s)
+optionnelle(s) pour la persistence.(voir <xref linkend="persistence"/>).</para></listitem>
 </varlistentry>
 
 <varlistentry>
-<term>Bootloader</term>
-<listitem><para>A small piece of code, crafted to boot up from the chosen media, possibly proposing a prompt or menu to let select options/configuration, then loading the Linux kernel and its initrd to let it run with associated filesystem image. Different solutions can be proposed depending of the target media and fornat of filesystem containing the previous components: Isolinux to boot from a CD or DVD in ISO9660 format, syslinux for HDD or USB drive boot from a VFAT partition, GRUB for ext2/3 partition, pxelinux for PXE netboot...</para></listitem>
+<term>Chargeur de démarrage</term>
+<listitem><para>Un petit morceau de code destiné à démarrer depuis le média choisi, il peut
+proposer une invite ou un menu pour selectionner des options, une
+configuration, puis il doit charger le noyau Linux et son initrd pour
+pouvoir utiliser l'image de système de fichiers associée à ce
+dernier. Différentes solutions peuvent être proposées, elles dépendent du
+média cible et du format du système de fichiers contenant les composants
+précédents: Isolinux pour démarrer depuis un CD ou un DVD au format ISO9660,
+syslinux pour démarrer depuis les disques durs ou les clefs USB contenant
+une partition vfat, GRUB pour les partitions ext2/3, pxelinux pour un
+démarrage réseau PXE...</para></listitem>
 </varlistentry>
 
 </variablelist>
 
-<para>The Debian Live tools will build the system image from your specifications, setup a Linux kernel and its initrd, a bootloader to run them, all in one media-dependant format(ISO9660 image, disk image, ...).</para>
+<para>Les outils de Debian Live construiront l'image du système en fonction de vos
+spécifications, configuration du noyau Linux et son initrd, un chargeur de
+démarrage pour les exécuter, tout ces composants dependent du format du
+media choisi(image ISO9660, image disque, ...).</para>
 </section>
 
 <section>
-<title>First steps: building an ISO image</title>
+<title>Premiers pas: Construire une image ISO</title>
 
-<para>The following sequence of helper commands, provided by &live-helper;, will create a basic ISO image containing just the Debian standard system without X.org. It is suitable for burning to CD or DVD media.</para>
-<para>First, we run the <filename>lh_config</filename> helper command which will create a <filename>"config/"</filename> hierarchy in the current directory for use by other helper commands:</para>
+<para>La séquence suivante de l'assistant de commandes fournit par &live-helper;
+créera une image ISO basique contenant uniquement le système Debian standard
+sans X.org. Elle peut être gravée sur un CD ou un DVD.</para>
+<para>D'abord on exécute la commande <filename>lh_config</filename> de l'assistant
+qui créée une arborescence <filename>"config/"</filename> dans le répertoire
+courant pour une utilisation ultérieure par d'autres commandes de
+l'assistant:</para>
 <screen>$ lh_config</screen>
-<para>By passing no parameters to <filename>lh_config</filename>, we indicated that we wish to use the defaults, which will create an image of type binary (see <xref linkend="lh_config"/>).</para>
-<para>Now that we have a <filename>"config/"</filename> hierarchy, we may build the image with <filename>lh_build</filename> helper command:</para>
+<para>En ne passant aucun paramètres à <filename>lh_config</filename>, on choisit
+d'utiliser les paramètres par défauts qui créeront une image de type binaire
+(voir <xref linkend="lh_config"/>).</para>
+<para>Maintenant que l'on a une arborescence <filename>"config/"</filename>, on
+devrait pouvoir construire une image avec la commande
+<filename>lh_build</filename> de l'assistant:</para>
 <screen># lh_build</screen>
-<para>This process can take a while, depending on the speed of your network connection (see <xref linkend="lh_build"/>).</para>
+<para>Ce processus peut prendre du temps, en fonction du débit de votre connexion
+réseau (voir <xref linkend="lh_build"/>).</para>
 
 <section>
-<title>Testing an ISO image with Qemu</title>
+<title>Tester une image ISO avec Qemu</title>
 
-<para>Testing an ISO is simple:</para>
+<para>Tester une image ISO est facile</para>
 <screen>
 # apt-get install qemu
 $ qemu -cdrom binary.iso
@@ -63,9 +100,9 @@ $ qemu -cdrom binary.iso
 </section>
 
 <section>
-<title>Burning an ISO image to physical medium</title>
+<title>Graver une image ISO sur un support physique</title>
 
-<para>Burning an ISO image is easy:</para>
+<para>Graver une imgae ISO est simple</para>
 <screen>
 # apt-get install wodim
 $ wodim binary.iso
@@ -74,27 +111,42 @@ $ wodim binary.iso
 </section>
 
 <section>
-<title>Building an USB/HDD image</title>
+<title>Construire une image USB/HDD</title>
 
-<para>The following sequence of helper commands will create a basic USB/HDD image containing just the Debian standard system without X.org. It is suitable for booting from USB sticks, USB hard drives, and various other portable storage devices.</para>
-<para>Note if you created an iso image with the previous example, you will need to clean up your working directory with the <filename>lh_clean</filename> helper command (see <xref linkend="lh_clean"/>):</para>
+<para> La séquence de commandes suivantes de l'assistant créera une image USB/HDD
+contenant uniquement le système Debian standard sans X.org. Elle peut être
+utilisée pour démarrer depuis une clef USB, une disque dur USB, ainsi que
+d'autres types variés de périphériques de stockage amovibles.</para>
+<para>Noter que si l'on a créé une image avec l'exemple précédent, on doit
+nettoyer le répertoire de travail avec la commande
+<filename>lh_clean</filename> de l'assistant (voir <xref
+linkend="lh_clean"/>).</para>
 <screen>$ lh_clean --binary</screen>
-<para>Run the <filename>lh_config</filename> helper command with the parameters to configure the <filename>"config/"</filename> hierarchy to create a USD/HDD image type:</para>
+<para>Exécuter la commande <filename>lh_config</filename> de l'assistant avec ces
+paramètres pour configurer l'arborescence <filename>"config/"</filename>
+afin de créer une image de type USB/HDD:</para>
 <screen>$ lh_config -b usb-hdd</screen>
-<para>Now build the image with <filename>lh_build</filename> helper command:</para>
+<para>Maintenant construire l'image avec la commande <filename>lh_build</filename>
+de l'assistant</para>
 <screen># lh_build</screen>
 
 <section>
-<title>Copying USB/HDD image to a USB stick</title>
+<title>Copier une image USB/HDD sur une clef USB</title>
 
-<para>The generated binary image contains a <acronym>VFAT</acronym> partition and the <command>syslinux</command> bootloader, ready to be directly written on an USB stick. Plug in an USB stick with a size larger than <filename>binary.img</filename>'s one, and type:
+<para>L'image binaire générée contient une partition <acronym>VFAT</acronym>  et le chargeur de démarrage <command>syslinux</command>, prêt à être
+directement écrit sur une clef USB. Brancher une ckef USB d'une taille
+supérieure à celle du fichier <filename>binary.img</filename>, et taper:
 <screen>$ dd if=binary.img of=${USBSTICK}</screen>
-where <replaceable>${USBSTICK}</replaceable> is the device file of your key, like <filename>/dev/sda</filename> (not a partition like <filename>/dev/sda1</filename>!); you can find the right device name by looking in <command>dmesg</command>'s output after plugging the stick, for example).</para>
+Où <replaceable>${USBSTICK}</replaceable> est le fichier descripteur de
+périphérique de votre clef, comme <filename>/dev/sda</filename> (pas une
+partition comme <filename>/dev/sda1</filename>!); on peut trouver le fichier
+descripteur de périphérique adéquat en regardant la sortie de la commande
+<command>dmesg</command> après avoir branché la clef par exemple)</para>
 <important>This will definitely overwrite any previous contents on youro stick!</important>
 </section>
 
 <section>
-<title>Testing a USB/HDD image with Qemu</title>
+<title>Tester une image USB/HDD avec Qemu</title>
 <screen>
 # apt-get install qemu
 $ qemu -hda binary.img
@@ -103,26 +155,55 @@ $ qemu -hda binary.img
 </section>
 
 <section>
-<title>Building a netboot image</title>
+<title>Construire une image démarrable depuis le réseau</title>
 
-<para>The following sequence of helper commands will create a basic netboot image containing the Debian standard system without X.org. It is suitable for booting over the network.</para>
-<para>Note if you performed any previous examples, you will need to clean up your working directory with the <filename>lh_clean</filename> helper command:</para>
+<para>La séquence de commandes suivante de l'assistant créera une image basique
+pour un démarrage réseau contenant uniquement le système Debian standard
+sans X.org. Elle peut être utilisée pour démarrer depuis le réseau.</para>
+<para>Noter que si l'on a réalisé l'un ou l'autre des exemples précédents, on doit
+nettoyer le répertoire de travail avec la commande
+<filename>lh_clean</filename> de l'assistant:</para>
 <screen>$ lh_clean --binary</screen>
-<para>Run the <filename>lh_config</filename> helper command with the parameters to configure the <filename>"config/"</filename> hierarchy to create our netboot image:</para>
+<para>Exécuter la commande <filename>lh_config</filename>de l'assistant avec les
+paramètres suivants pour configurer l'arborescence
+<filename>"config/"</filename> afin de créer une image pour un démarrage
+réseau:</para>
 <screen>$ lh_config -b net --net-root-path "/srv/debian-live" --net-root-server "192.168.0.1"</screen>
-<para>In contrast with the ISO and USB hdd images, netbooting does not support serving a filesystem image with the client so the files must be served via NFS. The <replaceable>net-root-path</replaceable> and <replaceable>net-root-server</replaceable> options specify the location and server respectfully of the NFS server where the filesytem image will be located at boot-time.</para>
-<para>Now build the image with <filename>lh_build</filename> helper command:</para>
+<para>A l'inverse des images USB/HDD ou ISO, le démarrage depuis le réseau ne
+permet pas de donner une image de système de fichiers au client, les
+fichiers doivents être fournis par NFS. Les options
+<replaceable>net-root-path</replaceable> et
+<replaceable>net-root-server</replaceable> spécifient respectivement
+l'emplacement et le serveur NFS où trouver l'image du système de fichiers
+pendant la phase de démarrage.</para>
+<para>Maintenant construire l'image avec la commande <filename>lh_build</filename>
+de l'assistant</para>
 <screen># lh_build</screen>
-<para>In a network boot, the client runs a small piece of software, usually on the <acronym>EEPROM</acronym> of the Ethernet card, which sends a <abbrev>DHCP</abbrev> request  to get an <abbrev>IP</abbrev> address and also information about what to do next; such as getting (through <abbrev>TFTP</abbrev> protocol) a higher level boot software like <application>Grub</application> or <application>PXLINUX</application>, or directly to an operating system like <application>Linux</application>.</para>
-<para>For example, you can extract the generated <filename>binary-net.tar.gz</filename> archive in the <filename>/srv/debian-live</filename> directory; you'll get the filesystem image in <filename>live/filesystem.squashfs</filename>, the kernel, initrd and PXE Linux bootloader in <filename>tftpboot/debian-live/i386</filename>.</para>
-<para>We must now configure three services on the server:</para>
+<para>Lors d'un démarrage réseau, le client exécute un petit morceau de code
+habituellement sur l' <acronym>EEPROM</acronym> de la carte Ethernet, qui envoie une requête  <abbrev>DHCP</abbrev> pour obtenir une adresse  <abbrev>IP</abbrev> ainsi que des informations sur ce qui doit être fait après; comme obtenir
+(via le protocole  <abbrev>TFTP</abbrev> ) un logiciel de démarrage de plus haut niveau comme
+<application>Grub</application> ou <application>PXLINUX</application>, ou
+directement un système d'exploitation comme
+<application>Linux</application>.</para>
+<para>Par exemple, vous pouvez extraire l'archive
+<filename>binary-net.tar.gz</filename> dans le
+répertoire<filename>/srv/debian-live</filename>; vous aurez l'image du
+système de fichiers dans le fichier
+<filename>live/filesystem.squashfs</filename>, le noyau, initrd et le
+chargeur de démarrage PXE Linux dans le
+répertoire<filename>tftpboot/debian-live/i386</filename>.</para>
+<para>Nous devons maintenant configurer trois services sur le serveur:</para>
 
 <variablelist>
 <varlistentry>
-<term>DHCP server</term>
+<term>Le serveur DHCP</term>
 <listitem>
-<para>We must configure our network's DHCP server to be sure to give a <abbrev>IP</abbrev> address to the computer netbooting, and to advertise the location of the PXE bootloader.</para>
-<para>Here is an example for inspiration, written for the ISC DHCP server (package <literal>dhcp3-server</literal>) in the <filename>/etc/dhcp3/dhcpd.conf</filename> configuration file :</para>
+<para>Nous devons configurer le serveur DHCP de notre réseau pour être sure de
+délivrer une <abbrev>IP</abbrev> adresse à l'ordinateur qui démarre depuis le réseau et pour publier
+l'emplacement du programme de démarrage PXE.</para>
+<para>Voici un exemple dont on peut s'inspirer, écrit pour le serveur ISC DHCP
+(paquet <literal>dhcp3-server</literal>) dans le fichier de configuration
+<filename>/etc/dhcp3/dhcpd.conf</filename>:</para>
 <screen>
 # Options DHCP spécifiques à Pxelinux:
 option space pxelinux;
@@ -176,29 +257,40 @@ subnet 192.168.1.0 netmask 255.255.255.0 {   # 192.168.1.0/24
 </varlistentry>
 
 <varlistentry>
-<term>TFTPd server</term>
+<term>Serveur TFTPd</term>
 <listitem>
-<para>This serves the kernel and initial ramdisk to the system at run-time.</para>
-<para>You should install the <command>tftpd-hpa</command> package. It can serve all files contained inside a root directory, usually <filename>/var/lib/tftpboot/</filename>, as defined with its <option>-s</option> option. To let it serves files inside <filename>/srv/debian-live/tftpboot</filename>, modify its start definition in <filename>/etc/inetd.conf</filename> with:
+<para>Il fournit le noyau et la ramdisk initiale au système pendant l'e</para>
+<para>Vous devriez installer le paquet <command>tftpd-hpa</command>. Il peut
+fournir tous les fichiers contenus dans un répertoire racine, habituellement
+<filename>/var/lib/tftpboot/</filename>, défini par l'option <option>-s</option> Pour lui faire fournir les fichiers contenus dans
+<filename>/srv/debian-live/tftpboot</filename>, modifier sa commande de
+démarrage dans  <filename>/etc/inetd.conf</filename> par:
 <screen>tftp           dgram   udp     wait    root  /usr/sbin/in.tftpd /usr/sbin/in.tftpd -s /srv/debian-live/tftpboot -r blksize -v -v</screen>
-and reload the super server with <command>/etc/init.d/openbsd-inetd reload</command>.
+et relancer le super server avec <command>/etc/init.d/openbsd-inetd
+reload</command>.
 </para>
 </listitem>
 </varlistentry>
 
-<varlistentry><term>NFS server</term>
+<varlistentry><term>Serveur NFS</term>
 <listitem>
-<para>Once the guest computer will have downloaded and booted a Linux kernel and its initrd, it will try to mount the Live filesystem image through a NFS server.</para>
-<para>You should install the <command>nfs-kernel-server</command> server package -- <command>nfs-user-server</command> does not function correctly with netboot.</para>
-<para>Then, declare that the directory of the filesystem image is available through NFS, by writing in <filename>/etc/exports</filename> :</para>
+<para>Une fois que la machine cliente a téléchargé et démarré le noyau Linux et sa
+ramdisk, elle essaie de monter l'image du système de fichiers Live via un
+serveur NFS.</para>
+<para>Vous devriez installer le paquet <command>nfs-kernel-server</command>
+--<command>nfs-user-server</command> ne fonctionne pas correctement pour le
+démarrage réseau.</para>
+<para>Après, rendez le répertoire de l'image du système de fichiers disponible via
+NFS en ajoutant au fichier <filename>/etc/exports</filename>:</para>
 <screen>/srv/debian-live *(ro,async,subtree_check,no_root_squash)</screen>
-<para>and let the NFS server knowing it typing following command :</para>
+<para>informez le serveur NFS en tapant la commande suivante:</para>
 <screen># exportfs -rv</screen>
 </listitem>
 </varlistentry>
 
 </variablelist>
 
-<para>Setting all these services is quite error prone, you'll need some patience to let all of them working together.</para>
+<para>Configurer tout ces services peut être source d'erreurs, vous aurez besoin
+de patience pour qu'il fonctionnent tous ensemble.</para>
 </section>
 </sect1>

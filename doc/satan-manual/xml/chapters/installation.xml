@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../entities/common.ent" > %commondata;
@@ -7,78 +7,94 @@
 <title>Installation</title>
 
 <section>
-<title>Requirements</title>
+<title>Prérequis</title>
 
-<para>Building Debian Live images has very few system requirements:</para>
+<para>Construire des systèmes Debian Live ne nécessite que très peu de prérequis:</para>
 
 <orderedlist>
-<listitem><para>Super user (root) access</para></listitem>
-<listitem><para>An up-to-date version of &live-helper;</para></listitem>
-<listitem><para>A POSIX-compliant shell, such as <command>bash</command> or <command>dash</command>.</para></listitem>
-<listitem><para><command>debootstrap</command> or <command>cdebootstrap</command></para></listitem>
+<listitem><para>Un accès super-utilisateur (root)</para></listitem>
+<listitem><para>Une version à jour de &live-helper;</para></listitem>
+<listitem><para>Un shell compatible POSIX comme <command>bash</command> ou
+<command>dash</command>.</para></listitem>
+<listitem><para><command>debootstrap</command> ou <command>cdebootstrap</command></para></listitem>
 <listitem><para>Linux 2.6.x</para></listitem>
 </orderedlist>
 
-<para>Note especially that using a Debian installation is not required - &live-helper; will run on almost any distribution.</para>
+<para>Note especially that using a Debian installation is not required -
+&live-helper; will run on almost any distribution.</para>
 
 </section>
 
 <section>
-<title>Installing &live-helper;</title>
+<title>Installer &live-helper;</title>
 
 <para>You may install &live-helper; in a number of different ways:</para>
 
 <orderedlist>
-<listitem><para>From the Debian repository</para></listitem>
-<listitem><para>From source</para></listitem>
-<listitem><para>From snapshots</para></listitem>
-<listitem><para>From backports.org</para></listitem>
+<listitem><para>Depuis le dépot Debian</para></listitem>
+<listitem><para>Depuis les sources</para></listitem>
+<listitem><para>Depuis les snapshots</para></listitem>
+<listitem><para>Depuis backports.org</para></listitem>
 </orderedlist>
 
-<para>If you are using &lenny; or &sid; the recommended way is to install &live-helper; via the Debian repository.</para>
+<para>Si vous utilisez &lenny; ou &sid; il est conseillé d'installer &live-helper;
+depuis le dépot Debian.</para>
 
 <section>
-<title>From the Debian repository</title>
+<title>Depuis le dépot Debian</title>
 
-<para>Simply install &live-helper; like any other package:</para>
+<para>Installer simplement &live-helper; comme n'importe quel autre paquet:</para>
 <screen># apt-get install live-helper</screen>
-<para>or</para>
+<para>ou</para>
 <screen># aptitude install live-helper</screen>
 
 </section>
 
 <section>
-<title>From source</title>
+<title>Depuis les sources</title>
 
-<para>&live-helper; is developed using the Git version control system. On Debian systems, this is provided by the <command>git-core</command> package. To check out the latest code, execute:</para>
+<para>&live-helper; est développé avec le système de contrôle de version Git. Sur
+les systèmes Debian, il est fourni par le paquet
+<command>git-core</command>. Pour rapatrier la dernière version, exécuter:</para>
 <screen>$ git clone git://git.debian.net/git/debian-live/live-helper.git</screen>
-<para>You can build and install your own Debian package by executing:</para>
+<para>Vous pouvez construire et installer votre propre paquet Debian en exécutant:</para>
 <screen>
  $ cd live-helper
  $ dpkg-buildpackage -rfakeroot -b -uc -us
  $ cd ..
  # dpkg -i live-helper*.deb
 </screen>
-<para>You can also use a local version of &live-helper; without installation:</para>
+<para>Vous pouvez aussi utiliser une version locale de &live-helper; sans
+installation:</para>
 <screen># live-helper/helpers/lh_local</screen>
-<para>Subsequent calls to <filename>lh_</filename>-prefixed helpers in that shell environment will then use the version located in the directory you executed <filename>lh_local</filename> from.</para>
-<para>You can also install &live-helper; directly to your system by executing:</para>
+<para>Subsequent calls to <filename>lh_</filename>-prefixed helpers in that shell
+environment will then use the version located in the directory you executed
+<filename>lh_local</filename> from.</para>
+<para>Vous pouvez aussi installer &live-helper; directement sur votre système en
+exécutant:</para>
 <screen># make install</screen>
 
 </section>
 
 <section>
-<title>From 'snapshots'</title>
-<para>If you do not wish to build or install &live-helper; from source, you can use snapshots. These are built automatically from the latest version in Git and are available on <ulink url="http://live.debian.net/debian/">http://live.debian.net/debian</ulink>.</para>
+<title>Depuis les 'snapshots'</title>
+<para>If you do not wish to build or install &live-helper; from source, you can
+use snapshots. These are built automatically from the latest version in Git
+and are available on <ulink
+url="http://live.debian.net/debian/">http://live.debian.net/debian</ulink>.</para>
 </section>
 
 <section>
-<title>From Backports.org</title>
+<title>Depuis Backports.org</title>
 
-<para>Whilst &live-helper; and friends are not a part of Debian etch relase, they will work on &etch; as well. You will need the following programs:</para>
+<para>Whilst &live-helper; and friends are not a part of Debian etch relase, they
+will work on &etch; as well. You will need the following programs:</para>
 <orderedlist>
-<listitem><para>An <emphasis>etch</emphasis> backport of either <command>debootstrap</command> or <command>cdebootstrap</command> from backports.org</para></listitem>
-<listitem><para>The <emphasis>lenny</emphasis> or <emphasis>sid</emphasis> version of &live-helper;</para></listitem>
+<listitem><para>An <emphasis>etch</emphasis> backport of either
+<command>debootstrap</command> or <command>cdebootstrap</command> from
+backports.org</para></listitem>
+<listitem><para>The <emphasis>lenny</emphasis> or <emphasis>sid</emphasis> version of
+&live-helper;</para></listitem>
 </orderedlist>
 
 <section>
@@ -94,26 +110,31 @@
 <screen>apt-get update</screen>
 </listitem>
 <listitem>
-<para>Either install <command>debootstrap</command>:</para>
+<para>Installer aussi <command>debootstrap</command>:</para>
 <screen>apt-get install -t etch-backports debootstrap</screen>
-<para>or install <command>cdebootstrap</command>:</para>
+<para>ou installer <command>cdebootstrap</command>:</para>
 <screen>apt-get install -t etch-backports cdebootstrap</screen>
 </listitem>
 </orderedlist>
 </section>
 
 <section>
-<title>Installing &live-helper; on etch</title>
+<title>Installer &live-helper; sur etch</title>
 
-<para>It is not recommended that you use &live-helper; from backports.org as it is likely to be out of date. The live-helper package from Lenny or Sid can be installed on Etch (without upgrading other packages, such as libc6; it's just shell scripts).</para>
+<para>It is not recommended that you use &live-helper; from backports.org as it is
+likely to be out of date. The live-helper package from Lenny or Sid can be
+installed on Etch (without upgrading other packages, such as libc6; it's
+just shell scripts).</para>
 <orderedlist>
-<listitem><para>Install debootstrap or cdebootstrap from backports.org (as indicated above).</para></listitem>
+<listitem><para>Installer debootstrap ou cdebootstrap depuis backports.org (comme indiqué
+ci-dessus).</para></listitem>
 <listitem>
 <para>Install live-helper from testing or unstable</para>
 <screen># apt-get install -t unstable live-helper</screen>
 </listitem>
 </orderedlist>
-<para>Of course you need the testing or unstable sources in /etc/apt/sources.list for this.</para>
+<para>Bien sur, pour ça, vous devez avoir les sources pour testing ou unstable
+dans /etc/apt/sources.list</para>
 </section>
 </section>
 </section>
@@ -121,53 +142,72 @@
 <section>
 <title>&live-initramfs;</title>
 
-<para><emphasis>N.B. You do not need to install on your host system to create customised Debian Live systems. However, doing so will do no harm.</emphasis></para>
+<para><emphasis>N.B. You do not need to install on your host system to create
+customised Debian Live systems. However, doing so will do no
+harm.</emphasis></para>
 
 <section>
-<title>Using a customised &live-initramfs;</title>
+<title>Utiliser un &live-initramfs; personnalisé</title>
 
-<para>To modify the code you can follow the process below. Please ensure you are familiar with the terms mentioned in <xref linkend="terms"/>.</para>
+<para>Pour modifer le code vous pouvez suivre la procédure suivante. Assurez-vous,
+svp, d'être familier avec les définitions mentionnées dans <xref
+linkend="terms"/>.</para>
 
 <orderedlist>
 <listitem>
-<para>Checkout the &live-initramfs; source</para>
+<para>Rapatrier les sources de &live-initramfs;</para>
 <screen>$ git clone git://git.debian.net/git/debian-live/live-initramfs.git</screen>
 </listitem>
 <listitem>
-<para>Make changes to your local copy</para>
-<para>And beware that if you want to add your pre-init script in live-bottom, you should name it without dashes '-', e.g: call it "81new_feature" and not "81new-feature".</para>
+<para>Faites les changements sur votre copie locale</para>
+<para>Et prenez garde que si vous voulez ajouter votre script pre-init à
+live-bottom, vous devriez le nommer sans tirets '-', par exemple, appeler le
+"81nouvelle_fonctionalite" et non "81nouvelle-fonctionalite".</para>
 </listitem>
 <listitem>
-<para>Build a &live-initramfs; <command>.deb</command></para>
-<para>You must build either on your target distribution or in a chroot containing your target platform: this means if your target is lenny then you should build against lenny. You can use a personal builder such as <command>pbuilder</command> to automate building packages in chroot. To build directly on the target platform, use <command>dpkg-buildpackage</command> (provided by the <command>dpkg-dev</command> package):</para>
+<para>Constuire un .deb de &live-initramfs;</para>
+<para>You must build either on your target distribution or in a chroot containing
+your target platform: this means if your target is lenny then you should
+build against lenny. You can use a personal builder such as
+<command>pbuilder</command> to automate building packages in chroot. To
+build directly on the target platform, use
+<command>dpkg-buildpackage</command> (provided by the
+<command>dpkg-dev</command> package):</para>
 <screen>
 $ cd live-initramfs
 $ dpkg-buildpackage -rfakeroot -b -uc -us
 </screen>
 </listitem>
 <listitem>
-<para>Use the generated &live-initramfs; <command>.deb</command></para>
-<para>As &live-initramfs; is installed by the build system, installing the package in the host system is not sufficient: you should treat the generated <command>.deb</command> like another custom package. Please see <xref linkend="custom-packages"/> for more information. You should pay particular attention to <xref linkend="custom-packages-apt"/>.</para>
+<para>Utiliser le <command>.deb</command> ainsi généré de &live-initramfs;</para>
+<para>As &live-initramfs; is installed by the build system, installing the package
+in the host system is not sufficient: you should treat the generated
+<command>.deb</command> like another custom package. Please see <xref
+linkend="custom-packages"/> for more information. You should pay particular
+attention to <xref linkend="custom-packages-apt"/>.</para>
 </listitem>
 </orderedlist>
 </section>
 
 <section>
-<title>Using a &live-initramfs; snapshots</title>
+<title>Utiliser un 'snapshot' de &live-initramfs;</title>
 
-<para>You can let &live-helper; automatically use the latest snapshot of &live-initramfs; by configuring a third-party repository in your live-system configuration. Assumed you have already created a configuration tree with <command>lh_config</command></para>
+<para>You can let &live-helper; automatically use the latest snapshot of
+&live-initramfs; by configuring a third-party repository in your live-system
+configuration. Assumed you have already created a configuration tree with
+<command>lh_config</command></para>
 
 <orderedlist>
 <listitem>
-<para>Create a sources.list entry for the chroot stage:</para>
+<para>Créer une entrée dans le fichier sources.list pour l'étape du chroot:</para>
 <screen>echo "deb http://live.debian.net/debian/ ./" > config/chroot_sources/live-snapshots.chroot</screen>
 </listitem>
 <listitem>
-<para>Create a sources.list entry fro the binary stage:</para>
+<para>Créer une entrée dans le fichier soures.list pour l'étape binaire:</para>
 <screen>cp config/chroot_sources/live-snapshots.chroot config/chroot_sources/live-snapshots.binary</screen>
 </listitem>
 <listitem>
-<para>Fetcht the archive signing key:</para>
+<para>Récuperer le fichier de signature du dépot:</para>
 <screen>
 wget http://live.debian.net/debian/archive-key.asc -O config/chroot_sources/live-snapshots.chroot.gpg
 cp config/chroot_sources/live-snapshots.chroot.gpg config/chroot_sources/live-snapshots.binary.gpg

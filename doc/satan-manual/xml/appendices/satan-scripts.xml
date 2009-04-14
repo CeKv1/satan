@@ -83,6 +83,7 @@
           <areaspec>
             <area id="config-4"      coords="4"/>
             <area id="config-7"      coords="7"/>
+            <area id="config-11"      coords="11"/>
             <area id="config-14"      coords="14"/>
             <area id="config-17"      coords="17"/>
             <area id="config-23"      coords="23"/>
@@ -256,6 +257,8 @@
             <area id="build-89"      coords="89"/>
             <area id="build-91"      coords="91"/>
             <area id="build-95"      coords="95"/>
+            <area id="build-97"      coords="97"/>
+            <area id="build-98"      coords="98"/>
             <area id="build-102"      coords="102"/>
             <area id="build-108"      coords="108"/>
             <area id="build-119"      coords="119"/>
@@ -356,18 +359,17 @@
             <area id="doc.sh-12"      coords="12"/>
             <area id="doc.sh-18"      coords="18"/>
             <area id="doc.sh-22"      coords="22"/>
+            <area id="doc.sh-23"      coords="23"/>
             <area id="doc.sh-24"      coords="24"/>
             <area id="doc.sh-25"      coords="25"/>
-            <area id="doc.sh-27"      coords="27"/>
+            <area id="doc.sh-28"      coords="28"/>
             <area id="doc.sh-31"      coords="31"/>
-            <area id="doc.sh-33"      coords="33"/>
+            <area id="doc.sh-32"      coords="32"/>
+            <area id="doc.sh-36"      coords="36"/>
             <area id="doc.sh-38"      coords="38"/>
-            <area id="doc.sh-40"      coords="40"/>
-            <area id="doc.sh-42"      coords="42"/>
-            <area id="doc.sh-44"      coords="44"/>
-            <area id="doc.sh-46"      coords="46"/>
-            <area id="doc.sh-47"      coords="47"/>
-            <area id="doc.sh-49"      coords="49"/>
+            <area id="doc.sh-43"      coords="43"/>
+            <area id="doc.sh-45"      coords="45"/>
+            <area id="doc.sh-50"      coords="50"/>
           </areaspec>
           <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../scripts/doc.sh" parse="text" encoding="utf-8"/></programlisting>
         </programlistingco>
@@ -388,40 +390,37 @@
               <para>On définit le répertoire de travail.</para>
             </callout>
             <callout arearefs="doc.sh-22">
-              <para></para>
+              <para>On définit le numéro de version du paquet.</para>
             </callout>
-            <callout arearefs="doc.sh-">
-              <para></para>
+            <callout arearefs="doc.sh-23">
+              <para>Création du paquet.</para>
             </callout>
-            <callout arearefs="doc.sh-">
-              <para></para>
+            <callout arearefs="doc.sh-24">
+              <para>Nettoyage des fichiers temporaires.</para>
             </callout>
-            <callout arearefs="doc.sh-">
-              <para></para>
+            <callout arearefs="doc.sh-25">
+              <para>Création du répertoire dans le pré-chroot.</para>
             </callout>
-            <callout arearefs="doc.sh-">
-              <para></para>
+            <callout arearefs="doc.sh-28">
+              <para>Copie des images dans le pré-chroot.</para>
             </callout>
-            <callout arearefs="doc.sh-">
-              <para></para>
+            <callout arearefs="doc.sh-32">
+              <para>On vérifie si la documentation est générée manuellement. </para>
             </callout>
-            <callout arearefs="doc.sh-">
-              <para></para>
+            <callout arearefs="doc.sh-36">
+              <para>Compilation de la documentation via le Makefile.</para>
             </callout>
-            <callout arearefs="doc.sh-">
-              <para></para>
+            <callout arearefs="doc.sh-38">
+              <para>On vérifie si on doit nettoyer la documentation.</para>
             </callout>
-            <callout arearefs="doc.sh-">
-              <para></para>
+            <callout arearefs="doc.sh-43">
+              <para>Nettoyage de la documentation via le Makefile.</para>
             </callout>
-            <callout arearefs="doc.sh-">
-              <para></para>
+            <callout arearefs="doc.sh-45">
+              <para>Suppression du paquet généré.</para>
             </callout>
-            <callout arearefs="doc.sh-">
-              <para></para>
-            </callout>
-            <callout arearefs="doc.sh-">
-              <para></para>
+            <callout arearefs="doc.sh-50">
+              <para>Si le script n'a pas été appelé avec l'une des options précédente, on rappel l'utilisation du script.</para>
             </callout>
           </calloutlist>
 </section>

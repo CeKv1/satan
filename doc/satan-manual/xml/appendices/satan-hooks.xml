@@ -10,32 +10,154 @@
 <section id="config/chroot_local-hooks/01-update_password.sh">
 <title>Fichier <filename>config/chroot_local-hooks/01-update_password.sh</filename></title>
    <programlistingco>
-          <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../config/chroot_local-hooks/01-update_password.sh" parse="text" encoding="utf-8"/></programlisting>
-        </programlistingco>
+	<areaspec>
+		<area id="hooks-01-1"      coords="6"/>
+	</areaspec>
+	   <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../config/chroot_local-hooks/01-update_password.sh" parse="text" encoding="utf-8"/></programlisting>
+	   <calloutlist>
+	  <callout arearefs="hooks-01-1">
+  		<para>Changement du mot de passe root à bonjour.</para>
+         </callout>
+ </calloutlist>
+    </programlistingco>
 </section>
 <section id="config/chroot_local-hooks/02-hydra.sh">
 <title>Fichier <filename>config/chroot_local-hooks/02-hydra.sh</filename></title>
    <programlistingco>
+	<areaspec>
+		<area id="hooks-02-9"      coords="9"/>
+		<area id="hooks-02-10"      coords="10"/>
+		<area id="hooks-02-11"      coords="11"/>
+		<area id="hooks-02-15"      coords="15"/>
+		<area id="hooks-02-16"      coords="16"/>
+		<area id="hooks-02-19"      coords="19"/>
+		<area id="hooks-02-23"      coords="23"/>
+		<area id="hooks-02-24"      coords="24"/>
+		<area id="hooks-02-26"      coords="26"/>
+	</areaspec>
           <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../config/chroot_local-hooks/02-hydra.sh" parse="text" encoding="utf-8"/></programlisting>
-        </programlistingco>
+	   <calloutlist>
+	  <callout arearefs="hooks-02-9">
+  		<para>Configuration de l'environnement de compilation de la librairie ssh.</para>
+         </callout>
+	  <callout arearefs="hooks-02-10">
+  		<para>Compilation de la librairie.</para>
+         </callout>
+	  <callout arearefs="hooks-02-11">
+  		<para>Installation de la librairie.</para>
+         </callout>
+	  <callout arearefs="hooks-02-15">
+  		<para>Configuration de l'environnement de compilation d'hydra.</para>
+         </callout>
+	  <callout arearefs="hooks-02-16">
+  		<para>Application d'un patch à hydra pour le support du bruteforce ssh.</para>
+         </callout>
+	  <callout arearefs="hooks-02-19">
+  		<para>Suppresion du support de PostgreSQL.</para>
+         </callout>
+	  <callout arearefs="hooks-02-23">
+  		<para>Compilation d'hydra.</para>
+         </callout>
+	  <callout arearefs="hooks-02-24">
+  		<para>Installation d'hydra.</para>
+         </callout>
+	  <callout arearefs="hooks-02-26">
+  		<para>Suppresion des sources.</para>
+         </callout>
+  </calloutlist>
+ </programlistingco>
 </section>
 <section id="config/chroot_local-hooks/03-metasploit.sh">
 <title>Fichier <filename>config/chroot_local-hooks/03-metasploit.sh</filename></title>
    <programlistingco>
+	<areaspec>
+		<area id="hooks-03-10"      coords="10"/>
+		<area id="hooks-03-12"      coords="12"/>
+	</areaspec>
           <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../config/chroot_local-hooks/03-metasploit.sh" parse="text" encoding="utf-8"/></programlisting>
-        </programlistingco>
+	  <calloutlist>
+	  <callout arearefs="hooks-03-10">
+  		<para>Attribution des droits d'éxécutions.</para>
+         </callout>
+	  <callout arearefs="hooks-03-10">
+  		<para>Création de liens symboliques pour pouvoir éxécuter les applications depuis "n'importe où".</para>
+         </callout>
+  </calloutlist>
+ </programlistingco>
+</section>
+<section id="config/chroot_local-hooks/04-iptrafgen.sh">
+<title>Fichier <filename>config/chroot_local-hooks/04-iptrafgen.sh</filename></title>
+   <programlistingco>
+	<areaspec>
+		<area id="hooks-04-6"      coords="6"/>
+		<area id="hooks-04-7"      coords="7"/>
+	</areaspec>
+          <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../config/chroot_local-hooks/04-iptrafgen.sh" parse="text" encoding="utf-8"/></programlisting>
+	  <calloutlist>
+	  <callout arearefs="hooks-04-6">
+		  <para>Installation du paquet itrafgen. Celui-ci ne s'installe pas correctement si il est placé dans config/chroo_local-include/.</para>
+         </callout>
+	  <callout arearefs="hooks-04-7">
+  		<para>Suppression du paquet.</para>
+         </callout>
+  </calloutlist>
+ </programlistingco>
 </section>
 <section id="config/chroot_local-hooks/07-netkit.sh">
 <title>Fichier <filename>config/chroot_local-hooks/07-netkit.sh</filename></title>
    <programlistingco>
+	<areaspec>
+		<area id="hooks-07-12"      coords="12"/>
+		<area id="hooks-07-16"      coords="16"/>
+		<area id="hooks-07-17"      coords="17"/>
+	</areaspec>
           <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../config/chroot_local-hooks/07-netkit.sh" parse="text" encoding="utf-8"/></programlisting>
-        </programlistingco>
+	   <calloutlist>
+	  <callout arearefs="hooks-07-12">
+  		<para>Vérification de l'installation.</para>
+         </callout>
+	  <callout arearefs="hooks-07-16">
+  		<para>Suppression du lancement de visualnetkit à la fin de la compilation sinon la création de la clef échoue.</para>
+         </callout>
+	  <callout arearefs="hooks-07-17">
+  		<para>Compilation de visualnetkit.</para>
+         </callout>
+  </calloutlist>
+ </programlistingco>
 </section>
 <section id="config/chroot_local-hooks/08-stop.sh">
 <title>Fichier <filename>config/chroot_local-hooks/08-stop.sh</filename></title>
    <programlistingco>
+	<areaspec>
+		<area id="hooks-08-7"      coords="7"/>
+		<area id="hooks-08-8"      coords="8"/>
+		<area id="hooks-08-9"      coords="9"/>
+		<area id="hooks-08-12"      coords="12"/>
+		<area id="hooks-08-13"      coords="13"/>
+		<area id="hooks-08-16"      coords="16"/>
+	</areaspec>
           <programlisting language="bash" linenumbering="numbered"><xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="../../../../config/chroot_local-hooks/08-stop.sh" parse="text" encoding="utf-8"/></programlisting>
-        </programlistingco>
+	   <calloutlist>
+	  <callout arearefs="hooks-08-7">
+  		<para>Définition des services à arrêter.</para>
+         </callout>
+	  <callout arearefs="hooks-08-8">
+  		<para>Comptage du nombre d'éléments.</para>
+         </callout>
+	  <callout arearefs="hooks-08-9">
+  		<para>Lancement de la boucle tant qu'il y a des éléments.</para>
+         </callout>
+	  <callout arearefs="hooks-08-12">
+  		<para>Suppression des services.</para>
+         </callout>
+	  <callout arearefs="hooks-08-13">
+  		<para>Paramétrage des services pour qu'ils ne se lancent pas au démarrage mais qu'il s'arrêtent à l'extinction.</para>
+         </callout>
+	  <callout arearefs="hooks-08-16">
+		  <para>Paramétrage du script /etc/init.d/satan pour qu'il se lance au démarrage.</para>
+         </callout>
+  </calloutlist>
+ </programlistingco>
 </section>
 
 </appendix>

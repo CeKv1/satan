@@ -1,27 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
     "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
   <!ENTITY % commondata SYSTEM "../../entities/common.ent" > %commondata;
 ]>
 <sect1 id="bootup">
-<title>Customising the bootup process</title>
+<title>Personnalisation du processus de démarrage</title>
 
-<para>This chapter discusses customisation of bootup process of a live system, including kernel options, modifications to the bootloader, "splash" screens and startup scripts.</para>
+<para>Ce chapitre décrit comment personnaliser le processus de démarrage d'un
+système live, y compris les options du noyau, les modifications apportées au
+chargeur de démarrage, l'écran d'accueil et les scripts de démarrage.</para>
 
 <para>FIXME</para>
 
 <sect2 id="kernel">
-<title>Kernel</title>
+<title>Noyau</title>
 </sect2>
 
 <sect2 id="bootloaders">
-<title>Bootloaders</title>
+<title>Chargeurs de démarrage</title>
 <para>
  FIXME
 </para>
 
 <sect3>
-<title>Choosing a bootloader</title>
+<title>Choix d'un chargeur de démarrage</title>
 <para>
  FIXME
 </para>
@@ -29,36 +31,42 @@
 
 <sect3 id="syslinux">
 <title>Syslinux</title>
- <para>In the default configuration, Syslinux will pause indefinitely at its splash screen. To adjust this, modify the <command>LH_SYSLINUX_TIMEOUT</command> value or pass <command>--syslinux-timeout <replaceable>TIMEOUT</replaceable></command> to <filename>lh_config</filename>. The value is specified in units of 1/10s and the maximum possible timeout is 35996. A timeout of 0 (zero) disables the timeout completely. For more information please see syslinux(1).</para>
+ <para>Dans la configuration par défaut, Syslinux reste indéfiniment en pause à
+l'écran d'accueil. Cela se paramètre en modifiant la variable
+<command>LH_SYSLINUX_TIMEOUT</command> ou en remplaçant la valeur
+<command>--syslinux-timeout·<replaceable>TIMEOUT</replaceable></command> de
+<filename>lh_config</filename>. Cette valeur est spécifiée en 1/10s, le
+maximum possible étant 35996. Une valeur de 0 (zero) désactive complètement
+le temps d'attente ("TIMEOUT"). Pour plus d'informations, voir syslinux(1).</para>
 </sect3>
 
 <sect3>
-<title>Bootloader templates</title>
+<title>Modèles pour le chargeur de démarrage</title>
 <para>
  FIXME
 </para>
 </sect3>
 
 <sect3>
-<title>Booting a Debian Live USB/HDD system from a USB stick with Grub</title>
+<title>Démarrage de Debian Live USB/HDD depuis une clé USB avec Grub</title>
 <para>
-Suppose you've built your Debian Live USB/HDD image, but want to
-install it on an already used USB stick with ext2/3 partition and Grub
-bootloader:
+Imaginons que vous avez construit une image Debian Live USB/HDD, mais que
+vous voulez l'installer sur une clé USB déjà utilisée, avec une partition
+ext2/3 et un chargeur de démarrage Grub :
 </para>
 
-<para>First, copy live components in a directory on your key: the
-  Linux kernel (<filename>vmlinuz*</filename>), its Initial RAM disk
-  (<filename>initrd*</filename>) and the system
-  (<filename>filesystem.squashfs</filename>):
+<para>Tout d'abord, copiez les composants live dans un répertoire de votre clé: le
+noyau Linux (<filename>vmlinuz*</filename>), le RAM disk Initial
+(<filename>initrd*</filename>) et le système
+(<filename>filesystem.squashfs</filename>):
 <screen>
 # mkdir /media/myUsb/boot/live/
 # cp binary/vmlinuz1 binary/initrd1.img binary/live/filesystem.squashfs /media/myUsb/boot/live/
 </screen>
 </para>
 
-<para>Then, add a stanza in Grub's menu definition to boot up this
-  system:
+<para>Ensuite, ajoutez une entrée dans le menu de Grub afin de démarrer ce système
+:
 <screen>
 echo &gt;&gt;/media/myUsb/boot/grub/menu.lst  &lt;&lt;EOF
 
@@ -69,44 +77,44 @@ initrd          /boot/live/initrd1.img
 
 EOF
 </screen>
-The important kernel command line option to add here
-is <variablename>live-media-path</variablename>, which tells to Live
-initrd's script in which subdirectory to look for the SquashFS image.
+Il est important d'ajouter ici l'option du noyau  <variablename>live-media-path</variablename>qui indique au script de Live initrd dans quel répertoire chercher l'image
+SquashFS
 </para>
 
-<para>Next, umount your USB stick and reboot on it. That's all!</para>
+<para>Enfin, démontez votre clé USB et redémarrez à partir de celle-ci. C'est
+tout!</para>
 
 </sect3>
 </sect2>
 
 <sect2 id="splash">
-<title>Splash screens</title>
+<title>Écrans d'accueil</title>
 <para>
  FIXME
 </para>
 </sect2>
 
 <sect2 id="memtest">
-<title>Memtest</title>
+<title>Test de mémoire</title>
 <para>
  FIXME
 </para>
 </sect2>
 
 <sect2 id="startup-scripts">
-<title>Startup scripts</title>
+<title>Scripts de démarrage</title>
 <para>
  FIXME
 </para>
 </sect2>
 
 <sect2 id="cheat-codes">
-<title>Cheat codes</title>
+<title>Codes de triche</title>
 <para>
  FIXME
 </para>
 <para>
- Checksums.
+ Sommes de contrôle
 </para>
 </sect2>
 

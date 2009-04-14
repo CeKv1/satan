@@ -1,9 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xfdesktop-menu>
 	<title name="Utilitaires"/>
+	<menu name="Génération de traffic">
+		<menu name="Iperf">
+			<app name="Iperf" cmd="terminator -e &quot;echo &apos;iperf -h&apos; ; iperf -h ;bash&quot;"/>
+			<app name="Documentation Iperf" cmd="iceweasel --display=:0.0 file:///usr/share/doc/satan-manual/html/utilitaires.html#gen_traffic"/>
+		</menu>
+		<menu name="Netcat">
+			<app name="Netcat" cmd="terminator -e &quot;echo &apos;Netcat -h&apos; ; netcat -h ;bash&quot;"/>
+			<app name="Documentation Netcat" cmd="iceweasel --display=:0.0 file:///usr/share/doc/satan-manual/html/utilitaires.html#gen_traffic"/>
+		</menu>
+	</menu>
 	<separator/>
+	<menu name="Wi-Fi">
+		<menu name="Aircrack">
+			<app name="Aircrack-ng" cmd="terminator -e &quot;echo &apos;aircrack-ng&apos; ; aircrack-ng ;bash&quot;"/>
+			<app name="Documentation Aircrack" cmd="iceweasel --display=:0.0 file:///usr/share/doc/satan-manual/html/utilitaires.html#wifi"/>
+		</menu>
+		<menu name="Kismet">
+			<app name="Kismet" cmd="terminator -e &quot;echo &apos;Kismet&apos; ; kismet -h ;bash&quot;"/>
+			<app name="Documentation Kismet" cmd="iceweasel --display=:0.0 file:///usr/share/doc/satan-manual/html/utilitaires.html#wifi"/>
+		</menu>
+	</menu>
 	<separator/>
+	<menu name="Manipulation de paquets">
+		<menu name="Dsniff">
+			<app name="Dsniff" cmd="terminator -e &quot;echo &apos;Dsniff&apos; ; dsniff -h ;bash&quot;"/>
+			<app name="Documentation Dsniff" cmd="iceweasel --display=:0.0 file:///usr/share/doc/satan-manual/html/utilitaires.html#manipp"/>
+		</menu>
+		<menu name="Hping">
+			<app name="Hping" cmd="terminator -e &quot;echo &apos;Hping3&apos; ; sudo hping3 -h ; sudo hping3 ;bash&quot;"/>
+			<app name="Documentation Hping" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/utilitaires.html#manipp"/>
+		</menu>
+		<menu name="Nemesis">
+			<app name="Nemesis" cmd="terminator -e &quot;nemesis ;bash&quot;"/>
+			<app name="Documentation Nemesis" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/utilitaires.html#manipp"/>
+		</menu>
+		<menu name="Scapy">
+			<app name="Scapy" cmd="terminator -e &quot;echo &apos;Scapy&apos; ; scapy -h ; scapy ;bash&quot;"/>
+			<app name="Documentation Scapy" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/utilitaires.html#manipp"/>
+		</menu>
+		<menu name="SendIP">
+			<app name="SendIP" cmd="terminator -e &quot;echo &apos;SendIP&apos; ; sendip ;bash&quot;"/>
+			<app name="Documentation SendIP" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/utilitaires.html#manipp"/>
+		</menu>
+	</menu>
 	<separator/>
+	<menu name="Général">
+		<menu name="NetwoX">
+			<app name="NetwoX" cmd="netwox" term="true"/>
+			<app name="Documentation NetwoX" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/utilitaires.html#reseaux"/>
+		</menu>
+	</menu>
 	<separator/>
+	<menu name="Calcul d&apos;adresses">
+		<menu name="Sipcalc">
+			<app name="Sipcalc" cmd="terminator -e &quot;echo &apos;Sipcalc&apos; ; sipcalc -h ; sipcalc ;bash&quot;"/>
+			<app name="Documentation Sipcalc" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/utilitaires.html#reseaux"/>
+		</menu>
+	</menu>
 	<separator/>
+	<menu name="Performances Réseau">
+		<menu name="Httperf">
+			<app name="Httperf" cmd="terminator -e &quot;echo &apos;Httperf&apos; ; httperf -h ;bash&quot; "/>
+			<app name="Documentation Httperf" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/utilitaires.html#reseaux"/>
+		</menu>
+		<menu name="Netperf">
+			<app name="Netperf" cmd="terminator -e &quot;echo &apos;Netperf&apos; ; netperf -h ;bash&quot;"/>
+			<app name="Documentation Netperf" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/utilitaires.html#reseaux"/>
+		</menu>
+	</menu>
 </xfdesktop-menu>

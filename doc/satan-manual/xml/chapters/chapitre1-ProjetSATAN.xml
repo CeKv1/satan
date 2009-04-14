@@ -9,39 +9,195 @@
 <sect1 id="origines">
 	<title>Les origines du projet</title>
 	<para>
-	Les orgines de ce projet remonte à l'année dernière. Trois étudiants ont réalisé un LiveCD baptisé R&amp;Tools dans le cadre des projets tuteurés.
+	Deux étudiants de deuxième année ont réalisé, en 2008, un LiveCD baptisé R&amp;Tools dans le cadre des projets tuteurés. Le but était de concentrer en un seul support mobile les différents outils utiles à un administrateur réseau. Pour cela, ils ont choisi un système consistant en un liveCD comportant un OS libre, Ubuntu. Ce choix est vital car il définit ensuite les outils utilisés. De plus, choisir un OS libre permet de laisser le projet évolutif. Les deux étudiants ont donc choisi et implémentés les logiciels utiles à leur liveCD et les ont documentés.<cmdsynopsis><sbr /></cmdsynopsis>
 	</para>
+	<mediaobject>
+  		<imageobject>
+    			<imagedata fileref="img/retools.png" format="PNG"/>
+  		</imageobject>
+  		<textobject>
+    			<phrase>R&amp;Tools</phrase>
+  		</textobject>
+	</mediaobject>
+	<para>
+	Voici une liste non-exhaustive des outils contenus dans le liveCD R&amp;Tools :
+	</para>
+	<para>
+	R&amp;Tools
+	</para>
+	<itemizedlist>
+        	<listitem>
+			<para>Administration</para>
+			<itemizedlist>
+				<listitem>
+					<para>Rancid</para>
+				</listitem>
+			</itemizedlist>
+		</listitem>
+		<listitem>
+			<para>Topologie - Modélisation</para>
+			<itemizedlist>
+				<listitem>
+					<para>Cheops</para>
+				</listitem>
+				<listitem>
+					<para>Dia</para>
+				</listitem>
+				<listitem>
+					<para>Etherape</para>
+				</listitem>
+				<listitem>
+					<para>GNS3</para>
+				</listitem>
+				<listitem>
+					<para>LanMap</para>
+				</listitem>
+				<listitem>
+					<para>XtraceRoute</para>
+				</listitem>
+			</itemizedlist>
+		</listitem>
+		<listitem>
+			<para>Outils</para>
+			<itemizedlist>
+				<listitem>
+					<para>gFtp</para>
+				</listitem>
+				<listitem>
+					<para>IPcalc &amp; sIPcalc</para>
+				</listitem>
+				<listitem>
+					<para>My Trace Route</para>
+				</listitem>
+				<listitem>
+					<para>NetCat</para>
+				</listitem>
+				<listitem>
+					<para>NeTwoX</para>
+				</listitem>
+				<listitem>
+					<para>Synergy</para>
+				</listitem>
+				<listitem>
+					<para>VNC</para>
+				</listitem>
+				<listitem>
+					<para>VideoLAN</para>
+				</listitem>
+			</itemizedlist>
+		</listitem>
+		<listitem>
+			<para>Scanners</para>
+			<itemizedlist>
+				<listitem>
+					<para>Autoscan</para>
+				</listitem>
+				<listitem>
+					<para>Nmap</para>
+				</listitem>
+			</itemizedlist>
+		</listitem>
+		<listitem>
+			<para>Sécurité</para>
+			<itemizedlist>
+				<listitem>
+					<para>Nessus</para>
+				</listitem>
+			</itemizedlist>
+		</listitem>
+		<listitem>
+			<para>Sniffers</para>
+			<itemizedlist>
+				<listitem>
+					<para>Ethercap</para>
+				</listitem>
+				<listitem>
+					<para>IPgraB</para>
+				</listitem>
+				<listitem>
+					<para>IpTraf</para>
+				</listitem>
+				<listitem>
+					<para>KarPski</para>
+				</listitem>
+				<listitem>
+					<para>Ngrep</para>
+				</listitem>
+				<listitem>
+					<para>Nstreams</para>
+				</listitem>
+				<listitem>
+					<para>SniffIT</para>
+				</listitem>
+				<listitem>
+					<para>TCPdump</para>
+				</listitem>
+				<listitem>
+					<para>TCPflow</para>
+				</listitem>
+				<listitem>
+					<para>Wireshark</para>
+				</listitem>
+			</itemizedlist>
+		</listitem>
+		<listitem>
+			<para>Supervision</para>
+			<itemizedlist>
+				<listitem>
+					<para>Cacti</para>
+				</listitem>
+				<listitem>
+					<para>IPerf</para>
+				</listitem>
+				<listitem>
+					<para>Nagios</para>
+				</listitem>
+				<listitem>
+					<para>Netperf</para>
+				</listitem>
+				<listitem>
+					<para>Netpipe</para>
+				</listitem>
+				<listitem>
+					<para>Ntop</para>
+				</listitem>
+				<listitem>
+					<para>Snort</para>
+				</listitem>
+			</itemizedlist>
+		</listitem>
+	</itemizedlist> 
 </sect1>
 <sect1 id="remise_en_cause">
 	<title>Remise en cause du projet R&amp;Tools</title>
 	<para>
-	Le projet R&amp;Tools 
+	Le projet R&amp;Tools est un outil qui doit être en constante évolution et nécessite donc des mises à jours régulières. Il faut pour cela avoir un système de base modulable et évolutif, ce qui est impossible avec le liveCD R&amp;Tools. En effet, faire un liveCD sur un support fixe tel qu'un CD ou un DVD ne permet pas de faire de mises à jour ou autres évolutions puisque ce support n'est inscriptible qu'une seule fois; ce support est aussi très fragile. Le liveCD actuel est en fait un DVD car l'image pèse près de 900 Mo; cela n'est pas très grave si les machines hôtes possèdent un lecteur DVD, ce qui n'est pas le cas des ordinateurs de l'IUT de Saint Malo. Il faut donc trouver une solution qui puisse supporter des mises à jour ainsi que des ajouts/suppression d'éléments très simplement.</para>
+	<para>
+	De plus, les logiciels présents sur R&amp;Tools ne sont pas tous utiles et certains sont en doublons; il faudra donc faire le tri et ne garder (ou ajouter) que les plus intéressants. Ensuite, le nom comporte le caractère &amp; qui est un caractère parfois mal supporté. Il faut par conséquent  trouver un nom plus normalisé, facile à retenir, et qui correspond au type de projet que nous nous sommes fixé : un système intégrant des outils de simulation et d'administration de réseaux. 
 	</para>
 	<sect2 id="a_conserver">
 		<title>Les éléments à conserver</title>
-		<itemizedlist>
-                        <listitem>
-				<para>Nous allons garder le principe de Live CD<footnote><para><ulink url="http://fr.wikipedia.org/wiki/LiveCD" /></para></footnote>. C'est à dire de CD autonome qui contient un système d'exploitation exécutable sans installation.</para>
-                        </listitem>
-                        <listitem>
-				<para>Nous garderons également les outils de base de l'administration réseaux tel que traceroute.</para>
-                        </listitem>
-		</itemizedlist>
+		<para>Nous allons tout d'abord garder le principe de Live CD<footnote><para><ulink url="http://fr.wikipedia.org/wiki/LiveCD" /></para></footnote>. C'est à dire un support autonome qui contient un système d'exploitation exécutable sans installation.</para>
+		<para>Nous garderons également quelques outils que nous avons trouvé judicieux tels que GNS3 et Wireshark par exemple.</para>
+		<para>Quelques outils tel que conky pourront aussi servir comme supplément à l'interface du projet.</para>
 	</sect2>
 	<sect2 id="a_enlever">
 		<title>Les éléments à modifier</title>
-		<itemizedlist>
-                        <listitem>
-				<para>R&amp;Tools est destiné à être gravé sur un cd-rom. Ce support est inscriptible seulement une seule fois (sauf les cd-rom RW) et il est très fragile. De plus sa capacité est limité à 800Mo pour les plus grandes capacités. Or R&amp;Tools pèse plus de 900Mo ! Il est par conséquent inutilisable. La parade consiste à graver l'image sur DVD mais l'IUT ne dispose pas de lecteurs DVD sur les ordinateurs.</para>
-				<para>SATAN utilise une clef USB qui peut être ré-utilisée plusieurs milliers de fois. De plus, celle-ci permet de stocker des informations dessus tel que des comptes rendus de travaux pratiques.</para> 
-				<para>R&amp;Tools n'est pas facilement modifiable. Il faut en effet monter l'image iso puis chrooter l'environnement pour y installer des logiciels. </para>
-				<para>SATAN permet d'ajouter un logiciel simplement en indiquant le nom du paquet correspondant dans config/chroot_local-packageslist/tools</para>
-                        </listitem>
-                        <listitem>
-				<para>R&amp;Tools n'est pas évolutif. Le système ne peut pas être mis à jour.</para>
-				<para>SATAN permet de générer une nouvelle image avec tout les logiciels à jours en seulement quatre commandes.</para>
-			</listitem>
-		</itemizedlist>
+		<para>Nous avons décidé de baptiser notre projet "S.A.T.A.N" pour "Simulations And Tools to Administrate Networks"; c'est en effet très facile à retenir. Il n'y a bien sûr aucune connotation avec un culte démoniaque ; S.A.T.A.N est en fait un acronyme utilisé par un projet de boite à outils abandonné il y a quelques années.</para>
+		<para>Pour le support de S.A.T.A.N, nous utiliserons une clef USB qui peut être ré-utilisée plusieurs milliers de fois. En effet le support CD ne permettant pas d'évolution, la solution de la clef usb est plus appropriée. De plus, celle-ci permet de stocker des informations dessus tel que des comptes rendus de travaux pratiques ou, si l'on se place dans le cadre de l'utilisation professionnelle, des captures réseau, des rapports d'audit, etc...</para>
+		<para>Pour le système d'exploitation de la clef, nous utiliserons le projet Debian Live qui permet de créer des clés usb bootables comportant la distribution libre Debian. De plus, la distribution Ubuntu utilisée par R&amp;Tools est trop lourde et posséde beaucoup de fonctions inutiles; elle ne permet pas aussi de créer un système vraiment personnalisé. Debian est aussi une distribution stable en comparaison avec Ubuntu.</para>
+		<para>R&amp;Tools n'est pas facilement modifiable. Il faut en effet monter l'image iso puis chrooter l'environnement pour y installer des logiciels. S.A.T.A.N permet d'ajouter un logiciel simplement en indiquant le nom du paquet correspondant dans un fichier de configuration.</para>
+		<para>R&amp;Tools n'est pas évolutif. Le système ne peut pas être mis à jour contrairement à S.A.T.A.N, qui permet de générer une nouvelle image avec tout les logiciels mis à jour en seulement quatre commandes.<cmdsynopsis><sbr /></cmdsynopsis></para>
+		<para>Voici un aperçu de l'interface graphique adoptée par notre projet :<cmdsynopsis><sbr /></cmdsynopsis></para>
+	        <mediaobject>
+        	        <imageobject>
+                	        <imagedata fileref="img/satan1.png" format="PNG"/>
+	                </imageobject>
+	                <textobject>
+	                        <phrase>R&amp;Tools</phrase>
+	                </textobject>
+	        </mediaobject>
+		<para>Nous voulions une interface qui soit à la fois sobre et agréable à utiliser. De plus, nous avons choisi le gestionnaire graphique xfce afin de permettre une navigation fluide et un faible encombrement d'espace disque. Nous avons aussi ajouté l'outil conky pour faciliter l'accès à des données importantes de sa machine telles que l'adresse Ip ou la charge de la carte réseau et du processeur.</para>
 	</sect2>
 </sect1>
 <sect1 id="trousse_a_outils">
@@ -51,42 +207,59 @@
 	<sect2 id="kit">
 		<title>Quels sont les outils et pourquoi ceux là ?</title>
 		<para>
-		Les outils sont réparties suivant quatre catégories :
+		Les outils sont répartis suivant ce plan (détails des logiciels en annexe) :
 		</para>
 		<sect3 id="kit-utilitaires">
 			<title>Utilitaires</title>
-			<para>
-			</para>
+			<itemizedlist>
+				<listitem><para>Génération de traffic</para><para>La génération de trafic est utile pour par exemple tester la résistance du réseau face à un trafic important ou de vérifier une politique de QOS par exemple.</para></listitem>
+				<listitem><para>Wi-Fi</para><para>Le Wi-Fi étant omniprésent dans les réseaux à ce jour, il était donc important d'intégrer des fonctionnalités sans-fil à notre projet. Grâce à ces utlitaires, on peut par exemple vérifier la sécurité des points d'accès Wi-Fi.</para></listitem>
+				<listitem><para>Manipulation de paquets</para><para>Les utilitaires de manipulation de paquets permettent de réaliser un envoi de trames en contrôlant la taille, le protocole utilisé et beaucoup d'autres paramètres.</para></listitem>
+				<listitem><para>Divers réseaux</para><para>Cette section contient des outils généraux tels qu'un logiciel pour calculer les masques des réseaux.</para></listitem>
+			</itemizedlist> 
 		</sect3>
 		<sect3 id="kit-administration">
 			<title>Administration</title>
-			<para>
-			</para>
+			<itemizedlist>
+				<listitem><para>Supervision</para><para>La sécurisation d'un réseau passe en partie par une surveillance de cellui-ci. Il était donc nécessaire d'inclure un logiciel de supervision permettant d'afficher graphiquement et d'enregistrer par exemple la charge d'un routeur ou le nombre d'accès à un serveur.</para></listitem>
+				<listitem><para>Gestion des configurations</para><para>Un administrateur réseau a pour tâche quotidienne la configuration d'équipements réseaux. Une fois configurés, l'administrateur doit pouvoir recharger ces configurations en cas de problème. C'est pourquoi nous avons inclus un logiciel gestionnaire de configurations.</para></listitem>
+				<listitem><para>Capture</para><para>Pour analyser un réseau, il est nécessaire de mettre en place une solution de capture de traffic. Nous avons donc choisi plusieurs logiciels qui se complètent entre eux.</para></listitem>
+				<listitem><para>DNS</para><para>Dans un réseau, il peut être utile d'avoir un serveur DNS afin d'offrir le service de résolution d'adresses localement.</para></listitem>
+				<listitem><para>HTTP</para><para>Afin d'héberger le site de son entreprise par exemple, l'administrateur peut avoir besoin de monter son serveur localement et non de nécessiter le service d'un hébergeur professionnel.</para></listitem>
+				<listitem><para>FTP/TFTP</para><para>Les services de transfert de fichiers sont très utiles dans une entreprise pour par exemple récupérer des documents stockés sur un serveur.</para></listitem>
+				<listitem><para>Base de données</para><para>Ce service est aussi très utilisé en entreprise ne serait-ce que pour gérer une liste d'utilisateurs par exemple.</para></listitem>
+				<listitem><para>Partage Samba</para><para>Le partage de fichiers entre des postes windows et unix est impossible par défaut. C'est pourquoi nous avons intégré Samba qui permet de faire du partage de fichier dans un environnement windows.</para></listitem>
+				<listitem><para>Authentification</para><para>La sécurité étant un facteur très important, mettre en place des systèmes d'authentification sur le réseau est primordial.</para></listitem>
+				<listitem><para>VoIP</para><para>La VoIP est en passe de devenir commune dans un réseau d'entreprise, nous avons donc intégré un serveur SIP à notre projet.</para></listitem>
+				<listitem><para>Routage</para><para>Dans cette section, on trouve des logiciels utiles permettant de mettre en place l'architecture du réseau.</para></listitem>
+			</itemizedlist>
 		</sect3>
 		<sect3 id="kit-securite">
 			<title>Sécurité</title>
-			<para>
-			</para>
+			<itemizedlist>
+				<listitem><para>IDS</para><para>Détecter les intrusions est une tâche importante pour l'administrateur réseau puisque c'est ce qui permet de se prévenir contre des attaques externes au réseau local.</para></listitem>
+				<listitem><para>Détection de vulnérabilités serveur</para><para>Un serveur sécurisé est un serveur surveillé, ces outils permettent donc, par exemple, de scanner les ports de la machine et détecter les éventuelles vulnérabilités et failles de sécurité.</para></listitem>
+				<listitem><para>Cracker des mots de passe</para><para>Attaquer son système de sécurité permet de redéfinir certains points sensibles de son intégrité. Par exemple, on peut tester la force de ses mots de passe en utilisant les outils disponibles dans cette section.</para></listitem>
+			</itemizedlist>
 		</sect3>
 		<sect3 id="kit-simulation">
 			<title>Simulation / virtualisation de réseaux</title>
-			<para>
-			</para>
+			<para>Les deux outils disponibles dans cette section permettent de virtualiser un réseau complet comportant commutateurs, routeurs et stations. Cela permet de pouvoir tester une solution de mise en place de réseau virtuellement avant de l'intégrer physiquement.</para>
 		</sect3>
 	</sect2>
 	<sect2 id="methode">
 		<title>Comment les utilise-t-on ?</title>
-		<para>
+		<para>La plupart des utilitaires présents dans notre projet sont utilisés en ligne de commandes avec des arguments spécifiques(voir annexe pour plus de précision). Sur l'interface que nous avons configurée, des raccourcis permettent de lancer automatiquement l'aide du logiciel et le logiciel s'ils fonctionnent en ligne de commande; pour les autres, les raccourcis pointent directement vers les éxécutables.
 		</para>
 	</sect2>
 	<sect2 id="maj">
 		<title>Comment mettre à jour les outils ?</title>
-		<para>
+		<para>Une fois avoir démarré un PC avec la clef usb, on utilise la commande "apt-get update" mais le problème est que cette mise à jour sera perdue au prochain redémarrage de l'ordinateur. En effet, S.A.T.A.N étant un système liveCD, toute modification éffectuée est effacée lors de l'extinction du PC. Afin de mettre à jour la totalité du système, il suffit de regénérer la clef usb grâce au logiciel live-helper comme expliqué dans le chapitre 3. Pour les logiciels dont les paquets d'installation ne sont pas dans les dépôts Debian, ils sont intégrés statiquement dans le dossier de génération de clef usb grâce à plusieurs scripts détaillés en annexe. Pour certains, il faudra télécharger la dernière version directement sur les sites hébergeurs de ces logiciels et les placer dans le dossier chroot_locale-include afin qu'ils s'installent automatiquement sur la clef.
 		</para>
 	</sect2>
 	<sect2 id="reproduire">
 		<title>Comment reproduire les clefs ?</title>
-		<para>
+		<para>Grâce au logiciel live-helper créé avec le projet Debian Live, on peut générer un système linux Debian virtuel et monter ce système sur une clef usb avec les scripts de configuration et d'installation détaillés en annexe.
 		</para>
 	</sect2>
 </sect1>
@@ -97,18 +270,43 @@
 		<sect3 id="contraintes">
 			<title>Contraintes</title>
 			<para>
-				La première contrainte est que l'ensemble de logiciels que nous avons utilisé pour générer notre distribution n'est pas stable. En effet, live-helper est en développement actif et il existe encore de nombreux bugs.
+				La première contrainte est que l'ensemble de logiciels que nous avons utilisé pour générer notre distribution n'est pas stable. En effet, live-helper est en développement actif et il existe encore des bugs. Nous avons donc changé plusieurs fois de structure de développement afin de faire correspondre une solution de génération de clef usb la plus simple possible tout en gardant un système évolutif et facilement mis à jour.
+			</para>
+			<para>
+				Nous pouvons par exemple citer deux bugs qui ont été corrigés grace au projet S.A.T.A.N : 
+			</para>
+			<itemizedlist>
+				<listitem><para><footnote><ulink url="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=511737"/></footnote>Bug #511737 :  openvas-server dependency problem.</para><para>Lors de la sortie de openvas 2.0.0-1 a entrainé un bug lié à une dépendance non satisfaite. En effet, le paquet openvas-server dépendait du paquet openvas-plugins mais celui-ci n'existait pas ! Le bug a été corrigé 3 jours plus tard dans la version 2.0.0-2.</para></listitem>
+				<listitem><para><footnote><ulink url="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=513262"/></footnote>Bug #513262 :  mysql-server-5.0  leaves password in debconf database</para><para>La majorité des sites utilisent des bases de données mysql et c'est pourquoi nous l'avons intégré dans la clef. Cependant, l'automatisation de l'installation fut longue et pénible car mysql-server-5.0 fait appel au paquet debconf<footnote><ulink url="http://packages.debian.org/squeeze/debconf"/></footnote> qui demande à l'utilisateur le mot de passe d'administration. C'est en utilisant les utilitaires de debconf-utils<footnote><ulink url="http://packages.debian.org/squeeze/debconf-utils"/></footnote> que nous avons trouvé une anomalie dans la gestion des mots de passe. En effet, le mot de passe était demandé deux fois pour éviter les erreurs de frappe mais seule première entrée était effacé du cache ! Le bug a été corrigé seulement deux heures après sa soumission.</para></listitem>
+			</itemizedlist>
+			<para>
+				De plus, les logiciels ne sont pas tous accessibles et téléchargeables dans les dépôts Debian. Il faut donc réfléchir à comment inclure les logiciels manuellement tout en ne créant pas de problèmes de dépendances. 
+			</para>
+			Enfin, même si certaines logiciels sont paquetagés, il est parfois impossible de les installer automatiquement. Nous avons rencontré ce problème avec le paquet phpmyadmin <footnote><ulink url="http://packages.debian.org/squeeze/phpmyadmin"/></footnote> qui utilise également debconf pour son installation. Cependant, un bug dans debconf <footnote><ulink url="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=511737"/></footnote> nous a empeché de répondre automatiquement aux questions. C'est pourquoi nous avons déposé un rapport de bug<footnote><ulink url="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=511737"/></footnote> et installé phpmyadmin manuellement en le téléchargeant sur le site de phpmyadmin. 
+			<para>
+
 			</para>
 		</sect3>
 		<sect3 id="ressources">
 			<title>Ressources</title>
 			<para>
+			Notre projet nous a demandé très peu de ressources matérielles. En effet, une clef USB et un ordinateur sont suffisants pour réaliser nos tests. De plus, nous avons beaucoup utilisé la virtualisation. Cette méthode nous a permis de gagner du temps puisque cela évite de monter le système sur la clef et de redémarrer pour tester si l'image disque SATAN comporte les modifications effectuées. 
 			</para>
 		</sect3>
 		<sect3 id="planning">
 			<title>Planning</title>
 			<para>
 			</para>
+			<itemizedlist>
+				<listitem><para>Septembre 2008 : Récupération du projet R&amp;Tools, étude des outils présent ;</para></listitem>
+				<listitem><para>Octobre 2008 : Analyse de la méthode de fabrication de R&amp;Tools ;</para></listitem>
+				<listitem><para>Novembre 2008 : Tests de différents outils pour la réalisation d'un liveCD. Choix de l'utilisation de Debian Live ;</para></listitem>
+				<listitem><para>Décembre 2008 : Création des scripts pour dupliquer facilement et rapidement les clefs (Yohann). Etude du choix de l'interface graphique (Vincent) ;</para></listitem>
+				<listitem><para>Janvier 2009 : Débugage des scripts pour la duplication des clefs, ajout des premiers logiciels (Yohann). Protoypage de l'interface graphique (Vincent) ;</para></listitem>
+				<listitem><para>Février 2009 : Ajout des logiciels de simulation, réécriture complète des scripts (Yohann). Finalisation de l'interface graphique, début de la rédaction de la documentation (Vincent) ;</para></listitem>
+				<listitem><para>Mars 2009 : Correction de bugs, écriture de la documentation, préparation de la soutenance (Yohann, Vincent).</para></listitem>
+			</itemizedlist>
+			<para>Nous aurons passé en cumulant les heres près de 300 heures pour réaliser ce projet.</para>
 		</sect3>
 	</sect2>
 	<sect2 id="etc2">
@@ -117,11 +315,28 @@
 			<title>Reporting</title>
 			<para>
 			</para>
+			<itemizedlist>
+				<listitem><para>23 septembre 2008 : Prise de contact avec Mr Rioual pour l'informer que notre binôme souhaite reprendre le projet R&amp;Tools.</para><para>Suite aux conseils de Mr Rioual, nous cherchons un troisième élève pour nous accompagner dans le projet mais nous n'avons pas trouvé de candidats ;</para></listitem>
+				<listitem><para>4 octobre 2008 : Première rencontre afin de définir les objectifs du projet ;</para></listitem>
+				<listitem><para>23 février 2009 : Compte rendu de l'avancement du projet et démonstration ;</para></listitem>
+				<listitem><para>4 mars 2009 : Compte rendu de l'avancement afin de déterminer les dernièrs points à finir.</para></listitem>
+				<listitem><para>26 mars 2009 : Soutenance du projet.</para></listitem>
+			</itemizedlist>
 		</sect3>
 		<sect3 id="evolutions">
 			<title>Evolutions</title>
 			<para>
+				Voici les évolutions qui peuvent être apportées au projet S.A.T.A.N :
 			</para>
+			<itemizedlist>
+				<listitem><para>Création de recettes sur l'utilisation des logiciels pour valider des architectures (créer des labs de tests);</para></listitem>
+				<listitem><para>Participation à la traduction du projet live-helper ;</para></listitem>
+				<listitem><para>Recherche et ajout de logiciels ;</para></listitem>
+				<listitem><para>Réécriture standardisé de tout les scripts ;</para></listitem>
+				<listitem><para>Création d'une interface graphique pour générer S.A.T.A.N ;</para></listitem>
+				<listitem><para>Automatiser l'importation de la documentation officielle dans la documentation de S.A.T.A.N.</para></listitem>
+				<listitem><para>Suivis et correction des bugs.</para></listitem>
+			</itemizedlist>
 		</sect3>
 	</sect2>
 </sect1>

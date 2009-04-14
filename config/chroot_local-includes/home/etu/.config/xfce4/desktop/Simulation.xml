@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xfdesktop-menu>
 	<title name="Simulation &amp; Modélisation"/>
+	<menu name="GNS 3">
+		<app name="gns3" cmd="gns3"/>
+		<app name="Documentation Gns3" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/simul.html#gns3"/>
+	</menu>
 	<separator/>
-	<separator/>
-	<separator/>
-	<separator/>
-	<separator/>
+	<menu name="Netkit">
+		<app name="Netkit" cmd="terminator -e &quot;echo &apos;Netkit&apos; ; cd /usr/share/netkit/ ; export NETKIT_HOME=/usr/share/netkit ; export MANPATH=:/usr/share/netkit/man ; export PATH=/usr/share/netkit/bin:$PATH ; sh check_configuration.sh ;bash&quot;"/>
+		<app name="Documentation Netkit" cmd="iceweasel --display:=0.0 file:///usr/share/doc/satan-manual/html/simul.html#netkit"/>
+	</menu>
 </xfdesktop-menu>

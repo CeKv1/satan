@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash -x
 
 #Scripts de live-helper
 . "${LH_BASE:-/usr/share/live-helper}"/functions.sh
@@ -22,6 +22,7 @@ then
 	dch --force-bad-version --newversion 42+01 --distribution UNRELEASED Autobuild 1
 	dpkg-buildpackage -rfakeroot -us -uc
 	debuild clean
+	mkdir -p ${SH_BASE}/config/chroot_local-packages
 	mv ${DOC_BASE}/satan*.deb ${SH_BASE}/config/chroot_local-packages
 
 	cp -R ${DOC_BASE}/satan-manual/img/ ${DOC_BASE}/../config/chroot_local-includes/usr/share/doc/satan-manual/html/	
