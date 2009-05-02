@@ -104,17 +104,11 @@ then
 	Echo_warning "Si vous n'êtes pas à l'IUT, il faut créer un repertoire dl et y inclure les IOS."
 
 	# IOS
-<<<<<<< HEAD:scripts/build
-	wget --tries=2 --timeout=5-N -c ${IOS1_URL}
-	wget --tries=2 --timeout=5 -N -c ${IOS2_URL}
-	wget --tries=2 --timeout=5 -N -c ${IOS2_URL}
-	wget --tries=2 --timeout=5 -N -c ${IOS3_URL}
-=======
 	wget --tries=2 --timeout=2 -N -c ${IOS1_URL}
 	wget --tries=2 --timeout=2 -N -c ${IOS2_URL}
 	wget --tries=2 --timeout=2 -N -c ${IOS2_URL}
 	wget --tries=2 --timeout=2 -N -c ${IOS3_URL}
->>>>>>> 7275a50fd7122d6354fa9930f9e1f79c358cedf2:scripts/build
+
 	# IOS
 	cp -u ${IOS1} ../config/chroot_local-includes/usr/share/ios/ 
 	cp -u ${IOS2} ../config/chroot_local-includes/usr/share/ios/ 
