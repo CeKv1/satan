@@ -30,7 +30,7 @@ sendip
 # Scapy
 python-scapy
 # Nemesis
-nemesis
+# nemesis # absent le 23 mai
 # Dépendance itrafgen
 libpcap0.8-dev
 

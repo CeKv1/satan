@@ -16,9 +16,9 @@ iceweasel iceweasel-l10n-fr
 
 ## Traitement de texte
 # vim
-vim-full
+vim-runtime
 # OpenOffice.Org
-openoffice.org-writer openoffice.org-l10n-fr openoffice.org-spellcheck-fr-fr 
+openoffice.org-writer openoffice.org-l10n-fr myspell-fr-gut
 # Monitoring des ressources
 htop
 
